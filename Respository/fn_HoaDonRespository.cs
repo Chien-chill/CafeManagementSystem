@@ -31,7 +31,7 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL ADD: " + ex.Message);
+                Console.WriteLine("Lỗi SQL ADD hihi: " + ex.Message);
                 return false;
             }
             catch (Exception ex)
