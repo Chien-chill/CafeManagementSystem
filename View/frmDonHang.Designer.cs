@@ -32,7 +32,7 @@
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnDoAn = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnDoUong = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnDonHangChuaXacNhan = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +48,7 @@
             // 
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2GradientButton3);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnDoAn);
-            this.guna2CustomGradientPanel1.Controls.Add(this.btnDoUong);
+            this.guna2CustomGradientPanel1.Controls.Add(this.btnDonHangChuaXacNhan);
             this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
@@ -121,38 +121,39 @@
             this.btnDoAn.TabIndex = 1;
             this.btnDoAn.Text = "Đồ Ăn";
             // 
-            // btnDoUong
+            // btnDonHangChuaXacNhan
             // 
-            this.btnDoUong.BackColor = System.Drawing.Color.White;
-            this.btnDoUong.BorderColor = System.Drawing.Color.Transparent;
-            this.btnDoUong.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.btnDoUong.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnDoUong.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
-            this.btnDoUong.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnDoUong.CheckedState.FillColor2 = System.Drawing.Color.White;
-            this.btnDoUong.CheckedState.ForeColor = System.Drawing.Color.DimGray;
-            this.btnDoUong.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDoUong.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 4);
-            this.btnDoUong.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDoUong.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDoUong.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDoUong.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDoUong.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDoUong.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnDoUong.FillColor = System.Drawing.Color.Empty;
-            this.btnDoUong.FillColor2 = System.Drawing.Color.Empty;
-            this.btnDoUong.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoUong.ForeColor = System.Drawing.Color.DimGray;
-            this.btnDoUong.HoverState.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.btnDoUong.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
-            this.btnDoUong.HoverState.FillColor2 = System.Drawing.Color.White;
-            this.btnDoUong.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnDoUong.Location = new System.Drawing.Point(0, 0);
-            this.btnDoUong.Name = "btnDoUong";
-            this.btnDoUong.PressedColor = System.Drawing.Color.White;
-            this.btnDoUong.Size = new System.Drawing.Size(236, 71);
-            this.btnDoUong.TabIndex = 1;
-            this.btnDoUong.Text = "Đồ Uống";
+            this.btnDonHangChuaXacNhan.BackColor = System.Drawing.Color.White;
+            this.btnDonHangChuaXacNhan.BorderColor = System.Drawing.Color.Transparent;
+            this.btnDonHangChuaXacNhan.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.btnDonHangChuaXacNhan.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnDonHangChuaXacNhan.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
+            this.btnDonHangChuaXacNhan.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnDonHangChuaXacNhan.CheckedState.FillColor2 = System.Drawing.Color.White;
+            this.btnDonHangChuaXacNhan.CheckedState.ForeColor = System.Drawing.Color.DimGray;
+            this.btnDonHangChuaXacNhan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDonHangChuaXacNhan.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 4);
+            this.btnDonHangChuaXacNhan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDonHangChuaXacNhan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDonHangChuaXacNhan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDonHangChuaXacNhan.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDonHangChuaXacNhan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDonHangChuaXacNhan.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnDonHangChuaXacNhan.FillColor = System.Drawing.Color.Empty;
+            this.btnDonHangChuaXacNhan.FillColor2 = System.Drawing.Color.Empty;
+            this.btnDonHangChuaXacNhan.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDonHangChuaXacNhan.ForeColor = System.Drawing.Color.DimGray;
+            this.btnDonHangChuaXacNhan.HoverState.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.btnDonHangChuaXacNhan.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
+            this.btnDonHangChuaXacNhan.HoverState.FillColor2 = System.Drawing.Color.White;
+            this.btnDonHangChuaXacNhan.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnDonHangChuaXacNhan.Location = new System.Drawing.Point(0, 0);
+            this.btnDonHangChuaXacNhan.Name = "btnDonHangChuaXacNhan";
+            this.btnDonHangChuaXacNhan.PressedColor = System.Drawing.Color.White;
+            this.btnDonHangChuaXacNhan.Size = new System.Drawing.Size(236, 71);
+            this.btnDonHangChuaXacNhan.TabIndex = 1;
+            this.btnDonHangChuaXacNhan.Text = "Đơn hàng chưa xác nhận";
+            this.btnDonHangChuaXacNhan.Click += new System.EventHandler(this.btnDonHangChuaXacNhan_Click);
             // 
             // frmDonHang
             // 
@@ -164,6 +165,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDonHang";
             this.Text = "frmDonHang";
+            this.Load += new System.EventHandler(this.frmDonHang_Load);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -175,6 +177,6 @@
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;
         private Guna.UI2.WinForms.Guna2GradientButton btnDoAn;
-        private Guna.UI2.WinForms.Guna2GradientButton btnDoUong;
+        private Guna.UI2.WinForms.Guna2GradientButton btnDonHangChuaXacNhan;
     }
 }

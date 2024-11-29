@@ -232,6 +232,7 @@
             this.btnDonHang.Size = new System.Drawing.Size(135, 125);
             this.btnDonHang.TabIndex = 3;
             this.btnDonHang.Text = "Đơn hàng";
+            this.btnDonHang.Click += new System.EventHandler(this.btnDonHang_Click);
             // 
             // guna2GradientTileButton1
             // 
@@ -443,6 +444,7 @@
             this.notifPDonHang.Size = new System.Drawing.Size(27, 20);
             this.notifPDonHang.TargetControl = this.btnDonHang;
             this.notifPDonHang.Text = "99";
+            this.notifPDonHang.Visible = false;
             // 
             // frmTrangChu
             // 

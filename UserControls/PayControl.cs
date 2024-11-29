@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Phan_Mem_Quan_Ly.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,12 +32,12 @@ namespace Phan_Mem_Quan_Ly
         {
             decimal TongGiaTien=0.00m;
             TongGiaTien = DonGiaSP * nudSoLuong.Value;
-            lblDonGia.Text = TongGiaTien.ToString("C", new CultureInfo("vi-VN"));
+            lblDonGia.Text = TongGiaTien.ToString(/*"C", new CultureInfo("vi-VN")*/);
         }
 
         private void PayControl_Load(object sender, EventArgs e)
         {
-          DonGiaSP = decimal.Parse(lblDonGia.Text.Replace(" ₫", ""));
+          DonGiaSP = decimal.Parse(lblDonGia.Text/*.Replace(" ₫", "")*/);
         }
         public string TenSP { get => lblTenSP.Text; set=> lblTenSP.Text = value; }
         public string DonGia { get=> lblDonGia.Text; set=> lblDonGia.Text = value; }

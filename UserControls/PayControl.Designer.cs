@@ -153,13 +153,12 @@
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2NumericUpDown nudSoLuong;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         public Guna.UI2.WinForms.Guna2PictureBox btnXoa;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblSize;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTenSP;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblDonGia;
+        public Guna.UI2.WinForms.Guna2NumericUpDown nudSoLuong;
     }
 }
