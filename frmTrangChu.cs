@@ -44,6 +44,13 @@ namespace Phan_Mem_Quan_Ly
                 {
                     banHang.TimKiemSP(txtTimKiem.Text);
                 };
+                txtTimKiem.KeyDown += (sender, e) =>
+                {
+                    if(e.KeyCode == Keys.Enter)
+                    {
+                        banHang.TimKiemSP(txtTimKiem.Text);
+                    }
+                };
                 txtTimKiem.TextChanged += (sender, e) =>
                 {
                     if(string.IsNullOrEmpty(txtTimKiem.Text))
