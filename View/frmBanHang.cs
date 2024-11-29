@@ -32,7 +32,7 @@ namespace Phan_Mem_Quan_Ly.View
                 item.DonGia_S = sp.DonGia_S.ToString();
                 item.DonGia_M = sp.DonGia_M.ToString();
                 item.DonGia_L = sp.DonGia_L.ToString();
-                item.DonGia_SP = sp.DonGia_SP.ToString()+ " ₫";
+                item.DonGia_SP = sp.DonGia_SP.ToString();
                 item.BackgroundImage = MainFn.ByteArrayToImage(sp.AnhSP);
                 item.MaLoai = sp.MaLoai;
                 // Tạo sự kiện của sản phẩm đồ uống (Mã Loại đồ uống: ML01)
@@ -43,35 +43,13 @@ namespace Phan_Mem_Quan_Ly.View
                     {
                         if (item.SizeS)
                         {
-                            PayControl pay = new PayControl();
-                            {
-                                pay.TenSP = item.TenSP;
-                                pay.DonGia = item.DonGia_S;
-                                pay.SizeSP = "Size S";
-                                pay.Tag = item.Tag; // Thêm tên tag từng paycontrol với mã sản phẩm tương ứng.
-                                pay.btnXoa.Click += (c, d) =>
-                                {
-                                    item.SizeS = false;
-                                    if (!item.SizeS && !item.SizeM && !item.SizeL)
-                                    {
-                                        item.btnChecked.Visible = false;
-                                        item.pnChecked.BorderColor = Color.Transparent;
-                                        return;
-                                    }
-                                };
-                            }
-                            flplstMua.Controls.Add(pay);
+                            CreatePayCtrl(item, "Size S");
                         }
                         else
                         {
-                            var controlToRemove = flplstMua.Controls.OfType<PayControl>()
-                            .FirstOrDefault(pay => pay.Tag.Equals(item.Tag) && pay.DonGia.Equals(item.DonGia_S));
-                            if (controlToRemove != null)
-                            {
-                                flplstMua.Controls.Remove(controlToRemove);
-                            }
+                            DeletePayCtrl(item, "Size S");
                         }
-
+                        TinhTongTien();
                     };
                     // Sự kiện đồ uống size M
                     item.btnSizeM.Click += (a, b) =>
@@ -79,35 +57,14 @@ namespace Phan_Mem_Quan_Ly.View
 
                         if (item.SizeM)
                         {
-                            PayControl pay = new PayControl();
-                            {
-                                pay.TenSP = item.TenSP;
-                                pay.DonGia = item.DonGia_M;
-                                pay.SizeSP = "Size M";
-                                pay.Tag = item.Tag; 
-                                pay.btnXoa.Click += (c, d) =>
-                                {
-                                    item.SizeM = false;
-                                    if (!item.SizeS && !item.SizeM && !item.SizeL)
-                                    {
-                                        item.btnChecked.Visible = false;
-                                        item.pnChecked.BorderColor = Color.Transparent;
-                                        return;
-                                    }
-                                };
-                            }
-                            flplstMua.Controls.Add(pay);
+                            CreatePayCtrl(item, "Size M");
+
                         }
                         else
                         {
-                            var controlToRemove = flplstMua.Controls.OfType<PayControl>()
-                            .FirstOrDefault(pay => pay.Tag.Equals(item.Tag) && pay.DonGia.Equals(item.DonGia_M));
-                            if (controlToRemove != null)
-                            {
-                                flplstMua.Controls.Remove(controlToRemove);
-                            }
+                            DeletePayCtrl(item, "Size M");
                         }
-
+                        TinhTongTien();
                     };
                     // Sự kiện đồ uống size L
                     item.btnSizeL.Click += (a, b) =>
@@ -115,36 +72,15 @@ namespace Phan_Mem_Quan_Ly.View
 
                         if (item.SizeL)
                         {
-                            PayControl pay = new PayControl();
-                            {
-                                pay.TenSP = item.TenSP;
-                                pay.DonGia = item.DonGia_L;
-                                pay.SizeSP = "Size L";
-                                pay.Tag = item.Tag; 
-                                pay.btnXoa.Click += (c, d) =>
-                                {
-                                    item.SizeL = false;
-                                    if (!item.SizeS && !item.SizeM && !item.SizeL)
-                                    {
-                                        item.btnChecked.Visible = false;
-                                        item.pnChecked.BorderColor = Color.Transparent;
-                                        return;
-                                    }
-                                };
-                            }
-                            flplstMua.Controls.Add(pay);
+                            CreatePayCtrl(item, "Size L");
                         }
                         else
                         {
-                            var controlToRemove = flplstMua.Controls.OfType<PayControl>()
-                            .FirstOrDefault(pay => pay.Tag.Equals(item.Tag) && pay.DonGia.Equals(item.DonGia_L));
-                            if (controlToRemove != null)
-                            {
-                                flplstMua.Controls.Remove(controlToRemove);
-                            }
+                            DeletePayCtrl(item, "Size L");
                         }
+                        TinhTongTien();
 
-                    }; 
+                    };
                 } // kết thúc if
                 // Tạo sự kiện của sản phẩm đồ ăn (Mã Loại đồ uống: ML02)
                 else
@@ -170,6 +106,7 @@ namespace Phan_Mem_Quan_Ly.View
                                 pay.Tag = item.Tag; // thêm tên tag từng paycontrol với mã sản phẩm tương ứng.
                                 pay.btnXoa.Click += (c, d) =>
                                 {
+                                    TinhTongTien();
                                     item.btnChecked.Visible = false;
                                     item.pnChecked.BorderColor = Color.Transparent;
                                 };
@@ -187,7 +124,7 @@ namespace Phan_Mem_Quan_Ly.View
                                 flplstMua.Controls.Remove(controlToRemove);
                             }
                         }
-
+                        TinhTongTien();
                     };
 
                 }
@@ -196,7 +133,51 @@ namespace Phan_Mem_Quan_Ly.View
 
             flpSP.Controls.Add(item);
         }
-       
+        private void CreatePayCtrl(ItemControl item, string size)
+        {
+            PayControl pay = new PayControl();
+            {
+                pay.TenSP = item.TenSP;
+                pay.DonGia = item.DonGia_S;
+                pay.SizeSP = size;
+                pay.Tag = item.Tag; // Thêm tên tag từng paycontrol với mã sản phẩm tương ứng.
+                pay.btnXoa.Click += (c, d) =>
+                {
+                    switch (size)
+                    {
+                        case "Size S": item.SizeS = false; break;
+                        case "Size M": item.SizeM = false; break;
+                        case "Size L": item.SizeL = false; break;
+                    }
+                    if (!item.SizeS && !item.SizeM && !item.SizeL)
+                    {
+                        TinhTongTien();
+                        item.btnChecked.Visible = false;
+                        item.pnChecked.BorderColor = Color.Transparent;
+                        return;
+                    }
+                };
+                pay.nudSoLuong.ValueChanged += (c, d) =>
+                {
+                    TinhTongTien();
+                };
+            }
+            flplstMua.Controls.Add(pay);
+        }
+        private void DeletePayCtrl(ItemControl item, string size)
+        {
+            var controlToRemove = flplstMua.Controls.OfType<PayControl>()
+            .FirstOrDefault(pay => pay.Tag.Equals(item.Tag) && pay.SizeSP.Equals(size));
+            if (controlToRemove != null)
+            {
+                flplstMua.Controls.Remove(controlToRemove);
+            }
+        }
+        public void TinhTongTien()
+        {
+            decimal TongTien = flplstMua.Controls.OfType<PayControl>().Sum(p => decimal.Parse(p.DonGia));
+            lblThanhTien.Text = TongTien.ToString("C", new CultureInfo("vi-VN"));
+        }
         public void loadDanhMuc()
         {
             var lstSanPham = fn_SanPhamRespository.GetAllSanPham();
@@ -225,7 +206,7 @@ namespace Phan_Mem_Quan_Ly.View
                     AddSanPham(sp);
                 }
             }
-           
+
 
             // LOAD flpSP sau khi xóa ( có trong flpSP, không có trong lstSanPham)
             foreach (var item in flpSP.Controls.OfType<ItemControl>())
@@ -265,14 +246,14 @@ namespace Phan_Mem_Quan_Ly.View
         private void btnPhanLoaiDoUong_Click(object sender, EventArgs e)
         {
             // Ẩn những sản phẩm có mã loại khác với mã loại ML01 ( Đồ Uống)
-            foreach(var item in flpSP.Controls)
+            foreach (var item in flpSP.Controls)
             {
                 var i = (ItemControl)item;
-                if(!i.MaLoai.Equals("ML01"))
-                    i.Visible= false;
-                else 
+                if (!i.MaLoai.Equals("ML01"))
+                    i.Visible = false;
+                else
                     i.Visible = true;
-            }    
+            }
         }
 
         private void btnPhanLoaiDoAn_Click(object sender, EventArgs e)
@@ -294,8 +275,13 @@ namespace Phan_Mem_Quan_Ly.View
             foreach (var item in flpSP.Controls)
             {
                 var i = (ItemControl)item;
-                    i.Visible = true;
+                i.Visible = true;
             }
+        }
+
+        private void btnThanhToan_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

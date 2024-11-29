@@ -68,5 +68,10 @@ namespace Phan_Mem_Quan_Ly
         {
             loadfrm("NhapSP", new frmNhapSP());
         }
+
+        private void btnDonHang_Click(object sender, EventArgs e)
+        {
+            loadfrm("DonHang", new frmDonHang());
+        }
     }
 }
