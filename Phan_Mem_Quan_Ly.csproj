@@ -119,11 +119,11 @@
     <Compile Include="TabControl\frmDoAn.Designer.cs">
       <DependentUpon>frmDoAn.cs</DependentUpon>
     </Compile>
-    <Compile Include="TabControl\frmDonHangChuaXacNhan.cs">
+    <Compile Include="TabControl\frmHoaDonChuaXacNhan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TabControl\frmDonHangChuaXacNhan.Designer.cs">
-      <DependentUpon>frmDonHangChuaXacNhan.cs</DependentUpon>
+    <Compile Include="TabControl\frmHoaDonChuaXacNhan.Designer.cs">
+      <DependentUpon>frmHoaDonChuaXacNhan.cs</DependentUpon>
     </Compile>
     <Compile Include="TabControl\frmDoUong.cs">
       <SubType>Form</SubType>
@@ -161,11 +161,11 @@
     <Compile Include="View\frmBanHang.Designer.cs">
       <DependentUpon>frmBanHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmDonHang.cs">
+    <Compile Include="View\frmQLHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmDonHang.Designer.cs">
-      <DependentUpon>frmDonHang.cs</DependentUpon>
+    <Compile Include="View\frmQLHoaDon.Designer.cs">
+      <DependentUpon>frmQLHoaDon.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmQLNhanVien.cs">
       <SubType>Form</SubType>
@@ -173,11 +173,11 @@
     <Compile Include="View\frmQLNhanVien.Designer.cs">
       <DependentUpon>frmQLNhanVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="View\frmNhapSP.cs">
+    <Compile Include="View\frmQLNhapSP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\frmNhapSP.Designer.cs">
-      <DependentUpon>frmNhapSP.cs</DependentUpon>
+    <Compile Include="View\frmQLNhapSP.Designer.cs">
+      <DependentUpon>frmQLNhapSP.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="PartialView\frmChiTiet.resx">
       <DependentUpon>frmChiTiet.cs</DependentUpon>
@@ -207,8 +207,8 @@
     <EmbeddedResource Include="TabControl\frmDoAn.resx">
       <DependentUpon>frmDoAn.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="TabControl\frmDonHangChuaXacNhan.resx">
-      <DependentUpon>frmDonHangChuaXacNhan.cs</DependentUpon>
+    <EmbeddedResource Include="TabControl\frmHoaDonChuaXacNhan.resx">
+      <DependentUpon>frmHoaDonChuaXacNhan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TabControl\frmDoUong.resx">
       <DependentUpon>frmDoUong.cs</DependentUpon>
@@ -228,14 +228,14 @@
     <EmbeddedResource Include="View\frmBanHang.resx">
       <DependentUpon>frmBanHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmDonHang.resx">
-      <DependentUpon>frmDonHang.cs</DependentUpon>
+    <EmbeddedResource Include="View\frmQLHoaDon.resx">
+      <DependentUpon>frmQLHoaDon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmQLNhanVien.resx">
       <DependentUpon>frmQLNhanVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmNhapSP.resx">
-      <DependentUpon>frmNhapSP.cs</DependentUpon>
+    <EmbeddedResource Include="View\frmQLNhapSP.resx">
+      <DependentUpon>frmQLNhapSP.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.SanPham.datasource" />

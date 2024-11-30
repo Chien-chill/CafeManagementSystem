@@ -15,16 +15,17 @@ namespace Phan_Mem_Quan_Ly.Model
         public string MaNV { get; set; }
         public string MaSK { get; set; }
         public DateTime NgayTao { get; set; }
+        public string GioRa { get; set; }
+        public string GioVao { get; set; }
         public decimal TongTien {  get; set; }
         public string TrangThai {  get; set; }
         public DataTable ChiTietHD  { get; set; }
         public HoaDon()
         {
             ChiTietHD = new DataTable("ChiTietHD");
-            // Thêm cột vào DataTable
-            ChiTietHD.Columns.Add("Ma_SP", typeof(string));    // Mã sản phẩm
-            ChiTietHD.Columns.Add("SoLuong", typeof(int));     // Số lượng
-            ChiTietHD.Columns.Add("DonGia", typeof(decimal));  // Đơn giá
+            ChiTietHD.Columns.Add("Ma_SP", typeof(string));   
+            ChiTietHD.Columns.Add("SoLuong", typeof(int));    
+            ChiTietHD.Columns.Add("DonGia", typeof(decimal)); 
         }
     }
 }

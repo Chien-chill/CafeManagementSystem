@@ -41,12 +41,13 @@ namespace Phan_Mem_Quan_Ly.View
 
         private void btnDonHangChuaXacNhan_Click(object sender, EventArgs e)
         {
-            loadPage("DonHangChuaXacNhan", new frmDonHangChuaXacNhan());
+            loadPage("DonHangChuaXacNhan", new frmHoaDonChuaXacNhan());
         }
 
         private void frmDonHang_Load(object sender, EventArgs e)
         {
             btnDonHangChuaXacNhan_Click(sender, e); 
+            btnDonHangChuaXacNhan.Checked = true;
         }
     }
 }
