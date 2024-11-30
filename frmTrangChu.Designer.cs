@@ -493,6 +493,6 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2NotificationPaint notifPDonHang;
+        public Guna.UI2.WinForms.Guna2NotificationPaint notifPDonHang;
     }
 }

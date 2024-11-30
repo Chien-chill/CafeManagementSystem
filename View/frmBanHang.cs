@@ -109,6 +109,11 @@ namespace Phan_Mem_Quan_Ly.View
                                     TinhTongTien();
                                     item.btnChecked.Visible = false;
                                     item.pnChecked.BorderColor = Color.Transparent;
+
+                                };
+                                pay.nudSoLuong.ValueChanged += (sender, e) =>
+                                {
+                                    TinhTongTien();
                                 };
                             }
                             flplstMua.Controls.Add(pay);
@@ -281,7 +286,33 @@ namespace Phan_Mem_Quan_Ly.View
 
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                var hd = new HoaDon();
+                {
+                    hd.MaKH = "KH01";
+                    hd.MaNV = "NV01";
+                    hd.MaSK = "SK01";
+                    foreach (var item in flplstMua.Controls)
+                    {
+                        var i = (PayControl)item;
+                        hd.ChiTietHD.Rows.Add(i.Tag, i.nudSoLuong.Value, i.DonGia);
+                    }
+                }
+                bool result = fn_HoaDonRespository.AddHoaDon(hd);
+                if (result)
+                {
+                    MessageBox.Show("Thêm thành công");
+                }
+                else
+                {
+                    MessageBox.Show("Thêm thất bại");
+                }    
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi thêm :" + ex.Message);
+            }
         }
     }
 }
