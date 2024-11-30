@@ -16,5 +16,13 @@ namespace Phan_Mem_Quan_Ly.TabControl
         {
             InitializeComponent();
         }
+
+        private void frmDonHangChuaXacNhan_Load(object sender, EventArgs e)
+        {
+            if (flpDonHang.Controls.Count > 0)
+            {
+                
+            }
+        }
     }
 }
