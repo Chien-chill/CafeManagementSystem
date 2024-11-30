@@ -1,6 +1,6 @@
 ﻿namespace Phan_Mem_Quan_Ly.TabControl
 {
-    partial class frmDonHangChuaXacNhan
+    partial class frmHoaDonChuaXacNhan
     {
         /// <summary>
         /// Required designer variable.

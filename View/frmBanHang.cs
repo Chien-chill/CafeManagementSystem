@@ -143,7 +143,7 @@ namespace Phan_Mem_Quan_Ly.View
             PayControl pay = new PayControl();
             {
                 pay.TenSP = item.TenSP;
-                pay.DonGia = item.DonGia_S;
+                pay.DonGia =(size.Equals("Size S"))? item.DonGia_S:((size.Equals("Size M"))?item.DonGia_M: item.DonGia_L);
                 pay.SizeSP = size;
                 pay.Tag = item.Tag; // Thêm tên tag từng paycontrol với mã sản phẩm tương ứng.
                 pay.btnXoa.Click += (c, d) =>

@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Guna.UI.Lib;
+using Phan_Mem_Quan_Ly.Respository;
 using Phan_Mem_Quan_Ly.View;
 namespace Phan_Mem_Quan_Ly
 {
@@ -64,6 +65,16 @@ namespace Phan_Mem_Quan_Ly
         private void frmTrangChu_Load(object sender, EventArgs e)
         {
             btnTatCa_Click(sender, e);
+            var lstHDChuaXuLy = fn_HoaDonRespository.GetHDChuaXuLy();
+            if (lstHDChuaXuLy.Count() > 0)
+            {
+                notifPDonHang.Visible = true;
+                notifPDonHang.Text = lstHDChuaXuLy.Count.ToString("D2");
+            }
+            else
+            {
+                notifPDonHang.Visible = false;
+            }
         }
         private void btnTatCa_Click(object sender, EventArgs e)
         {

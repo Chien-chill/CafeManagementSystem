@@ -59,7 +59,7 @@ namespace Phan_Mem_Quan_Ly.PartialView
                 txtDonGiaS.Visible = txtDonGiaL.Visible = txtDonGiaM.Visible = btnSizeS.Visible = btnSizeM.Visible = btnSizeL.Visible = false;
                 lblMoTa.Location = new Point(32, 396);
                 txtMoTa.Location = new Point(195, 388);
-                if(frmDoAn.DoAn !=null)
+                if (frmDoAn.DoAn != null)
                 {
                     btnThem.Visible = false;
                     btnSua.Visible = true;
@@ -94,8 +94,8 @@ namespace Phan_Mem_Quan_Ly.PartialView
                     sp.DonGia_S = (string.IsNullOrEmpty(txtDonGiaS.Text)) ? 0 : decimal.Parse(txtDonGiaS.Text);
                     sp.DonGia_M = (string.IsNullOrEmpty(txtDonGiaM.Text)) ? 0 : decimal.Parse(txtDonGiaM.Text);
                     sp.DonGia_L = (string.IsNullOrEmpty(txtDonGiaL.Text)) ? 0 : decimal.Parse(txtDonGiaL.Text);
-                    sp.DonGia_SP = (string.IsNullOrEmpty(txtDonGia.Text))?0:decimal.Parse(txtDonGia.Text);
-                    sp.MaLoai = (frmCall.Equals("DoUong"))?"ML01":"ML02";
+                    sp.DonGia_SP = (string.IsNullOrEmpty(txtDonGia.Text)) ? 0 : decimal.Parse(txtDonGia.Text);
+                    sp.MaLoai = (frmCall.Equals("DoUong")) ? "ML01" : "ML02";
                 }
                 if (MainFn.CompareImages(picSP.Image, DefaultImage) || picSP.Image == null)
                 {
@@ -135,6 +135,8 @@ namespace Phan_Mem_Quan_Ly.PartialView
         }
         private void btnSua_Click(object sender, EventArgs e)
         {
+            try
+            {
                 var sp = new SanPham();
                 {
                     sp.MaSP = txtMaSP.Text;
@@ -147,33 +149,36 @@ namespace Phan_Mem_Quan_Ly.PartialView
                     sp.DonGia_SP = (string.IsNullOrEmpty(txtDonGia.Text)) ? 0 : decimal.Parse(txtDonGia.Text);
                     sp.MaLoai = (frmCall.Equals("DoUong")) ? "ML01" : "ML02";
                 }
-                    if (!SanPham.KiemTraSP(sp, out string errorMessage))
+                if (!SanPham.KiemTraSP(sp, out string errorMessage))
+                {
+                    Mss.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+                    Mss.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+                    Mss.Show($"Sửa thất bại: \n{errorMessage}");
+                }
+                else
+                {
+                    this.DialogResult = DialogResult.OK;
+                    bool result = fn_SanPhamRespository.UpdateSanPham(sp);
+                    frmDoUong.DoUong = null;
+                    frmDoAn.DoAn = null;
+                    if (result)
                     {
-                        Mss.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-                        Mss.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
-                        Mss.Show($"Sửa thất bại: \n{errorMessage}");
+                        Mss.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+                        Mss.Show("Sửa thành công");
                     }
                     else
                     {
-                        this.DialogResult = DialogResult.OK;
-                        bool result = fn_SanPhamRespository.UpdateSanPham(sp);
-                        frmDoUong.DoUong = null;
-                        frmDoAn.DoAn = null;
-                        if (result)
-                        {
-                            Mss.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
-                            Mss.Show("Sửa thành công");
-                        }
-                        else
-                        {
-                            Mss.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
-                            Mss.Show("Sửa thất bại");
-                        }
+                        Mss.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+                        Mss.Show("Sửa thất bại");
                     }
-          
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi Sửa: " + ex.Message);
+            }
+
         }
-
-
 
         private void btnSizeS_Click(object sender, EventArgs e)
         {
