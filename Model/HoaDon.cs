@@ -14,7 +14,7 @@ namespace Phan_Mem_Quan_Ly.Model
         public string MaKH { get; set; }
         public string MaNV { get; set; }
         public string MaSK { get; set; }
-        public DateTime NgayTao { get; set; }
+        public string NgayTao { get; set; }
         public string GioRa { get; set; }
         public string GioVao { get; set; }
         public decimal TongTien {  get; set; }

@@ -22,6 +22,8 @@ namespace Phan_Mem_Quan_Ly.UserControls
         public string MaSK { get => lblMaSK.Text; set => lblMaSK.Text = value; }
         public string TongTien { get => lblTongTien.Text; set => lblTongTien.Text = value; }
         public string NgayTao { get => lblNgayTao.Text; set => lblNgayTao.Text = value; }
+        public string GioVao { get => lblGioVao.Text; set => lblGioVao.Text = value; }
+
         public OrderControl()
         {
             InitializeComponent();
@@ -38,6 +40,10 @@ namespace Phan_Mem_Quan_Ly.UserControls
                 bool result = fn_HoaDonRespository.UPDATEHoaDon(hd, "Xác Nhận");
                 if (result)
                 {
+                    if (this.Parent != null)
+                    {
+                        this.Parent.Controls.Remove(this);
+                    }
                     MessageBox.Show("Xác Nhận Thành Công");
                 }
                 else
@@ -62,6 +68,10 @@ namespace Phan_Mem_Quan_Ly.UserControls
                 bool result = fn_HoaDonRespository.UPDATEHoaDon(hd, "Hủy");
                 if (result)
                 {
+                    if (this.Parent != null)
+                    {
+                        this.Parent.Controls.Remove(this);
+                    }
                     MessageBox.Show("Hủy Thành Công");
                 }
                 else

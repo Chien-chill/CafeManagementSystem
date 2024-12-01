@@ -49,7 +49,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Guna.UI">
-      <HintPath>..\..\..\Downloads\Guna.UI.dll</HintPath>
+      <HintPath>C:\Users\tranc\Downloads\Guna.UI.dll</HintPath>
     </Reference>
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
@@ -281,6 +281,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icons8-strawberry-cheesecake-50-hover.png" />
+    <None Include="Resources\icons8-soda-48-hover.png" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="bin\Debug\QLCF.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -288,8 +292,10 @@
       <DependentUpon>QLCF.mdf</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <None Include="Resources\icons8-strawberry-cheesecake-50-hover.png" />
-    <None Include="Resources\icons8-soda-48-hover.png" />
+    <Content Include="QLCF.mdf" />
+    <Content Include="QLCF_log.ldf">
+      <DependentUpon>QLCF.mdf</DependentUpon>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

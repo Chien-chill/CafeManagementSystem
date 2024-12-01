@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Guna.UI.Lib;
 using Phan_Mem_Quan_Ly.Respository;
 using Phan_Mem_Quan_Ly.View;
+using System.Security.Cryptography;
 namespace Phan_Mem_Quan_Ly
 {
     public partial class frmTrangChu : Form
@@ -47,15 +48,22 @@ namespace Phan_Mem_Quan_Ly
                 };
                 txtTimKiem.KeyDown += (sender, e) =>
                 {
-                    if(e.KeyCode == Keys.Enter)
+                    if (e.KeyCode == Keys.Enter)
                     {
                         banHang.TimKiemSP(txtTimKiem.Text);
                     }
                 };
                 txtTimKiem.TextChanged += (sender, e) =>
                 {
-                    if(string.IsNullOrEmpty(txtTimKiem.Text))
-                    banHang.TimKiemSP(txtTimKiem.Text);
+                    if (string.IsNullOrEmpty(txtTimKiem.Text))
+                        banHang.TimKiemSP(txtTimKiem.Text);
+                };
+                banHang.btnThanhToan.Click += (sender, e) =>
+                {
+                    if(banHang.checkHD)
+                    {
+                        frmTrangChu_Load(sender, e);
+                    }
                 };
                 banHang.loadDanhMuc();
             }

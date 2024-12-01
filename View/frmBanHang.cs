@@ -186,7 +186,10 @@ namespace Phan_Mem_Quan_Ly.View
         public void loadDanhMuc()
         {
             var lstSanPham = fn_SanPhamRespository.GetAllSanPham();
-            lblSoLuong.Text = lstSanPham.Count().ToString() + "+ Sản Phẩm";
+            if (lstSanPham.Any())
+            {
+                lblSoLuong.Text = lstSanPham.Count().ToString() + "+ Sản Phẩm";
+            }
             flpSP.SuspendLayout();
 
             // LOAD flpSP sau khi sửa ( có trong lstSPUpdate, có trong flpSP)
@@ -204,7 +207,7 @@ namespace Phan_Mem_Quan_Ly.View
 
             // LOAD flpSP sau khi thêm ( có trong lstSanPham, không có trong flpSP)
             var lstSanPhamThem = lstSanPham.Where(sp => !flpSP.Controls.OfType<ItemControl>().Any(item => item.Tag.Equals(sp.MaSP))).ToList();
-            if (lstSanPhamThem.Count > 0)
+            if (lstSanPhamThem.Any())
             {
                 foreach (var sp in lstSanPhamThem)
                 {
@@ -283,7 +286,7 @@ namespace Phan_Mem_Quan_Ly.View
                 i.Visible = true;
             }
         }
-
+        public bool checkHD = false;
         private void btnThanhToan_Click(object sender, EventArgs e)
         {
             try
@@ -303,6 +306,7 @@ namespace Phan_Mem_Quan_Ly.View
                 if (result)
                 {
                     MessageBox.Show("Thêm thành công");
+                    checkHD = true;
                 }
                 else
                 {

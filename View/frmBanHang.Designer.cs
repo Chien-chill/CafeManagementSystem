@@ -286,7 +286,7 @@
             this.lblSoLuong.Name = "lblSoLuong";
             this.lblSoLuong.Size = new System.Drawing.Size(173, 51);
             this.lblSoLuong.TabIndex = 9;
-            this.lblSoLuong.Text = "N+ Sản Phẩm";
+            this.lblSoLuong.Text = "0+ Sản Phẩm";
             this.lblSoLuong.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2Separator1
@@ -427,7 +427,6 @@
 
         private System.Windows.Forms.Panel panel1;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2GradientButton btnThanhToan;
         private Guna.UI.WinForms.GunaVScrollBar gunaVScrollBar1;
         private System.Windows.Forms.FlowLayoutPanel flplstMua;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel1;
@@ -447,5 +446,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTongTien;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
+        public Guna.UI2.WinForms.Guna2GradientButton btnThanhToan;
     }
 }
