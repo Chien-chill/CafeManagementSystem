@@ -16,7 +16,6 @@ namespace Phan_Mem_Quan_Ly
         [STAThread]
         static void Main()
         {
-
             if (Environment.OSVersion.Version.Major >= 6)
             {
                 SetProcessDPIAware();

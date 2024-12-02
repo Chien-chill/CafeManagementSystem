@@ -186,7 +186,7 @@ namespace Phan_Mem_Quan_Ly.View
         public void loadDanhMuc()
         {
             var lstSanPham = fn_SanPhamRespository.GetAllSanPham();
-            if (lstSanPham.Any())
+            if (lstSanPham!= null)
             {
                 lblSoLuong.Text = lstSanPham.Count().ToString() + "+ Sản Phẩm";
             }

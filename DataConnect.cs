@@ -15,7 +15,6 @@ namespace Phan_Mem_Quan_Ly
             try
             {
                 string conn = ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString;
-                Console.WriteLine(AppDomain.CurrentDomain.GetData("DataDirectory"));
                 return conn;
             }
             catch (ConfigurationErrorsException ex)
