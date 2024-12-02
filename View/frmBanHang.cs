@@ -1,4 +1,5 @@
 ﻿using Phan_Mem_Quan_Ly.Model;
+using Phan_Mem_Quan_Ly.PartialView;
 using Phan_Mem_Quan_Ly.Respository;
 using Phan_Mem_Quan_Ly.TabControl;
 using System;
@@ -291,27 +292,35 @@ namespace Phan_Mem_Quan_Ly.View
         {
             try
             {
-                var hd = new HoaDon();
+                if (flplstMua.Controls.OfType<PayControl>().Any())
                 {
-                    hd.MaKH = "KH01";
-                    hd.MaNV = "NV01";
-                    hd.MaSK = "SK01";
-                    foreach (var item in flplstMua.Controls)
+                    var hd = new HoaDon();
                     {
-                        var i = (PayControl)item;
-                        hd.ChiTietHD.Rows.Add(i.Tag, i.nudSoLuong.Value, i.DonGia);
+                        hd.MaKH = "KH01";
+                        hd.MaNV = "NV01";
+                        hd.MaSK = "SK01";
+                        foreach (var item in flplstMua.Controls)
+                        {
+                            var i = (PayControl)item;
+                            hd.ChiTietHD.Rows.Add(i.Tag, i.nudSoLuong.Value, i.DonGia);
+                        }
                     }
-                }
-                bool result = fn_HoaDonRespository.AddHoaDon(hd);
-                if (result)
-                {
-                    MessageBox.Show("Thêm thành công");
-                    checkHD = true;
+                    bool result = fn_HoaDonRespository.AddHoaDon(hd);
+                    if (result)
+                    {
+                        MessageBox.Show("Thêm thành công");
+                        checkHD = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Thêm thất bại");
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Thêm thất bại");
-                }    
+                    ToastMSS toast = new ToastMSS("Vui lòng chọn đồ !","INFO");
+                    toast.Show();
+                }
             }
             catch (Exception ex)
             {

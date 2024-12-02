@@ -73,9 +73,29 @@ namespace Phan_Mem_Quan_Ly.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_cancel_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-cancel-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_category_64 {
             get {
                 object obj = ResourceManager.GetObject("icons8-category-64", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_checked_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-checked-32", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -106,6 +126,16 @@ namespace Phan_Mem_Quan_Ly.Properties {
         internal static System.Drawing.Bitmap icons8_image_96 {
             get {
                 object obj = ResourceManager.GetObject("icons8-image-96", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_info_50 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-info-50", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

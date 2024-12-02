@@ -12,6 +12,7 @@ using Guna.UI.Lib;
 using Phan_Mem_Quan_Ly.Respository;
 using Phan_Mem_Quan_Ly.View;
 using System.Security.Cryptography;
+using Phan_Mem_Quan_Ly.PartialView;
 namespace Phan_Mem_Quan_Ly
 {
     public partial class frmTrangChu : Form
@@ -74,7 +75,7 @@ namespace Phan_Mem_Quan_Ly
         {
             btnTatCa_Click(sender, e);
             var lstHDChuaXuLy = fn_HoaDonRespository.GetHDChuaXuLy();
-            if (lstHDChuaXuLy.Count() > 0)
+            if (lstHDChuaXuLy.Any())
             {
                 notifPDonHang.Visible = true;
                 notifPDonHang.Text = lstHDChuaXuLy.Count.ToString("D2");
@@ -98,6 +99,10 @@ namespace Phan_Mem_Quan_Ly
         private void btnDonHang_Click(object sender, EventArgs e)
         {
             loadfrm("DonHang", new frmDonHang());
+        }
+
+        private void btnQLKhachHang_Click(object sender, EventArgs e)
+        {
         }
     }
 }
