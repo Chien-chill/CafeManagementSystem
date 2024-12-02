@@ -1,4 +1,5 @@
 ﻿using Phan_Mem_Quan_Ly.Model;
+using Phan_Mem_Quan_Ly.PartialView;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -72,9 +73,8 @@ namespace Phan_Mem_Quan_Ly
         {
             if (!btnSizeS.Checked && !btnSizeM.Checked && !btnSizeL.Checked)
             {
-                MSS.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
-                MSS.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
-                MSS.Show("Hãy Chọn Size Trước");
+                ToastMSS toast = new ToastMSS("Hãy chọn size trước !", "INFO");
+                toast.Show();
                 return;
             }
             //if (!btnChecked.Visible)

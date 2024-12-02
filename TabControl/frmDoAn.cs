@@ -81,7 +81,8 @@ namespace Phan_Mem_Quan_Ly.TabControl
                     bool result = fn_SanPhamRespository.DeleteSanPham(sp);
                     if (result)
                     {
-                        MessageBox.Show("Xóa thành công");
+                        ToastMSS ts = new ToastMSS("Xóa thành công !", "DELETE");
+                        ts.Show();
                         LoadDataSP();
                     }
                     else

@@ -117,8 +117,8 @@ namespace Phan_Mem_Quan_Ly.PartialView
                         bool result = fn_SanPhamRespository.AddSanPham(sp);
                         if (result)
                         {
-                            Mss.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
-                            Mss.Show("Thêm thành công");
+                            ToastMSS ts = new ToastMSS("Thêm thành công !", "SUCCESS");
+                            ts.Show();
                         }
                         else
                         {
@@ -163,8 +163,8 @@ namespace Phan_Mem_Quan_Ly.PartialView
                     frmDoAn.DoAn = null;
                     if (result)
                     {
-                        Mss.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
-                        Mss.Show("Sửa thành công");
+                        ToastMSS ts = new ToastMSS("Sửa thành công !", "SUCCESS");
+                        ts.Show();
                     }
                     else
                     {

@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web.UI.WebControls;
 using System.Windows.Forms;
+using Phan_Mem_Quan_Ly;
 
 namespace Phan_Mem_Quan_Ly.UserControls
 {
@@ -44,7 +45,8 @@ namespace Phan_Mem_Quan_Ly.UserControls
                     {
                         this.Parent.Controls.Remove(this);
                     }
-                    MessageBox.Show("Xác Nhận Thành Công");
+                    ToastMSS ts = new ToastMSS("Xác nhận thành công !", "SUCCESS");
+                    ts.Show();
                 }
                 else
                 {
@@ -61,22 +63,27 @@ namespace Phan_Mem_Quan_Ly.UserControls
         {
             try
             {
-                var hd = new HoaDon();
+                MssBox mss = new MssBox("Bạn có muốn hủy hóa đơn "+MaHD+" ?");
+                if (mss.ShowDialog() == DialogResult.Yes)
                 {
-                    hd.MaHD = MaHD;
-                }
-                bool result = fn_HoaDonRespository.UPDATEHoaDon(hd, "Hủy");
-                if (result)
-                {
-                    if (this.Parent != null)
+                    var hd = new HoaDon();
                     {
-                        this.Parent.Controls.Remove(this);
+                        hd.MaHD = MaHD;
                     }
-                    MessageBox.Show("Hủy Thành Công");
-                }
-                else
-                {
-                    MessageBox.Show("Hủy Thất Bại");
+                    bool result = fn_HoaDonRespository.UPDATEHoaDon(hd, "Hủy");
+                    if (result)
+                    {
+                        if (this.Parent != null)
+                        {
+                            this.Parent.Controls.Remove(this);
+                        }
+                        ToastMSS ts = new ToastMSS("Hủy thành công !", "DELETE");
+                        ts.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Hủy Thất Bại");
+                    }
                 }
             }
             catch (Exception ex)
