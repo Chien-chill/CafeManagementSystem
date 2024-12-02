@@ -32,7 +32,7 @@ namespace Phan_Mem_Quan_Ly.Respository
                                 hd.MaHD = reader["Ma_HD"].ToString();
                                 hd.MaKH = reader["Ma_KH"].ToString();
                                 hd.MaNV = reader["Ma_NV"].ToString();
-                                hd.NgayTao = reader["NgayTao"].ToString();
+                                hd.NgayTao = reader["NgayTao"].ToString().Split(' ')[0];
                                 hd.GioRa = reader["GioRa"].ToString();
                                 hd.GioVao = reader["GioVao"].ToString();
                                 hd.TongTien = (decimal)reader["TongTien"];
@@ -76,7 +76,7 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL ADD hihi: " + ex.Message);
+                Console.WriteLine("Lỗi SQL ADD : " + ex.Message);
                 return false;
             }
             catch (Exception ex)

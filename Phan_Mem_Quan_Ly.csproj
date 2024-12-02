@@ -285,15 +285,8 @@
     <None Include="Resources\icons8-soda-48-hover.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\QLCF.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="bin\Debug\QLCF.mdf" />
     <Content Include="bin\Debug\QLCF_log.ldf">
-      <DependentUpon>QLCF.mdf</DependentUpon>
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="QLCF.mdf" />
-    <Content Include="QLCF_log.ldf">
       <DependentUpon>QLCF.mdf</DependentUpon>
     </Content>
   </ItemGroup>
