@@ -2,13 +2,7 @@
 using Phan_Mem_Quan_Ly.PartialView;
 using Phan_Mem_Quan_Ly.Respository;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Phan_Mem_Quan_Ly.TabControl
@@ -21,7 +15,7 @@ namespace Phan_Mem_Quan_Ly.TabControl
         }
         private void frmDoAn_Load(object sender, EventArgs e)
         {
-           LoadDataSP();
+            LoadDataSP();
         }
         public void LoadDataSP()
         {
@@ -55,7 +49,7 @@ namespace Phan_Mem_Quan_Ly.TabControl
         public static SanPham DoAn { get; set; }
         private void dtgDoAn_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(dtgDoAn.CurrentCell.OwningColumn.Name == "ThaoTacSua")
+            if (dtgDoAn.CurrentCell.OwningColumn.Name == "ThaoTacSua")
             {
                 frmThaoTac frmSuaDoAn = new frmThaoTac();
                 {
@@ -75,7 +69,7 @@ namespace Phan_Mem_Quan_Ly.TabControl
                 {
                     sp.MaSP = Convert.ToString(dtgDoAn.CurrentRow.Cells["MaDA"].Value);
                 }
-                MssBox mss = new MssBox("Bạn có muốn xóa mã "+sp.MaSP+ " ?");
+                MssBox mss = new MssBox("Bạn có muốn xóa mã " + sp.MaSP + " ?");
                 if (mss.ShowDialog() == DialogResult.Yes)
                 {
                     bool result = fn_SanPhamRespository.DeleteSanPham(sp);
