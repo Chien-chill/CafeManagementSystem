@@ -30,6 +30,7 @@ namespace Phan_Mem_Quan_Ly.TabControl
                 ord.MaSK = hd.MaSK;
                 ord.GioVao = hd.GioVao;
                 ord.NgayTao = hd.NgayTao;
+                ord.TongTien = hd.TongTien.ToString();
             }
             flpDonHang.Controls.Add(ord);
         }

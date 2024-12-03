@@ -47,6 +47,7 @@ namespace Phan_Mem_Quan_Ly.UserControls
                     }
                     ToastMSS ts = new ToastMSS("Xác nhận thành công !", "SUCCESS");
                     ts.Show();
+                    frmTrangChu.Instance.loadThongBao();
                 }
                 else
                 {
@@ -79,6 +80,7 @@ namespace Phan_Mem_Quan_Ly.UserControls
                         }
                         ToastMSS ts = new ToastMSS("Hủy thành công !", "DELETE");
                         ts.Show();
+                        frmTrangChu.Instance.loadThongBao();
                     }
                     else
                     {

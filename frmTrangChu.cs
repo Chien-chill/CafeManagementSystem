@@ -17,8 +17,10 @@ namespace Phan_Mem_Quan_Ly
 {
     public partial class frmTrangChu : Form
     {
+        public static frmTrangChu Instance;
         public frmTrangChu()
         {
+            Instance = this;
             InitializeComponent();
         }
         private Dictionary<string, Form> frmDic = new Dictionary<string, Form>();
@@ -74,6 +76,10 @@ namespace Phan_Mem_Quan_Ly
         private void frmTrangChu_Load(object sender, EventArgs e)
         {
             btnTatCa_Click(sender, e);
+            loadThongBao();
+        }
+        public void loadThongBao()
+        {
             var lstHDChuaXuLy = fn_HoaDonRespository.GetHDChuaXuLy();
             if (lstHDChuaXuLy.Any())
             {
