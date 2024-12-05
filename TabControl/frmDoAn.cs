@@ -32,20 +32,6 @@ namespace Phan_Mem_Quan_Ly.TabControl
                 MessageBox.Show("Lỗi không load được bảng sản phẩm" + ex.Message);
             }
         }
-        private void btnThemSP_Click(object sender, EventArgs e)
-        {
-            frmThaoTac frmThemDA = new frmThaoTac();
-            {
-                var lstDU = fn_SanPhamRespository.GetAllSanPham();
-                string MaMoi = lstDU.Max(sp => sp.MaSP);
-                frmThemDA.MaMoi = "SP" + (int.Parse(MaMoi.Substring(2, MaMoi.Length - 2)) + 1).ToString("D2");
-                frmThemDA.frmCall = "DoAn";
-                if (frmThemDA.ShowDialog() == DialogResult.OK)
-                {
-                    LoadDataSP();
-                }
-            }
-        }
         public static SanPham DoAn { get; set; }
         private void dtgDoAn_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -84,6 +70,47 @@ namespace Phan_Mem_Quan_Ly.TabControl
                         MessageBox.Show("Xóa thất bại");
                     }
                 }
+            }
+        }
+
+        private void btnThemSP_Click(object sender, EventArgs e)
+        {
+            frmThaoTac frmThemDA = new frmThaoTac();
+            {
+                var lstDU = fn_SanPhamRespository.GetAllSanPham();
+                string MaMoi = lstDU.Max(sp => sp.MaSP);
+                frmThemDA.MaMoi = "SP" + (int.Parse(MaMoi.Substring(2, MaMoi.Length - 2)) + 1).ToString("D2");
+                frmThemDA.frmCall = "DoAn";
+                if (frmThemDA.ShowDialog() == DialogResult.OK)
+                {
+                    LoadDataSP();
+                }
+            }
+
+        }
+
+        private void txtTimKiem_IconRightClick(object sender, EventArgs e)
+        {
+            try
+            {
+                var lstDA = fn_SanPhamRespository.GetDoAn();
+                if (lstDA != null && !string.IsNullOrEmpty(txtTimKiem.Text))
+                {
+                    sanPhamBindingSource.DataSource = lstDA.Where(sp =>
+                    sp.MaSP.Trim().ToLower().Contains(
+                    txtTimKiem.Text.Trim().ToLower()) ||
+                     sp.TenSP.Trim().ToLower().Contains(
+                    txtTimKiem.Text.Trim().ToLower())).ToList();
+
+                }
+                else if (string.IsNullOrEmpty(txtTimKiem.Text))
+                {
+                    sanPhamBindingSource.DataSource = lstDA;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi không load được bảng sản phẩm" + ex.Message);
             }
         }
     }

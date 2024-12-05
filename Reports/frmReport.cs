@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace Phan_Mem_Quan_Ly.Reports
 {
-    public partial class rptHoaDon : Form
+    public partial class frmReport : Form
     {
-        public rptHoaDon()
+        public frmReport()
         {
             InitializeComponent();
-        }
-
-        private void rptHoaDon_Load(object sender, EventArgs e)
-        {
-
-            this.reportViewer1.RefreshReport();
-            this.reportViewer1.RefreshReport();
         }
     }
 }
