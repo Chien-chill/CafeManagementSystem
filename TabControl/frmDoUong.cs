@@ -1,14 +1,9 @@
 ﻿using Phan_Mem_Quan_Ly.Model;
-using Phan_Mem_Quan_Ly.Respository;
 using Phan_Mem_Quan_Ly.PartialView;
+using Phan_Mem_Quan_Ly.Respository;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Phan_Mem_Quan_Ly.TabControl
@@ -18,20 +13,6 @@ namespace Phan_Mem_Quan_Ly.TabControl
         public frmDoUong()
         {
             InitializeComponent();
-        }
-        private void btnThemSP_Click(object sender, EventArgs e)
-        {
-            frmThaoTac frmThemDU = new frmThaoTac();
-            {
-                var lstDU = fn_SanPhamRespository.GetDoUong();
-                string MaMoi = lstDU.Max(sp=>sp.MaSP);
-                frmThemDU.MaMoi = "SP"+(int.Parse(MaMoi.Substring(2,MaMoi.Length-2))+1).ToString("D2");
-                frmThemDU.frmCall = "DoUong";
-                if (frmThemDU.ShowDialog() == DialogResult.OK)
-                {
-                    LoadDataSP();
-                }
-            }
         }
         public void LoadDataSP()
         {
@@ -79,7 +60,7 @@ namespace Phan_Mem_Quan_Ly.TabControl
                 }
                 MssBox mss = new MssBox("Bạn có muốn xóa mã " + sp.MaSP + " ?");
                 if (mss.ShowDialog() == DialogResult.Yes)
-                {     
+                {
                     bool result = fn_SanPhamRespository.DeleteSanPham(sp);
                     if (result)
                     {
@@ -93,15 +74,49 @@ namespace Phan_Mem_Quan_Ly.TabControl
                     }
                 }
             }
-            else if(dtgDoUong.CurrentCell.OwningColumn.Name == "ChiTietDonGia")
+            else if (dtgDoUong.CurrentCell.OwningColumn.Name == "ChiTietDonGia")
             {
 
-            }    
+            }
+        }
+        private void btnThemSP_Click_1(object sender, EventArgs e)
+        {
+            frmThaoTac frmThemDU = new frmThaoTac();
+            {
+                var lstDU = fn_SanPhamRespository.GetDoUong();
+                string MaMoi = lstDU.Max(sp => sp.MaSP);
+                frmThemDU.MaMoi = "SP" + (int.Parse(MaMoi.Substring(2, MaMoi.Length - 2)) + 1).ToString("D2");
+                frmThemDU.frmCall = "DoUong";
+                if (frmThemDU.ShowDialog() == DialogResult.OK)
+                {
+                    LoadDataSP();
+                }
+            }
         }
 
-        private void txtTimKiem_TextChanged(object sender, EventArgs e)
+        private void txtTimKiem_IconRightClick(object sender, EventArgs e)
         {
-            
+            try
+            {
+                var lstDU = fn_SanPhamRespository.GetDoUong();
+                if (lstDU != null && !string.IsNullOrEmpty(txtTimKiem.Text))
+                {
+                    SanPhambindingSource.DataSource = lstDU.Where(sp =>
+                    sp.MaSP.Trim().ToLower().Contains(
+                    txtTimKiem.Text.Trim().ToLower()) ||
+                     sp.TenSP.Trim().ToLower().Contains(
+                    txtTimKiem.Text.Trim().ToLower())).ToList();
+
+                }
+                else if (string.IsNullOrEmpty(txtTimKiem.Text))
+                {
+                    SanPhambindingSource.DataSource = lstDU;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi không load được bảng sản phẩm" + ex.Message);
+            }
         }
     }
 }

@@ -36,7 +36,6 @@
             this.dataGridViewImageColumn6 = new System.Windows.Forms.DataGridViewImageColumn();
             this.ThaoTacXoa = new System.Windows.Forms.DataGridViewImageColumn();
             this.ThaoTacSua = new System.Windows.Forms.DataGridViewImageColumn();
-            this.btnThemSP = new Guna.UI.WinForms.GunaButton();
             this.guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.dataGridViewImageColumn5 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
@@ -45,6 +44,7 @@
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dtgDoAn = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.btnThemNV = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDoAn)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,29 +82,6 @@
             this.ThaoTacSua.Name = "ThaoTacSua";
             this.ThaoTacSua.ReadOnly = true;
             this.ThaoTacSua.Width = 90;
-            // 
-            // btnThemSP
-            // 
-            this.btnThemSP.AnimationHoverSpeed = 0.07F;
-            this.btnThemSP.AnimationSpeed = 0.03F;
-            this.btnThemSP.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnThemSP.BorderColor = System.Drawing.Color.Black;
-            this.btnThemSP.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnThemSP.FocusedColor = System.Drawing.Color.Empty;
-            this.btnThemSP.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnThemSP.ForeColor = System.Drawing.Color.White;
-            this.btnThemSP.Image = ((System.Drawing.Image)(resources.GetObject("btnThemSP.Image")));
-            this.btnThemSP.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnThemSP.Location = new System.Drawing.Point(78, 52);
-            this.btnThemSP.Name = "btnThemSP";
-            this.btnThemSP.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.btnThemSP.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnThemSP.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnThemSP.OnHoverImage = null;
-            this.btnThemSP.OnPressedColor = System.Drawing.Color.Black;
-            this.btnThemSP.Size = new System.Drawing.Size(182, 56);
-            this.btnThemSP.TabIndex = 9;
-            this.btnThemSP.Text = "Thêm Mới";
             // 
             // guna2TextBox1
             // 
@@ -267,13 +244,30 @@
             this.dtgDoAn.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.Silver;
             this.dtgDoAn.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // btnThemNV
+            // 
+            this.btnThemNV.AutoRoundedCorners = true;
+            this.btnThemNV.BorderRadius = 27;
+            this.btnThemNV.CustomizableEdges.TopRight = false;
+            this.btnThemNV.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThemNV.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThemNV.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThemNV.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThemNV.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThemNV.ForeColor = System.Drawing.Color.White;
+            this.btnThemNV.Location = new System.Drawing.Point(78, 52);
+            this.btnThemNV.Name = "btnThemNV";
+            this.btnThemNV.Size = new System.Drawing.Size(182, 56);
+            this.btnThemNV.TabIndex = 13;
+            this.btnThemNV.Text = "Thêm Mới";
+            // 
             // frmNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(253)))));
             this.ClientSize = new System.Drawing.Size(1618, 895);
-            this.Controls.Add(this.btnThemSP);
+            this.Controls.Add(this.btnThemNV);
             this.Controls.Add(this.guna2TextBox1);
             this.Controls.Add(this.guna2Separator1);
             this.Controls.Add(this.dtgDoAn);
@@ -290,7 +284,6 @@
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn6;
         private System.Windows.Forms.DataGridViewImageColumn ThaoTacXoa;
         private System.Windows.Forms.DataGridViewImageColumn ThaoTacSua;
-        private Guna.UI.WinForms.GunaButton btnThemSP;
         private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn5;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn4;
@@ -299,5 +292,6 @@
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn2;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn3;
         private Guna.UI2.WinForms.Guna2DataGridView dtgDoAn;
+        private Guna.UI2.WinForms.Guna2Button btnThemNV;
     }
 }

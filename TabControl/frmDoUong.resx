@@ -279,16 +279,6 @@
         YII=
 </value>
   </data>
-  <data name="btnThemSP.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DAAACwwBP0AiyAAAAQpJREFUaEPtmcEKwjAQRPsdevZj003/Qw9+mQi2P6BJWXIIkW07kBWZB3Nx2Zkd
-        6akdCCHkdwkhXMYY7xLjkvTurCVl36ZpOus5+1iPF3k2jLsq3fA4VEL/+aZpd4lc9aztpEWPx+abXnrW
-        dmoT/bkbcD5sAALnwwYgcD5sAALnowbe+yzgvc8C3vss4L3//wXqOSq1LVhzE8ugnqNS24I1N7EM6jkq
-        tS1YcxPLoJ6jUtuCNTdBDbz3WcB7nwW891nAe58FUOB82AAEzocNQOB82AAEzh9F5trEUftf7uaPCw0j
-        Hx15vZ4/KuSPC03Djso3hBBOetY+8mJu7/E4rZkp+/DxhBDSgWH4AH8Iqj7kn9S7AAAAAElFTkSuQmCC
-</value>
-  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>227</value>
   </metadata>

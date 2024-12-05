@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 
 namespace Phan_Mem_Quan_Ly
@@ -20,6 +18,9 @@ namespace Phan_Mem_Quan_Ly
             {
                 SetProcessDPIAware();
             }
+            string databaseFolder = Path.GetFullPath(Application.StartupPath + @"\..\..\Database");
+            Console.WriteLine("Database path: " + databaseFolder);
+            AppDomain.CurrentDomain.SetData("DataDirectory", databaseFolder);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new frmTrangChu());
