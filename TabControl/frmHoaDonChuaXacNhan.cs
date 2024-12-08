@@ -2,14 +2,8 @@
 using Phan_Mem_Quan_Ly.Respository;
 using Phan_Mem_Quan_Ly.UserControls;
 using System;
-using Phan_Mem_Quan_Ly;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Phan_Mem_Quan_Ly.TabControl

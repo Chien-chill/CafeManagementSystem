@@ -45,6 +45,8 @@ namespace Phan_Mem_Quan_Ly.TabControl
                     if (frmSuaDoAn.ShowDialog() == DialogResult.OK)
                     {
                         frmDoUong.lstSpUpdate.Add(Convert.ToString(dtgDoAn.CurrentRow.Cells["MaDA"].Value));
+                        ToastMSS ts = new ToastMSS("Sửa thành công !", "SUCCESS");
+                        ts.Show();
                         LoadDataSP();
                     }
                 }
@@ -83,6 +85,8 @@ namespace Phan_Mem_Quan_Ly.TabControl
                 frmThemDA.frmCall = "DoAn";
                 if (frmThemDA.ShowDialog() == DialogResult.OK)
                 {
+                    ToastMSS ts = new ToastMSS("Thêm thành công !", "SUCCESS");
+                    ts.Show();
                     LoadDataSP();
                 }
             }

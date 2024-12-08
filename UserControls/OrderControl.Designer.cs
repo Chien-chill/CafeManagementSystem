@@ -32,6 +32,7 @@
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
             this.lblMaHD = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblNgayTao = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -39,7 +40,6 @@
             this.btnHuy = new Guna.UI2.WinForms.Guna2Button();
             this.lblMaKH = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblMaNV = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblNgayTao = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblMaSK = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -86,6 +86,19 @@
             this.guna2HtmlLabel1.TabIndex = 0;
             this.guna2HtmlLabel1.Text = "Mã Đơn Hàng :";
             this.guna2HtmlLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblNgayTao
+            // 
+            this.lblNgayTao.AutoSize = false;
+            this.lblNgayTao.BackColor = System.Drawing.Color.Transparent;
+            this.lblNgayTao.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNgayTao.ForeColor = System.Drawing.Color.White;
+            this.lblNgayTao.Location = new System.Drawing.Point(128, 5);
+            this.lblNgayTao.Name = "lblNgayTao";
+            this.lblNgayTao.Size = new System.Drawing.Size(186, 30);
+            this.lblNgayTao.TabIndex = 1;
+            this.lblNgayTao.Text = "Ngày Tạo";
+            this.lblNgayTao.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // guna2HtmlLabel3
             // 
@@ -180,19 +193,6 @@
             this.lblMaNV.Text = "Mã Nhân Viên";
             this.lblMaNV.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // lblNgayTao
-            // 
-            this.lblNgayTao.AutoSize = false;
-            this.lblNgayTao.BackColor = System.Drawing.Color.Transparent;
-            this.lblNgayTao.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNgayTao.ForeColor = System.Drawing.Color.White;
-            this.lblNgayTao.Location = new System.Drawing.Point(128, 5);
-            this.lblNgayTao.Name = "lblNgayTao";
-            this.lblNgayTao.Size = new System.Drawing.Size(186, 30);
-            this.lblNgayTao.TabIndex = 1;
-            this.lblNgayTao.Text = "Ngày Tạo";
-            this.lblNgayTao.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // guna2HtmlLabel5
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
@@ -286,7 +286,7 @@
             this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.guna2GradientPanel1);
             this.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(30, 3, 30, 3);
+            this.Margin = new System.Windows.Forms.Padding(30, 3, 30, 30);
             this.Name = "OrderControl";
             this.Size = new System.Drawing.Size(414, 457);
             this.guna2GradientPanel1.ResumeLayout(false);

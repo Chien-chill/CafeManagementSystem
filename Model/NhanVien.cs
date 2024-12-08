@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Phan_Mem_Quan_Ly.Model
 {
-    internal class NhanVien
+    public class NhanVien
     {
         public string MaNV { get; set; }
         [Required(ErrorMessage = "Tên nhân viên không được trống")]
@@ -19,7 +19,7 @@ namespace Phan_Mem_Quan_Ly.Model
         public string DiaChi { get; set; }
         [Required(ErrorMessage = "Số điện thoại không được trống")]
         public string SDT { get; set; }
-
+        public byte[] AnhNV { get; set; }
         public static bool KiemTraVN(NhanVien nv, out string errorMessage)
         {
             var context = new ValidationContext(nv);

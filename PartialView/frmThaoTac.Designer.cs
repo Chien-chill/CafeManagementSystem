@@ -242,7 +242,6 @@
             this.txtMaSP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
             this.txtMaSP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
             this.txtMaSP.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtMaSP.Enabled = false;
             this.txtMaSP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaSP.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMaSP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
@@ -251,6 +250,7 @@
             this.txtMaSP.Name = "txtMaSP";
             this.txtMaSP.PasswordChar = '\0';
             this.txtMaSP.PlaceholderText = "";
+            this.txtMaSP.ReadOnly = true;
             this.txtMaSP.SelectedText = "";
             this.txtMaSP.Size = new System.Drawing.Size(299, 60);
             this.txtMaSP.TabIndex = 2;
@@ -494,7 +494,7 @@
             this.btnDuyetAnh.ForeColor = System.Drawing.Color.White;
             this.btnDuyetAnh.Image = ((System.Drawing.Image)(resources.GetObject("btnDuyetAnh.Image")));
             this.btnDuyetAnh.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnDuyetAnh.Location = new System.Drawing.Point(635, 369);
+            this.btnDuyetAnh.Location = new System.Drawing.Point(649, 369);
             this.btnDuyetAnh.Name = "btnDuyetAnh";
             this.btnDuyetAnh.Size = new System.Drawing.Size(160, 62);
             this.btnDuyetAnh.TabIndex = 10;

@@ -2,14 +2,7 @@
 using Phan_Mem_Quan_Ly.Respository;
 using Phan_Mem_Quan_Ly.TabControl;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Phan_Mem_Quan_Ly.PartialView
@@ -113,12 +106,11 @@ namespace Phan_Mem_Quan_Ly.PartialView
                     }
                     else
                     {
-                        this.DialogResult = DialogResult.OK;
                         bool result = fn_SanPhamRespository.AddSanPham(sp);
                         if (result)
                         {
-                            ToastMSS ts = new ToastMSS("Thêm thành công !", "SUCCESS");
-                            ts.Show();
+                            this.DialogResult = DialogResult.OK;
+
                         }
                         else
                         {
@@ -157,14 +149,13 @@ namespace Phan_Mem_Quan_Ly.PartialView
                 }
                 else
                 {
-                    this.DialogResult = DialogResult.OK;
                     bool result = fn_SanPhamRespository.UpdateSanPham(sp);
                     frmDoUong.DoUong = null;
                     frmDoAn.DoAn = null;
                     if (result)
                     {
-                        ToastMSS ts = new ToastMSS("Sửa thành công !", "SUCCESS");
-                        ts.Show();
+
+                        this.DialogResult = DialogResult.OK;
                     }
                     else
                     {
