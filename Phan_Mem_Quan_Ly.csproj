@@ -85,6 +85,7 @@
   <ItemGroup>
     <Compile Include="DataConnect.cs" />
     <Compile Include="Model\HoaDon.cs" />
+    <Compile Include="Model\KhachHang.cs" />
     <Compile Include="Model\NhanVien.cs" />
     <Compile Include="PartialView\frmChiTiet.cs">
       <SubType>Form</SubType>
@@ -112,6 +113,18 @@
     </Compile>
     <Compile Include="MainFn.cs" />
     <Compile Include="Model\SanPham.cs" />
+    <Compile Include="PartialView\frmThaoTacKH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartialView\frmThaoTacKH.Designer.cs">
+      <DependentUpon>frmThaoTacKH.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartialView\frmThaoTacNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartialView\frmThaoTacNV.Designer.cs">
+      <DependentUpon>frmThaoTacNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="PartialView\MssBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +157,7 @@
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Respository\fn_HoaDonRespository.cs" />
+    <Compile Include="Respository\fn_KhachHangRespository.cs" />
     <Compile Include="Respository\fn_NhanVienRespository.cs" />
     <Compile Include="Respository\fn_SanPhamRespository.cs" />
     <Compile Include="TabControl\frmDoAn.cs">
@@ -163,6 +177,12 @@
     </Compile>
     <Compile Include="TabControl\frmDoUong.Designer.cs">
       <DependentUpon>frmDoUong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabControl\frmKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabControl\frmKhachHang.Designer.cs">
+      <DependentUpon>frmKhachHang.cs</DependentUpon>
     </Compile>
     <Compile Include="TabControl\frmNhanVien.cs">
       <SubType>Form</SubType>
@@ -200,6 +220,12 @@
     <Compile Include="View\frmQLHoaDon.Designer.cs">
       <DependentUpon>frmQLHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmQLKhachHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmQLKhachHang.Designer.cs">
+      <DependentUpon>frmQLKhachHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmQLNhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -223,6 +249,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmTrangChu.resx">
       <DependentUpon>frmTrangChu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartialView\frmThaoTacKH.resx">
+      <DependentUpon>frmThaoTacKH.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartialView\frmThaoTacNV.resx">
+      <DependentUpon>frmThaoTacNV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PartialView\MssBox.resx">
       <DependentUpon>MssBox.cs</DependentUpon>
@@ -256,6 +288,9 @@
     <EmbeddedResource Include="TabControl\frmDoUong.resx">
       <DependentUpon>frmDoUong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TabControl\frmKhachHang.resx">
+      <DependentUpon>frmKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TabControl\frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -274,6 +309,9 @@
     <EmbeddedResource Include="View\frmQLHoaDon.resx">
       <DependentUpon>frmQLHoaDon.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\frmQLKhachHang.resx">
+      <DependentUpon>frmQLKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmQLNhanVien.resx">
       <DependentUpon>frmQLNhanVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -281,6 +319,8 @@
       <DependentUpon>frmQLNhapSP.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.KhachHang.datasource" />
+    <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.NhanVien.datasource" />
     <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.SanPham.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -33,6 +33,7 @@
             // 
             // flpDonHang
             // 
+            this.flpDonHang.AutoScroll = true;
             this.flpDonHang.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(253)))));
             this.flpDonHang.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.flpDonHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(253)))));
@@ -41,7 +42,7 @@
             this.flpDonHang.Size = new System.Drawing.Size(1618, 824);
             this.flpDonHang.TabIndex = 0;
             // 
-            // frmDonHangChuaXacNhan
+            // frmHoaDonChuaXacNhan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -49,7 +50,7 @@
             this.ClientSize = new System.Drawing.Size(1618, 895);
             this.Controls.Add(this.flpDonHang);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmDonHangChuaXacNhan";
+            this.Name = "frmHoaDonChuaXacNhan";
             this.Text = "frmDonHangChuaXacNhan";
             this.Load += new System.EventHandler(this.frmDonHangChuaXacNhan_Load);
             this.ResumeLayout(false);

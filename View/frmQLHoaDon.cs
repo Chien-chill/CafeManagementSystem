@@ -1,14 +1,7 @@
-﻿using System;
+﻿using Phan_Mem_Quan_Ly.TabControl;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Phan_Mem_Quan_Ly.TabControl;
 namespace Phan_Mem_Quan_Ly.View
 {
     public partial class frmDonHang : Form
@@ -37,7 +30,7 @@ namespace Phan_Mem_Quan_Ly.View
             Form frm = frmDic[formName];
             frm.BringToFront();
             frm.Show();
-            if(formName == "DonHangChuaXacNhan" && frm is frmHoaDonChuaXacNhan hoaDonChuaXacNhan)
+            if (formName == "DonHangChuaXacNhan" && frm is frmHoaDonChuaXacNhan hoaDonChuaXacNhan)
             {
                 hoaDonChuaXacNhan.loadDonHang();
             }
@@ -49,10 +42,10 @@ namespace Phan_Mem_Quan_Ly.View
             loadPage("DonHangChuaXacNhan", new frmHoaDonChuaXacNhan());
         }
 
-        private void frmDonHang_Load(object sender, EventArgs e)
+        public void frmDonHang_Load(object sender, EventArgs e)
         {
-            btnDonHangChuaXacNhan_Click(sender, e); 
             btnDonHangChuaXacNhan.Checked = true;
+            btnDonHangChuaXacNhan_Click(sender, e);
         }
     }
 }

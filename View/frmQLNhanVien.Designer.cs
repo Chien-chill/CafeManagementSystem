@@ -153,8 +153,9 @@
             this.btnNhanVien.Size = new System.Drawing.Size(236, 71);
             this.btnNhanVien.TabIndex = 1;
             this.btnNhanVien.Text = "Nhân Viên";
+            this.btnNhanVien.Click += new System.EventHandler(this.btnNhanVien_Click);
             // 
-            // frmNhanVien
+            // frmQLNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -162,7 +163,7 @@
             this.Controls.Add(this.PnPage);
             this.Controls.Add(this.guna2CustomGradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmNhanVien";
+            this.Name = "frmQLNhanVien";
             this.Text = "frmNhanVien";
             this.Load += new System.EventHandler(this.frmNhanVien_Load);
             this.guna2CustomGradientPanel1.ResumeLayout(false);

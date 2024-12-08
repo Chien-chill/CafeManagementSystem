@@ -35,13 +35,13 @@
             this.pnTen = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblTenSP = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnChecked = new Guna.UI2.WinForms.Guna2Panel();
+            this.PnSize = new System.Windows.Forms.Panel();
             this.btnSizeL = new Guna.UI2.WinForms.Guna2Button();
             this.btnSizeM = new Guna.UI2.WinForms.Guna2Button();
             this.btnSizeS = new Guna.UI2.WinForms.Guna2Button();
             this.btnChecked = new Guna.UI2.WinForms.Guna2GradientButton();
             this.MSS = new Guna.UI2.WinForms.Guna2MessageDialog();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.PnSize = new System.Windows.Forms.Panel();
             this.pnDonGia.SuspendLayout();
             this.pnTen.SuspendLayout();
             this.pnChecked.SuspendLayout();
@@ -74,6 +74,7 @@
             this.lblDonGia.Name = "lblDonGia";
             this.lblDonGia.Size = new System.Drawing.Size(137, 35);
             this.lblDonGia.TabIndex = 0;
+            this.lblDonGia.Text = null;
             this.lblDonGia.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblDonGia.Click += new System.EventHandler(this.lblDonGia_Click);
             // 
@@ -124,6 +125,16 @@
             this.pnChecked.Size = new System.Drawing.Size(260, 260);
             this.pnChecked.TabIndex = 0;
             this.pnChecked.Click += new System.EventHandler(this.pnChecked_Click);
+            // 
+            // PnSize
+            // 
+            this.PnSize.Controls.Add(this.btnSizeL);
+            this.PnSize.Controls.Add(this.btnSizeM);
+            this.PnSize.Controls.Add(this.btnSizeS);
+            this.PnSize.Location = new System.Drawing.Point(8, 201);
+            this.PnSize.Name = "PnSize";
+            this.PnSize.Size = new System.Drawing.Size(120, 58);
+            this.PnSize.TabIndex = 9;
             // 
             // btnSizeL
             // 
@@ -248,23 +259,13 @@
             this.guna2Elipse1.BorderRadius = 4;
             this.guna2Elipse1.TargetControl = this;
             // 
-            // PnSize
-            // 
-            this.PnSize.Controls.Add(this.btnSizeL);
-            this.PnSize.Controls.Add(this.btnSizeM);
-            this.PnSize.Controls.Add(this.btnSizeS);
-            this.PnSize.Location = new System.Drawing.Point(8, 201);
-            this.PnSize.Name = "PnSize";
-            this.PnSize.Size = new System.Drawing.Size(120, 58);
-            this.PnSize.TabIndex = 9;
-            // 
             // ItemControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.Controls.Add(this.pnChecked);
             this.Margin = new System.Windows.Forms.Padding(15, 5, 10, 20);
             this.Name = "ItemControl";

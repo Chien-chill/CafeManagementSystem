@@ -1,18 +1,9 @@
-﻿using Guna.UI2.WinForms;
+﻿using Phan_Mem_Quan_Ly.Respository;
+using Phan_Mem_Quan_Ly.View;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Guna.UI.Lib;
-using Phan_Mem_Quan_Ly.Respository;
-using Phan_Mem_Quan_Ly.View;
-using System.Security.Cryptography;
-using Phan_Mem_Quan_Ly.PartialView;
 namespace Phan_Mem_Quan_Ly
 {
     public partial class frmTrangChu : Form
@@ -26,6 +17,7 @@ namespace Phan_Mem_Quan_Ly
         private Dictionary<string, Form> frmDic = new Dictionary<string, Form>();
         private void loadfrm(string formName, Form f)
         {
+            txtTimKiem.Visible = false;
             foreach (Control c in this.MainPanel.Controls)
             {
                 if (c is Form)
@@ -45,6 +37,7 @@ namespace Phan_Mem_Quan_Ly
             frm.Show();
             if (formName == "BanHang" && frm is frmBanHang banHang)
             {
+                txtTimKiem.Visible = true;
                 txtTimKiem.IconRightClick += (sender, e) =>
                 {
                     banHang.TimKiemSP(txtTimKiem.Text);
@@ -63,14 +56,14 @@ namespace Phan_Mem_Quan_Ly
                 };
                 banHang.btnThanhToan.Click += (sender, e) =>
                 {
-                    if(banHang.checkHD)
+                    if (banHang.checkHD)
                     {
                         frmTrangChu_Load(sender, e);
                     }
                 };
                 banHang.loadDanhMuc();
             }
-            
+
             this.MainPanel.Tag = frm;
         }
         private void frmTrangChu_Load(object sender, EventArgs e)
@@ -99,16 +92,22 @@ namespace Phan_Mem_Quan_Ly
 
         private void btnNuocUong_Click(object sender, EventArgs e)
         {
-            loadfrm("NhapSP", new frmNhapSP());
+            loadfrm("QLNhapSP", new frmNhapSP());
         }
 
         private void btnDonHang_Click(object sender, EventArgs e)
         {
-            loadfrm("DonHang", new frmDonHang());
+            loadfrm("QLDonHang", new frmDonHang());
         }
 
         private void btnQLKhachHang_Click(object sender, EventArgs e)
         {
+            loadfrm("QLKhachHang", new frmQLKhachHang());
+        }
+
+        private void btnQLNhanVien_Click(object sender, EventArgs e)
+        {
+            loadfrm("QLNhanVien", new frmQLNhanVien());
         }
     }
 }
