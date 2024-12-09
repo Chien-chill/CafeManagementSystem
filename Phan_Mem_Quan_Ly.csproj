@@ -31,7 +31,7 @@
     <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -57,6 +57,7 @@
     </Reference>
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Guna.UI">
       <HintPath>C:\Users\tranc\Downloads\Guna.UI.dll</HintPath>
     </Reference>
@@ -72,6 +73,7 @@
     <Reference Include="System.Design" />
     <Reference Include="System.Management" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -84,6 +86,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataConnect.cs" />
+    <Compile Include="Model\ChiTietHoaDon.cs" />
     <Compile Include="Model\HoaDon.cs" />
     <Compile Include="Model\KhachHang.cs" />
     <Compile Include="Model\NhanVien.cs" />
@@ -238,6 +241,12 @@
     <Compile Include="View\frmQLNhapSP.Designer.cs">
       <DependentUpon>frmQLNhapSP.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmQLSuKien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmQLSuKien.Designer.cs">
+      <DependentUpon>frmQLSuKien.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="PartialView\frmChiTiet.resx">
       <DependentUpon>frmChiTiet.cs</DependentUpon>
     </EmbeddedResource>
@@ -318,6 +327,9 @@
     <EmbeddedResource Include="View\frmQLNhapSP.resx">
       <DependentUpon>frmQLNhapSP.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\frmQLSuKien.resx">
+      <DependentUpon>frmQLSuKien.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.KhachHang.datasource" />
     <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.NhanVien.datasource" />
@@ -390,6 +402,7 @@
       <DependentUpon>QLCF.mdf</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Resources\icons8-sad-52.png" />
     <None Include="Resources\icons8-cancel-24.png" />
     <None Include="Resources\icons8-info-50.png" />
     <None Include="Resources\icons8-checked-32.png" />

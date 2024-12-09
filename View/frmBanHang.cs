@@ -3,17 +3,10 @@ using Phan_Mem_Quan_Ly.PartialView;
 using Phan_Mem_Quan_Ly.Respository;
 using Phan_Mem_Quan_Ly.TabControl;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
-using System.Text;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Web.UI;
 using System.Windows.Forms;
 
 namespace Phan_Mem_Quan_Ly.View
@@ -39,49 +32,77 @@ namespace Phan_Mem_Quan_Ly.View
                 // Tạo sự kiện của sản phẩm đồ uống (Mã Loại đồ uống: ML01)
                 if (item.MaLoai.Equals("ML01"))
                 {
+
                     // Sự kiện đồ uống size S
                     item.btnSizeS.Click += (a, b) =>
                     {
-                        if (item.SizeS)
+                        if (Convert.ToDecimal(item.DonGia_S) == 0.0m)
                         {
-                            CreatePayCtrl(item, "Size S");
+                            ToastMSS mss = new ToastMSS("Xin lỗi đã hết size S !", "SAD");
+                            mss.Show();
+                            return;
                         }
                         else
                         {
-                            DeletePayCtrl(item, "Size S");
+                            if (item.SizeS)
+                            {
+                                CreatePayCtrl(item, "Size S");
+                            }
+                            else
+                            {
+                                DeletePayCtrl(item, "Size S");
+                            }
+                            TinhTongTien();
                         }
-                        TinhTongTien();
                     };
+
                     // Sự kiện đồ uống size M
                     item.btnSizeM.Click += (a, b) =>
                     {
-
-                        if (item.SizeM)
+                        if (Convert.ToDecimal(item.DonGia_M) == 0.0m)
                         {
-                            CreatePayCtrl(item, "Size M");
-
+                            ToastMSS mss = new ToastMSS("Xin lỗi đã hết size M !", "SAD");
+                            mss.Show();
                         }
                         else
                         {
-                            DeletePayCtrl(item, "Size M");
+                            if (item.SizeM)
+                            {
+                                CreatePayCtrl(item, "Size M");
+
+                            }
+                            else
+                            {
+                                DeletePayCtrl(item, "Size M");
+                            }
+                            TinhTongTien();
                         }
-                        TinhTongTien();
+
                     };
+
                     // Sự kiện đồ uống size L
                     item.btnSizeL.Click += (a, b) =>
                     {
-
-                        if (item.SizeL)
+                        if (Convert.ToDecimal(item.DonGia_L) == 0.0m)
                         {
-                            CreatePayCtrl(item, "Size L");
+                            ToastMSS mss = new ToastMSS("Xin lỗi đã hết size L !", "SAD");
+                            mss.Show();
                         }
                         else
                         {
-                            DeletePayCtrl(item, "Size L");
+                            if (item.SizeL)
+                            {
+                                CreatePayCtrl(item, "Size L");
+                            }
+                            else
+                            {
+                                DeletePayCtrl(item, "Size L");
+                            }
+                            TinhTongTien();
                         }
-                        TinhTongTien();
 
                     };
+
                 } // kết thúc if
                 // Tạo sự kiện của sản phẩm đồ ăn (Mã Loại đồ uống: ML02)
                 else
@@ -102,7 +123,7 @@ namespace Phan_Mem_Quan_Ly.View
                             PayControl pay = new PayControl();
                             {
                                 pay.TenSP = item.TenSP;
-                                pay.DonGia = item.DonGia_SP;
+                                pay.ThanhTien = item.DonGia_SP;
                                 pay.SizeSP = "";
                                 pay.Tag = item.Tag; // thêm tên tag từng paycontrol với mã sản phẩm tương ứng.
                                 pay.btnXoa.Click += (c, d) =>
@@ -139,12 +160,13 @@ namespace Phan_Mem_Quan_Ly.View
 
             flpSP.Controls.Add(item);
         }
+
         private void CreatePayCtrl(ItemControl item, string size)
         {
             PayControl pay = new PayControl();
             {
                 pay.TenSP = item.TenSP;
-                pay.DonGia =(size.Equals("Size S"))? item.DonGia_S:((size.Equals("Size M"))?item.DonGia_M: item.DonGia_L);
+                pay.ThanhTien = (size.Equals("Size S")) ? item.DonGia_S : ((size.Equals("Size M")) ? item.DonGia_M : item.DonGia_L);
                 pay.SizeSP = size;
                 pay.Tag = item.Tag; // Thêm tên tag từng paycontrol với mã sản phẩm tương ứng.
                 pay.btnXoa.Click += (c, d) =>
@@ -181,13 +203,13 @@ namespace Phan_Mem_Quan_Ly.View
         }
         public void TinhTongTien()
         {
-            decimal TongTien = flplstMua.Controls.OfType<PayControl>().Sum(p => decimal.Parse(p.DonGia));
+            decimal TongTien = flplstMua.Controls.OfType<PayControl>().Sum(p => decimal.Parse(p.ThanhTien));
             lblThanhTien.Text = TongTien.ToString("C", new CultureInfo("vi-VN"));
         }
         public void loadDanhMuc()
         {
             var lstSanPham = fn_SanPhamRespository.GetAllSanPham();
-            if (lstSanPham!= null)
+            if (lstSanPham != null)
             {
                 lblSoLuong.Text = lstSanPham.Count().ToString() + "+ Sản Phẩm";
             }
@@ -318,7 +340,7 @@ namespace Phan_Mem_Quan_Ly.View
                 }
                 else
                 {
-                    ToastMSS toast = new ToastMSS("Vui lòng chọn đồ !","INFO");
+                    ToastMSS toast = new ToastMSS("Vui lòng chọn đồ !", "INFO");
                     toast.Show();
                 }
             }

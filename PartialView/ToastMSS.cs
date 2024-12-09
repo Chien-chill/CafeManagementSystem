@@ -29,6 +29,10 @@ namespace Phan_Mem_Quan_Ly.PartialView
                     this.BackColor = Color.FromArgb(238, 62, 84);
                     pcbIcon.Image = Phan_Mem_Quan_Ly.Properties.Resources.icons8_cancel_24;
                     break;
+                case "SAD":
+                    this.BackColor = Color.FromArgb(238, 62, 84);
+                    pcbIcon.Image = Phan_Mem_Quan_Ly.Properties.Resources.icons8_sad_52;
+                    break;
             }
         }
         int X, Y;

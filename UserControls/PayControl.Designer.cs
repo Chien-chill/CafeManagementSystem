@@ -34,8 +34,9 @@
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.lblSize = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblTenSP = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblDonGia = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblThanhTien = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnXoa = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.lblDonGia = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnXoa)).BeginInit();
@@ -71,10 +72,11 @@
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.lblDonGia);
             this.guna2Panel1.Controls.Add(this.guna2Separator1);
             this.guna2Panel1.Controls.Add(this.lblSize);
             this.guna2Panel1.Controls.Add(this.lblTenSP);
-            this.guna2Panel1.Controls.Add(this.lblDonGia);
+            this.guna2Panel1.Controls.Add(this.lblThanhTien);
             this.guna2Panel1.Controls.Add(this.btnXoa);
             this.guna2Panel1.Controls.Add(this.nudSoLuong);
             this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -111,15 +113,15 @@
             this.lblTenSP.TabIndex = 5;
             this.lblTenSP.Text = "Tên Sản Phẩm";
             // 
-            // lblDonGia
+            // lblThanhTien
             // 
-            this.lblDonGia.BackColor = System.Drawing.Color.Transparent;
-            this.lblDonGia.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDonGia.Location = new System.Drawing.Point(445, 15);
-            this.lblDonGia.Name = "lblDonGia";
-            this.lblDonGia.Size = new System.Drawing.Size(67, 27);
-            this.lblDonGia.TabIndex = 4;
-            this.lblDonGia.Text = "Đơn Giá";
+            this.lblThanhTien.BackColor = System.Drawing.Color.Transparent;
+            this.lblThanhTien.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblThanhTien.Location = new System.Drawing.Point(445, 15);
+            this.lblThanhTien.Name = "lblThanhTien";
+            this.lblThanhTien.Size = new System.Drawing.Size(88, 27);
+            this.lblThanhTien.TabIndex = 4;
+            this.lblThanhTien.Text = "Thành Tiền";
             // 
             // btnXoa
             // 
@@ -133,6 +135,16 @@
             this.btnXoa.TabIndex = 3;
             this.btnXoa.TabStop = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // lblDonGia
+            // 
+            this.lblDonGia.BackColor = System.Drawing.Color.Transparent;
+            this.lblDonGia.Location = new System.Drawing.Point(445, 48);
+            this.lblDonGia.Name = "lblDonGia";
+            this.lblDonGia.Size = new System.Drawing.Size(62, 22);
+            this.lblDonGia.TabIndex = 8;
+            this.lblDonGia.Text = "Đơn Giá";
+            this.lblDonGia.Visible = false;
             // 
             // PayControl
             // 
@@ -158,7 +170,8 @@
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblSize;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTenSP;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblDonGia;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblThanhTien;
         public Guna.UI2.WinForms.Guna2NumericUpDown nudSoLuong;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblDonGia;
     }
 }
