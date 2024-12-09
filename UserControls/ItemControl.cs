@@ -1,13 +1,6 @@
-﻿using Phan_Mem_Quan_Ly.Model;
-using Phan_Mem_Quan_Ly.PartialView;
+﻿using Phan_Mem_Quan_Ly.PartialView;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Phan_Mem_Quan_Ly
@@ -86,53 +79,75 @@ namespace Phan_Mem_Quan_Ly
             //{
             //    ItemControl_Load(sender, e);
             //}
-        }    
-      
+        }
+
         private void btnSizeS_Click(object sender, EventArgs e)
         {
-            if (!btnSizeS.Checked)
+            if (Convert.ToDecimal(DonGia_S) != 0.0m)
             {
-                if (btnSizeM.Checked == false && btnSizeL.Checked == false)
+                if (!btnSizeS.Checked)
                 {
-                    ItemControl_Load(sender, e);
+                    if (btnSizeM.Checked == false && btnSizeL.Checked == false)
+                    {
+                        ItemControl_Load(sender, e);
+                    }
+                }
+                else
+                {
+                    btnChecked.Visible = true;
+                    pnChecked.BorderColor = Color.Tomato;
                 }
             }
             else
             {
-                btnChecked.Visible = true;
-                pnChecked.BorderColor = Color.Tomato;
+                btnSizeS.Checked = false;
             }
         }
-        
+
         private void btnSizeM_Click(object sender, EventArgs e)
         {
-            if (!btnSizeM.Checked)
+            if (Convert.ToDecimal(DonGia_M) != 0.0m)
             {
-                if (btnSizeS.Checked == false && btnSizeL.Checked == false)
+                if (!btnSizeM.Checked)
                 {
-                    ItemControl_Load(sender, e);
+                    if (btnSizeS.Checked == false && btnSizeL.Checked == false)
+                    {
+                        ItemControl_Load(sender, e);
+                    }
+                }
+                else
+                {
+                    btnChecked.Visible = true;
+                    pnChecked.BorderColor = Color.Tomato;
                 }
             }
             else
             {
-                btnChecked.Visible = true;
-                pnChecked.BorderColor = Color.Tomato;
+                btnSizeM.Checked = false;
             }
         }
 
         private void btnSizeL_Click(object sender, EventArgs e)
         {
-            if (!btnSizeL.Checked)
+
+            if (Convert.ToDecimal(DonGia_L) != 0.0m)
             {
-                if (btnSizeS.Checked == false && btnSizeM.Checked == false)
+                if (!btnSizeL.Checked)
                 {
-                    ItemControl_Load(sender, e);
+                    if (btnSizeS.Checked == false && btnSizeM.Checked == false)
+                    {
+                        ItemControl_Load(sender, e);
+                    }
+                }
+                else
+                {
+                    btnChecked.Visible = true;
+                    pnChecked.BorderColor = Color.Tomato;
                 }
             }
             else
             {
-                btnChecked.Visible = true;
-                pnChecked.BorderColor = Color.Tomato;
+                btnSizeL.Checked = false;
             }
         }
     }

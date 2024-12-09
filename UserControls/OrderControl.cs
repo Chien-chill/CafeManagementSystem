@@ -1,17 +1,12 @@
-﻿using Phan_Mem_Quan_Ly.Model;
+﻿using CrystalDecisions.CrystalReports.Engine;
+using Phan_Mem_Quan_Ly.Model;
 using Phan_Mem_Quan_Ly.PartialView;
+using Phan_Mem_Quan_Ly.Reports;
 using Phan_Mem_Quan_Ly.Respository;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Web.UI.WebControls;
+using System.IO;
 using System.Windows.Forms;
-using Phan_Mem_Quan_Ly;
 
 namespace Phan_Mem_Quan_Ly.UserControls
 {
@@ -48,6 +43,54 @@ namespace Phan_Mem_Quan_Ly.UserControls
                     ToastMSS ts = new ToastMSS("Xác nhận thành công !", "SUCCESS");
                     ts.Show();
                     frmTrangChu.Instance.loadThongBao();
+
+                    HoaDonDataSet dataset = new HoaDonDataSet();
+
+                    // Tạo dữ liệu mẫu
+                    DataRow hdRow = dataset.Tables["HoaDonTable"].NewRow();
+                    hdRow["MaHD"] = MaHD;
+                    hdRow["NgayTao"] = NgayTao;
+                    hdRow["GioRa"] = DateTime.Now.ToString("HH:mm:ss");
+                    hdRow["GioVao"] = GioVao;
+                    hdRow["TongTien"] = TongTien;
+                    dataset.Tables["HoaDonTable"].Rows.Add(hdRow);
+
+                    var lstcthd = fn_HoaDonRespository.GetChiTietHDTheoMa(MaHD);
+                    int stt = 1;
+
+                    foreach (var ct in lstcthd)
+                    {
+                        DataRow ctRow = dataset.Tables["ChiTietHDTable"].NewRow();
+                        ctRow["STT"] = stt;
+                        ctRow["TenSP"] = ct.TenSP;
+                        ctRow["SoLuong"] = ct.SoLuong;
+                        ctRow["DonGia"] = ct.DonGia;
+                        ctRow["ThanhTien"] = ct.ThanhTien;
+                        dataset.Tables["ChiTietHDTable"].Rows.Add(ctRow);
+                        stt++;
+                    }
+
+                    // Kiểm tra dữ liệu trong DataSet
+                    if (dataset.Tables["HoaDonTable"].Rows.Count == 0 || dataset.Tables["ChiTietHDTable"].Rows.Count == 0)
+                    {
+                        throw new Exception("DataSet không có dữ liệu.");
+                    }
+
+                    // Khởi tạo báo cáo
+                    ReportDocument report = new ReportDocument();
+                    string pathReport = Path.GetFullPath(Application.StartupPath + @"\..\..\Reports\HoaDonReport.rpt");
+                    Console.WriteLine(pathReport);
+                    report.Load(pathReport);
+
+                    // Gán DataSet cho báo cáo
+                    report.SetDataSource(dataset);
+
+                    // Hiển thị báo cáo
+                    frmReport rp = new frmReport();
+                    rp.crystalReportViewer.ReportSource = report;
+                    rp.crystalReportViewer.Refresh();
+                    rp.Show();
+
                 }
                 else
                 {
@@ -64,7 +107,7 @@ namespace Phan_Mem_Quan_Ly.UserControls
         {
             try
             {
-                MssBox mss = new MssBox("Bạn có muốn hủy hóa đơn "+MaHD+" ?");
+                MssBox mss = new MssBox("Bạn có muốn hủy hóa đơn " + MaHD + " ?");
                 if (mss.ShowDialog() == DialogResult.Yes)
                 {
                     var hd = new HoaDon();

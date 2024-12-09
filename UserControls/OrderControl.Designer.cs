@@ -305,7 +305,6 @@
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2Button btnHuy;
-        private Guna.UI2.WinForms.Guna2Button btnXacNhan;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblNgayTao;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblMaNV;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblMaKH;
@@ -316,5 +315,6 @@
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblGioVao;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        public Guna.UI2.WinForms.Guna2Button btnXacNhan;
     }
 }

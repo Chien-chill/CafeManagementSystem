@@ -458,7 +458,7 @@
             // 
             this.picNV.Image = ((System.Drawing.Image)(resources.GetObject("picNV.Image")));
             this.picNV.ImageRotate = 0F;
-            this.picNV.Location = new System.Drawing.Point(463, 118);
+            this.picNV.Location = new System.Drawing.Point(473, 106);
             this.picNV.Name = "picNV";
             this.picNV.ShadowDecoration.Color = System.Drawing.Color.Tomato;
             this.picNV.ShadowDecoration.Depth = 40;
