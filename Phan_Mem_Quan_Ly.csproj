@@ -64,6 +64,9 @@
     <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
       <HintPath>packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System">
       <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
@@ -87,9 +90,11 @@
   <ItemGroup>
     <Compile Include="DataConnect.cs" />
     <Compile Include="Model\ChiTietHoaDon.cs" />
+    <Compile Include="Model\ChiTietSuKien.cs" />
     <Compile Include="Model\HoaDon.cs" />
     <Compile Include="Model\KhachHang.cs" />
     <Compile Include="Model\NhanVien.cs" />
+    <Compile Include="Model\SuKien.cs" />
     <Compile Include="PartialView\frmChiTiet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +133,12 @@
     <Compile Include="PartialView\frmThaoTacNV.Designer.cs">
       <DependentUpon>frmThaoTacNV.cs</DependentUpon>
     </Compile>
+    <Compile Include="PartialView\frmThaoTacSK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartialView\frmThaoTacSK.Designer.cs">
+      <DependentUpon>frmThaoTacSK.cs</DependentUpon>
+    </Compile>
     <Compile Include="PartialView\MssBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -163,6 +174,7 @@
     <Compile Include="Respository\fn_KhachHangRespository.cs" />
     <Compile Include="Respository\fn_NhanVienRespository.cs" />
     <Compile Include="Respository\fn_SanPhamRespository.cs" />
+    <Compile Include="Respository\fn_SuKienRespository.cs" />
     <Compile Include="TabControl\frmDoAn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -265,6 +277,9 @@
     <EmbeddedResource Include="PartialView\frmThaoTacNV.resx">
       <DependentUpon>frmThaoTacNV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PartialView\frmThaoTacSK.resx">
+      <DependentUpon>frmThaoTacSK.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PartialView\MssBox.resx">
       <DependentUpon>MssBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -334,6 +349,7 @@
     <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.KhachHang.datasource" />
     <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.NhanVien.datasource" />
     <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.SanPham.datasource" />
+    <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.SuKien.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

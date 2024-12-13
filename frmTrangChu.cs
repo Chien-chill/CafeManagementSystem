@@ -109,5 +109,10 @@ namespace Phan_Mem_Quan_Ly
         {
             loadfrm("QLNhanVien", new frmQLNhanVien());
         }
+
+        private void btnQLSuKien_Click(object sender, EventArgs e)
+        {
+            loadfrm("QLSuKien", new frmQLSuKien());
+        }
     }
 }
