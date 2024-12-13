@@ -81,7 +81,7 @@ namespace Phan_Mem_Quan_Ly.TabControl
             {
                 var lstDU = fn_SanPhamRespository.GetAllSanPham();
                 string MaMoi = lstDU.Max(sp => sp.MaSP);
-                frmThemDA.MaMoi = "SP" + (int.Parse(MaMoi.Substring(2, MaMoi.Length - 2)) + 1).ToString("D2");
+                frmThemDA.MaMoi = (!string.IsNullOrEmpty(MaMoi)) ? "SP" + (int.Parse(MaMoi.Substring(2, MaMoi.Length - 2)) + 1).ToString("D2") : "SP01";
                 frmThemDA.frmCall = "DoAn";
                 if (frmThemDA.ShowDialog() == DialogResult.OK)
                 {
