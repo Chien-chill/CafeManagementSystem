@@ -292,7 +292,7 @@
             this.btnThemSP.Size = new System.Drawing.Size(182, 56);
             this.btnThemSP.TabIndex = 14;
             this.btnThemSP.Text = "Thêm Mới";
-            this.btnThemSP.Click += new System.EventHandler(this.btnThemSP_Click_1);
+            this.btnThemSP.Click += new System.EventHandler(this.btnThemSP_Click);
             // 
             // MaDU
             // 

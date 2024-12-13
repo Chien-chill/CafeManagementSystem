@@ -81,13 +81,13 @@ namespace Phan_Mem_Quan_Ly.TabControl
 
             }
         }
-        private void btnThemSP_Click_1(object sender, EventArgs e)
+        private void btnThemSP_Click(object sender, EventArgs e)
         {
             frmThaoTac frmThemDU = new frmThaoTac();
             {
-                var lstDU = fn_SanPhamRespository.GetDoUong();
+                var lstDU = fn_SanPhamRespository.GetAllSanPham();
                 string MaMoi = lstDU.Max(sp => sp.MaSP);
-                frmThemDU.MaMoi = "SP" + (int.Parse(MaMoi.Substring(2, MaMoi.Length - 2)) + 1).ToString("D2");
+                frmThemDU.MaMoi = (!string.IsNullOrEmpty(MaMoi)) ? "SP" + (int.Parse(MaMoi.Substring(2, MaMoi.Length - 2)) + 1).ToString("D2") : "SP01";
                 frmThemDU.frmCall = "DoUong";
                 if (frmThemDU.ShowDialog() == DialogResult.OK)
                 {

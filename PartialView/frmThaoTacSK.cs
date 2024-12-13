@@ -1,4 +1,5 @@
 ﻿using Phan_Mem_Quan_Ly.Model;
+using Phan_Mem_Quan_Ly.Respository;
 using System;
 using System.Windows.Forms;
 
@@ -50,7 +51,18 @@ namespace Phan_Mem_Quan_Ly.PartialView
 
         private void frmThaoTacSK_Load(object sender, EventArgs e)
         {
-
+            try
+            {
+                var lstSP = fn_SanPhamRespository.GetAllSanPham();
+                if (lstSP != null)
+                {
+                    SanPhambindingSource.DataSource = lstSP;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi không load được bảng nhân viên" + ex.Message);
+            }
         }
     }
 }
