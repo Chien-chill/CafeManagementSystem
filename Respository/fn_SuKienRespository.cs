@@ -6,7 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 namespace Phan_Mem_Quan_Ly.Respository
 {
-    internal class fn_SuKienRespository
+    public class fn_SuKienRespository
     {
         public static List<SuKien> GetAllSuKien()
         {
@@ -50,7 +50,7 @@ namespace Phan_Mem_Quan_Ly.Respository
                 return null;
             }
         }
-        public bool AddSuKien(SuKien sk, string skDetails)
+        public static bool AddSuKien(SuKien sk, List<ChiTietSuKien> skDetails)
         {
             try
             {
@@ -58,12 +58,14 @@ namespace Phan_Mem_Quan_Ly.Respository
                 {
                     using (SqlCommand cmd = new SqlCommand("SP_ThemSuKien", conn))
                     {
+                        cmd.CommandType = CommandType.StoredProcedure;
                         // Install-Package Newtonsoft.Json
                         string Jsonsk = JsonConvert.SerializeObject(skDetails);
-                        cmd.Parameters.AddWithValue("Ten_SK", sk.TenSK);
-                        cmd.Parameters.AddWithValue("ThoiGian_BD", sk.ThoiGianBD);
-                        cmd.Parameters.AddWithValue("ThoiGian_KT", sk.ThoiGianKT);
-                        cmd.Parameters.AddWithValue("ChiTietSuKien", Jsonsk);
+                        Console.WriteLine("JSON Sent: " + Jsonsk);
+                        cmd.Parameters.AddWithValue("@Ten_SK", sk.TenSK);
+                        cmd.Parameters.AddWithValue("@ThoiGian_BD", sk.ThoiGianBD);
+                        cmd.Parameters.AddWithValue("@ThoiGian_KT", sk.ThoiGianKT);
+                        cmd.Parameters.AddWithValue("@ChiTietSuKien", Jsonsk);
                         int result = cmd.ExecuteNonQuery();
                         return result > 0;
                     }

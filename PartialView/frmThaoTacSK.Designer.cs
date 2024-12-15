@@ -52,14 +52,14 @@
             this.lblMoTa = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.dtpThoiGianKT = new Guna.UI2.WinForms.Guna2DateTimePicker();
             this.dtgSanPham = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.GiamGia = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
-            this.flpGiamGia = new System.Windows.Forms.FlowLayoutPanel();
-            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenSPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.moTaSPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.GiamGia = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.SanPhambindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
+            this.flpGiamGia = new System.Windows.Forms.FlowLayoutPanel();
+            this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcTieuDe)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -158,7 +158,7 @@
             // 
             this.dtpThoiGianBD.Animated = true;
             this.dtpThoiGianBD.AutoRoundedCorners = true;
-            this.dtpThoiGianBD.BackColor = System.Drawing.SystemColors.Control;
+            this.dtpThoiGianBD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
             this.dtpThoiGianBD.BorderRadius = 29;
             this.dtpThoiGianBD.Checked = true;
             this.dtpThoiGianBD.CustomFormat = "dd/MM/yyyy HH:mm:ss";
@@ -308,7 +308,7 @@
             // 
             this.dtpThoiGianKT.Animated = true;
             this.dtpThoiGianKT.AutoRoundedCorners = true;
-            this.dtpThoiGianKT.BackColor = System.Drawing.SystemColors.Control;
+            this.dtpThoiGianKT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
             this.dtpThoiGianKT.BorderRadius = 29;
             this.dtpThoiGianKT.Checked = true;
             this.dtpThoiGianKT.CustomFormat = "dd/MM/yyyy HH:mm:ss";
@@ -324,6 +324,7 @@
             this.dtpThoiGianKT.TabIndex = 47;
             this.dtpThoiGianKT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.dtpThoiGianKT.Value = new System.DateTime(2024, 12, 13, 0, 0, 0, 0);
+            this.dtpThoiGianKT.ValueChanged += new System.EventHandler(this.dtpThoiGianKT_ValueChanged);
             // 
             // dtgSanPham
             // 
@@ -402,56 +403,6 @@
             this.dtgSanPham.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgSanPham_CellValueChanged);
             this.dtgSanPham.CurrentCellDirtyStateChanged += new System.EventHandler(this.dtgSanPham_CurrentCellDirtyStateChanged);
             // 
-            // GiamGia
-            // 
-            this.GiamGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.GiamGia.FillWeight = 90.90909F;
-            this.GiamGia.HeaderText = "Chọn";
-            this.GiamGia.MinimumWidth = 8;
-            this.GiamGia.Name = "GiamGia";
-            this.GiamGia.Width = 70;
-            // 
-            // txtTimKiem
-            // 
-            this.txtTimKiem.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTimKiem.DefaultText = "";
-            this.txtTimKiem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTimKiem.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTimKiem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtTimKiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTimKiem.IconRight = ((System.Drawing.Image)(resources.GetObject("txtTimKiem.IconRight")));
-            this.txtTimKiem.IconRightSize = new System.Drawing.Size(32, 32);
-            this.txtTimKiem.Location = new System.Drawing.Point(29, 446);
-            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtTimKiem.Name = "txtTimKiem";
-            this.txtTimKiem.PasswordChar = '\0';
-            this.txtTimKiem.PlaceholderText = "Tìm Kiếm";
-            this.txtTimKiem.SelectedText = "";
-            this.txtTimKiem.Size = new System.Drawing.Size(453, 49);
-            this.txtTimKiem.TabIndex = 49;
-            // 
-            // flpGiamGia
-            // 
-            this.flpGiamGia.AutoScroll = true;
-            this.flpGiamGia.BackColor = System.Drawing.Color.White;
-            this.flpGiamGia.Location = new System.Drawing.Point(801, 168);
-            this.flpGiamGia.Name = "flpGiamGia";
-            this.flpGiamGia.Size = new System.Drawing.Size(416, 675);
-            this.flpGiamGia.TabIndex = 50;
-            // 
-            // guna2HtmlLabel2
-            // 
-            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(801, 130);
-            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            this.guna2HtmlLabel2.Size = new System.Drawing.Size(192, 30);
-            this.guna2HtmlLabel2.TabIndex = 38;
-            this.guna2HtmlLabel2.Text = "Danh Sách Giảm Giá:";
-            // 
             // MaSP
             // 
             this.MaSP.DataPropertyName = "MaSP";
@@ -479,9 +430,60 @@
             this.moTaSPDataGridViewTextBoxColumn.Name = "moTaSPDataGridViewTextBoxColumn";
             this.moTaSPDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // GiamGia
+            // 
+            this.GiamGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.GiamGia.FillWeight = 90.90909F;
+            this.GiamGia.HeaderText = "Chọn";
+            this.GiamGia.MinimumWidth = 8;
+            this.GiamGia.Name = "GiamGia";
+            this.GiamGia.Width = 70;
+            // 
             // SanPhambindingSource
             // 
             this.SanPhambindingSource.DataSource = typeof(Phan_Mem_Quan_Ly.Model.SanPham);
+            // 
+            // txtTimKiem
+            // 
+            this.txtTimKiem.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTimKiem.DefaultText = "";
+            this.txtTimKiem.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTimKiem.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTimKiem.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTimKiem.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTimKiem.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTimKiem.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTimKiem.IconRight = ((System.Drawing.Image)(resources.GetObject("txtTimKiem.IconRight")));
+            this.txtTimKiem.IconRightSize = new System.Drawing.Size(32, 32);
+            this.txtTimKiem.Location = new System.Drawing.Point(29, 446);
+            this.txtTimKiem.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.PasswordChar = '\0';
+            this.txtTimKiem.PlaceholderText = "Tìm Kiếm";
+            this.txtTimKiem.SelectedText = "";
+            this.txtTimKiem.Size = new System.Drawing.Size(466, 49);
+            this.txtTimKiem.TabIndex = 49;
+            this.txtTimKiem.IconRightClick += new System.EventHandler(this.txtTimKiem_IconRightClick);
+            // 
+            // flpGiamGia
+            // 
+            this.flpGiamGia.AutoScroll = true;
+            this.flpGiamGia.BackColor = System.Drawing.Color.White;
+            this.flpGiamGia.Location = new System.Drawing.Point(801, 168);
+            this.flpGiamGia.Name = "flpGiamGia";
+            this.flpGiamGia.Size = new System.Drawing.Size(416, 675);
+            this.flpGiamGia.TabIndex = 50;
+            // 
+            // guna2HtmlLabel2
+            // 
+            this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(801, 130);
+            this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            this.guna2HtmlLabel2.Size = new System.Drawing.Size(192, 30);
+            this.guna2HtmlLabel2.TabIndex = 38;
+            this.guna2HtmlLabel2.Text = "Danh Sách Giảm Giá:";
             // 
             // frmThaoTacSK
             // 

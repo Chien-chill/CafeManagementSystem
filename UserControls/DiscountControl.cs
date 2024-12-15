@@ -21,9 +21,6 @@ namespace Phan_Mem_Quan_Ly.UserControls
             }
         }
 
-        private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
-        {
 
-        }
     }
 }

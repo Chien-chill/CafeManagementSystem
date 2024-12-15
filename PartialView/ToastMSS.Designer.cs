@@ -38,14 +38,16 @@
             // 
             // lblNoiDung
             // 
+            this.lblNoiDung.AutoSize = false;
             this.lblNoiDung.BackColor = System.Drawing.Color.Transparent;
             this.lblNoiDung.Font = new System.Drawing.Font("Segoe UI Semibold", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNoiDung.ForeColor = System.Drawing.Color.White;
-            this.lblNoiDung.Location = new System.Drawing.Point(128, 33);
+            this.lblNoiDung.Location = new System.Drawing.Point(128, 12);
             this.lblNoiDung.Name = "lblNoiDung";
-            this.lblNoiDung.Size = new System.Drawing.Size(176, 32);
+            this.lblNoiDung.Size = new System.Drawing.Size(291, 79);
             this.lblNoiDung.TabIndex = 1;
-            this.lblNoiDung.Text = "guna2HtmlLabel1";
+            this.lblNoiDung.Text = "Nội Dung";
+            this.lblNoiDung.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // timerShow
             // 
@@ -83,7 +85,6 @@
             this.Text = "ToastMSS";
             ((System.ComponentModel.ISupportInitialize)(this.pcbIcon)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 

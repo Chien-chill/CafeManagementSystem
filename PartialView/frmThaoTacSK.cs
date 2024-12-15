@@ -2,6 +2,7 @@
 using Phan_Mem_Quan_Ly.Respository;
 using Phan_Mem_Quan_Ly.UserControls;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -23,13 +24,25 @@ namespace Phan_Mem_Quan_Ly.PartialView
         {
             try
             {
+                List<ChiTietSuKien> lstskDetails = new List<ChiTietSuKien>();
+                foreach (var i in flpGiamGia.Controls.OfType<DiscountControl>())
+                {
+
+                    lstskDetails.Add(new ChiTietSuKien
+                    {
+                        Ma_SP = i.MaSP,
+                        Giam_Gia = Convert.ToInt16(i.GiamGia)
+                    });
+                }
+
                 SuKien sk = new SuKien();
                 {
                     sk.TenSK = txtTenSK.Text;
                     sk.ThoiGianBD = dtpThoiGianBD.Value;
                     sk.ThoiGianKT = dtpThoiGianKT.Value;
+
                 }
-                bool result = true;
+                bool result = fn_SuKienRespository.AddSuKien(sk, lstskDetails);
                 if (result)
                 {
                     this.DialogResult = DialogResult.OK;
@@ -53,6 +66,10 @@ namespace Phan_Mem_Quan_Ly.PartialView
 
         private void frmThaoTacSK_Load(object sender, EventArgs e)
         {
+            DateTime now = DateTime.Now;
+            dtpThoiGianBD.MinDate = now;
+            dtpThoiGianKT.MinDate = now;
+
             try
             {
                 var lstSP = fn_SanPhamRespository.GetAllSanPham();
@@ -65,6 +82,9 @@ namespace Phan_Mem_Quan_Ly.PartialView
             {
                 MessageBox.Show("Lỗi không load được bảng nhân viên" + ex.Message);
             }
+
+            btnThem.Visible = true;
+            btnSua.Visible = false;
         }
 
 
@@ -103,6 +123,41 @@ namespace Phan_Mem_Quan_Ly.PartialView
             {
                 // Cập nhật ngay lập tức giá trị ô checkbox
                 dtgSanPham.CommitEdit(DataGridViewDataErrorContexts.Commit);
+            }
+        }
+        private void txtTimKiem_IconRightClick(object sender, EventArgs e)
+        {
+            try
+            {
+                var lstSP = fn_SanPhamRespository.GetDoAn();
+                if (lstSP != null && !string.IsNullOrEmpty(txtTimKiem.Text))
+                {
+                    SanPhambindingSource.DataSource = lstSP.Where(sp =>
+                    sp.MaSP.Trim().ToLower().Contains(
+                    txtTimKiem.Text.Trim().ToLower()) ||
+                     sp.TenSP.Trim().ToLower().Contains(
+                    txtTimKiem.Text.Trim().ToLower())).ToList();
+
+                }
+                else if (string.IsNullOrEmpty(txtTimKiem.Text))
+                {
+                    SanPhambindingSource.DataSource = lstSP;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi không load được bảng sản phẩm" + ex.Message);
+            }
+        }
+
+        private void dtpThoiGianKT_ValueChanged(object sender, EventArgs e)
+        {
+            if (dtpThoiGianKT.Value == dtpThoiGianBD.Value)
+            {
+                if (dtpThoiGianKT.Value.TimeOfDay <= dtpThoiGianBD.Value.TimeOfDay)
+                {
+                    ToastMSS mss = new ToastMSS("Vui lòng chọn ngày kết thúc lơn hơn ngày bắt đầu !", "INFO");
+                }
             }
         }
     }
