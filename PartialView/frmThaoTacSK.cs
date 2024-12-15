@@ -1,6 +1,8 @@
 ﻿using Phan_Mem_Quan_Ly.Model;
 using Phan_Mem_Quan_Ly.Respository;
+using Phan_Mem_Quan_Ly.UserControls;
 using System;
+using System.Linq;
 using System.Windows.Forms;
 
 namespace Phan_Mem_Quan_Ly.PartialView
@@ -62,6 +64,45 @@ namespace Phan_Mem_Quan_Ly.PartialView
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi không load được bảng nhân viên" + ex.Message);
+            }
+        }
+
+
+
+        private void dtgSanPham_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && dtgSanPham.Columns[e.ColumnIndex].Name == "GiamGia")
+            {
+                bool isChecked = Convert.ToBoolean(dtgSanPham.Rows[e.RowIndex].Cells["GiamGia"].Value);
+                string maSP = Convert.ToString(dtgSanPham.Rows[e.RowIndex].Cells["MaSP"].Value);
+
+                if (isChecked)
+                {
+                    // Thêm DiscountControl vào FlowLayoutPanel
+                    DiscountControl discount = new DiscountControl();
+                    discount.MaSP = maSP;
+                    flpGiamGia.Controls.Add(discount);
+                }
+                else
+                {
+                    // Xóa DiscountControl khỏi FlowLayoutPanel
+                    var discountControl = flpGiamGia.Controls.OfType<DiscountControl>()
+                        .FirstOrDefault(dis => dis.MaSP.Equals(maSP));
+
+                    if (discountControl != null)
+                    {
+                        flpGiamGia.Controls.Remove(discountControl);
+                    }
+                }
+            }
+        }
+
+        private void dtgSanPham_CurrentCellDirtyStateChanged(object sender, EventArgs e)
+        {
+            if (dtgSanPham.IsCurrentCellDirty)
+            {
+                // Cập nhật ngay lập tức giá trị ô checkbox
+                dtgSanPham.CommitEdit(DataGridViewDataErrorContexts.Commit);
             }
         }
     }
