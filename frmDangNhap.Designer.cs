@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDangNhap));
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2TextBox2 = new Guna.UI2.WinForms.Guna2TextBox();
-            this.txtTK = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
+            this.txtMKLogin = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTKLogin = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2PictureBox4 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnDK = new System.Windows.Forms.Label();
@@ -53,77 +53,78 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // guna2Button1
+            // btnLogin
             // 
-            this.guna2Button1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Button1.BorderRadius = 20;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.SystemColors.Window;
-            this.guna2Button1.Location = new System.Drawing.Point(94, 275);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(218, 71);
-            this.guna2Button1.TabIndex = 12;
-            this.guna2Button1.Text = "LOGIN";
+            this.btnLogin.BackColor = System.Drawing.Color.Transparent;
+            this.btnLogin.BorderRadius = 20;
+            this.btnLogin.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogin.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLogin.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogin.ForeColor = System.Drawing.SystemColors.Window;
+            this.btnLogin.Location = new System.Drawing.Point(94, 275);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btnLogin.Name = "btnLogin";
+            this.btnLogin.Size = new System.Drawing.Size(218, 71);
+            this.btnLogin.TabIndex = 12;
+            this.btnLogin.Text = "LOGIN";
+            this.btnLogin.Click += new System.EventHandler(this.btnLogin_Click);
             // 
-            // guna2TextBox2
+            // txtMKLogin
             // 
-            this.guna2TextBox2.BackColor = System.Drawing.Color.Transparent;
-            this.guna2TextBox2.BorderRadius = 20;
-            this.guna2TextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.DefaultText = "";
-            this.guna2TextBox2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.guna2TextBox2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.guna2TextBox2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.guna2TextBox2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.guna2TextBox2.ForeColor = System.Drawing.Color.Black;
-            this.guna2TextBox2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.guna2TextBox2.IconLeft = ((System.Drawing.Image)(resources.GetObject("guna2TextBox2.IconLeft")));
-            this.guna2TextBox2.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2TextBox2.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.guna2TextBox2.IconLeftSize = new System.Drawing.Size(80, 60);
-            this.guna2TextBox2.Location = new System.Drawing.Point(10, 131);
-            this.guna2TextBox2.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.guna2TextBox2.Name = "guna2TextBox2";
-            this.guna2TextBox2.PasswordChar = '●';
-            this.guna2TextBox2.PlaceholderText = "PASSWORD";
-            this.guna2TextBox2.SelectedText = "";
-            this.guna2TextBox2.Size = new System.Drawing.Size(389, 59);
-            this.guna2TextBox2.TabIndex = 8;
-            this.guna2TextBox2.UseSystemPasswordChar = true;
+            this.txtMKLogin.BackColor = System.Drawing.Color.Transparent;
+            this.txtMKLogin.BorderRadius = 20;
+            this.txtMKLogin.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMKLogin.DefaultText = "";
+            this.txtMKLogin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtMKLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtMKLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMKLogin.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtMKLogin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMKLogin.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txtMKLogin.ForeColor = System.Drawing.Color.Black;
+            this.txtMKLogin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtMKLogin.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtMKLogin.IconLeft")));
+            this.txtMKLogin.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMKLogin.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txtMKLogin.IconLeftSize = new System.Drawing.Size(80, 60);
+            this.txtMKLogin.Location = new System.Drawing.Point(10, 131);
+            this.txtMKLogin.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtMKLogin.Name = "txtMKLogin";
+            this.txtMKLogin.PasswordChar = '●';
+            this.txtMKLogin.PlaceholderText = "PASSWORD";
+            this.txtMKLogin.SelectedText = "";
+            this.txtMKLogin.Size = new System.Drawing.Size(389, 59);
+            this.txtMKLogin.TabIndex = 8;
+            this.txtMKLogin.UseSystemPasswordChar = true;
             // 
-            // txtTK
+            // txtTKLogin
             // 
-            this.txtTK.AutoSize = true;
-            this.txtTK.BackColor = System.Drawing.Color.Transparent;
-            this.txtTK.BorderRadius = 20;
-            this.txtTK.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTK.DefaultText = "";
-            this.txtTK.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTK.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTK.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTK.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTK.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTK.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTK.ForeColor = System.Drawing.Color.Black;
-            this.txtTK.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTK.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtTK.IconLeft")));
-            this.txtTK.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtTK.IconLeftSize = new System.Drawing.Size(80, 60);
-            this.txtTK.Location = new System.Drawing.Point(10, 44);
-            this.txtTK.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
-            this.txtTK.Name = "txtTK";
-            this.txtTK.PasswordChar = '\0';
-            this.txtTK.PlaceholderText = "USERNAME";
-            this.txtTK.SelectedText = "";
-            this.txtTK.Size = new System.Drawing.Size(389, 59);
-            this.txtTK.TabIndex = 7;
+            this.txtTKLogin.AutoSize = true;
+            this.txtTKLogin.BackColor = System.Drawing.Color.Transparent;
+            this.txtTKLogin.BorderRadius = 20;
+            this.txtTKLogin.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTKLogin.DefaultText = "";
+            this.txtTKLogin.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTKLogin.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTKLogin.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTKLogin.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTKLogin.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTKLogin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTKLogin.ForeColor = System.Drawing.Color.Black;
+            this.txtTKLogin.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTKLogin.IconLeft = ((System.Drawing.Image)(resources.GetObject("txtTKLogin.IconLeft")));
+            this.txtTKLogin.IconLeftOffset = new System.Drawing.Point(10, 0);
+            this.txtTKLogin.IconLeftSize = new System.Drawing.Size(80, 60);
+            this.txtTKLogin.Location = new System.Drawing.Point(10, 44);
+            this.txtTKLogin.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.txtTKLogin.Name = "txtTKLogin";
+            this.txtTKLogin.PasswordChar = '\0';
+            this.txtTKLogin.PlaceholderText = "USERNAME";
+            this.txtTKLogin.SelectedText = "";
+            this.txtTKLogin.Size = new System.Drawing.Size(389, 59);
+            this.txtTKLogin.TabIndex = 7;
             // 
             // guna2PictureBox4
             // 
@@ -170,9 +171,9 @@
             this.pnDN.Controls.Add(this.btnDK1);
             this.pnDN.Controls.Add(this.btnDK);
             this.pnDN.Controls.Add(this.label1);
-            this.pnDN.Controls.Add(this.guna2Button1);
-            this.pnDN.Controls.Add(this.guna2TextBox2);
-            this.pnDN.Controls.Add(this.txtTK);
+            this.pnDN.Controls.Add(this.btnLogin);
+            this.pnDN.Controls.Add(this.txtMKLogin);
+            this.pnDN.Controls.Add(this.txtTKLogin);
             this.pnDN.Location = new System.Drawing.Point(79, 200);
             this.pnDN.Name = "pnDN";
             this.pnDN.Size = new System.Drawing.Size(415, 433);
@@ -384,9 +385,9 @@
         }
 
         #endregion
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox2;
-        private Guna.UI2.WinForms.Guna2TextBox txtTK;
+        private Guna.UI2.WinForms.Guna2Button btnLogin;
+        private Guna.UI2.WinForms.Guna2TextBox txtMKLogin;
+        private Guna.UI2.WinForms.Guna2TextBox txtTKLogin;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox4;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label btnDK;

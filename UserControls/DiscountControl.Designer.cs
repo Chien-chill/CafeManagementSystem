@@ -171,8 +171,8 @@
             // 
             // DiscountControl
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.Controls.Add(this.guna2GradientPanel1);
             this.Margin = new System.Windows.Forms.Padding(15, 5, 15, 15);
             this.Name = "DiscountControl";

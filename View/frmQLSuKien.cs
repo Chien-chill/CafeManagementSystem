@@ -51,7 +51,6 @@ namespace Phan_Mem_Quan_Ly.View
             {
                 MessageBox.Show("Lỗi không load được bảng sự kiện" + ex.Message);
             }
-
         }
 
         private void btnThemSK_Click(object sender, EventArgs e)
@@ -68,14 +67,13 @@ namespace Phan_Mem_Quan_Ly.View
                     LoadData();
                 }
             }
-
         }
 
         private void frmQLSuKien_Load(object sender, EventArgs e)
         {
             LoadData();
         }
-        public SuKien skSua { get; set; }
+        public static SuKien skSua { get; set; }
         private void dtgSuKien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dtgSuKien.CurrentCell.OwningColumn.Name == "ThaoTacSua")

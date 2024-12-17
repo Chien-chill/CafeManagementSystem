@@ -1,6 +1,7 @@
 ﻿using Phan_Mem_Quan_Ly.Model;
 using Phan_Mem_Quan_Ly.Respository;
 using Phan_Mem_Quan_Ly.UserControls;
+using Phan_Mem_Quan_Ly.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,11 +18,20 @@ namespace Phan_Mem_Quan_Ly.PartialView
         public string MaMoi { get => txtMaSK.Text; set => txtMaSK.Text = value; }
         private void btnThoat_Click(object sender, EventArgs e)
         {
+            frmQLSuKien.skSua = null;
             this.Close();
         }
 
         private void btnThem_Click(object sender, EventArgs e)
         {
+            if (dtpThoiGianKT.Value.Date == dtpThoiGianBD.Value.Date)
+            {
+                if (dtpThoiGianKT.Value.TimeOfDay <= dtpThoiGianBD.Value.TimeOfDay)
+                {
+                    MessageBox.Show("Thời gian kết thúc phải lớn hơn thời gian bắt đầu");
+                    return;
+                }
+            }
             try
             {
                 List<ChiTietSuKien> lstskDetails = new List<ChiTietSuKien>();
@@ -66,10 +76,45 @@ namespace Phan_Mem_Quan_Ly.PartialView
 
         private void frmThaoTacSK_Load(object sender, EventArgs e)
         {
-            DateTime now = DateTime.Now;
-            dtpThoiGianBD.MinDate = now;
-            dtpThoiGianKT.MinDate = now;
+            LoadData();
+            if (frmQLSuKien.skSua != null)
+            {
+                txtMaSK.Text = frmQLSuKien.skSua.MaSK;
+                txtTenSK.Text = frmQLSuKien.skSua.TenSK;
+                dtpThoiGianBD.Value = frmQLSuKien.skSua.ThoiGianBD;
+                dtpThoiGianKT.Value = frmQLSuKien.skSua.ThoiGianKT;
+                try
+                {
+                    var lstGiamGia = fn_SuKienRespository.GetChiTietSKTheoMa(txtMaSK.Text);
+                    // Duyệt những mã sản phẩm đã được giảm giá của dtgSanPham
+                    foreach (DataGridViewRow row in dtgSanPham.Rows)
+                    {
+                        string MaSProw = Convert.ToString(row.Cells["MaSP"].Value);
+                        if (lstGiamGia.Any(item => item.Ma_SP.Equals(MaSProw)))
+                        {
+                            row.Cells["GiamGia"].Value = true;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine("Lỗi :" + ex.Message);
+                }
+            }
+            else
+            {
+                DateTime now = DateTime.Now;
+                dtpThoiGianBD.MinDate = now;
+                dtpThoiGianKT.MinDate = now;
+                btnThem.Visible = true;
+                btnSua.Visible = false;
 
+            }
+
+        }
+
+        public void LoadData()
+        {
             try
             {
                 var lstSP = fn_SanPhamRespository.GetAllSanPham();
@@ -82,12 +127,7 @@ namespace Phan_Mem_Quan_Ly.PartialView
             {
                 MessageBox.Show("Lỗi không load được bảng nhân viên" + ex.Message);
             }
-
-            btnThem.Visible = true;
-            btnSua.Visible = false;
         }
-
-
 
         private void dtgSanPham_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
@@ -95,7 +135,6 @@ namespace Phan_Mem_Quan_Ly.PartialView
             {
                 bool isChecked = Convert.ToBoolean(dtgSanPham.Rows[e.RowIndex].Cells["GiamGia"].Value);
                 string maSP = Convert.ToString(dtgSanPham.Rows[e.RowIndex].Cells["MaSP"].Value);
-
                 if (isChecked)
                 {
                     // Thêm DiscountControl vào FlowLayoutPanel
@@ -108,7 +147,6 @@ namespace Phan_Mem_Quan_Ly.PartialView
                     // Xóa DiscountControl khỏi FlowLayoutPanel
                     var discountControl = flpGiamGia.Controls.OfType<DiscountControl>()
                         .FirstOrDefault(dis => dis.MaSP.Equals(maSP));
-
                     if (discountControl != null)
                     {
                         flpGiamGia.Controls.Remove(discountControl);
@@ -116,7 +154,6 @@ namespace Phan_Mem_Quan_Ly.PartialView
                 }
             }
         }
-
         private void dtgSanPham_CurrentCellDirtyStateChanged(object sender, EventArgs e)
         {
             if (dtgSanPham.IsCurrentCellDirty)
@@ -152,13 +189,13 @@ namespace Phan_Mem_Quan_Ly.PartialView
 
         private void dtpThoiGianKT_ValueChanged(object sender, EventArgs e)
         {
-            if (dtpThoiGianKT.Value == dtpThoiGianBD.Value)
-            {
-                if (dtpThoiGianKT.Value.TimeOfDay <= dtpThoiGianBD.Value.TimeOfDay)
-                {
-                    ToastMSS mss = new ToastMSS("Vui lòng chọn ngày kết thúc lơn hơn ngày bắt đầu !", "INFO");
-                }
-            }
+            //if (dtpThoiGianKT.Value == dtpThoiGianBD.Value)
+            //{
+            //    if (dtpThoiGianKT.Value.TimeOfDay <= dtpThoiGianBD.Value.TimeOfDay)
+            //    {
+            //        ToastMSS mss = new ToastMSS("Vui lòng chọn ngày kết thúc lơn hơn ngày bắt đầu !", "INFO");
+            //    }
+            //}
         }
     }
 }

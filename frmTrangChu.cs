@@ -2,6 +2,7 @@
 using Phan_Mem_Quan_Ly.View;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 namespace Phan_Mem_Quan_Ly
@@ -9,6 +10,9 @@ namespace Phan_Mem_Quan_Ly
     public partial class frmTrangChu : Form
     {
         public static frmTrangChu Instance;
+        public string TenNV { get => lblTenNV.Text; set => lblTenNV.Text = value; }
+        public string ChucVu { get => lblChucVu.Text; set => lblChucVu.Text = value; }
+        public Image AnhNV { get => pcbAnhNV.Image; set => pcbAnhNV.Image = value; }
         public frmTrangChu()
         {
             Instance = this;

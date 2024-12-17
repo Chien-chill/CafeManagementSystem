@@ -44,12 +44,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL GETALL: " + ex.Message);
+                Console.WriteLine("Lỗi SQL GetAllNhanVien: " + ex.Message);
                 return null;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi GetALL: " + ex.Message);
+                Console.WriteLine("Lỗi GetAllNhanVien: " + ex.Message);
                 return null;
             }
         }
@@ -77,12 +77,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL ADD: " + ex.Message);
+                Console.WriteLine("Lỗi SQL AddNhanVien: " + ex.Message);
                 return false;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi ADD: " + ex.Message);
+                Console.WriteLine("Lỗi AddNhanVien: " + ex.Message);
                 return false;
             }
         }
@@ -111,12 +111,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL UpDate: " + ex.Message);
+                Console.WriteLine("Lỗi SQL UpdateNV: " + ex.Message);
                 return false;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi UpDate: " + ex.Message);
+                Console.WriteLine("Lỗi UpdateNV: " + ex.Message);
                 return false;
             }
         }
@@ -137,12 +137,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL Delete:" + ex.Message);
+                Console.WriteLine("Lỗi SQL DeleteNV:" + ex.Message);
                 return false;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi Delete:" + ex.Message);
+                Console.WriteLine("Lỗi DeleteNV:" + ex.Message);
                 return false;
             }
         }

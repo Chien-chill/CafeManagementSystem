@@ -328,6 +328,7 @@
             // 
             // dtgSanPham
             // 
+            this.dtgSanPham.AllowUserToAddRows = false;
             this.dtgSanPham.AllowUserToDeleteRows = false;
             this.dtgSanPham.AllowUserToResizeRows = false;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
@@ -541,7 +542,6 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblMoTa;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtpThoiGianKT;
-        private Guna.UI2.WinForms.Guna2DataGridView dtgSanPham;
         private Guna.UI2.WinForms.Guna2TextBox txtTimKiem;
         private System.Windows.Forms.BindingSource SanPhambindingSource;
         private System.Windows.Forms.FlowLayoutPanel flpGiamGia;
@@ -550,5 +550,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tenSPDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn moTaSPDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn GiamGia;
+        public Guna.UI2.WinForms.Guna2DataGridView dtgSanPham;
     }
 }

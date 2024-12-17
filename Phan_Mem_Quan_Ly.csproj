@@ -95,6 +95,7 @@
     <Compile Include="Model\KhachHang.cs" />
     <Compile Include="Model\NhanVien.cs" />
     <Compile Include="Model\SuKien.cs" />
+    <Compile Include="Model\TaiKhoan.cs" />
     <Compile Include="PartialView\frmChiTiet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -175,6 +176,7 @@
     <Compile Include="Respository\fn_NhanVienRespository.cs" />
     <Compile Include="Respository\fn_SanPhamRespository.cs" />
     <Compile Include="Respository\fn_SuKienRespository.cs" />
+    <Compile Include="Respository\fn_TaiKhoanRespository.cs" />
     <Compile Include="TabControl\frmDoAn.cs">
       <SubType>Form</SubType>
     </Compile>
