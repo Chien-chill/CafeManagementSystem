@@ -30,7 +30,8 @@ namespace Phan_Mem_Quan_Ly.Respository
                                 hd.MaKH = reader["Ma_KH"].ToString();
                                 hd.MaNV = reader["Ma_NV"].ToString();
                                 hd.MaSK = reader["Ma_SK"].ToString();
-                                hd.NgayTao = reader["NgayTao"].ToString().Split(' ')[0];
+                                DateTime dateTime = (DateTime)reader["NgayTao"];
+                                hd.NgayTao = dateTime.ToString("dd/MM/yyyy").Split(' ')[0];
                                 hd.GioRa = reader["GioRa"].ToString();
                                 hd.GioVao = reader["GioVao"].ToString();
                                 hd.TongTien = (decimal)reader["TongTien"];
@@ -44,12 +45,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL :" + ex.Message);
+                Console.WriteLine("Lỗi SQL GETHDChuaXuLy:" + ex.Message);
                 return null;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi :" + ex.Message);
+                Console.WriteLine("Lỗi GETHDChuaXuLy:" + ex.Message);
                 return null;
             }
         }
@@ -86,12 +87,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL :" + ex.Message);
+                Console.WriteLine("Lỗi SQL GetChiTietHDTheoMa:" + ex.Message);
                 return null;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi :" + ex.Message);
+                Console.WriteLine("Lỗi GetChiTietHDTheoMa:" + ex.Message);
                 return null;
             }
         }
@@ -116,12 +117,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL ADD : " + ex.Message);
+                Console.WriteLine("Lỗi SQL AddHoaDon : " + ex.Message);
                 return false;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi ADD: " + ex.Message);
+                Console.WriteLine("Lỗi AddHoaDon: " + ex.Message);
                 return false;
             }
         }
@@ -143,12 +144,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL UPDATE: " + ex.Message);
+                Console.WriteLine("Lỗi SQL UPDATEHoaDon: " + ex.Message);
                 return false;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi UPDATE: " + ex.Message);
+                Console.WriteLine("Lỗi UPDATEHoaDon: " + ex.Message);
                 return false;
             }
         }

@@ -51,7 +51,6 @@ namespace Phan_Mem_Quan_Ly.View
             {
                 MessageBox.Show("Lỗi không load được bảng sự kiện" + ex.Message);
             }
-
         }
 
         private void btnThemSK_Click(object sender, EventArgs e)
@@ -60,7 +59,7 @@ namespace Phan_Mem_Quan_Ly.View
             {
                 var lstSK = fn_SuKienRespository.GetAllSuKien();
                 string MaMoi = lstSK.Max(sk => sk.MaSK);
-                frmThemSK.MaMoi = (!string.IsNullOrEmpty(MaMoi)) ? "NV" + (int.Parse(MaMoi.Substring(2, MaMoi.Length - 2)) + 1).ToString("D2") : "NV01";
+                frmThemSK.MaMoi = (!string.IsNullOrEmpty(MaMoi)) ? "SK" + (int.Parse(MaMoi.Substring(2, MaMoi.Length - 2)) + 1).ToString("D2") : "SK01";
                 if (frmThemSK.ShowDialog() == DialogResult.OK)
                 {
                     ToastMSS ts = new ToastMSS("Thêm thành công !", "SUCCESS");
@@ -68,14 +67,13 @@ namespace Phan_Mem_Quan_Ly.View
                     LoadData();
                 }
             }
-
         }
 
         private void frmQLSuKien_Load(object sender, EventArgs e)
         {
             LoadData();
         }
-        public SuKien skSua { get; set; }
+        public static SuKien skSua { get; set; }
         private void dtgSuKien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (dtgSuKien.CurrentCell.OwningColumn.Name == "ThaoTacSua")

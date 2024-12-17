@@ -42,12 +42,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL GETALL: " + ex.Message);
+                Console.WriteLine("Lỗi SQL GetAllKhachHang: " + ex.Message);
                 return null;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi GetALL: " + ex.Message);
+                Console.WriteLine("Lỗi GetAllKhachHang: " + ex.Message);
                 return null;
             }
         }
@@ -73,12 +73,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL ADD: " + ex.Message);
+                Console.WriteLine("Lỗi SQL AddKhachHang: " + ex.Message);
                 return false;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi ADD: " + ex.Message);
+                Console.WriteLine("Lỗi AddKhachHang: " + ex.Message);
                 return false;
             }
         }
@@ -104,12 +104,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL UpDate: " + ex.Message);
+                Console.WriteLine("Lỗi SQL UpdateKH: " + ex.Message);
                 return false;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi UpDate: " + ex.Message);
+                Console.WriteLine("Lỗi UpdateKH: " + ex.Message);
                 return false;
             }
         }
@@ -130,12 +130,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL Delete:" + ex.Message);
+                Console.WriteLine("Lỗi SQL DeleteKH:" + ex.Message);
                 return false;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi Delete:" + ex.Message);
+                Console.WriteLine("Lỗi DeleteKH:" + ex.Message);
                 return false;
             }
         }
