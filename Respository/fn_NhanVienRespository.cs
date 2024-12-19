@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 
 namespace Phan_Mem_Quan_Ly.Respository
 {
@@ -44,12 +45,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL GetAllNhanVien: " + ex.Message);
+                Debug.WriteLine("Lỗi SQL GetAllNhanVien: " + ex.Message);
                 return null;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi GetAllNhanVien: " + ex.Message);
+                Debug.WriteLine("Lỗi GetAllNhanVien: " + ex.Message);
                 return null;
             }
         }
@@ -77,12 +78,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL AddNhanVien: " + ex.Message);
+                Debug.WriteLine("Lỗi SQL AddNhanVien: " + ex.Message);
                 return false;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi AddNhanVien: " + ex.Message);
+                Debug.WriteLine("Lỗi AddNhanVien: " + ex.Message);
                 return false;
             }
         }
@@ -111,12 +112,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL UpdateNV: " + ex.Message);
+                Debug.WriteLine("Lỗi SQL UpdateNV: " + ex.Message);
                 return false;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi UpdateNV: " + ex.Message);
+                Debug.WriteLine("Lỗi UpdateNV: " + ex.Message);
                 return false;
             }
         }
@@ -137,12 +138,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL DeleteNV:" + ex.Message);
+                Debug.WriteLine("Lỗi SQL DeleteNV:" + ex.Message);
                 return false;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi DeleteNV:" + ex.Message);
+                Debug.WriteLine("Lỗi DeleteNV:" + ex.Message);
                 return false;
             }
         }

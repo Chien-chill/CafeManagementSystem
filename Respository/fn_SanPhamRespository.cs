@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 namespace Phan_Mem_Quan_Ly.Respository
 {
     internal class fn_SanPhamRespository
@@ -46,12 +47,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL GetAllSanPham: " + ex.Message);
+                Debug.WriteLine("Lỗi SQL GetAllSanPham: " + ex.Message);
                 return null;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi GetAllSanPham: " + ex.Message);
+                Debug.WriteLine("Lỗi GetAllSanPham: " + ex.Message);
                 return null;
             }
         }
@@ -91,12 +92,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL GetDoUong: " + ex.Message);
+                Debug.WriteLine("Lỗi SQL GetDoUong: " + ex.Message);
                 return null;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi GetDoUong: " + ex.Message);
+                Debug.WriteLine("Lỗi GetDoUong: " + ex.Message);
                 return null;
             }
         }
@@ -132,12 +133,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL GetDoAn: " + ex.Message);
+                Debug.WriteLine("Lỗi SQL GetDoAn: " + ex.Message);
                 return null;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi GetDoAn: " + ex.Message);
+                Debug.WriteLine("Lỗi GetDoAn: " + ex.Message);
                 return null;
             }
         }
@@ -165,12 +166,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL AddSanPham: " + ex.Message);
+                Debug.WriteLine("Lỗi SQL AddSanPham: " + ex.Message);
                 return false;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi AddSanPham: " + ex.Message);
+                Debug.WriteLine("Lỗi AddSanPham: " + ex.Message);
                 return false;
             }
         }
@@ -201,12 +202,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL UpdateSanPham: " + ex.Message);
+                Debug.WriteLine("Lỗi SQL UpdateSanPham: " + ex.Message);
                 return false;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi UpdateSanPham: " + ex.Message);
+                Debug.WriteLine("Lỗi UpdateSanPham: " + ex.Message);
                 return false;
             }
         }
@@ -227,12 +228,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL DeleteSanPham:" + ex.Message);
+                Debug.WriteLine("Lỗi SQL DeleteSanPham:" + ex.Message);
                 return false;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi DeleteSanPham:" + ex.Message);
+                Debug.WriteLine("Lỗi DeleteSanPham:" + ex.Message);
                 return false;
             }
         }

@@ -1,13 +1,15 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
-
 namespace Phan_Mem_Quan_Ly
 {
     internal static class Program
     {
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         private static extern bool SetProcessDPIAware();
+
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -19,7 +21,7 @@ namespace Phan_Mem_Quan_Ly
                 SetProcessDPIAware();
             }
             string databaseFolder = Path.GetFullPath(Application.StartupPath + @"\..\..\Database");
-            Console.WriteLine("Database path: " + databaseFolder);
+            Debug.WriteLine("Database path: " + databaseFolder);
             AppDomain.CurrentDomain.SetData("DataDirectory", databaseFolder);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

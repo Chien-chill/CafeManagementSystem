@@ -37,12 +37,12 @@ namespace Phan_Mem_Quan_Ly.PartialView
                 List<ChiTietSuKien> lstskDetails = new List<ChiTietSuKien>();
                 foreach (var i in flpGiamGia.Controls.OfType<DiscountControl>())
                 {
-
-                    lstskDetails.Add(new ChiTietSuKien
+                    ChiTietSuKien chiTietSuKien = new ChiTietSuKien();
                     {
-                        Ma_SP = i.MaSP,
-                        Giam_Gia = Convert.ToInt16(i.GiamGia)
-                    });
+                        chiTietSuKien.ctsk_SanPham.MaSP = i.MaSP;
+                        chiTietSuKien.Giam_Gia = Convert.ToInt16(i.GiamGia);
+                    }
+                    lstskDetails.Add(chiTietSuKien);
                 }
 
                 SuKien sk = new SuKien();
@@ -90,7 +90,7 @@ namespace Phan_Mem_Quan_Ly.PartialView
                     foreach (DataGridViewRow row in dtgSanPham.Rows)
                     {
                         string MaSProw = Convert.ToString(row.Cells["MaSP"].Value);
-                        if (lstGiamGia.Any(item => item.Ma_SP.Equals(MaSProw)))
+                        if (lstGiamGia.Any(item => item.ctsk_SanPham.MaSP.Equals(MaSProw)))
                         {
                             row.Cells["GiamGia"].Value = true;
                         }

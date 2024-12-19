@@ -118,5 +118,10 @@ namespace Phan_Mem_Quan_Ly
         {
             loadfrm("QLSuKien", new frmQLSuKien());
         }
+
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            loadfrm("ThongKe", new frmThongKe());
+        }
     }
 }
