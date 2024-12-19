@@ -3,6 +3,7 @@ using Phan_Mem_Quan_Ly.PartialView;
 using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 
 namespace Phan_Mem_Quan_Ly.Respository
 {
@@ -44,11 +45,11 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL CheckTaiKhoan: " + ex.Message);
+                Debug.WriteLine("Lỗi SQL CheckTaiKhoan: " + ex.Message);
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi CheckTaiKhoan: " + ex.Message);
+                Debug.WriteLine("Lỗi CheckTaiKhoan: " + ex.Message);
             }
         }
     }

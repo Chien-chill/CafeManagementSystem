@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 
 namespace Phan_Mem_Quan_Ly.Respository
 {
@@ -42,12 +43,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL GetAllKhachHang: " + ex.Message);
+                Debug.WriteLine("Lỗi SQL GetAllKhachHang: " + ex.Message);
                 return null;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi GetAllKhachHang: " + ex.Message);
+                Debug.WriteLine("Lỗi GetAllKhachHang: " + ex.Message);
                 return null;
             }
         }
@@ -73,12 +74,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL AddKhachHang: " + ex.Message);
+                Debug.WriteLine("Lỗi SQL AddKhachHang: " + ex.Message);
                 return false;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi AddKhachHang: " + ex.Message);
+                Debug.WriteLine("Lỗi AddKhachHang: " + ex.Message);
                 return false;
             }
         }
@@ -104,12 +105,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL UpdateKH: " + ex.Message);
+                Debug.WriteLine("Lỗi SQL UpdateKH: " + ex.Message);
                 return false;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi UpdateKH: " + ex.Message);
+                Debug.WriteLine("Lỗi UpdateKH: " + ex.Message);
                 return false;
             }
         }
@@ -130,12 +131,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL DeleteKH:" + ex.Message);
+                Debug.WriteLine("Lỗi SQL DeleteKH:" + ex.Message);
                 return false;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi DeleteKH:" + ex.Message);
+                Debug.WriteLine("Lỗi DeleteKH:" + ex.Message);
                 return false;
             }
         }

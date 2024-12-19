@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 namespace Phan_Mem_Quan_Ly.Respository
 {
     public class fn_SuKienRespository
@@ -41,12 +42,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL GetAllSuKien: " + ex.Message);
+                Debug.WriteLine("Lỗi SQL GetAllSuKien: " + ex.Message);
                 return null;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi GetAllSuKien: " + ex.Message);
+                Debug.WriteLine("Lỗi GetAllSuKien: " + ex.Message);
                 return null;
             }
         }
@@ -70,7 +71,7 @@ namespace Phan_Mem_Quan_Ly.Respository
                             while (reader.Read())
                             {
                                 ChiTietSuKien sk = new ChiTietSuKien();
-                                sk.Ma_SP = reader["Ma_SP"].ToString();
+                                sk.ctsk_SanPham.MaSP = reader["Ma_SP"].ToString();
                                 sk.Giam_Gia = Convert.ToInt16(reader["Giam_Gia"]);
                                 SKList.Add(sk);
                             }
@@ -81,12 +82,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL GetChiTietSKTheoMa: " + ex.Message);
+                Debug.WriteLine("Lỗi SQL GetChiTietSKTheoMa: " + ex.Message);
                 return null;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi GetChiTietSKTheoMa: " + ex.Message);
+                Debug.WriteLine("Lỗi GetChiTietSKTheoMa: " + ex.Message);
                 return null;
             }
         }
@@ -101,7 +102,7 @@ namespace Phan_Mem_Quan_Ly.Respository
                         cmd.CommandType = CommandType.StoredProcedure;
                         // Install-Package Newtonsoft.Json
                         string Jsonsk = JsonConvert.SerializeObject(skDetails);
-                        Console.WriteLine("JSON Sent: " + Jsonsk);
+                        Debug.WriteLine("JSON Sent: " + Jsonsk);
                         cmd.Parameters.AddWithValue("@Ten_SK", sk.TenSK);
                         cmd.Parameters.AddWithValue("@ThoiGian_BD", sk.ThoiGianBD);
                         cmd.Parameters.AddWithValue("@ThoiGian_KT", sk.ThoiGianKT);
@@ -113,12 +114,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL AddSuKien: " + ex.Message);
+                Debug.WriteLine("Lỗi SQL AddSuKien: " + ex.Message);
                 return false;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi AddSuKien: " + ex.Message);
+                Debug.WriteLine("Lỗi AddSuKien: " + ex.Message);
                 return false;
             }
         }

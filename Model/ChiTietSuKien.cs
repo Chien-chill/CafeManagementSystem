@@ -1,10 +1,8 @@
 ﻿namespace Phan_Mem_Quan_Ly.Model
 {
-    public class ChiTietSuKien
+    public class ChiTietSuKien : SuKien
     {
-        public string MaSK { get; set; }
-        public string Ma_SP { get; set; }
-        public string TenSP { get; set; }
+        public SanPham ctsk_SanPham { get; set; }
         public int Giam_Gia { get; set; }
     }
 }

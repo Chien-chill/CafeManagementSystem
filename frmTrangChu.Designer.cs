@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTrangChu));
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.btnThongKe = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnQLSuKien = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnNuocUong = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnTatCa = new Guna.UI2.WinForms.Guna2GradientTileButton();
@@ -61,6 +62,7 @@
             // guna2Panel1
             // 
             this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(247)))), ((int)(((byte)(251)))));
+            this.guna2Panel1.Controls.Add(this.btnThongKe);
             this.guna2Panel1.Controls.Add(this.btnQLSuKien);
             this.guna2Panel1.Controls.Add(this.btnNuocUong);
             this.guna2Panel1.Controls.Add(this.btnTatCa);
@@ -76,6 +78,38 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(237, 1050);
             this.guna2Panel1.TabIndex = 4;
+            // 
+            // btnThongKe
+            // 
+            this.btnThongKe.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThongKe.Animated = true;
+            this.btnThongKe.BackColor = System.Drawing.Color.Transparent;
+            this.btnThongKe.BorderRadius = 5;
+            this.btnThongKe.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThongKe.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThongKe.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThongKe.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThongKe.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThongKe.FillColor = System.Drawing.Color.Transparent;
+            this.btnThongKe.FillColor2 = System.Drawing.Color.Transparent;
+            this.btnThongKe.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.btnThongKe.ForeColor = System.Drawing.Color.Gray;
+            this.btnThongKe.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.ForwardDiagonal;
+            this.btnThongKe.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
+            this.btnThongKe.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
+            this.btnThongKe.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnThongKe.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btnThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btnThongKe.Image")));
+            this.btnThongKe.ImageOffset = new System.Drawing.Point(0, 5);
+            this.btnThongKe.ImageSize = new System.Drawing.Size(58, 58);
+            this.btnThongKe.Location = new System.Drawing.Point(51, 901);
+            this.btnThongKe.Name = "btnThongKe";
+            this.btnThongKe.PressedColor = System.Drawing.Color.White;
+            this.btnThongKe.Size = new System.Drawing.Size(135, 125);
+            this.btnThongKe.TabIndex = 3;
+            this.btnThongKe.Text = "Thống Kê";
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
             // btnQLSuKien
             // 
@@ -97,11 +131,11 @@
             this.btnQLSuKien.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
             this.btnQLSuKien.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
             this.btnQLSuKien.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnQLSuKien.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btnQLSuKien.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
             this.btnQLSuKien.Image = ((System.Drawing.Image)(resources.GetObject("btnQLSuKien.Image")));
             this.btnQLSuKien.ImageOffset = new System.Drawing.Point(0, 5);
             this.btnQLSuKien.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnQLSuKien.Location = new System.Drawing.Point(51, 918);
+            this.btnQLSuKien.Location = new System.Drawing.Point(51, 758);
             this.btnQLSuKien.Name = "btnQLSuKien";
             this.btnQLSuKien.PressedColor = System.Drawing.Color.White;
             this.btnQLSuKien.Size = new System.Drawing.Size(135, 125);
@@ -129,7 +163,7 @@
             this.btnNuocUong.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
             this.btnNuocUong.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
             this.btnNuocUong.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnNuocUong.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.btnNuocUong.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
             this.btnNuocUong.Image = ((System.Drawing.Image)(resources.GetObject("btnNuocUong.Image")));
             this.btnNuocUong.ImageOffset = new System.Drawing.Point(0, 1);
             this.btnNuocUong.ImageSize = new System.Drawing.Size(50, 50);
@@ -161,7 +195,7 @@
             this.btnTatCa.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
             this.btnTatCa.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
             this.btnTatCa.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnTatCa.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
+            this.btnTatCa.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
             this.btnTatCa.Image = ((System.Drawing.Image)(resources.GetObject("btnTatCa.Image")));
             this.btnTatCa.ImageOffset = new System.Drawing.Point(0, 5);
             this.btnTatCa.ImageSize = new System.Drawing.Size(50, 50);
@@ -193,11 +227,11 @@
             this.btnQLNhanVien.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
             this.btnQLNhanVien.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
             this.btnQLNhanVien.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnQLNhanVien.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
+            this.btnQLNhanVien.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
             this.btnQLNhanVien.Image = ((System.Drawing.Image)(resources.GetObject("btnQLNhanVien.Image")));
             this.btnQLNhanVien.ImageOffset = new System.Drawing.Point(0, 1);
             this.btnQLNhanVien.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnQLNhanVien.Location = new System.Drawing.Point(51, 773);
+            this.btnQLNhanVien.Location = new System.Drawing.Point(51, 613);
             this.btnQLNhanVien.Name = "btnQLNhanVien";
             this.btnQLNhanVien.PressedColor = System.Drawing.Color.White;
             this.btnQLNhanVien.Size = new System.Drawing.Size(135, 125);
@@ -225,11 +259,11 @@
             this.btnDonHang.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
             this.btnDonHang.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
             this.btnDonHang.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnDonHang.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
+            this.btnDonHang.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
             this.btnDonHang.Image = ((System.Drawing.Image)(resources.GetObject("btnDonHang.Image")));
             this.btnDonHang.ImageOffset = new System.Drawing.Point(0, 1);
             this.btnDonHang.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnDonHang.Location = new System.Drawing.Point(51, 479);
+            this.btnDonHang.Location = new System.Drawing.Point(51, 319);
             this.btnDonHang.Name = "btnDonHang";
             this.btnDonHang.PressedColor = System.Drawing.Color.White;
             this.btnDonHang.Size = new System.Drawing.Size(135, 125);
@@ -257,11 +291,11 @@
             this.btnQLKhachHang.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
             this.btnQLKhachHang.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
             this.btnQLKhachHang.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnQLKhachHang.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
+            this.btnQLKhachHang.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
             this.btnQLKhachHang.Image = ((System.Drawing.Image)(resources.GetObject("btnQLKhachHang.Image")));
             this.btnQLKhachHang.ImageOffset = new System.Drawing.Point(0, 1);
             this.btnQLKhachHang.ImageSize = new System.Drawing.Size(50, 50);
-            this.btnQLKhachHang.Location = new System.Drawing.Point(51, 628);
+            this.btnQLKhachHang.Location = new System.Drawing.Point(51, 468);
             this.btnQLKhachHang.Name = "btnQLKhachHang";
             this.btnQLKhachHang.PressedColor = System.Drawing.Color.White;
             this.btnQLKhachHang.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -499,5 +533,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lblChucVu;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTenNV;
         public Guna.UI2.WinForms.Guna2NotificationPaint notifPDonHang;
+        private Guna.UI2.WinForms.Guna2GradientTileButton btnThongKe;
     }
 }

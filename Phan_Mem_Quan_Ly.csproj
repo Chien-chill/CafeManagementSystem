@@ -58,6 +58,18 @@
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v24.2.Core, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Drawing.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v24.2.Core, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v24.2.UI, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v24.2.Wizard, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraEditors.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="Guna.UI">
       <HintPath>C:\Users\tranc\Downloads\Guna.UI.dll</HintPath>
     </Reference>
@@ -96,6 +108,7 @@
     <Compile Include="Model\NhanVien.cs" />
     <Compile Include="Model\SuKien.cs" />
     <Compile Include="Model\TaiKhoan.cs" />
+    <Compile Include="Model\ThongKe.cs" />
     <Compile Include="PartialView\frmChiTiet.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -177,6 +190,7 @@
     <Compile Include="Respository\fn_SanPhamRespository.cs" />
     <Compile Include="Respository\fn_SuKienRespository.cs" />
     <Compile Include="Respository\fn_TaiKhoanRespository.cs" />
+    <Compile Include="Respository\fn_ThongKeRespository.cs" />
     <Compile Include="TabControl\frmDoAn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -267,6 +281,12 @@
     <Compile Include="View\frmQLSuKien.Designer.cs">
       <DependentUpon>frmQLSuKien.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmThongKe.Designer.cs">
+      <DependentUpon>frmThongKe.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="PartialView\frmChiTiet.resx">
       <DependentUpon>frmChiTiet.cs</DependentUpon>
     </EmbeddedResource>
@@ -294,6 +314,7 @@
     <EmbeddedResource Include="PartialView\ToastMSS.resx">
       <DependentUpon>ToastMSS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -355,6 +376,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmQLSuKien.resx">
       <DependentUpon>frmQLSuKien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmThongKe.resx">
+      <DependentUpon>frmThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.ChiTietSuKien.datasource" />

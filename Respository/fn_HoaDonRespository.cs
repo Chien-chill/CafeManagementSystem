@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 namespace Phan_Mem_Quan_Ly.Respository
 {
     internal class fn_HoaDonRespository
@@ -45,12 +46,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL GETHDChuaXuLy:" + ex.Message);
+                Debug.WriteLine("Lỗi SQL GETHDChuaXuLy:" + ex.Message);
                 return null;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi GETHDChuaXuLy:" + ex.Message);
+                Debug.WriteLine("Lỗi GETHDChuaXuLy:" + ex.Message);
                 return null;
             }
         }
@@ -87,12 +88,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL GetChiTietHDTheoMa:" + ex.Message);
+                Debug.WriteLine("Lỗi SQL GetChiTietHDTheoMa:" + ex.Message);
                 return null;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi GetChiTietHDTheoMa:" + ex.Message);
+                Debug.WriteLine("Lỗi GetChiTietHDTheoMa:" + ex.Message);
                 return null;
             }
         }
@@ -117,12 +118,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL AddHoaDon : " + ex.Message);
+                Debug.WriteLine("Lỗi SQL AddHoaDon : " + ex.Message);
                 return false;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi AddHoaDon: " + ex.Message);
+                Debug.WriteLine("Lỗi AddHoaDon: " + ex.Message);
                 return false;
             }
         }
@@ -144,12 +145,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Console.WriteLine("Lỗi SQL UPDATEHoaDon: " + ex.Message);
+                Debug.WriteLine("Lỗi SQL UPDATEHoaDon: " + ex.Message);
                 return false;
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Lỗi UPDATEHoaDon: " + ex.Message);
+                Debug.WriteLine("Lỗi UPDATEHoaDon: " + ex.Message);
                 return false;
             }
         }
