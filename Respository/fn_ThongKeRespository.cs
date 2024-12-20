@@ -50,5 +50,45 @@ namespace Phan_Mem_Quan_Ly.Respository
                 return null;
             }
         }
+        public static List<ThongKe> GetThongKeDoanhThu()
+        {
+            try
+            {
+                using (SqlConnection conn = DataConnect.CreateConnection())
+                {
+                    if (conn == null)
+                    {
+                        throw new Exception("Không thể tạo kết nối đến cơ sở dữ liệu.");
+                    }
+                    using (SqlCommand cmd = new SqlCommand("SP_DoanhThuTheoThang", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            List<ThongKe> TKList = new List<ThongKe>();
+                            while (reader.Read())
+                            {
+                                ThongKe tk = new ThongKe();
+                                tk.Thang_Nam = reader["Thang"].ToString() + "/" + reader["Nam"].ToString();
+                                tk.TongDoanhThu = Convert.ToDecimal(reader["TongDoanhThu"]);
+                                TKList.Add(tk);
+                            }
+                            return TKList;
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                Debug.WriteLine("Lỗi SQL GetThongKeDoanhThu: " + ex.Message);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Lỗi  GetThongKeDoanhThu: " + ex.Message);
+                return null;
+            }
+        }
+
     }
 }

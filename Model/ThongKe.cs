@@ -3,6 +3,7 @@
     internal class ThongKe : SanPham
     {
         public int TongSoLuong { get; set; }
+        public string Thang_Nam { get; set; }
         public decimal TongDoanhThu { get; set; }
     }
 }

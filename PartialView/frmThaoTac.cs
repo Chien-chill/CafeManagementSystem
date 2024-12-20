@@ -74,7 +74,7 @@ namespace Phan_Mem_Quan_Ly.PartialView
                 picSP.Image = new Bitmap(ofd.FileName);
             }
         }
-        private readonly Image DefaultImage = Phan_Mem_Quan_Ly.Properties.Resources.icons8_image_96;
+        private Image DefaultImage = Phan_Mem_Quan_Ly.Properties.Resources.icons8_image_96;
         private void btnLuu_Click(object sender, EventArgs e)
         {
             try

@@ -123,5 +123,10 @@ namespace Phan_Mem_Quan_Ly
         {
             loadfrm("ThongKe", new frmThongKe());
         }
+
+        private void btnTrangChu_Click(object sender, EventArgs e)
+        {
+            loadfrm("TrangChu", new frmHome());
+        }
     }
 }

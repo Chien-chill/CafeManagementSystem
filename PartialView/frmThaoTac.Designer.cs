@@ -74,7 +74,7 @@
             this.txtTenSP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtTenSP.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtTenSP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTenSP.Location = new System.Drawing.Point(195, 205);
+            this.txtTenSP.Location = new System.Drawing.Point(194, 205);
             this.txtTenSP.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtTenSP.Name = "txtTenSP";
             this.txtTenSP.PasswordChar = '\0';
@@ -94,7 +94,7 @@
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(934, 100);
-            this.guna2GradientPanel1.TabIndex = 2;
+            this.guna2GradientPanel1.TabIndex = 0;
             // 
             // pcTieuDe
             // 
@@ -102,7 +102,7 @@
             this.pcTieuDe.FillColor = System.Drawing.Color.Transparent;
             this.pcTieuDe.Image = global::Phan_Mem_Quan_Ly.Properties.Resources.icons8_soda_48_hover;
             this.pcTieuDe.ImageRotate = 0F;
-            this.pcTieuDe.Location = new System.Drawing.Point(12, 12);
+            this.pcTieuDe.Location = new System.Drawing.Point(11, 12);
             this.pcTieuDe.Name = "pcTieuDe";
             this.pcTieuDe.Size = new System.Drawing.Size(76, 75);
             this.pcTieuDe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -115,7 +115,7 @@
             this.lblTieuDe.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold);
             this.lblTieuDe.ForeColor = System.Drawing.Color.White;
             this.lblTieuDe.IsSelectionEnabled = false;
-            this.lblTieuDe.Location = new System.Drawing.Point(94, 31);
+            this.lblTieuDe.Location = new System.Drawing.Point(93, 31);
             this.lblTieuDe.Name = "lblTieuDe";
             this.lblTieuDe.Size = new System.Drawing.Size(219, 40);
             this.lblTieuDe.TabIndex = 0;
@@ -135,7 +135,7 @@
             this.btnThem.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
             this.btnThem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.Color.White;
-            this.btnThem.Location = new System.Drawing.Point(29, 26);
+            this.btnThem.Location = new System.Drawing.Point(28, 26);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(152, 62);
             this.btnThem.TabIndex = 0;
@@ -157,7 +157,7 @@
             this.btnThoat.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
             this.btnThoat.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.White;
-            this.btnThoat.Location = new System.Drawing.Point(218, 26);
+            this.btnThoat.Location = new System.Drawing.Point(217, 26);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(152, 62);
             this.btnThoat.TabIndex = 1;
@@ -190,7 +190,7 @@
             this.btnSua.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
             this.btnSua.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.Color.White;
-            this.btnSua.Location = new System.Drawing.Point(29, 26);
+            this.btnSua.Location = new System.Drawing.Point(28, 26);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(152, 62);
             this.btnSua.TabIndex = 0;
@@ -201,7 +201,7 @@
             // 
             this.lblTenSP.BackColor = System.Drawing.Color.Transparent;
             this.lblTenSP.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenSP.Location = new System.Drawing.Point(32, 220);
+            this.lblTenSP.Location = new System.Drawing.Point(31, 220);
             this.lblTenSP.Name = "lblTenSP";
             this.lblTenSP.Size = new System.Drawing.Size(130, 30);
             this.lblTenSP.TabIndex = 3;
@@ -226,7 +226,7 @@
             // 
             this.lblMaSP.BackColor = System.Drawing.Color.Transparent;
             this.lblMaSP.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMaSP.Location = new System.Drawing.Point(32, 130);
+            this.lblMaSP.Location = new System.Drawing.Point(31, 130);
             this.lblMaSP.Name = "lblMaSP";
             this.lblMaSP.Size = new System.Drawing.Size(124, 30);
             this.lblMaSP.TabIndex = 1;
@@ -245,7 +245,7 @@
             this.txtMaSP.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMaSP.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMaSP.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMaSP.Location = new System.Drawing.Point(195, 115);
+            this.txtMaSP.Location = new System.Drawing.Point(194, 115);
             this.txtMaSP.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMaSP.Name = "txtMaSP";
             this.txtMaSP.PasswordChar = '\0';
@@ -269,7 +269,7 @@
             this.txtMoTa.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtMoTa.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtMoTa.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtMoTa.Location = new System.Drawing.Point(195, 562);
+            this.txtMoTa.Location = new System.Drawing.Point(194, 562);
             this.txtMoTa.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtMoTa.Name = "txtMoTa";
             this.txtMoTa.PasswordChar = '\0';
@@ -283,7 +283,7 @@
             // 
             this.lblMoTa.BackColor = System.Drawing.Color.Transparent;
             this.lblMoTa.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMoTa.Location = new System.Drawing.Point(15, 577);
+            this.lblMoTa.Location = new System.Drawing.Point(14, 577);
             this.lblMoTa.Name = "lblMoTa";
             this.lblMoTa.Size = new System.Drawing.Size(147, 30);
             this.lblMoTa.TabIndex = 3;
@@ -303,7 +303,7 @@
             this.txtDonGiaM.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDonGiaM.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDonGiaM.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDonGiaM.Location = new System.Drawing.Point(195, 388);
+            this.txtDonGiaM.Location = new System.Drawing.Point(194, 388);
             this.txtDonGiaM.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDonGiaM.Name = "txtDonGiaM";
             this.txtDonGiaM.PasswordChar = '\0';
@@ -327,7 +327,7 @@
             this.txtDonGiaS.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDonGiaS.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDonGiaS.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDonGiaS.Location = new System.Drawing.Point(195, 299);
+            this.txtDonGiaS.Location = new System.Drawing.Point(194, 299);
             this.txtDonGiaS.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDonGiaS.Name = "txtDonGiaS";
             this.txtDonGiaS.PasswordChar = '\0';
@@ -358,7 +358,7 @@
             this.btnSizeL.HoverState.BorderColor = System.Drawing.Color.White;
             this.btnSizeL.HoverState.FillColor = System.Drawing.Color.Tomato;
             this.btnSizeL.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnSizeL.Location = new System.Drawing.Point(65, 485);
+            this.btnSizeL.Location = new System.Drawing.Point(64, 485);
             this.btnSizeL.Name = "btnSizeL";
             this.btnSizeL.Size = new System.Drawing.Size(91, 45);
             this.btnSizeL.TabIndex = 7;
@@ -379,7 +379,7 @@
             this.txtDonGiaL.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDonGiaL.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDonGiaL.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDonGiaL.Location = new System.Drawing.Point(195, 477);
+            this.txtDonGiaL.Location = new System.Drawing.Point(194, 477);
             this.txtDonGiaL.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDonGiaL.Name = "txtDonGiaL";
             this.txtDonGiaL.PasswordChar = '\0';
@@ -410,7 +410,7 @@
             this.btnSizeM.HoverState.BorderColor = System.Drawing.Color.White;
             this.btnSizeM.HoverState.FillColor = System.Drawing.Color.Tomato;
             this.btnSizeM.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnSizeM.Location = new System.Drawing.Point(65, 396);
+            this.btnSizeM.Location = new System.Drawing.Point(64, 396);
             this.btnSizeM.Name = "btnSizeM";
             this.btnSizeM.Size = new System.Drawing.Size(91, 45);
             this.btnSizeM.TabIndex = 6;
@@ -438,7 +438,7 @@
             this.btnSizeS.HoverState.BorderColor = System.Drawing.Color.White;
             this.btnSizeS.HoverState.FillColor = System.Drawing.Color.Tomato;
             this.btnSizeS.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnSizeS.Location = new System.Drawing.Point(65, 307);
+            this.btnSizeS.Location = new System.Drawing.Point(64, 307);
             this.btnSizeS.Name = "btnSizeS";
             this.btnSizeS.Size = new System.Drawing.Size(91, 45);
             this.btnSizeS.TabIndex = 5;
@@ -458,7 +458,7 @@
             this.txtDonGia.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtDonGia.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtDonGia.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtDonGia.Location = new System.Drawing.Point(195, 292);
+            this.txtDonGia.Location = new System.Drawing.Point(194, 292);
             this.txtDonGia.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtDonGia.Name = "txtDonGia";
             this.txtDonGia.PasswordChar = '\0';
@@ -473,7 +473,7 @@
             // 
             this.lblDonGia.BackColor = System.Drawing.Color.Transparent;
             this.lblDonGia.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDonGia.Location = new System.Drawing.Point(65, 307);
+            this.lblDonGia.Location = new System.Drawing.Point(64, 307);
             this.lblDonGia.Name = "lblDonGia";
             this.lblDonGia.Size = new System.Drawing.Size(81, 30);
             this.lblDonGia.TabIndex = 3;
@@ -494,7 +494,7 @@
             this.btnDuyetAnh.ForeColor = System.Drawing.Color.White;
             this.btnDuyetAnh.Image = ((System.Drawing.Image)(resources.GetObject("btnDuyetAnh.Image")));
             this.btnDuyetAnh.ImageSize = new System.Drawing.Size(64, 64);
-            this.btnDuyetAnh.Location = new System.Drawing.Point(649, 369);
+            this.btnDuyetAnh.Location = new System.Drawing.Point(648, 369);
             this.btnDuyetAnh.Name = "btnDuyetAnh";
             this.btnDuyetAnh.Size = new System.Drawing.Size(160, 62);
             this.btnDuyetAnh.TabIndex = 10;
@@ -504,7 +504,7 @@
             // 
             this.picSP.Image = ((System.Drawing.Image)(resources.GetObject("picSP.Image")));
             this.picSP.ImageRotate = 0F;
-            this.picSP.Location = new System.Drawing.Point(605, 115);
+            this.picSP.Location = new System.Drawing.Point(604, 115);
             this.picSP.Name = "picSP";
             this.picSP.ShadowDecoration.Color = System.Drawing.Color.Tomato;
             this.picSP.ShadowDecoration.Depth = 40;

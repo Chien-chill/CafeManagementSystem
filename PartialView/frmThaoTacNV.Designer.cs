@@ -86,7 +86,7 @@
             this.btnNam.Location = new System.Drawing.Point(42, 57);
             this.btnNam.Name = "btnNam";
             this.btnNam.Size = new System.Drawing.Size(91, 45);
-            this.btnNam.TabIndex = 26;
+            this.btnNam.TabIndex = 0;
             this.btnNam.Text = "Nam ";
             // 
             // lblMoTa
@@ -96,7 +96,7 @@
             this.lblMoTa.Location = new System.Drawing.Point(397, 549);
             this.lblMoTa.Name = "lblMoTa";
             this.lblMoTa.Size = new System.Drawing.Size(135, 30);
-            this.lblMoTa.TabIndex = 16;
+            this.lblMoTa.TabIndex = 12;
             this.lblMoTa.Text = "Số Điện Thoại:";
             // 
             // btnNu
@@ -123,7 +123,7 @@
             this.btnNu.Location = new System.Drawing.Point(166, 57);
             this.btnNu.Name = "btnNu";
             this.btnNu.Size = new System.Drawing.Size(91, 45);
-            this.btnNu.TabIndex = 27;
+            this.btnNu.TabIndex = 1;
             this.btnNu.Text = "Nữ";
             // 
             // lblDonGia
@@ -133,7 +133,7 @@
             this.lblDonGia.Location = new System.Drawing.Point(32, 381);
             this.lblDonGia.Name = "lblDonGia";
             this.lblDonGia.Size = new System.Drawing.Size(58, 30);
-            this.lblDonGia.TabIndex = 17;
+            this.lblDonGia.TabIndex = 5;
             this.lblDonGia.Text = "CCCD:";
             // 
             // lblTenSP
@@ -143,7 +143,7 @@
             this.lblTenSP.Location = new System.Drawing.Point(29, 258);
             this.lblTenSP.Name = "lblTenSP";
             this.lblTenSP.Size = new System.Drawing.Size(144, 30);
-            this.lblTenSP.TabIndex = 18;
+            this.lblTenSP.TabIndex = 3;
             this.lblTenSP.Text = "Tên Nhân Viên:";
             // 
             // txtCCCD
@@ -166,7 +166,7 @@
             this.txtCCCD.PlaceholderText = "";
             this.txtCCCD.SelectedText = "";
             this.txtCCCD.Size = new System.Drawing.Size(299, 60);
-            this.txtCCCD.TabIndex = 23;
+            this.txtCCCD.TabIndex = 6;
             this.txtCCCD.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // lblMaSP
@@ -176,7 +176,7 @@
             this.lblMaSP.Location = new System.Drawing.Point(32, 130);
             this.lblMaSP.Name = "lblMaSP";
             this.lblMaSP.Size = new System.Drawing.Size(138, 30);
-            this.lblMaSP.TabIndex = 13;
+            this.lblMaSP.TabIndex = 1;
             this.lblMaSP.Text = "Mã Nhân Viên:";
             // 
             // guna2Panel1
@@ -265,7 +265,7 @@
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(725, 100);
-            this.guna2GradientPanel1.TabIndex = 15;
+            this.guna2GradientPanel1.TabIndex = 0;
             // 
             // pcTieuDe
             // 
@@ -312,7 +312,7 @@
             this.txtSDT.PlaceholderText = "";
             this.txtSDT.SelectedText = "";
             this.txtSDT.Size = new System.Drawing.Size(299, 60);
-            this.txtSDT.TabIndex = 21;
+            this.txtSDT.TabIndex = 13;
             this.txtSDT.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // txtTenNV
@@ -335,7 +335,7 @@
             this.txtTenNV.PlaceholderText = "";
             this.txtTenNV.SelectedText = "";
             this.txtTenNV.Size = new System.Drawing.Size(299, 60);
-            this.txtTenNV.TabIndex = 19;
+            this.txtTenNV.TabIndex = 4;
             this.txtTenNV.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // Mss
@@ -375,7 +375,7 @@
             this.txtMaNV.ReadOnly = true;
             this.txtMaNV.SelectedText = "";
             this.txtMaNV.Size = new System.Drawing.Size(299, 60);
-            this.txtMaNV.TabIndex = 14;
+            this.txtMaNV.TabIndex = 2;
             this.txtMaNV.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // groupBox1
@@ -386,7 +386,7 @@
             this.groupBox1.Location = new System.Drawing.Point(35, 519);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(302, 119);
-            this.groupBox1.TabIndex = 30;
+            this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Giới Tính";
             // 
@@ -410,7 +410,7 @@
             this.txtDiaChi.PlaceholderText = "";
             this.txtDiaChi.SelectedText = "";
             this.txtDiaChi.Size = new System.Drawing.Size(299, 60);
-            this.txtDiaChi.TabIndex = 23;
+            this.txtDiaChi.TabIndex = 11;
             this.txtDiaChi.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // guna2HtmlLabel1
@@ -420,7 +420,7 @@
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(399, 424);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(72, 30);
-            this.guna2HtmlLabel1.TabIndex = 17;
+            this.guna2HtmlLabel1.TabIndex = 10;
             this.guna2HtmlLabel1.Text = "Địa Chỉ:";
             // 
             // guna2HtmlLabel2
@@ -430,7 +430,7 @@
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(397, 296);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(101, 30);
-            this.guna2HtmlLabel2.TabIndex = 17;
+            this.guna2HtmlLabel2.TabIndex = 8;
             this.guna2HtmlLabel2.Text = "Ngày Sinh:";
             this.guna2HtmlLabel2.Visible = false;
             // 
@@ -450,7 +450,7 @@
             this.dtpNS.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpNS.Name = "dtpNS";
             this.dtpNS.Size = new System.Drawing.Size(301, 60);
-            this.dtpNS.TabIndex = 31;
+            this.dtpNS.TabIndex = 9;
             this.dtpNS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.dtpNS.Value = new System.DateTime(2024, 12, 6, 0, 0, 0, 0);
             // 

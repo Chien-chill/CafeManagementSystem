@@ -74,7 +74,7 @@
             this.guna2HtmlLabel1.Location = new System.Drawing.Point(397, 130);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(172, 30);
-            this.guna2HtmlLabel1.TabIndex = 38;
+            this.guna2HtmlLabel1.TabIndex = 5;
             this.guna2HtmlLabel1.Text = "Thời Gian Bắt Đầu:";
             // 
             // txtMaSK
@@ -99,7 +99,7 @@
             this.txtMaSK.ReadOnly = true;
             this.txtMaSK.SelectedText = "";
             this.txtMaSK.Size = new System.Drawing.Size(299, 60);
-            this.txtMaSK.TabIndex = 34;
+            this.txtMaSK.TabIndex = 2;
             this.txtMaSK.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // guna2DragControl1
@@ -118,7 +118,7 @@
             this.guna2GradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(1258, 100);
-            this.guna2GradientPanel1.TabIndex = 35;
+            this.guna2GradientPanel1.TabIndex = 0;
             // 
             // pcTieuDe
             // 
@@ -171,7 +171,7 @@
             this.dtpThoiGianBD.Name = "dtpThoiGianBD";
             this.dtpThoiGianBD.ShowUpDown = true;
             this.dtpThoiGianBD.Size = new System.Drawing.Size(301, 60);
-            this.dtpThoiGianBD.TabIndex = 47;
+            this.dtpThoiGianBD.TabIndex = 6;
             this.dtpThoiGianBD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.dtpThoiGianBD.Value = new System.DateTime(2024, 12, 13, 0, 0, 0, 0);
             // 
@@ -195,7 +195,7 @@
             this.txtTenSK.PlaceholderText = "";
             this.txtTenSK.SelectedText = "";
             this.txtTenSK.Size = new System.Drawing.Size(299, 60);
-            this.txtTenSK.TabIndex = 41;
+            this.txtTenSK.TabIndex = 4;
             this.txtTenSK.TextOffset = new System.Drawing.Point(10, 0);
             // 
             // btnThoat
@@ -269,7 +269,7 @@
             this.lblTenSP.Location = new System.Drawing.Point(29, 258);
             this.lblTenSP.Name = "lblTenSP";
             this.lblTenSP.Size = new System.Drawing.Size(117, 30);
-            this.lblTenSP.TabIndex = 40;
+            this.lblTenSP.TabIndex = 3;
             this.lblTenSP.Text = "Tên Sự Kiện:";
             // 
             // lblMaSP
@@ -279,7 +279,7 @@
             this.lblMaSP.Location = new System.Drawing.Point(32, 130);
             this.lblMaSP.Name = "lblMaSP";
             this.lblMaSP.Size = new System.Drawing.Size(111, 30);
-            this.lblMaSP.TabIndex = 33;
+            this.lblMaSP.TabIndex = 1;
             this.lblMaSP.Text = "Mã Sự Kiện:";
             // 
             // guna2Panel1
@@ -292,7 +292,7 @@
             this.guna2Panel1.Location = new System.Drawing.Point(0, 859);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1258, 111);
-            this.guna2Panel1.TabIndex = 45;
+            this.guna2Panel1.TabIndex = 13;
             // 
             // lblMoTa
             // 
@@ -301,7 +301,7 @@
             this.lblMoTa.Location = new System.Drawing.Point(397, 260);
             this.lblMoTa.Name = "lblMoTa";
             this.lblMoTa.Size = new System.Drawing.Size(181, 30);
-            this.lblMoTa.TabIndex = 36;
+            this.lblMoTa.TabIndex = 7;
             this.lblMoTa.Text = "Thời Gian Kết Thúc:";
             // 
             // dtpThoiGianKT
@@ -321,7 +321,7 @@
             this.dtpThoiGianKT.Name = "dtpThoiGianKT";
             this.dtpThoiGianKT.ShowUpDown = true;
             this.dtpThoiGianKT.Size = new System.Drawing.Size(301, 60);
-            this.dtpThoiGianKT.TabIndex = 47;
+            this.dtpThoiGianKT.TabIndex = 8;
             this.dtpThoiGianKT.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.dtpThoiGianKT.Value = new System.DateTime(2024, 12, 13, 0, 0, 0, 0);
             this.dtpThoiGianKT.ValueChanged += new System.EventHandler(this.dtpThoiGianKT_ValueChanged);
@@ -379,7 +379,7 @@
             this.dtgSanPham.RowHeadersWidth = 62;
             this.dtgSanPham.RowTemplate.Height = 50;
             this.dtgSanPham.Size = new System.Drawing.Size(766, 340);
-            this.dtgSanPham.TabIndex = 48;
+            this.dtgSanPham.TabIndex = 10;
             this.dtgSanPham.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dtgSanPham.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtgSanPham.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -464,7 +464,7 @@
             this.txtTimKiem.PlaceholderText = "Tìm Kiếm";
             this.txtTimKiem.SelectedText = "";
             this.txtTimKiem.Size = new System.Drawing.Size(466, 49);
-            this.txtTimKiem.TabIndex = 49;
+            this.txtTimKiem.TabIndex = 9;
             this.txtTimKiem.IconRightClick += new System.EventHandler(this.txtTimKiem_IconRightClick);
             // 
             // flpGiamGia
@@ -474,7 +474,7 @@
             this.flpGiamGia.Location = new System.Drawing.Point(801, 168);
             this.flpGiamGia.Name = "flpGiamGia";
             this.flpGiamGia.Size = new System.Drawing.Size(416, 675);
-            this.flpGiamGia.TabIndex = 50;
+            this.flpGiamGia.TabIndex = 12;
             // 
             // guna2HtmlLabel2
             // 
@@ -483,7 +483,7 @@
             this.guna2HtmlLabel2.Location = new System.Drawing.Point(801, 130);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(192, 30);
-            this.guna2HtmlLabel2.TabIndex = 38;
+            this.guna2HtmlLabel2.TabIndex = 11;
             this.guna2HtmlLabel2.Text = "Danh Sách Giảm Giá:";
             // 
             // frmThaoTacSK

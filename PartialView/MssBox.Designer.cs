@@ -57,7 +57,7 @@
             this.lblNoiDung.Location = new System.Drawing.Point(200, 0);
             this.lblNoiDung.Name = "lblNoiDung";
             this.lblNoiDung.Size = new System.Drawing.Size(443, 129);
-            this.lblNoiDung.TabIndex = 1;
+            this.lblNoiDung.TabIndex = 0;
             this.lblNoiDung.Text = "Nội Dung";
             this.lblNoiDung.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -77,7 +77,7 @@
             this.btnYes.Name = "btnYes";
             this.btnYes.PressedColor = System.Drawing.Color.White;
             this.btnYes.Size = new System.Drawing.Size(162, 54);
-            this.btnYes.TabIndex = 2;
+            this.btnYes.TabIndex = 1;
             this.btnYes.Text = "Có";
             this.btnYes.Click += new System.EventHandler(this.btnYes_Click);
             // 
