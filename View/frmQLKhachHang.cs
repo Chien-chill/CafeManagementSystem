@@ -28,7 +28,6 @@ namespace Phan_Mem_Quan_Ly.View
                 frmDic[formName] = f;
             }
             Form frm = frmDic[formName];
-            frm.BringToFront();
             frm.Show();
             this.PnPage.Tag = frm;
         }

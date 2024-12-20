@@ -8,7 +8,7 @@ namespace Phan_Mem_Quan_Ly.Respository
 {
     internal class fn_HoaDonRespository
     {
-        public static List<HoaDon> GetHDChuaXuLy()
+        public static List<HoaDon> GetHoaDonTheoTrangThai(string TrangThai)
         {
             try
             {
@@ -18,9 +18,10 @@ namespace Phan_Mem_Quan_Ly.Respository
                     {
                         throw new Exception("Không thể tạo kết nối đến cơ sở dữ liệu.");
                     }
-                    using (SqlCommand cmd = new SqlCommand("SP_HDChoXuLy", conn))
+                    using (SqlCommand cmd = new SqlCommand("SP_HienThiHD", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@TrangThai", TrangThai);
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
                             List<HoaDon> lstHD = new List<HoaDon>();
@@ -46,12 +47,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Debug.WriteLine("Lỗi SQL GETHDChuaXuLy:" + ex.Message);
+                Debug.WriteLine("Lỗi SQL GetHoaDonTheoTrangThai:" + ex.Message);
                 return null;
             }
             catch (Exception ex)
             {
-                Debug.WriteLine("Lỗi GETHDChuaXuLy:" + ex.Message);
+                Debug.WriteLine("Lỗi GetHoaDonTheoTrangThai:" + ex.Message);
                 return null;
             }
         }

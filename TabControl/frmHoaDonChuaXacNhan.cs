@@ -2,7 +2,6 @@
 using Phan_Mem_Quan_Ly.Respository;
 using Phan_Mem_Quan_Ly.UserControls;
 using System;
-using System.Data;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -31,18 +30,26 @@ namespace Phan_Mem_Quan_Ly.TabControl
 
         public void loadDonHang()
         {
-            var lstHoaDon = fn_HoaDonRespository.GetHDChuaXuLy();
-            var lstHoaDonThem = lstHoaDon.Where(hd => !flpDonHang.Controls.OfType<OrderControl>().Any(ord => ord.MaHD.Equals(hd.MaHD))).ToList();
-            if (lstHoaDon.Any())
+            try
             {
-                foreach (var hd in lstHoaDonThem)
+                flpDonHang.Controls.Clear();
+                var lstHoaDon = fn_HoaDonRespository.GetHoaDonTheoTrangThai("Chưa Xác Nhận");
+                if (lstHoaDon.Any())
                 {
-                    addOrderCtrl(hd);
+                    foreach (var hd in lstHoaDon)
+                    {
+                        addOrderCtrl(hd);
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi không load được bảng hóa đơn" + ex.Message);
             }
         }
         private void frmDonHangChuaXacNhan_Load(object sender, EventArgs e)
         {
+
             loadDonHang();
         }
     }

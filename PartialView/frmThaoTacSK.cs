@@ -1,12 +1,11 @@
 ﻿using Phan_Mem_Quan_Ly.Model;
 using Phan_Mem_Quan_Ly.Respository;
+using Phan_Mem_Quan_Ly.TabControl;
 using Phan_Mem_Quan_Ly.UserControls;
-using Phan_Mem_Quan_Ly.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-
 namespace Phan_Mem_Quan_Ly.PartialView
 {
     public partial class frmThaoTacSK : Form
@@ -18,7 +17,7 @@ namespace Phan_Mem_Quan_Ly.PartialView
         public string MaMoi { get => txtMaSK.Text; set => txtMaSK.Text = value; }
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            frmQLSuKien.skSua = null;
+            frmSuKien.skSua = null;
             this.Close();
         }
 
@@ -86,12 +85,12 @@ namespace Phan_Mem_Quan_Ly.PartialView
         private void frmThaoTacSK_Load(object sender, EventArgs e)
         {
             LoadData();
-            if (frmQLSuKien.skSua != null)
+            if (frmSuKien.skSua != null)
             {
-                txtMaSK.Text = frmQLSuKien.skSua.MaSK;
-                txtTenSK.Text = frmQLSuKien.skSua.TenSK;
-                dtpThoiGianBD.Value = frmQLSuKien.skSua.ThoiGianBD;
-                dtpThoiGianKT.Value = frmQLSuKien.skSua.ThoiGianKT;
+                txtMaSK.Text = frmSuKien.skSua.MaSK;
+                txtTenSK.Text = frmSuKien.skSua.TenSK;
+                dtpThoiGianBD.Value = frmSuKien.skSua.ThoiGianBD;
+                dtpThoiGianKT.Value = frmSuKien.skSua.ThoiGianKT;
                 try
                 {
                     var lstGiamGia = fn_SuKienRespository.GetChiTietSKTheoMa(txtMaSK.Text);

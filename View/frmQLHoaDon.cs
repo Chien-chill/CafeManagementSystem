@@ -28,7 +28,6 @@ namespace Phan_Mem_Quan_Ly.View
                 frmDic[formName] = f;
             }
             Form frm = frmDic[formName];
-            frm.BringToFront();
             frm.Show();
             if (formName == "DonHangChuaXacNhan" && frm is frmHoaDonChuaXacNhan hoaDonChuaXacNhan)
             {
@@ -46,6 +45,11 @@ namespace Phan_Mem_Quan_Ly.View
         {
             btnDonHangChuaXacNhan.Checked = true;
             btnDonHangChuaXacNhan_Click(sender, e);
+        }
+
+        private void btnDSHoaDon_Click(object sender, EventArgs e)
+        {
+            loadPage("DSHoaDon", new frmDSHoaDon());
         }
     }
 }
