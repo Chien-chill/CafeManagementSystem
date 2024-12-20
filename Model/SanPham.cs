@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations; // Thư viện sử dụng Data Annotation (vào References -> Add)
-using System.Runtime.CompilerServices;
+using System.Linq;
 namespace Phan_Mem_Quan_Ly.Model
 {
     public class SanPham

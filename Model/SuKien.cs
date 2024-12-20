@@ -1,5 +1,4 @@
 ﻿using System;
-
 namespace Phan_Mem_Quan_Ly.Model
 {
     public class SuKien

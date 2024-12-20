@@ -34,33 +34,42 @@ namespace Phan_Mem_Quan_Ly.PartialView
             }
             try
             {
-                List<ChiTietSuKien> lstskDetails = new List<ChiTietSuKien>();
-                foreach (var i in flpGiamGia.Controls.OfType<DiscountControl>())
+                if (string.IsNullOrEmpty(txtTenSK.Text))
                 {
-                    ChiTietSuKien chiTietSuKien = new ChiTietSuKien();
-                    {
-                        chiTietSuKien.ctsk_SanPham.MaSP = i.MaSP;
-                        chiTietSuKien.Giam_Gia = Convert.ToInt16(i.GiamGia);
-                    }
-                    lstskDetails.Add(chiTietSuKien);
-                }
-
-                SuKien sk = new SuKien();
-                {
-                    sk.TenSK = txtTenSK.Text;
-                    sk.ThoiGianBD = dtpThoiGianBD.Value;
-                    sk.ThoiGianKT = dtpThoiGianKT.Value;
-
-                }
-                bool result = fn_SuKienRespository.AddSuKien(sk, lstskDetails);
-                if (result)
-                {
-                    this.DialogResult = DialogResult.OK;
+                    Mss.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+                    Mss.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+                    Mss.Show($"Thêm thất bại: \n - Tên sự kiện không được để trống");
                 }
                 else
                 {
-                    Mss.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
-                    Mss.Show("Thêm thất bại ở SQL");
+                    List<ChiTietSuKien> lstskDetails = new List<ChiTietSuKien>();
+                    foreach (var i in flpGiamGia.Controls.OfType<DiscountControl>())
+                    {
+                        ChiTietSuKien chiTietSuKien = new ChiTietSuKien();
+                        {
+                            chiTietSuKien.ctsk_SanPham.MaSP = i.MaSP;
+                            chiTietSuKien.Giam_Gia = Convert.ToInt16(i.GiamGia);
+                        }
+                        lstskDetails.Add(chiTietSuKien);
+                    }
+
+                    SuKien sk = new SuKien();
+                    {
+                        sk.TenSK = txtTenSK.Text;
+                        sk.ThoiGianBD = dtpThoiGianBD.Value;
+                        sk.ThoiGianKT = dtpThoiGianKT.Value;
+
+                    }
+                    bool result = fn_SuKienRespository.AddSuKien(sk, lstskDetails);
+                    if (result)
+                    {
+                        this.DialogResult = DialogResult.OK;
+                    }
+                    else
+                    {
+                        Mss.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+                        Mss.Show("Thêm thất bại ở SQL");
+                    }
                 }
             }
             catch (Exception ex)

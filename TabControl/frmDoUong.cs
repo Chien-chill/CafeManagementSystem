@@ -76,9 +76,12 @@ namespace Phan_Mem_Quan_Ly.TabControl
                     }
                 }
             }
-            else if (dtgDoUong.CurrentCell.OwningColumn.Name == "ChiTietDonGia")
+            else if (dtgDoUong.CurrentCell.OwningColumn.Name == "ChiTiet")
             {
-
+                var lstDU = fn_SanPhamRespository.GetDoUong();
+                DoUong = lstDU.FirstOrDefault(sp => sp.MaSP.Equals(Convert.ToString(dtgDoUong.CurrentRow.Cells["MaDU"].Value)));
+                frmChiTietSP chitiet = new frmChiTietSP();
+                chitiet.ShowDialog();
             }
         }
         private void btnThemSP_Click(object sender, EventArgs e)

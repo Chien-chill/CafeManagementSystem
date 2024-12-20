@@ -28,15 +28,24 @@ namespace Phan_Mem_Quan_Ly.PartialView
                     nv.GioiTinh = (btnNam.Checked) ? "Nam" : "Nữ";
                     nv.NgaySinh = dtpNS.Text;
                 }
-                bool result = fn_NhanVienRespository.AddNhanVien(nv);
-                if (result)
+                if (!NhanVien.KiemTraNV(nv, out string errorMessage))
                 {
-                    this.DialogResult = DialogResult.OK;
+                    Mss.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+                    Mss.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+                    Mss.Show($"Thêm thất bại: \n{errorMessage}");
                 }
                 else
                 {
-                    Mss.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
-                    Mss.Show("Thêm thất bại ở SQL");
+                    bool result = fn_NhanVienRespository.AddNhanVien(nv);
+                    if (result)
+                    {
+                        this.DialogResult = DialogResult.OK;
+                    }
+                    else
+                    {
+                        Mss.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+                        Mss.Show("Thêm thất bại ở SQL");
+                    }
                 }
             }
             catch (Exception ex)

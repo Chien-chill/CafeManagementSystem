@@ -109,11 +109,11 @@
     <Compile Include="Model\SuKien.cs" />
     <Compile Include="Model\TaiKhoan.cs" />
     <Compile Include="Model\ThongKe.cs" />
-    <Compile Include="PartialView\frmChiTiet.cs">
+    <Compile Include="PartialView\frmChiTietSP.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PartialView\frmChiTiet.Designer.cs">
-      <DependentUpon>frmChiTiet.cs</DependentUpon>
+    <Compile Include="PartialView\frmChiTietSP.Designer.cs">
+      <DependentUpon>frmChiTietSP.cs</DependentUpon>
     </Compile>
     <Compile Include="PartialView\frmThaoTac.cs">
       <SubType>Form</SubType>
@@ -245,11 +245,23 @@
     <Compile Include="UserControls\PayControl.Designer.cs">
       <DependentUpon>PayControl.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UserControl1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UserControl1.Designer.cs">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmBanHang.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View\frmBanHang.Designer.cs">
       <DependentUpon>frmBanHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\frmHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmHome.Designer.cs">
+      <DependentUpon>frmHome.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmQLHoaDon.cs">
       <SubType>Form</SubType>
@@ -287,8 +299,8 @@
     <Compile Include="View\frmThongKe.Designer.cs">
       <DependentUpon>frmThongKe.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="PartialView\frmChiTiet.resx">
-      <DependentUpon>frmChiTiet.cs</DependentUpon>
+    <EmbeddedResource Include="PartialView\frmChiTietSP.resx">
+      <DependentUpon>frmChiTietSP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PartialView\frmThaoTac.resx">
       <DependentUpon>frmThaoTac.cs</DependentUpon>
@@ -359,8 +371,14 @@
     <EmbeddedResource Include="UserControls\PayControl.resx">
       <DependentUpon>PayControl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UserControl1.resx">
+      <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmBanHang.resx">
       <DependentUpon>frmBanHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmHome.resx">
+      <DependentUpon>frmHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmQLHoaDon.resx">
       <DependentUpon>frmQLHoaDon.cs</DependentUpon>
