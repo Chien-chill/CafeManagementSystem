@@ -8,6 +8,7 @@ namespace Phan_Mem_Quan_Ly.PartialView
     {
         public ToastMSS(string noidung, string type)
         {
+            this.BringToFront();
             InitializeComponent();
             lblNoiDung.Text = noidung;
             int ScreenWidth = Screen.PrimaryScreen.WorkingArea.Width;

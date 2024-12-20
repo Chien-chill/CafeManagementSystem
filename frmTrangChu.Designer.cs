@@ -259,7 +259,7 @@
             this.btnDonHang.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(249)))), ((int)(((byte)(130)))), ((int)(((byte)(68)))));
             this.btnDonHang.HoverState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
             this.btnDonHang.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnDonHang.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.btnDonHang.HoverState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
             this.btnDonHang.Image = ((System.Drawing.Image)(resources.GetObject("btnDonHang.Image")));
             this.btnDonHang.ImageOffset = new System.Drawing.Point(-5, 1);
             this.btnDonHang.ImageSize = new System.Drawing.Size(58, 58);
@@ -479,8 +479,8 @@
             this.notifPDonHang.BorderColor = System.Drawing.Color.Transparent;
             this.notifPDonHang.BorderRadius = 9;
             this.notifPDonHang.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.notifPDonHang.Location = new System.Drawing.Point(75, 9);
-            this.notifPDonHang.Size = new System.Drawing.Size(27, 20);
+            this.notifPDonHang.Location = new System.Drawing.Point(68, 4);
+            this.notifPDonHang.Size = new System.Drawing.Size(30, 22);
             this.notifPDonHang.TargetControl = this.btnDonHang;
             this.notifPDonHang.Text = "99";
             this.notifPDonHang.Visible = false;

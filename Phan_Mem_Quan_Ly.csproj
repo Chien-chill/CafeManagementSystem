@@ -197,6 +197,12 @@
     <Compile Include="TabControl\frmDoAn.Designer.cs">
       <DependentUpon>frmDoAn.cs</DependentUpon>
     </Compile>
+    <Compile Include="TabControl\frmDSHoaDon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabControl\frmDSHoaDon.Designer.cs">
+      <DependentUpon>frmDSHoaDon.cs</DependentUpon>
+    </Compile>
     <Compile Include="TabControl\frmHoaDonChuaXacNhan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -221,6 +227,12 @@
     <Compile Include="TabControl\frmNhanVien.Designer.cs">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="TabControl\frmSuKien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabControl\frmSuKien.Designer.cs">
+      <DependentUpon>frmSuKien.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\DiscountControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -244,12 +256,6 @@
     </Compile>
     <Compile Include="UserControls\PayControl.Designer.cs">
       <DependentUpon>PayControl.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\UserControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmBanHang.cs">
       <SubType>Form</SubType>
@@ -286,12 +292,6 @@
     </Compile>
     <Compile Include="View\frmQLNhapSP.Designer.cs">
       <DependentUpon>frmQLNhapSP.cs</DependentUpon>
-    </Compile>
-    <Compile Include="View\frmQLSuKien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View\frmQLSuKien.Designer.cs">
-      <DependentUpon>frmQLSuKien.cs</DependentUpon>
     </Compile>
     <Compile Include="View\frmThongKe.cs">
       <SubType>Form</SubType>
@@ -347,6 +347,9 @@
     <EmbeddedResource Include="TabControl\frmDoAn.resx">
       <DependentUpon>frmDoAn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TabControl\frmDSHoaDon.resx">
+      <DependentUpon>frmDSHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TabControl\frmHoaDonChuaXacNhan.resx">
       <DependentUpon>frmHoaDonChuaXacNhan.cs</DependentUpon>
     </EmbeddedResource>
@@ -359,6 +362,9 @@
     <EmbeddedResource Include="TabControl\frmNhanVien.resx">
       <DependentUpon>frmNhanVien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TabControl\frmSuKien.resx">
+      <DependentUpon>frmSuKien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\DiscountControl.resx">
       <DependentUpon>DiscountControl.cs</DependentUpon>
     </EmbeddedResource>
@@ -370,9 +376,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\PayControl.resx">
       <DependentUpon>PayControl.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmBanHang.resx">
       <DependentUpon>frmBanHang.cs</DependentUpon>
@@ -392,14 +395,12 @@
     <EmbeddedResource Include="View\frmQLNhapSP.resx">
       <DependentUpon>frmQLNhapSP.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\frmQLSuKien.resx">
-      <DependentUpon>frmQLSuKien.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="View\frmThongKe.resx">
       <DependentUpon>frmThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.ChiTietSuKien.datasource" />
+    <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.HoaDon.datasource" />
     <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.KhachHang.datasource" />
     <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.NhanVien.datasource" />
     <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.SanPham.datasource" />

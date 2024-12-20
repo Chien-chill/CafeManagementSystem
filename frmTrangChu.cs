@@ -77,9 +77,13 @@ namespace Phan_Mem_Quan_Ly
         }
         public void loadThongBao()
         {
-            var lstHDChuaXuLy = fn_HoaDonRespository.GetHDChuaXuLy();
+            var lstHDChuaXuLy = fn_HoaDonRespository.GetHoaDonTheoTrangThai("Chưa Xác Nhận");
             if (lstHDChuaXuLy.Any())
             {
+                if (lstHDChuaXuLy.Count() > 99)
+                {
+                    notifPDonHang.Size = new Size(40, 22);
+                }
                 notifPDonHang.Visible = true;
                 notifPDonHang.Text = lstHDChuaXuLy.Count.ToString("D2");
             }
@@ -114,10 +118,6 @@ namespace Phan_Mem_Quan_Ly
             loadfrm("QLNhanVien", new frmQLNhanVien());
         }
 
-        private void btnQLSuKien_Click(object sender, EventArgs e)
-        {
-            loadfrm("QLSuKien", new frmQLSuKien());
-        }
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
