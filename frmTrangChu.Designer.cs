@@ -263,7 +263,7 @@
             this.btnDonHang.Image = ((System.Drawing.Image)(resources.GetObject("btnDonHang.Image")));
             this.btnDonHang.ImageOffset = new System.Drawing.Point(-5, 1);
             this.btnDonHang.ImageSize = new System.Drawing.Size(58, 58);
-            this.btnDonHang.Location = new System.Drawing.Point(48, 461);
+            this.btnDonHang.Location = new System.Drawing.Point(48, 456);
             this.btnDonHang.Name = "btnDonHang";
             this.btnDonHang.PressedColor = System.Drawing.Color.White;
             this.btnDonHang.Size = new System.Drawing.Size(135, 125);

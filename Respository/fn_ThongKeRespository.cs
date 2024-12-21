@@ -50,7 +50,7 @@ namespace Phan_Mem_Quan_Ly.Respository
                 return null;
             }
         }
-        public static List<ThongKe> GetThongKeDoanhThu()
+        public static List<ThongKe> GetThongKeDoanhThuThang()
         {
             try
             {
@@ -90,5 +90,44 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
         }
 
+        public static List<ThongKe> GetThongKeDoanhThuTuan()
+        {
+            try
+            {
+                using (SqlConnection conn = DataConnect.CreateConnection())
+                {
+                    if (conn == null)
+                    {
+                        throw new Exception("Không thể tạo kết nối đến cơ sở dữ liệu.");
+                    }
+                    using (SqlCommand cmd = new SqlCommand("SP_DoanhThuTheoTuan", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            List<ThongKe> TKList = new List<ThongKe>();
+                            while (reader.Read())
+                            {
+                                ThongKe tk = new ThongKe();
+                                tk.Thu = reader["Thu"].ToString();
+                                tk.TongDoanhThu = Convert.ToDecimal(reader["TongDoanhThu"]);
+                                TKList.Add(tk);
+                            }
+                            return TKList;
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                Debug.WriteLine("Lỗi SQL GetThongKeDoanhThuTuan: " + ex.Message);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Lỗi GetThongKeDoanhThuTuan: " + ex.Message);
+                return null;
+            }
+        }
     }
 }

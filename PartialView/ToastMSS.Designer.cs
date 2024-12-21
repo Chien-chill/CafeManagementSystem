@@ -82,6 +82,7 @@
             this.Controls.Add(this.pcbIcon);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ToastMSS";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ToastMSS";
             ((System.ComponentModel.ISupportInitialize)(this.pcbIcon)).EndInit();
             this.ResumeLayout(false);

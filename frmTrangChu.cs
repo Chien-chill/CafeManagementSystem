@@ -62,7 +62,7 @@ namespace Phan_Mem_Quan_Ly
                 {
                     if (banHang.checkHD)
                     {
-                        frmTrangChu_Load(sender, e);
+                        loadThongBao();
                     }
                 };
                 banHang.loadDanhMuc();
@@ -72,7 +72,7 @@ namespace Phan_Mem_Quan_Ly
         }
         private void frmTrangChu_Load(object sender, EventArgs e)
         {
-            btnTatCa_Click(sender, e);
+            btnTrangChu_Click(sender, e);
             loadThongBao();
         }
         public void loadThongBao()
