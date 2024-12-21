@@ -63,7 +63,7 @@ namespace Phan_Mem_Quan_Ly.View
             //    Debug.WriteLine($"Tháng/Năm: {i.Thang_Nam},Tổng Doanh Thu: {i.TongDoanhThu}");
             //}
             Series series1 = new Series("Thống Kê Doanh Thu Tháng", ViewType.Bar);
-            series1.DataSource = fn_ThongKeRespository.GetThongKeDoanhThu();
+            series1.DataSource = fn_ThongKeRespository.GetThongKeDoanhThuThang();
             series1.ArgumentDataMember = "Thang_Nam";
             series1.ValueDataMembers.AddRange(new string[] { "TongDoanhThu" });
             series.Label.TextPattern = "{VP:p0} ({V:.##} VND)";

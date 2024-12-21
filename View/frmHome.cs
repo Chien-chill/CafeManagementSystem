@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraCharts;
+using Phan_Mem_Quan_Ly.Respository;
 using System.Windows.Forms;
 
 namespace Phan_Mem_Quan_Ly.View
@@ -10,19 +11,13 @@ namespace Phan_Mem_Quan_Ly.View
             InitializeComponent();
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void frmHome_Load(object sender, System.EventArgs e)
         {
-
-        }
-
-        private void guna2GradientPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void guna2GradientPanel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
+            Series series1 = new Series("Thống Kê Doanh Thu Tuần", ViewType.Bar);
+            series1.DataSource = fn_ThongKeRespository.GetThongKeDoanhThuTuan();
+            series1.ArgumentDataMember = "Thu";
+            series1.ValueDataMembers.AddRange(new string[] { "TongDoanhThu" });
+            chtDoanhThuTuan.Series.Add(series1);
         }
     }
 }
