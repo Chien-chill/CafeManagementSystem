@@ -76,7 +76,9 @@ namespace Phan_Mem_Quan_Ly.Respository
                             while (reader.Read())
                             {
                                 ChiTietHoaDon cthd = new ChiTietHoaDon();
+                                cthd.MaSP = reader["Ma_SP"].ToString();
                                 cthd.TenSP = reader["Ten_SP"].ToString();
+                                cthd.AnhSP = (byte[])reader["Anh_SP"];
                                 cthd.SoLuong = Convert.ToInt16(reader["SoLuong"].ToString());
                                 cthd.DonGia = Convert.ToDecimal(reader["DonGia"].ToString());
                                 cthd.ThanhTien = Convert.ToDecimal(reader["ThanhTien"].ToString());

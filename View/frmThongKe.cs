@@ -52,6 +52,16 @@ namespace Phan_Mem_Quan_Ly.View
             // Add the chart to the form.
             chtDoanhThuSanPham.Series.Add(series);
 
+
+
+
+
+
+            //var lst = fn_ThongKeRespository.GetThongKeDoanhThu();
+            //foreach (var i in lst)
+            //{
+            //    Debug.WriteLine($"Tháng/Năm: {i.Thang_Nam},Tổng Doanh Thu: {i.TongDoanhThu}");
+            //}
             Series series1 = new Series("Thống Kê Doanh Thu Tháng", ViewType.Bar);
             series1.DataSource = fn_ThongKeRespository.GetThongKeDoanhThu();
             series1.ArgumentDataMember = "Thang_Nam";
@@ -60,8 +70,6 @@ namespace Phan_Mem_Quan_Ly.View
             series.LegendTextPattern = "{A}";
 
             chtDoanhThuThang.Series.Add(series1);
-
-
         }
     }
 }

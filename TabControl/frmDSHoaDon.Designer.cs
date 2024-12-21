@@ -35,13 +35,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDSHoaDon));
             this.dtgHoaDon = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
-            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
-            this.cbTrangThai = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.ChiTiet = new System.Windows.Forms.DataGridViewImageColumn();
             this.MaHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,7 +44,14 @@
             this.GioVao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GioRa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ChiTiet = new System.Windows.Forms.DataGridViewImageColumn();
             this.HoaDonbindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
+            this.cbTrangThai = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgHoaDon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.HoaDonbindingSource)).BeginInit();
             this.SuspendLayout();
@@ -138,6 +138,97 @@
             this.dtgHoaDon.ThemeStyle.RowsStyle.Height = 50;
             this.dtgHoaDon.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.Silver;
             this.dtgHoaDon.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.dtgHoaDon.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgHoaDon_CellClick);
+            // 
+            // MaHD
+            // 
+            this.MaHD.DataPropertyName = "MaHD";
+            this.MaHD.HeaderText = "Mã Hóa Đơn";
+            this.MaHD.MinimumWidth = 8;
+            this.MaHD.Name = "MaHD";
+            this.MaHD.ReadOnly = true;
+            // 
+            // TrangThai
+            // 
+            this.TrangThai.DataPropertyName = "TrangThai";
+            this.TrangThai.HeaderText = "Trạng Thái";
+            this.TrangThai.MinimumWidth = 8;
+            this.TrangThai.Name = "TrangThai";
+            this.TrangThai.ReadOnly = true;
+            // 
+            // MaKH
+            // 
+            this.MaKH.DataPropertyName = "MaKH";
+            this.MaKH.HeaderText = "Mã Khách Hàng";
+            this.MaKH.MinimumWidth = 8;
+            this.MaKH.Name = "MaKH";
+            this.MaKH.ReadOnly = true;
+            // 
+            // MaNV
+            // 
+            this.MaNV.DataPropertyName = "MaNV";
+            this.MaNV.HeaderText = "Mã Nhân Viên";
+            this.MaNV.MinimumWidth = 8;
+            this.MaNV.Name = "MaNV";
+            this.MaNV.ReadOnly = true;
+            // 
+            // MaSK
+            // 
+            this.MaSK.DataPropertyName = "MaSK";
+            this.MaSK.HeaderText = "Mã Sự Kiện";
+            this.MaSK.MinimumWidth = 8;
+            this.MaSK.Name = "MaSK";
+            this.MaSK.ReadOnly = true;
+            // 
+            // NgayTao
+            // 
+            this.NgayTao.DataPropertyName = "NgayTao";
+            this.NgayTao.HeaderText = "Ngày Tạo";
+            this.NgayTao.MinimumWidth = 8;
+            this.NgayTao.Name = "NgayTao";
+            this.NgayTao.ReadOnly = true;
+            // 
+            // GioVao
+            // 
+            this.GioVao.DataPropertyName = "GioVao";
+            this.GioVao.HeaderText = "Giờ Vào";
+            this.GioVao.MinimumWidth = 8;
+            this.GioVao.Name = "GioVao";
+            this.GioVao.ReadOnly = true;
+            // 
+            // GioRa
+            // 
+            this.GioRa.DataPropertyName = "GioRa";
+            this.GioRa.HeaderText = "Giờ Ra";
+            this.GioRa.MinimumWidth = 8;
+            this.GioRa.Name = "GioRa";
+            this.GioRa.ReadOnly = true;
+            // 
+            // TongTien
+            // 
+            this.TongTien.DataPropertyName = "TongTien";
+            this.TongTien.HeaderText = "Tổng Tiền";
+            this.TongTien.MinimumWidth = 8;
+            this.TongTien.Name = "TongTien";
+            this.TongTien.ReadOnly = true;
+            // 
+            // ChiTiet
+            // 
+            this.ChiTiet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ChiTiet.FillWeight = 84.75073F;
+            this.ChiTiet.HeaderText = "Chi Tiết";
+            this.ChiTiet.Image = ((System.Drawing.Image)(resources.GetObject("ChiTiet.Image")));
+            this.ChiTiet.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.ChiTiet.MinimumWidth = 8;
+            this.ChiTiet.Name = "ChiTiet";
+            this.ChiTiet.ReadOnly = true;
+            this.ChiTiet.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ChiTiet.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ChiTiet.Width = 90;
+            // 
+            // HoaDonbindingSource
+            // 
+            this.HoaDonbindingSource.DataSource = typeof(Phan_Mem_Quan_Ly.Model.HoaDon);
             // 
             // guna2Separator1
             // 
@@ -227,96 +318,6 @@
             this.cbTrangThai.TabIndex = 8;
             this.cbTrangThai.TextOffset = new System.Drawing.Point(10, 0);
             this.cbTrangThai.SelectedIndexChanged += new System.EventHandler(this.cbTrangThai_SelectedIndexChanged);
-            // 
-            // ChiTiet
-            // 
-            this.ChiTiet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ChiTiet.FillWeight = 84.75073F;
-            this.ChiTiet.HeaderText = "Chi Tiết";
-            this.ChiTiet.Image = ((System.Drawing.Image)(resources.GetObject("ChiTiet.Image")));
-            this.ChiTiet.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.ChiTiet.MinimumWidth = 8;
-            this.ChiTiet.Name = "ChiTiet";
-            this.ChiTiet.ReadOnly = true;
-            this.ChiTiet.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ChiTiet.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ChiTiet.Width = 90;
-            // 
-            // MaHD
-            // 
-            this.MaHD.DataPropertyName = "MaHD";
-            this.MaHD.HeaderText = "Mã Hóa Đơn";
-            this.MaHD.MinimumWidth = 8;
-            this.MaHD.Name = "MaHD";
-            this.MaHD.ReadOnly = true;
-            // 
-            // TrangThai
-            // 
-            this.TrangThai.DataPropertyName = "TrangThai";
-            this.TrangThai.HeaderText = "Trạng Thái";
-            this.TrangThai.MinimumWidth = 8;
-            this.TrangThai.Name = "TrangThai";
-            this.TrangThai.ReadOnly = true;
-            // 
-            // MaKH
-            // 
-            this.MaKH.DataPropertyName = "MaKH";
-            this.MaKH.HeaderText = "Mã Khách Hàng";
-            this.MaKH.MinimumWidth = 8;
-            this.MaKH.Name = "MaKH";
-            this.MaKH.ReadOnly = true;
-            // 
-            // MaNV
-            // 
-            this.MaNV.DataPropertyName = "MaNV";
-            this.MaNV.HeaderText = "Mã Nhân Viên";
-            this.MaNV.MinimumWidth = 8;
-            this.MaNV.Name = "MaNV";
-            this.MaNV.ReadOnly = true;
-            // 
-            // MaSK
-            // 
-            this.MaSK.DataPropertyName = "MaSK";
-            this.MaSK.HeaderText = "Mã Sự Kiện";
-            this.MaSK.MinimumWidth = 8;
-            this.MaSK.Name = "MaSK";
-            this.MaSK.ReadOnly = true;
-            // 
-            // NgayTao
-            // 
-            this.NgayTao.DataPropertyName = "NgayTao";
-            this.NgayTao.HeaderText = "Ngày Tạo";
-            this.NgayTao.MinimumWidth = 8;
-            this.NgayTao.Name = "NgayTao";
-            this.NgayTao.ReadOnly = true;
-            // 
-            // GioVao
-            // 
-            this.GioVao.DataPropertyName = "GioVao";
-            this.GioVao.HeaderText = "Giờ Vào";
-            this.GioVao.MinimumWidth = 8;
-            this.GioVao.Name = "GioVao";
-            this.GioVao.ReadOnly = true;
-            // 
-            // GioRa
-            // 
-            this.GioRa.DataPropertyName = "GioRa";
-            this.GioRa.HeaderText = "Giờ Ra";
-            this.GioRa.MinimumWidth = 8;
-            this.GioRa.Name = "GioRa";
-            this.GioRa.ReadOnly = true;
-            // 
-            // TongTien
-            // 
-            this.TongTien.DataPropertyName = "TongTien";
-            this.TongTien.HeaderText = "Tổng Tiền";
-            this.TongTien.MinimumWidth = 8;
-            this.TongTien.Name = "TongTien";
-            this.TongTien.ReadOnly = true;
-            // 
-            // HoaDonbindingSource
-            // 
-            this.HoaDonbindingSource.DataSource = typeof(Phan_Mem_Quan_Ly.Model.HoaDon);
             // 
             // frmDSHoaDon
             // 
