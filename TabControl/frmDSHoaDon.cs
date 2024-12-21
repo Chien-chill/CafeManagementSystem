@@ -1,4 +1,5 @@
-﻿using Phan_Mem_Quan_Ly.Respository;
+﻿using Phan_Mem_Quan_Ly.PartialView;
+using Phan_Mem_Quan_Ly.Respository;
 using System;
 using System.Linq;
 using System.Windows.Forms;
@@ -57,12 +58,32 @@ namespace Phan_Mem_Quan_Ly.TabControl
                 var lstHD = fn_HoaDonRespository.GetHoaDonTheoTrangThai(cbTrangThai.Text);
                 if (lstHD != null)
                 {
-                    HoaDonbindingSource.DataSource = lstHD.Where(hd => hd.MaHD.Contains(txtTimKiem.Text)).ToList();
+                    HoaDonbindingSource.DataSource = lstHD.Where(hd => hd.MaHD.Contains(txtTimKiem.Text)
+                    || hd.NgayTao.Contains(txtTimKiem.Text)
+                    || hd.MaKH.Contains(txtTimKiem.Text)
+                    || hd.MaNV.Contains(txtTimKiem.Text)
+                    ).ToList();
+                }
+                else if (string.IsNullOrEmpty(txtTimKiem.Text))
+                {
+                    HoaDonbindingSource.DataSource = lstHD;
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi không load được bảng hóa đơn" + ex.Message);
+            }
+        }
+        public static string MaChiTietHD { get; set; }
+        private void dtgHoaDon_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dtgHoaDon.CurrentCell.OwningColumn.Name == "ChiTiet")
+            {
+                frmChiTietHD chitiethd = new frmChiTietHD();
+                {
+                    MaChiTietHD = Convert.ToString(dtgHoaDon.CurrentRow.Cells["MaHD"].Value);
+                    chitiethd.ShowDialog();
+                }
             }
         }
     }

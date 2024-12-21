@@ -109,6 +109,12 @@
     <Compile Include="Model\SuKien.cs" />
     <Compile Include="Model\TaiKhoan.cs" />
     <Compile Include="Model\ThongKe.cs" />
+    <Compile Include="PartialView\frmChiTietHD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartialView\frmChiTietHD.Designer.cs">
+      <DependentUpon>frmChiTietHD.cs</DependentUpon>
+    </Compile>
     <Compile Include="PartialView\frmChiTietSP.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -299,6 +305,9 @@
     <Compile Include="View\frmThongKe.Designer.cs">
       <DependentUpon>frmThongKe.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="PartialView\frmChiTietHD.resx">
+      <DependentUpon>frmChiTietHD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PartialView\frmChiTietSP.resx">
       <DependentUpon>frmChiTietSP.cs</DependentUpon>
     </EmbeddedResource>
@@ -399,6 +408,7 @@
       <DependentUpon>frmThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.ChiTietHoaDon.datasource" />
     <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.ChiTietSuKien.datasource" />
     <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.HoaDon.datasource" />
     <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.KhachHang.datasource" />
