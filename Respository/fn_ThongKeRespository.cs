@@ -9,6 +9,49 @@ namespace Phan_Mem_Quan_Ly.Respository
 {
     internal class fn_ThongKeRespository
     {
+        public static List<ThongKe> GetSanPhamBanChay()
+        {
+            try
+            {
+                using (SqlConnection conn = DataConnect.CreateConnection())
+                {
+                    if (conn == null)
+                    {
+                        throw new Exception("Không thể tạo kết nối đến cơ sở dữ liệu.");
+                    }
+                    using (SqlCommand cmd = new SqlCommand("SP_SanPhamBanChay", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            List<ThongKe> TKList = new List<ThongKe>();
+                            while (reader.Read())
+                            {
+                                ThongKe tk = new ThongKe();
+                                tk.MaSP = reader["Ma_SP"].ToString();
+                                tk.TenSP = reader["Ten_SP"].ToString();
+                                tk.AnhSP = (byte[])reader["Anh_SP"];
+                                tk.TongKhachHangDat = Convert.ToInt16(reader["KhachHangMua"]);
+                                tk.TongSoLuong = Convert.ToInt16(reader["TongSoLuong"]);
+                                tk.TongDoanhThu = Convert.ToDecimal(reader["TongDoanhThu"]);
+                                TKList.Add(tk);
+                            }
+                            return TKList;
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                Debug.WriteLine("Lỗi SQL GetThongKeSanPham: " + ex.Message);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Lỗi GetThongKeSanPham: " + ex.Message);
+                return null;
+            }
+        }
         public static List<ThongKe> GetThongKeSanPham()
         {
             try

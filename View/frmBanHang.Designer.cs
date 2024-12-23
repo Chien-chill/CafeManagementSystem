@@ -248,7 +248,7 @@
             // 
             // gunaVScrollBar1
             // 
-            this.gunaVScrollBar1.Cursor = System.Windows.Forms.Cursors.SizeNS;
+            this.gunaVScrollBar1.Cursor = System.Windows.Forms.Cursors.Default;
             this.gunaVScrollBar1.LargeChange = 10;
             this.gunaVScrollBar1.Location = new System.Drawing.Point(863, 4);
             this.gunaVScrollBar1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);

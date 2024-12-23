@@ -88,7 +88,7 @@
             this.pnTen.Location = new System.Drawing.Point(20, 112);
             this.pnTen.Name = "pnTen";
             this.pnTen.ShadowColor = System.Drawing.Color.Black;
-            this.pnTen.Size = new System.Drawing.Size(223, 50);
+            this.pnTen.Size = new System.Drawing.Size(223, 56);
             this.pnTen.TabIndex = 4;
             this.pnTen.Click += new System.EventHandler(this.pnTen_Click);
             // 
@@ -100,11 +100,11 @@
             this.lblTenSP.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTenSP.ForeColor = System.Drawing.Color.Black;
             this.lblTenSP.IsSelectionEnabled = false;
-            this.lblTenSP.Location = new System.Drawing.Point(3, 6);
+            this.lblTenSP.Location = new System.Drawing.Point(3, 7);
             this.lblTenSP.Name = "lblTenSP";
-            this.lblTenSP.Size = new System.Drawing.Size(217, 41);
+            this.lblTenSP.Size = new System.Drawing.Size(217, 45);
             this.lblTenSP.TabIndex = 0;
-            this.lblTenSP.Text = "Tên Sản Phẩm";
+            this.lblTenSP.Text = "Tên Sản Phẩm ";
             this.lblTenSP.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnChecked
@@ -265,7 +265,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Controls.Add(this.pnChecked);
             this.Margin = new System.Windows.Forms.Padding(15, 5, 10, 20);
             this.Name = "ItemControl";

@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Drawing;
+using System.Drawing.Imaging;
 using System.IO;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Drawing;
-using System.Windows.Forms;
-using System.Drawing.Imaging;
 namespace Phan_Mem_Quan_Ly
 {
     internal class MainFn
@@ -22,7 +17,7 @@ namespace Phan_Mem_Quan_Ly
                 else if (ImageFormat.Jpeg.Equals(image.RawFormat))
                 {
                     using (var bitmap = new Bitmap(image))
-                       bitmap.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                        bitmap.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
                 }
                 return ms.ToArray();
             }
@@ -57,6 +52,16 @@ namespace Phan_Mem_Quan_Ly
             }
             return false;
         }
-
+        public static string FormatNumber(decimal value)
+        {
+            if (value >= 1_000_000_000)
+                return (value / 1_000_000_000).ToString("0.#") + "B";
+            else if (value >= 1_000_000)
+                return (value / 1_000_000).ToString("0.#") + "M";
+            else if (value >= 1_000)
+                return (value / 1_000).ToString("0.#") + "K";
+            else
+                return value.ToString();
+        }
     }
 }

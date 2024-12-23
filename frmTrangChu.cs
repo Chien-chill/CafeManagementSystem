@@ -19,7 +19,7 @@ namespace Phan_Mem_Quan_Ly
             InitializeComponent();
         }
         private Dictionary<string, Form> frmDic = new Dictionary<string, Form>();
-        private void loadfrm(string formName, Form f)
+        private void loadfrm(string formName, Form f, bool refreshForm = false)
         {
             txtTimKiem.Visible = false;
             foreach (Control c in this.MainPanel.Controls)
@@ -28,6 +28,14 @@ namespace Phan_Mem_Quan_Ly
                 {
                     c.Hide();
                 }
+            }
+            if (refreshForm && frmDic.ContainsKey(formName))
+            {
+                // Loại bỏ form cũ khỏi MainPanel và Dictionary
+                Form oldForm = frmDic[formName];
+                this.MainPanel.Controls.Remove(oldForm);
+                frmDic.Remove(formName);
+                oldForm.Dispose(); // Giải phóng tài nguyên
             }
             if (!frmDic.ContainsKey(formName))
             {
@@ -105,7 +113,7 @@ namespace Phan_Mem_Quan_Ly
 
         private void btnDonHang_Click(object sender, EventArgs e)
         {
-            loadfrm("QLDonHang", new frmDonHang());
+            loadfrm("QLDonHang", new frmDonHang(), true);
         }
 
         private void btnQLKhachHang_Click(object sender, EventArgs e)
@@ -121,12 +129,12 @@ namespace Phan_Mem_Quan_Ly
 
         private void btnThongKe_Click(object sender, EventArgs e)
         {
-            loadfrm("ThongKe", new frmThongKe());
+            loadfrm("ThongKe", new frmThongKe(), true);
         }
 
         private void btnTrangChu_Click(object sender, EventArgs e)
         {
-            loadfrm("TrangChu", new frmHome());
+            loadfrm("TrangChu", new frmHome(), true);
         }
     }
 }

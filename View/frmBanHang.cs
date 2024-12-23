@@ -157,7 +157,6 @@ namespace Phan_Mem_Quan_Ly.View
                 }
 
             }
-
             flpSP.Controls.Add(item);
         }
 
@@ -259,13 +258,15 @@ namespace Phan_Mem_Quan_Ly.View
                 i.Visible = i.TenSP.Trim().ToLower().Contains(TimKiem.Trim().ToLower());
             }
         }
+        Guna.UI.Lib.ScrollBar.PanelScrollHelper flowphelper;
         private void frmBanHang_Load(object sender, EventArgs e)
         {
             btnPhanLoaiTatCa.Checked = true;
             timer1.Start();
             flpSP.HorizontalScroll.Maximum = 0;
             flpSP.HorizontalScroll.Visible = false;
-            Guna.UI.Lib.ScrollBar.PanelScrollHelper flowphelper = new Guna.UI.Lib.ScrollBar.PanelScrollHelper(flpSP, gunaVScrollBar1, true);
+            flowphelper = new Guna.UI.Lib.ScrollBar.PanelScrollHelper(flpSP, gunaVScrollBar1, true);
+
             Guna.UI.Lib.ScrollBar.PanelScrollHelper flowphelper1 = new Guna.UI.Lib.ScrollBar.PanelScrollHelper(flplstMua, gunaVScrollBar2, true);
         }
 
@@ -285,6 +286,7 @@ namespace Phan_Mem_Quan_Ly.View
                 else
                     i.Visible = true;
             }
+            flowphelper.UpdateScrollBar();
         }
 
         private void btnPhanLoaiDoAn_Click(object sender, EventArgs e)
@@ -298,6 +300,7 @@ namespace Phan_Mem_Quan_Ly.View
                 else
                     i.Visible = true;
             }
+            flowphelper.UpdateScrollBar();
         }
 
         private void btnPhanLoaiTatCa_Click(object sender, EventArgs e)
@@ -308,6 +311,7 @@ namespace Phan_Mem_Quan_Ly.View
                 var i = (ItemControl)item;
                 i.Visible = true;
             }
+            flowphelper.UpdateScrollBar();
         }
         public bool checkHD = false;
         private void btnThanhToan_Click(object sender, EventArgs e)
