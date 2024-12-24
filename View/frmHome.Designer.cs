@@ -42,10 +42,10 @@
             this.lblTenSP = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblLuongKHDat = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblDoanhThu = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblSoLuongBan = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.lblDoanhThu = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.pbBestSeller)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
@@ -64,9 +64,9 @@
             // 
             this.pbBestSeller.BackColor = System.Drawing.Color.Transparent;
             this.pbBestSeller.Image = ((System.Drawing.Image)(resources.GetObject("pbBestSeller.Image")));
-            this.pbBestSeller.Location = new System.Drawing.Point(841, 266);
+            this.pbBestSeller.Location = new System.Drawing.Point(863, 241);
             this.pbBestSeller.Name = "pbBestSeller";
-            this.pbBestSeller.Size = new System.Drawing.Size(492, 473);
+            this.pbBestSeller.Size = new System.Drawing.Size(492, 496);
             this.pbBestSeller.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbBestSeller.TabIndex = 0;
             this.pbBestSeller.TabStop = false;
@@ -103,7 +103,7 @@
             this.guna2PictureBox4.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox4.Image")));
             this.guna2PictureBox4.ImageRotate = 0F;
-            this.guna2PictureBox4.Location = new System.Drawing.Point(1271, 88);
+            this.guna2PictureBox4.Location = new System.Drawing.Point(1236, 88);
             this.guna2PictureBox4.Name = "guna2PictureBox4";
             this.guna2PictureBox4.Size = new System.Drawing.Size(47, 43);
             this.guna2PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -116,7 +116,7 @@
             this.guna2PictureBox6.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox6.Image")));
             this.guna2PictureBox6.ImageRotate = 0F;
-            this.guna2PictureBox6.Location = new System.Drawing.Point(1271, 155);
+            this.guna2PictureBox6.Location = new System.Drawing.Point(1236, 155);
             this.guna2PictureBox6.Name = "guna2PictureBox6";
             this.guna2PictureBox6.Size = new System.Drawing.Size(47, 43);
             this.guna2PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -129,7 +129,7 @@
             this.guna2PictureBox5.FillColor = System.Drawing.Color.Transparent;
             this.guna2PictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox5.Image")));
             this.guna2PictureBox5.ImageRotate = 0F;
-            this.guna2PictureBox5.Location = new System.Drawing.Point(1271, 28);
+            this.guna2PictureBox5.Location = new System.Drawing.Point(1236, 28);
             this.guna2PictureBox5.Name = "guna2PictureBox5";
             this.guna2PictureBox5.Size = new System.Drawing.Size(47, 43);
             this.guna2PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -156,8 +156,8 @@
             this.guna2Panel1.Controls.Add(this.lblTenSP);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel3);
             this.guna2Panel1.Controls.Add(this.lblLuongKHDat);
-            this.guna2Panel1.Controls.Add(this.lblDoanhThu);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel2);
+            this.guna2Panel1.Controls.Add(this.lblDoanhThu);
             this.guna2Panel1.Controls.Add(this.lblSoLuongBan);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel1);
             this.guna2Panel1.Controls.Add(this.guna2PictureBox3);
@@ -202,25 +202,12 @@
             this.lblLuongKHDat.BackColor = System.Drawing.Color.Transparent;
             this.lblLuongKHDat.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLuongKHDat.ForeColor = System.Drawing.Color.White;
-            this.lblLuongKHDat.Location = new System.Drawing.Point(1167, 161);
+            this.lblLuongKHDat.Location = new System.Drawing.Point(1155, 161);
             this.lblLuongKHDat.Name = "lblLuongKHDat";
-            this.lblLuongKHDat.Size = new System.Drawing.Size(98, 30);
+            this.lblLuongKHDat.Size = new System.Drawing.Size(75, 30);
             this.lblLuongKHDat.TabIndex = 2;
-            this.lblLuongKHDat.Text = "1000000";
+            this.lblLuongKHDat.Text = "1.1B";
             this.lblLuongKHDat.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // lblDoanhThu
-            // 
-            this.lblDoanhThu.AutoSize = false;
-            this.lblDoanhThu.BackColor = System.Drawing.Color.Transparent;
-            this.lblDoanhThu.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDoanhThu.ForeColor = System.Drawing.Color.White;
-            this.lblDoanhThu.Location = new System.Drawing.Point(1167, 94);
-            this.lblDoanhThu.Name = "lblDoanhThu";
-            this.lblDoanhThu.Size = new System.Drawing.Size(98, 30);
-            this.lblDoanhThu.TabIndex = 2;
-            this.lblDoanhThu.Text = "1000000";
-            this.lblDoanhThu.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // guna2HtmlLabel2
             // 
@@ -239,11 +226,11 @@
             this.lblSoLuongBan.BackColor = System.Drawing.Color.Transparent;
             this.lblSoLuongBan.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSoLuongBan.ForeColor = System.Drawing.Color.White;
-            this.lblSoLuongBan.Location = new System.Drawing.Point(1167, 34);
+            this.lblSoLuongBan.Location = new System.Drawing.Point(1155, 34);
             this.lblSoLuongBan.Name = "lblSoLuongBan";
-            this.lblSoLuongBan.Size = new System.Drawing.Size(98, 30);
+            this.lblSoLuongBan.Size = new System.Drawing.Size(75, 30);
             this.lblSoLuongBan.TabIndex = 2;
-            this.lblSoLuongBan.Text = "10000";
+            this.lblSoLuongBan.Text = "1.1M";
             this.lblSoLuongBan.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // guna2HtmlLabel1
@@ -256,6 +243,19 @@
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(171, 30);
             this.guna2HtmlLabel1.TabIndex = 2;
             this.guna2HtmlLabel1.Text = "Số Lượng Đã Bán:";
+            // 
+            // lblDoanhThu
+            // 
+            this.lblDoanhThu.AutoSize = false;
+            this.lblDoanhThu.BackColor = System.Drawing.Color.Transparent;
+            this.lblDoanhThu.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoanhThu.ForeColor = System.Drawing.Color.White;
+            this.lblDoanhThu.Location = new System.Drawing.Point(1155, 94);
+            this.lblDoanhThu.Name = "lblDoanhThu";
+            this.lblDoanhThu.Size = new System.Drawing.Size(75, 30);
+            this.lblDoanhThu.TabIndex = 2;
+            this.lblDoanhThu.Text = "1.1M";
+            this.lblDoanhThu.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // frmHome
             // 
@@ -294,10 +294,10 @@
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblLuongKHDat;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblDoanhThu;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblSoLuongBan;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTenSP;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblDoanhThu;
     }
 }

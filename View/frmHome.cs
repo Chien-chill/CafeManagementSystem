@@ -22,6 +22,7 @@ namespace Phan_Mem_Quan_Ly.View
                 lblSoLuongBan.Text = MainFn.FormatNumber(bestSeller.TongSoLuong);
                 lblDoanhThu.Text = MainFn.FormatNumber(bestSeller.TongDoanhThu);
                 lblLuongKHDat.Text = MainFn.FormatNumber(bestSeller.TongKhachHangDat);
+                lblTenSP.Text = bestSeller.TenSP;
             }
             //Series series1 = new Series("Thống Kê Doanh Thu Tuần", ViewType.Bar);
             //series1.DataSource = fn_ThongKeRespository.GetThongKeDoanhThuTuan();

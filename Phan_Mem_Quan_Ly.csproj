@@ -197,6 +197,12 @@
     <Compile Include="Respository\fn_SuKienRespository.cs" />
     <Compile Include="Respository\fn_TaiKhoanRespository.cs" />
     <Compile Include="Respository\fn_ThongKeRespository.cs" />
+    <Compile Include="TabControl\frmBaoCaoTuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabControl\frmBaoCaoTuan.Designer.cs">
+      <DependentUpon>frmBaoCaoTuan.cs</DependentUpon>
+    </Compile>
     <Compile Include="TabControl\frmDoAn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +244,18 @@
     </Compile>
     <Compile Include="TabControl\frmSuKien.Designer.cs">
       <DependentUpon>frmSuKien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabControl\frmThongKeNam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabControl\frmThongKeNam.Designer.cs">
+      <DependentUpon>frmThongKeNam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabControl\frmThongKeSP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabControl\frmThongKeSP.Designer.cs">
+      <DependentUpon>frmThongKeSP.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\DiscountControl.cs">
       <SubType>UserControl</SubType>
@@ -373,6 +391,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TabControl\frmSuKien.resx">
       <DependentUpon>frmSuKien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabControl\frmThongKeNam.resx">
+      <DependentUpon>frmThongKeNam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabControl\frmThongKeSP.resx">
+      <DependentUpon>frmThongKeSP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\DiscountControl.resx">
       <DependentUpon>DiscountControl.cs</DependentUpon>
