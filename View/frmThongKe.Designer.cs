@@ -28,79 +28,157 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.chtDoanhThuSanPham = new DevExpress.XtraCharts.ChartControl();
-            this.chtDoanhThuThang = new DevExpress.XtraCharts.ChartControl();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            ((System.ComponentModel.ISupportInitialize)(this.chtDoanhThuSanPham)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chtDoanhThuThang)).BeginInit();
+            this.btnBaoCaoTuan = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnThongKeNam = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.btnThongKeSP = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.PnPage = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // chtDoanhThuSanPham
-            // 
-            this.chtDoanhThuSanPham.Location = new System.Drawing.Point(41, 20);
-            this.chtDoanhThuSanPham.Name = "chtDoanhThuSanPham";
-            this.chtDoanhThuSanPham.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.chtDoanhThuSanPham.Size = new System.Drawing.Size(732, 427);
-            this.chtDoanhThuSanPham.TabIndex = 0;
-            // 
-            // chtDoanhThuThang
-            // 
-            this.chtDoanhThuThang.Location = new System.Drawing.Point(819, 20);
-            this.chtDoanhThuThang.Name = "chtDoanhThuThang";
-            this.chtDoanhThuThang.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.chtDoanhThuThang.Size = new System.Drawing.Size(736, 427);
-            this.chtDoanhThuThang.TabIndex = 1;
-            // 
             // guna2CustomGradientPanel1
             // 
-            this.guna2CustomGradientPanel1.BorderColor = System.Drawing.Color.LightGray;
-            this.guna2CustomGradientPanel1.BorderThickness = 1;
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2HtmlLabel3);
-            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(394, 537);
+            this.guna2CustomGradientPanel1.Controls.Add(this.btnBaoCaoTuan);
+            this.guna2CustomGradientPanel1.Controls.Add(this.btnThongKeNam);
+            this.guna2CustomGradientPanel1.Controls.Add(this.btnThongKeSP);
+            this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
-            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(360, 178);
-            this.guna2CustomGradientPanel1.TabIndex = 3;
+            this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1618, 71);
+            this.guna2CustomGradientPanel1.TabIndex = 2;
             // 
-            // guna2HtmlLabel3
+            // btnBaoCaoTuan
             // 
-            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.MediumSeaGreen;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(28, 17);
-            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            this.guna2HtmlLabel3.Size = new System.Drawing.Size(300, 40);
-            this.guna2HtmlLabel3.TabIndex = 3;
-            this.guna2HtmlLabel3.Text = "Doanh Thu Trong Ngày";
+            this.btnBaoCaoTuan.BackColor = System.Drawing.Color.White;
+            this.btnBaoCaoTuan.BorderColor = System.Drawing.Color.Transparent;
+            this.btnBaoCaoTuan.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.btnBaoCaoTuan.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnBaoCaoTuan.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
+            this.btnBaoCaoTuan.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnBaoCaoTuan.CheckedState.FillColor2 = System.Drawing.Color.White;
+            this.btnBaoCaoTuan.CheckedState.ForeColor = System.Drawing.Color.DimGray;
+            this.btnBaoCaoTuan.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBaoCaoTuan.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 4);
+            this.btnBaoCaoTuan.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnBaoCaoTuan.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnBaoCaoTuan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBaoCaoTuan.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnBaoCaoTuan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnBaoCaoTuan.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnBaoCaoTuan.FillColor = System.Drawing.Color.Empty;
+            this.btnBaoCaoTuan.FillColor2 = System.Drawing.Color.Empty;
+            this.btnBaoCaoTuan.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBaoCaoTuan.ForeColor = System.Drawing.Color.DimGray;
+            this.btnBaoCaoTuan.HoverState.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.btnBaoCaoTuan.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
+            this.btnBaoCaoTuan.HoverState.FillColor2 = System.Drawing.Color.White;
+            this.btnBaoCaoTuan.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnBaoCaoTuan.Location = new System.Drawing.Point(532, 0);
+            this.btnBaoCaoTuan.Name = "btnBaoCaoTuan";
+            this.btnBaoCaoTuan.PressedColor = System.Drawing.Color.White;
+            this.btnBaoCaoTuan.Size = new System.Drawing.Size(266, 71);
+            this.btnBaoCaoTuan.TabIndex = 1;
+            this.btnBaoCaoTuan.Text = "Báo Cáo Tuần Hiện Tại";
+            // 
+            // btnThongKeNam
+            // 
+            this.btnThongKeNam.BackColor = System.Drawing.Color.White;
+            this.btnThongKeNam.BorderColor = System.Drawing.Color.Transparent;
+            this.btnThongKeNam.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.btnThongKeNam.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnThongKeNam.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
+            this.btnThongKeNam.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnThongKeNam.CheckedState.FillColor2 = System.Drawing.Color.White;
+            this.btnThongKeNam.CheckedState.ForeColor = System.Drawing.Color.DimGray;
+            this.btnThongKeNam.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThongKeNam.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 4);
+            this.btnThongKeNam.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThongKeNam.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThongKeNam.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThongKeNam.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThongKeNam.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThongKeNam.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnThongKeNam.FillColor = System.Drawing.Color.Empty;
+            this.btnThongKeNam.FillColor2 = System.Drawing.Color.Empty;
+            this.btnThongKeNam.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKeNam.ForeColor = System.Drawing.Color.DimGray;
+            this.btnThongKeNam.HoverState.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.btnThongKeNam.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
+            this.btnThongKeNam.HoverState.FillColor2 = System.Drawing.Color.White;
+            this.btnThongKeNam.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnThongKeNam.Location = new System.Drawing.Point(266, 0);
+            this.btnThongKeNam.Name = "btnThongKeNam";
+            this.btnThongKeNam.PressedColor = System.Drawing.Color.White;
+            this.btnThongKeNam.Size = new System.Drawing.Size(266, 71);
+            this.btnThongKeNam.TabIndex = 1;
+            this.btnThongKeNam.Text = "Thống Kê Trong Năm";
+            this.btnThongKeNam.Click += new System.EventHandler(this.btnThongKeNam_Click);
+            // 
+            // btnThongKeSP
+            // 
+            this.btnThongKeSP.BackColor = System.Drawing.Color.White;
+            this.btnThongKeSP.BorderColor = System.Drawing.Color.Transparent;
+            this.btnThongKeSP.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.btnThongKeSP.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnThongKeSP.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
+            this.btnThongKeSP.CheckedState.FillColor = System.Drawing.Color.White;
+            this.btnThongKeSP.CheckedState.FillColor2 = System.Drawing.Color.White;
+            this.btnThongKeSP.CheckedState.ForeColor = System.Drawing.Color.DimGray;
+            this.btnThongKeSP.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnThongKeSP.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 4);
+            this.btnThongKeSP.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnThongKeSP.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnThongKeSP.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThongKeSP.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnThongKeSP.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnThongKeSP.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnThongKeSP.FillColor = System.Drawing.Color.Empty;
+            this.btnThongKeSP.FillColor2 = System.Drawing.Color.Empty;
+            this.btnThongKeSP.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnThongKeSP.ForeColor = System.Drawing.Color.DimGray;
+            this.btnThongKeSP.HoverState.CustomBorderColor = System.Drawing.Color.Transparent;
+            this.btnThongKeSP.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
+            this.btnThongKeSP.HoverState.FillColor2 = System.Drawing.Color.White;
+            this.btnThongKeSP.HoverState.ForeColor = System.Drawing.Color.White;
+            this.btnThongKeSP.Location = new System.Drawing.Point(0, 0);
+            this.btnThongKeSP.Name = "btnThongKeSP";
+            this.btnThongKeSP.PressedColor = System.Drawing.Color.White;
+            this.btnThongKeSP.Size = new System.Drawing.Size(266, 71);
+            this.btnThongKeSP.TabIndex = 1;
+            this.btnThongKeSP.Text = "Thống Kê Sản Phẩm";
+            this.btnThongKeSP.Click += new System.EventHandler(this.btnThongKeSP_Click);
+            // 
+            // PnPage
+            // 
+            this.PnPage.Location = new System.Drawing.Point(0, 71);
+            this.PnPage.Name = "PnPage";
+            this.PnPage.Size = new System.Drawing.Size(1618, 895);
+            this.PnPage.TabIndex = 3;
             // 
             // frmThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(253)))));
-            this.ClientSize = new System.Drawing.Size(1596, 955);
+            this.ClientSize = new System.Drawing.Size(1618, 966);
             this.Controls.Add(this.guna2CustomGradientPanel1);
-            this.Controls.Add(this.chtDoanhThuSanPham);
-            this.Controls.Add(this.chtDoanhThuThang);
+            this.Controls.Add(this.PnPage);
             this.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmThongKe";
             this.Text = "frmThongKe";
             this.Load += new System.EventHandler(this.frmThongKe_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.chtDoanhThuSanPham)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chtDoanhThuThang)).EndInit();
             this.guna2CustomGradientPanel1.ResumeLayout(false);
-            this.guna2CustomGradientPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private DevExpress.XtraCharts.ChartControl chtDoanhThuSanPham;
-        private DevExpress.XtraCharts.ChartControl chtDoanhThuThang;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2GradientButton btnBaoCaoTuan;
+        private Guna.UI2.WinForms.Guna2GradientButton btnThongKeNam;
+        private Guna.UI2.WinForms.Guna2GradientButton btnThongKeSP;
+        private Guna.UI2.WinForms.Guna2Panel PnPage;
     }
 }

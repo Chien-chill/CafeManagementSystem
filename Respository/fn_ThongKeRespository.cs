@@ -43,12 +43,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Debug.WriteLine("Lỗi SQL GetThongKeSanPham: " + ex.Message);
+                Debug.WriteLine("Lỗi SQL GetSanPhamBanChay: " + ex.Message);
                 return null;
             }
             catch (Exception ex)
             {
-                Debug.WriteLine("Lỗi GetThongKeSanPham: " + ex.Message);
+                Debug.WriteLine("Lỗi GetSanPhamBanChay: " + ex.Message);
                 return null;
             }
         }
@@ -93,7 +93,7 @@ namespace Phan_Mem_Quan_Ly.Respository
                 return null;
             }
         }
-        public static List<ThongKe> GetThongKeDoanhThuThang()
+        public static List<ThongKe> GetThongKeDoanhThuNam(int Nam)
         {
             try
             {
@@ -103,9 +103,10 @@ namespace Phan_Mem_Quan_Ly.Respository
                     {
                         throw new Exception("Không thể tạo kết nối đến cơ sở dữ liệu.");
                     }
-                    using (SqlCommand cmd = new SqlCommand("SP_DoanhThuTheoThang", conn))
+                    using (SqlCommand cmd = new SqlCommand("SP_DoanhThuTheoNam", conn))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@Nam", Nam);
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
                             List<ThongKe> TKList = new List<ThongKe>();
@@ -123,12 +124,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             }
             catch (SqlException ex)
             {
-                Debug.WriteLine("Lỗi SQL GetThongKeDoanhThu: " + ex.Message);
+                Debug.WriteLine("Lỗi SQL GetThongKeDoanhThuNam: " + ex.Message);
                 return null;
             }
             catch (Exception ex)
             {
-                Debug.WriteLine("Lỗi  GetThongKeDoanhThu: " + ex.Message);
+                Debug.WriteLine("Lỗi  GetThongKeDoanhThuNam: " + ex.Message);
                 return null;
             }
         }
