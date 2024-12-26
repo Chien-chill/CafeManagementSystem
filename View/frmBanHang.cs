@@ -4,6 +4,7 @@ using Phan_Mem_Quan_Ly.Respository;
 using Phan_Mem_Quan_Ly.TabControl;
 using System;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
@@ -208,7 +209,7 @@ namespace Phan_Mem_Quan_Ly.View
         public void loadDanhMuc()
         {
             var lstSanPham = fn_SanPhamRespository.GetAllSanPham();
-            if (lstSanPham != null)
+            if (lstSanPham.Any())
             {
                 lblSoLuong.Text = lstSanPham.Count().ToString() + "+ Sản Phẩm";
             }
@@ -266,8 +267,16 @@ namespace Phan_Mem_Quan_Ly.View
             flpSP.HorizontalScroll.Maximum = 0;
             flpSP.HorizontalScroll.Visible = false;
             flowphelper = new Guna.UI.Lib.ScrollBar.PanelScrollHelper(flpSP, gunaVScrollBar1, true);
-
             Guna.UI.Lib.ScrollBar.PanelScrollHelper flowphelper1 = new Guna.UI.Lib.ScrollBar.PanelScrollHelper(flplstMua, gunaVScrollBar2, true);
+            try
+            {
+                var lstKH = fn_KhachHangRespository.GetAllKhachHang();
+                khachHangBindingSource.DataSource = lstKH;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Lỗi load combox khách hàng: " + ex.Message);
+            }
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -322,8 +331,8 @@ namespace Phan_Mem_Quan_Ly.View
                 {
                     var hd = new HoaDon();
                     {
-                        hd.MaKH = "KH01";
-                        hd.MaNV = "NV01";
+                        hd.MaKH = Convert.ToString(cbKhachHang.SelectedValue);
+                        hd.MaNV = frmTrangChu.Instance.MaNV;
                         hd.MaSK = "SK01";
                         foreach (var item in flplstMua.Controls)
                         {

@@ -84,7 +84,7 @@
             this.pnTen.BackColor = System.Drawing.Color.Transparent;
             this.pnTen.Controls.Add(this.lblTenSP);
             this.pnTen.Enabled = false;
-            this.pnTen.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.pnTen.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.pnTen.Location = new System.Drawing.Point(20, 112);
             this.pnTen.Name = "pnTen";
             this.pnTen.ShadowColor = System.Drawing.Color.Black;
@@ -98,7 +98,7 @@
             this.lblTenSP.BackColor = System.Drawing.Color.Transparent;
             this.lblTenSP.Enabled = false;
             this.lblTenSP.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenSP.ForeColor = System.Drawing.Color.Black;
+            this.lblTenSP.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.lblTenSP.IsSelectionEnabled = false;
             this.lblTenSP.Location = new System.Drawing.Point(3, 7);
             this.lblTenSP.Name = "lblTenSP";

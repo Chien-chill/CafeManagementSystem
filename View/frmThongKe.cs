@@ -26,21 +26,8 @@ namespace Phan_Mem_Quan_Ly.View
         }
         private void frmThongKe_Load(object sender, System.EventArgs e)
         {
-
+            btnThongKeSP.Checked = true;
             btnThongKeSP_Click(sender, e);
-
-
-
-
-
-            //Series series1 = new Series("Thống Kê Doanh Thu Tháng", ViewType.Bar);
-            //series1.DataSource = fn_ThongKeRespository.GetThongKeDoanhThuThang();
-            //series1.ArgumentDataMember = "Thang_Nam";
-            //series1.ValueDataMembers.AddRange(new string[] { "TongDoanhThu" });
-            //series.Label.TextPattern = "{VP:p0} ({V:.##} VND)";
-            //series.LegendTextPattern = "{A}";
-
-            //chtDoanhThuThang.Series.Add(series1);
         }
 
         private void btnThongKeSP_Click(object sender, System.EventArgs e)
@@ -51,6 +38,11 @@ namespace Phan_Mem_Quan_Ly.View
         private void btnThongKeNam_Click(object sender, System.EventArgs e)
         {
             loadPage(new frmThongKeNam());
+        }
+
+        private void btnBaoCaoTuan_Click(object sender, System.EventArgs e)
+        {
+            loadPage(new frmBaoCaoTuan());
         }
     }
 }

@@ -4,6 +4,7 @@ using Phan_Mem_Quan_Ly.TabControl;
 using Phan_Mem_Quan_Ly.UserControls;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 namespace Phan_Mem_Quan_Ly.PartialView
@@ -23,14 +24,6 @@ namespace Phan_Mem_Quan_Ly.PartialView
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            if (dtpThoiGianKT.Value.Date == dtpThoiGianBD.Value.Date)
-            {
-                if (dtpThoiGianKT.Value.TimeOfDay <= dtpThoiGianBD.Value.TimeOfDay)
-                {
-                    MessageBox.Show("Thời gian kết thúc phải lớn hơn thời gian bắt đầu");
-                    return;
-                }
-            }
             try
             {
                 if (string.IsNullOrEmpty(txtTenSK.Text))
@@ -46,7 +39,7 @@ namespace Phan_Mem_Quan_Ly.PartialView
                     {
                         ChiTietSuKien chiTietSuKien = new ChiTietSuKien();
                         {
-                            chiTietSuKien.ctsk_SanPham.MaSP = i.MaSP;
+                            chiTietSuKien.Ma_SP = i.MaSP;
                             chiTietSuKien.Giam_Gia = Convert.ToInt16(i.GiamGia);
                         }
                         lstskDetails.Add(chiTietSuKien);
@@ -55,8 +48,7 @@ namespace Phan_Mem_Quan_Ly.PartialView
                     SuKien sk = new SuKien();
                     {
                         sk.TenSK = txtTenSK.Text;
-                        sk.ThoiGianBD = dtpThoiGianBD.Value;
-                        sk.ThoiGianKT = dtpThoiGianKT.Value;
+                        sk.TrangThai = (toggleBatTat.Checked) ? "Đang Kích Hoạt" : "Chờ Kích Hoạt";
 
                     }
                     bool result = fn_SuKienRespository.AddSuKien(sk, lstskDetails);
@@ -79,7 +71,50 @@ namespace Phan_Mem_Quan_Ly.PartialView
 
         private void btnSua_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (string.IsNullOrEmpty(txtTenSK.Text))
+                {
+                    Mss.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
+                    Mss.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
+                    Mss.Show($"Thêm thất bại: \n - Tên sự kiện không được để trống");
+                }
+                else
+                {
+                    List<ChiTietSuKien> lstskDetails = new List<ChiTietSuKien>();
+                    foreach (var i in flpGiamGia.Controls.OfType<DiscountControl>())
+                    {
+                        ChiTietSuKien chiTietSuKien = new ChiTietSuKien();
+                        {
+                            chiTietSuKien.Ma_SP = i.MaSP;
+                            chiTietSuKien.Giam_Gia = Convert.ToInt16(i.GiamGia);
+                        }
+                        lstskDetails.Add(chiTietSuKien);
+                    }
 
+                    SuKien sk = new SuKien();
+                    {
+                        sk.MaSK = txtMaSK.Text;
+                        sk.TenSK = txtTenSK.Text;
+                        sk.TrangThai = (toggleBatTat.Checked) ? "Đang Kích Hoạt" : "Chờ Kích Hoạt";
+
+                    }
+                    bool result = fn_SuKienRespository.UPDSuKien(sk, lstskDetails);
+                    if (result)
+                    {
+                        this.DialogResult = DialogResult.OK;
+                    }
+                    else
+                    {
+                        Mss.Icon = Guna.UI2.WinForms.MessageDialogIcon.Information;
+                        Mss.Show("Thêm thất bại ở SQL");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Lỗi Thêm: " + ex.Message);
+            }
         }
 
         private void frmThaoTacSK_Load(object sender, EventArgs e)
@@ -89,8 +124,18 @@ namespace Phan_Mem_Quan_Ly.PartialView
             {
                 txtMaSK.Text = frmSuKien.skSua.MaSK;
                 txtTenSK.Text = frmSuKien.skSua.TenSK;
-                dtpThoiGianBD.Value = frmSuKien.skSua.ThoiGianBD;
-                dtpThoiGianKT.Value = frmSuKien.skSua.ThoiGianKT;
+                if (frmSuKien.skSua.TrangThai.Equals("Đang Kích Hoạt"))
+                {
+                    toggleBatTat.Checked = true;
+                    lblKichHoat.Text = "ON";
+                    lblKichHoat.ForeColor = Color.SeaGreen;
+                }
+                else
+                {
+                    toggleBatTat.Checked = false;
+                    lblKichHoat.Text = "OFF";
+                    lblKichHoat.ForeColor = Color.Crimson;
+                }
                 try
                 {
                     var lstGiamGia = fn_SuKienRespository.GetChiTietSKTheoMa(txtMaSK.Text);
@@ -98,7 +143,7 @@ namespace Phan_Mem_Quan_Ly.PartialView
                     foreach (DataGridViewRow row in dtgSanPham.Rows)
                     {
                         string MaSProw = Convert.ToString(row.Cells["MaSP"].Value);
-                        if (lstGiamGia.Any(item => item.ctsk_SanPham.MaSP.Equals(MaSProw)))
+                        if (lstGiamGia.Any(item => item.Ma_SP.Equals(MaSProw)))
                         {
                             row.Cells["GiamGia"].Value = true;
                         }
@@ -111,14 +156,9 @@ namespace Phan_Mem_Quan_Ly.PartialView
             }
             else
             {
-                DateTime now = DateTime.Now;
-                dtpThoiGianBD.MinDate = now;
-                dtpThoiGianKT.MinDate = now;
                 btnThem.Visible = true;
                 btnSua.Visible = false;
-
             }
-
         }
 
         public void LoadData()
@@ -195,15 +235,18 @@ namespace Phan_Mem_Quan_Ly.PartialView
             }
         }
 
-        private void dtpThoiGianKT_ValueChanged(object sender, EventArgs e)
+        private void toggleBatTat_CheckedChanged(object sender, EventArgs e)
         {
-            //if (dtpThoiGianKT.Value == dtpThoiGianBD.Value)
-            //{
-            //    if (dtpThoiGianKT.Value.TimeOfDay <= dtpThoiGianBD.Value.TimeOfDay)
-            //    {
-            //        ToastMSS mss = new ToastMSS("Vui lòng chọn ngày kết thúc lơn hơn ngày bắt đầu !", "INFO");
-            //    }
-            //}
+            if (toggleBatTat.Checked)
+            {
+                lblKichHoat.Text = "ON";
+                lblKichHoat.ForeColor = Color.SeaGreen;
+            }
+            else
+            {
+                lblKichHoat.Text = "OFF";
+                lblKichHoat.ForeColor = Color.Crimson;
+            }
         }
     }
 }

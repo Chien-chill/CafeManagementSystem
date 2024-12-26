@@ -35,22 +35,21 @@
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblCuoiNam = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.btnSau = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnTruoc = new Guna.UI2.WinForms.Guna2PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnTruoc = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.btnSau = new Guna.UI2.WinForms.Guna2PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.chtDoanhThuThang)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSau)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnTruoc)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTruoc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSau)).BeginInit();
             this.SuspendLayout();
             // 
             // chtDoanhThuThang
             // 
-            this.chtDoanhThuThang.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.chtDoanhThuThang.Location = new System.Drawing.Point(0, 198);
+            this.chtDoanhThuThang.Location = new System.Drawing.Point(28, 256);
             this.chtDoanhThuThang.Name = "chtDoanhThuThang";
             this.chtDoanhThuThang.SeriesSerializable = new DevExpress.XtraCharts.Series[0];
-            this.chtDoanhThuThang.Size = new System.Drawing.Size(1596, 641);
+            this.chtDoanhThuThang.Size = new System.Drawing.Size(1561, 641);
             this.chtDoanhThuThang.TabIndex = 0;
             // 
             // guna2HtmlLabel1
@@ -105,17 +104,19 @@
             this.guna2HtmlLabel5.TabIndex = 1;
             this.guna2HtmlLabel5.Text = "-";
             // 
-            // btnSau
+            // panel1
             // 
-            this.btnSau.Image = ((System.Drawing.Image)(resources.GetObject("btnSau.Image")));
-            this.btnSau.ImageRotate = 0F;
-            this.btnSau.Location = new System.Drawing.Point(554, 12);
-            this.btnSau.Name = "btnSau";
-            this.btnSau.Size = new System.Drawing.Size(61, 56);
-            this.btnSau.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnSau.TabIndex = 2;
-            this.btnSau.TabStop = false;
-            this.btnSau.Click += new System.EventHandler(this.btnSau_Click);
+            this.panel1.Controls.Add(this.btnTruoc);
+            this.panel1.Controls.Add(this.guna2HtmlLabel1);
+            this.panel1.Controls.Add(this.btnSau);
+            this.panel1.Controls.Add(this.guna2HtmlLabel5);
+            this.panel1.Controls.Add(this.lblCuoiNam);
+            this.panel1.Controls.Add(this.guna2HtmlLabel3);
+            this.panel1.Controls.Add(this.lblDauNam);
+            this.panel1.Location = new System.Drawing.Point(472, 141);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(707, 79);
+            this.panel1.TabIndex = 3;
             // 
             // btnTruoc
             // 
@@ -129,26 +130,24 @@
             this.btnTruoc.TabStop = false;
             this.btnTruoc.Click += new System.EventHandler(this.btnTruoc_Click);
             // 
-            // panel1
+            // btnSau
             // 
-            this.panel1.Controls.Add(this.btnTruoc);
-            this.panel1.Controls.Add(this.guna2HtmlLabel1);
-            this.panel1.Controls.Add(this.btnSau);
-            this.panel1.Controls.Add(this.guna2HtmlLabel5);
-            this.panel1.Controls.Add(this.lblCuoiNam);
-            this.panel1.Controls.Add(this.guna2HtmlLabel3);
-            this.panel1.Controls.Add(this.lblDauNam);
-            this.panel1.Location = new System.Drawing.Point(470, 113);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(707, 79);
-            this.panel1.TabIndex = 3;
+            this.btnSau.Image = ((System.Drawing.Image)(resources.GetObject("btnSau.Image")));
+            this.btnSau.ImageRotate = 0F;
+            this.btnSau.Location = new System.Drawing.Point(554, 12);
+            this.btnSau.Name = "btnSau";
+            this.btnSau.Size = new System.Drawing.Size(61, 56);
+            this.btnSau.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnSau.TabIndex = 2;
+            this.btnSau.TabStop = false;
+            this.btnSau.Click += new System.EventHandler(this.btnSau_Click);
             // 
             // frmThongKeNam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(253)))));
-            this.ClientSize = new System.Drawing.Size(1596, 839);
+            this.ClientSize = new System.Drawing.Size(1618, 895);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.chtDoanhThuThang);
             this.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -157,10 +156,10 @@
             this.Text = "frmThongKeNam";
             this.Load += new System.EventHandler(this.frmThongKeNam_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chtDoanhThuThang)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnSau)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnTruoc)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnTruoc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSau)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -30,8 +30,6 @@ namespace Phan_Mem_Quan_Ly.Respository
                                 SuKien sk = new SuKien();
                                 sk.MaSK = reader["Ma_SK"].ToString();
                                 sk.TenSK = reader["Ten_SK"].ToString();
-                                sk.ThoiGianBD = (DateTime)reader["ThoiGian_BD"];
-                                sk.ThoiGianKT = (DateTime)reader["ThoiGian_KT"];
                                 sk.TrangThai = reader["TrangThai"].ToString();
                                 SKList.Add(sk);
                             }
@@ -71,7 +69,7 @@ namespace Phan_Mem_Quan_Ly.Respository
                             while (reader.Read())
                             {
                                 ChiTietSuKien sk = new ChiTietSuKien();
-                                sk.ctsk_SanPham.MaSP = reader["Ma_SP"].ToString();
+                                sk.Ma_SP = reader["Ma_SP"].ToString();
                                 sk.Giam_Gia = Convert.ToInt16(reader["Giam_Gia"]);
                                 SKList.Add(sk);
                             }
@@ -102,10 +100,8 @@ namespace Phan_Mem_Quan_Ly.Respository
                         cmd.CommandType = CommandType.StoredProcedure;
                         // Install-Package Newtonsoft.Json
                         string Jsonsk = JsonConvert.SerializeObject(skDetails);
-                        Debug.WriteLine("JSON Sent: " + Jsonsk);
                         cmd.Parameters.AddWithValue("@Ten_SK", sk.TenSK);
-                        cmd.Parameters.AddWithValue("@ThoiGian_BD", sk.ThoiGianBD);
-                        cmd.Parameters.AddWithValue("@ThoiGian_KT", sk.ThoiGianKT);
+                        cmd.Parameters.AddWithValue("@TrangThai", sk.TrangThai);
                         cmd.Parameters.AddWithValue("@ChiTietSuKien", Jsonsk);
                         int result = cmd.ExecuteNonQuery();
                         return result > 0;
@@ -120,6 +116,36 @@ namespace Phan_Mem_Quan_Ly.Respository
             catch (Exception ex)
             {
                 Debug.WriteLine("Lỗi AddSuKien: " + ex.Message);
+                return false;
+            }
+        }
+        public static bool UPDSuKien(SuKien sk, List<ChiTietSuKien> skDetails)
+        {
+            try
+            {
+                using (SqlConnection conn = DataConnect.CreateConnection())
+                {
+                    using (SqlCommand cmd = new SqlCommand("SP_SuaSuKien", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        string Jsonsk = JsonConvert.SerializeObject(skDetails);
+                        cmd.Parameters.AddWithValue("@Ma_SK", sk.MaSK);
+                        cmd.Parameters.AddWithValue("@Ten_SK", sk.TenSK);
+                        cmd.Parameters.AddWithValue("@TrangThai", sk.TrangThai);
+                        cmd.Parameters.AddWithValue("@ChiTietSuKien", Jsonsk);
+                        int result = cmd.ExecuteNonQuery();
+                        return result > 0;
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                Debug.WriteLine("Lỗi SQL UPDSuKien: " + ex.Message);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Lỗi UPDSuKien: " + ex.Message);
                 return false;
             }
         }

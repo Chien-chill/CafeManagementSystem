@@ -1,4 +1,5 @@
 ﻿using Phan_Mem_Quan_Ly.Model;
+using Phan_Mem_Quan_Ly.PartialView;
 using Phan_Mem_Quan_Ly.Respository;
 using System;
 using System.Windows.Forms;
@@ -49,7 +50,22 @@ namespace Phan_Mem_Quan_Ly
                 tk.Tai_Khoan = txtTKLogin.Text;
                 tk.Mat_Khau = txtMKLogin.Text;
             }
-            fn_TaiKhoanRespository.CheckTaiKhoan(tk);
+            var nv = fn_TaiKhoanRespository.CheckTaiKhoan(tk);
+            if (nv != null)
+            {
+                this.Hide();
+                frmTrangChu tt = new frmTrangChu();
+                tt.TenNV = nv.TenNV;
+                tt.AnhNV = MainFn.ByteArrayToImage(nv.AnhNV);
+                tt.MaNV = nv.MaNV;
+                tt.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                ToastMSS mss = new ToastMSS("Đăng nhập thất bại !", "INFO");
+                mss.Show();
+            }
         }
     }
 }
