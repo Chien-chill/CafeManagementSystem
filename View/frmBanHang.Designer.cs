@@ -37,10 +37,13 @@
             this.lblTGHienTai = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.cbKhachHang = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.khachHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.gunaCheckBox1 = new Guna.UI.WinForms.GunaCheckBox();
             this.lblTongTien = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblThanhTien = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnThanhToan = new Guna.UI2.WinForms.Guna2GradientButton();
@@ -55,6 +58,7 @@
             this.panel1.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -134,10 +138,12 @@
             // guna2Panel2
             // 
             this.guna2Panel2.BackColor = System.Drawing.Color.White;
+            this.guna2Panel2.Controls.Add(this.cbKhachHang);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel4);
             this.guna2Panel2.Controls.Add(this.gunaCheckBox1);
             this.guna2Panel2.Controls.Add(this.lblTongTien);
             this.guna2Panel2.Controls.Add(this.lblThanhTien);
+            this.guna2Panel2.Controls.Add(this.guna2HtmlLabel3);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel5);
             this.guna2Panel2.Controls.Add(this.guna2HtmlLabel2);
             this.guna2Panel2.Controls.Add(this.btnThanhToan);
@@ -146,13 +152,35 @@
             this.guna2Panel2.Size = new System.Drawing.Size(692, 366);
             this.guna2Panel2.TabIndex = 3;
             // 
+            // cbKhachHang
+            // 
+            this.cbKhachHang.BackColor = System.Drawing.Color.Transparent;
+            this.cbKhachHang.DataSource = this.khachHangBindingSource;
+            this.cbKhachHang.DisplayMember = "TenKH";
+            this.cbKhachHang.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cbKhachHang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbKhachHang.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbKhachHang.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cbKhachHang.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cbKhachHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cbKhachHang.ItemHeight = 50;
+            this.cbKhachHang.Location = new System.Drawing.Point(157, 278);
+            this.cbKhachHang.Name = "cbKhachHang";
+            this.cbKhachHang.Size = new System.Drawing.Size(278, 56);
+            this.cbKhachHang.TabIndex = 6;
+            this.cbKhachHang.ValueMember = "MaKH";
+            // 
+            // khachHangBindingSource
+            // 
+            this.khachHangBindingSource.DataSource = typeof(Phan_Mem_Quan_Ly.Model.KhachHang);
+            // 
             // guna2HtmlLabel4
             // 
             this.guna2HtmlLabel4.AutoSize = false;
             this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.OrangeRed;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(443, 103);
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(444, 126);
             this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             this.guna2HtmlLabel4.Size = new System.Drawing.Size(189, 34);
             this.guna2HtmlLabel4.TabIndex = 5;
@@ -168,7 +196,7 @@
             this.gunaCheckBox1.FillColor = System.Drawing.Color.White;
             this.gunaCheckBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaCheckBox1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.gunaCheckBox1.Location = new System.Drawing.Point(96, 105);
+            this.gunaCheckBox1.Location = new System.Drawing.Point(97, 128);
             this.gunaCheckBox1.Name = "gunaCheckBox1";
             this.gunaCheckBox1.Size = new System.Drawing.Size(118, 31);
             this.gunaCheckBox1.TabIndex = 4;
@@ -180,7 +208,7 @@
             this.lblTongTien.BackColor = System.Drawing.Color.Transparent;
             this.lblTongTien.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTongTien.ForeColor = System.Drawing.Color.OrangeRed;
-            this.lblTongTien.Location = new System.Drawing.Point(443, 183);
+            this.lblTongTien.Location = new System.Drawing.Point(444, 206);
             this.lblTongTien.Name = "lblTongTien";
             this.lblTongTien.Size = new System.Drawing.Size(189, 34);
             this.lblTongTien.TabIndex = 2;
@@ -193,19 +221,30 @@
             this.lblThanhTien.BackColor = System.Drawing.Color.Transparent;
             this.lblThanhTien.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblThanhTien.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.lblThanhTien.Location = new System.Drawing.Point(443, 19);
+            this.lblThanhTien.Location = new System.Drawing.Point(444, 42);
             this.lblThanhTien.Name = "lblThanhTien";
             this.lblThanhTien.Size = new System.Drawing.Size(189, 34);
             this.lblThanhTien.TabIndex = 2;
             this.lblThanhTien.Text = "000.00";
             this.lblThanhTien.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(9, 289);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(142, 34);
+            this.guna2HtmlLabel3.TabIndex = 2;
+            this.guna2HtmlLabel3.Text = "Khách Hàng:";
+            // 
             // guna2HtmlLabel5
             // 
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(96, 183);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(97, 206);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             this.guna2HtmlLabel5.Size = new System.Drawing.Size(128, 34);
             this.guna2HtmlLabel5.TabIndex = 2;
@@ -216,7 +255,7 @@
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(96, 21);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(97, 44);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(93, 30);
             this.guna2HtmlLabel2.TabIndex = 2;
@@ -419,6 +458,7 @@
             this.guna2GradientPanel1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
             this.guna2Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.khachHangBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -447,5 +487,8 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTongTien;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         public Guna.UI2.WinForms.Guna2GradientButton btnThanhToan;
+        private Guna.UI2.WinForms.Guna2ComboBox cbKhachHang;
+        private System.Windows.Forms.BindingSource khachHangBindingSource;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
     }
 }

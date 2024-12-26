@@ -10,6 +10,7 @@ namespace Phan_Mem_Quan_Ly
     public partial class frmTrangChu : Form
     {
         public static frmTrangChu Instance;
+        public string MaNV { get => lblMaNV.Text; set => lblMaNV.Text = value; }
         public string TenNV { get => lblTenNV.Text; set => lblTenNV.Text = value; }
         public string ChucVu { get => lblChucVu.Text; set => lblChucVu.Text = value; }
         public Image AnhNV { get => pcbAnhNV.Image; set => pcbAnhNV.Image = value; }

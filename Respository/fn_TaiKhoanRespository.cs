@@ -1,5 +1,4 @@
 ﻿using Phan_Mem_Quan_Ly.Model;
-using Phan_Mem_Quan_Ly.PartialView;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -9,7 +8,7 @@ namespace Phan_Mem_Quan_Ly.Respository
 {
     internal class fn_TaiKhoanRespository
     {
-        public static void CheckTaiKhoan(TaiKhoan tk)
+        public static NhanVien CheckTaiKhoan(TaiKhoan tk)
         {
             try
             {
@@ -28,16 +27,17 @@ namespace Phan_Mem_Quan_Ly.Respository
                         {
                             if (reader.HasRows)
                             {
-                                ToastMSS mss = new ToastMSS("Đăng nhập thành công !", "SUCCESS");
-                                mss.Show();
-                                frmTrangChu tt = new frmTrangChu();
-                                tt.TenNV = reader["Ten_NV"].ToString();
-                                tt.AnhNV = MainFn.ByteArrayToImage((byte[])reader["Anh_NV"]);
+                                NhanVien nv = new NhanVien();
+                                while (reader.Read())
+                                {
+                                    nv.TenNV = reader["Ten_NV"].ToString();
+                                    nv.AnhNV = (byte[])reader["Anh_NV"];
+                                }
+                                return nv;
                             }
                             else
                             {
-                                ToastMSS mss = new ToastMSS("Tài khoản hoặc mật khẩu sai !", "INFO");
-                                mss.Show();
+                                return null;
                             }
                         }
                     }
@@ -46,10 +46,12 @@ namespace Phan_Mem_Quan_Ly.Respository
             catch (SqlException ex)
             {
                 Debug.WriteLine("Lỗi SQL CheckTaiKhoan: " + ex.Message);
+                return null;
             }
             catch (Exception ex)
             {
                 Debug.WriteLine("Lỗi CheckTaiKhoan: " + ex.Message);
+                return null;
             }
         }
     }

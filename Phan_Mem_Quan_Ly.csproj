@@ -63,13 +63,21 @@
     <Reference Include="DevExpress.Data.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Drawing.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v24.2.Core, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.SpellChecker.v24.2.Core, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Utils.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraCharts.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraCharts.v24.2.UI, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraCharts.v24.2.Wizard, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v24.2.Core, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v24.2.Core.Desktop, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v24.2.Extensions, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraSpellChecker.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v24.2, Version=24.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="Guna.UI">
       <HintPath>C:\Users\tranc\Downloads\Guna.UI.dll</HintPath>
     </Reference>
@@ -103,6 +111,7 @@
     <Compile Include="DataConnect.cs" />
     <Compile Include="Model\ChiTietHoaDon.cs" />
     <Compile Include="Model\ChiTietSuKien.cs" />
+    <Compile Include="Model\ChucVu.cs" />
     <Compile Include="Model\HoaDon.cs" />
     <Compile Include="Model\KhachHang.cs" />
     <Compile Include="Model\NhanVien.cs" />
@@ -141,6 +150,12 @@
     </Compile>
     <Compile Include="MainFn.cs" />
     <Compile Include="Model\SanPham.cs" />
+    <Compile Include="PartialView\frmThaoTacCV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartialView\frmThaoTacCV.Designer.cs">
+      <DependentUpon>frmThaoTacCV.cs</DependentUpon>
+    </Compile>
     <Compile Include="PartialView\frmThaoTacKH.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,6 +217,12 @@
     </Compile>
     <Compile Include="TabControl\frmBaoCaoTuan.Designer.cs">
       <DependentUpon>frmBaoCaoTuan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabControl\frmChucVu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabControl\frmChucVu.Designer.cs">
+      <DependentUpon>frmChucVu.cs</DependentUpon>
     </Compile>
     <Compile Include="TabControl\frmDoAn.cs">
       <SubType>Form</SubType>
@@ -338,6 +359,9 @@
     <EmbeddedResource Include="frmTrangChu.resx">
       <DependentUpon>frmTrangChu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PartialView\frmThaoTacCV.resx">
+      <DependentUpon>frmThaoTacCV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PartialView\frmThaoTacKH.resx">
       <DependentUpon>frmThaoTacKH.cs</DependentUpon>
     </EmbeddedResource>
@@ -370,6 +394,12 @@
     <EmbeddedResource Include="Reports\HoaDonReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>HoaDonReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabControl\frmBaoCaoTuan.resx">
+      <DependentUpon>frmBaoCaoTuan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TabControl\frmChucVu.resx">
+      <DependentUpon>frmChucVu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TabControl\frmDoAn.resx">
       <DependentUpon>frmDoAn.cs</DependentUpon>
@@ -434,6 +464,7 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.ChiTietHoaDon.datasource" />
     <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.ChiTietSuKien.datasource" />
+    <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.ChucVu.datasource" />
     <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.HoaDon.datasource" />
     <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.KhachHang.datasource" />
     <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.NhanVien.datasource" />

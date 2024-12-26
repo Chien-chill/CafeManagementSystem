@@ -25,7 +25,7 @@ namespace Phan_Mem_Quan_Ly.TabControl
             {
                 var lstKH = fn_KhachHangRespository.GetAllKhachHang();
                 string MaMoi = lstKH.Max(kh => kh.MaKH);
-                frmThemKH.MaMoi = (!string.IsNullOrEmpty(MaMoi)) ? "KH" + (int.Parse(MaMoi.Substring(2, MaMoi.Length - 2)) + 1).ToString("D2") : "NV01";
+                frmThemKH.MaMoi = (!string.IsNullOrEmpty(MaMoi)) ? "KH" + (int.Parse(MaMoi.Substring(2, MaMoi.Length - 2)) + 1).ToString("D2") : "KH01";
                 if (frmThemKH.ShowDialog() == DialogResult.OK)
                 {
                     ToastMSS ts = new ToastMSS("Thêm thành công !", "SUCCESS");

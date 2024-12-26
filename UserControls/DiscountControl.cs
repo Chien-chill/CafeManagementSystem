@@ -13,14 +13,6 @@ namespace Phan_Mem_Quan_Ly.UserControls
 
         private void nudGiamGia_ValueChanged(object sender, System.EventArgs e)
         {
-            if (nudGiamGia.Value > 10)
-            {
-                MessageBox.Show("Không được quá 10");
-                nudGiamGia.Value--;
-                return;
-            }
         }
-
-
     }
 }

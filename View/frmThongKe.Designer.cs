@@ -79,6 +79,7 @@
             this.btnBaoCaoTuan.Size = new System.Drawing.Size(266, 71);
             this.btnBaoCaoTuan.TabIndex = 1;
             this.btnBaoCaoTuan.Text = "Báo Cáo Tuần Hiện Tại";
+            this.btnBaoCaoTuan.Click += new System.EventHandler(this.btnBaoCaoTuan_Click);
             // 
             // btnThongKeNam
             // 
