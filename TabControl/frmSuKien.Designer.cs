@@ -48,8 +48,6 @@
             this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.MaSK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenSK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThoiGianBD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ThoiGianKT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SuKienbindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dtgSuKien)).BeginInit();
@@ -166,8 +164,6 @@
             this.dtgSuKien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaSK,
             this.TenSK,
-            this.ThoiGianBD,
-            this.ThoiGianKT,
             this.TrangThai,
             this.ThaoTacSua,
             this.ThaoTacXoa});
@@ -294,22 +290,6 @@
             this.TenSK.MinimumWidth = 8;
             this.TenSK.Name = "TenSK";
             this.TenSK.ReadOnly = true;
-            // 
-            // ThoiGianBD
-            // 
-            this.ThoiGianBD.DataPropertyName = "ThoiGianBD";
-            this.ThoiGianBD.HeaderText = "Thời Gian Bắt Đầu";
-            this.ThoiGianBD.MinimumWidth = 8;
-            this.ThoiGianBD.Name = "ThoiGianBD";
-            this.ThoiGianBD.ReadOnly = true;
-            // 
-            // ThoiGianKT
-            // 
-            this.ThoiGianKT.DataPropertyName = "ThoiGianKT";
-            this.ThoiGianKT.HeaderText = "Thời Gian Kết Thúc";
-            this.ThoiGianKT.MinimumWidth = 8;
-            this.ThoiGianKT.Name = "ThoiGianKT";
-            this.ThoiGianKT.ReadOnly = true;
             // 
             // TrangThai
             // 

@@ -326,6 +326,10 @@ namespace Phan_Mem_Quan_Ly.Reports {
             
             private global::System.Data.DataColumn columnTongTien;
             
+            private global::System.Data.DataColumn columnMaKH;
+            
+            private global::System.Data.DataColumn columnMaSK;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public HoaDonTableDataTable() {
@@ -409,6 +413,22 @@ namespace Phan_Mem_Quan_Ly.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn MaKHColumn {
+                get {
+                    return this.columnMaKH;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn MaSKColumn {
+                get {
+                    return this.columnMaSK;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -444,7 +464,7 @@ namespace Phan_Mem_Quan_Ly.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public HoaDonTableRow AddHoaDonTableRow(string MaHD, string NgayTao, string GioRa, string GioVao, string GiamGia, string TongTien) {
+            public HoaDonTableRow AddHoaDonTableRow(string MaHD, string NgayTao, string GioRa, string GioVao, string GiamGia, string TongTien, string MaKH, string MaSK) {
                 HoaDonTableRow rowHoaDonTableRow = ((HoaDonTableRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         MaHD,
@@ -452,7 +472,9 @@ namespace Phan_Mem_Quan_Ly.Reports {
                         GioRa,
                         GioVao,
                         GiamGia,
-                        TongTien};
+                        TongTien,
+                        MaKH,
+                        MaSK};
                 rowHoaDonTableRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowHoaDonTableRow);
                 return rowHoaDonTableRow;
@@ -481,6 +503,8 @@ namespace Phan_Mem_Quan_Ly.Reports {
                 this.columnGioVao = base.Columns["GioVao"];
                 this.columnGiamGia = base.Columns["GiamGia"];
                 this.columnTongTien = base.Columns["TongTien"];
+                this.columnMaKH = base.Columns["MaKH"];
+                this.columnMaSK = base.Columns["MaSK"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -498,6 +522,10 @@ namespace Phan_Mem_Quan_Ly.Reports {
                 base.Columns.Add(this.columnGiamGia);
                 this.columnTongTien = new global::System.Data.DataColumn("TongTien", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTongTien);
+                this.columnMaKH = new global::System.Data.DataColumn("MaKH", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMaKH);
+                this.columnMaSK = new global::System.Data.DataColumn("MaSK", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMaSK);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1039,6 +1067,38 @@ namespace Phan_Mem_Quan_Ly.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string MaKH {
+                get {
+                    try {
+                        return ((string)(this[this.tableHoaDonTable.MaKHColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MaKH\' in table \'HoaDonTable\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableHoaDonTable.MaKHColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string MaSK {
+                get {
+                    try {
+                        return ((string)(this[this.tableHoaDonTable.MaSKColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MaSK\' in table \'HoaDonTable\' is DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableHoaDonTable.MaSKColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public bool IsMaHDNull() {
                 return this.IsNull(this.tableHoaDonTable.MaHDColumn);
             }
@@ -1107,6 +1167,30 @@ namespace Phan_Mem_Quan_Ly.Reports {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public void SetTongTienNull() {
                 this[this.tableHoaDonTable.TongTienColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsMaKHNull() {
+                return this.IsNull(this.tableHoaDonTable.MaKHColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetMaKHNull() {
+                this[this.tableHoaDonTable.MaKHColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsMaSKNull() {
+                return this.IsNull(this.tableHoaDonTable.MaSKColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetMaSKNull() {
+                this[this.tableHoaDonTable.MaSKColumn] = global::System.Convert.DBNull;
             }
         }
         

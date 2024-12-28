@@ -148,6 +148,17 @@ namespace Phan_Mem_Quan_Ly.PartialView
                             row.Cells["GiamGia"].Value = true;
                         }
                     }
+                    // Tạo Dictionary để tra cứu nhanh
+                    var giamGiaDict = lstGiamGia.ToDictionary(item => item.Ma_SP, item => item.Giam_Gia);
+
+                    // Duyệt qua các DiscountControl và gán giá trị
+                    foreach (var i in flpGiamGia.Controls.OfType<DiscountControl>())
+                    {
+                        if (giamGiaDict.TryGetValue(i.MaSP, out var giamGia))
+                        {
+                            i.GiamGia = giamGia;
+                        }
+                    }
                 }
                 catch (Exception ex)
                 {
@@ -239,8 +250,20 @@ namespace Phan_Mem_Quan_Ly.PartialView
         {
             if (toggleBatTat.Checked)
             {
-                lblKichHoat.Text = "ON";
-                lblKichHoat.ForeColor = Color.SeaGreen;
+                if (fn_SuKienRespository.KiemTraSuKien(txtMaSK.Text))
+                {
+                    ToastMSS mss = new ToastMSS("Có sự kiện đang kích hoạt !", "INFO");
+                    mss.Show();
+                    toggleBatTat.Checked = false;
+                    lblKichHoat.Text = "OFF";
+                    lblKichHoat.ForeColor = Color.Crimson;
+                }
+                else
+                {
+                    lblKichHoat.Text = "ON";
+                    lblKichHoat.ForeColor = Color.SeaGreen;
+                }
+
             }
             else
             {

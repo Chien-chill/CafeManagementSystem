@@ -35,6 +35,7 @@
             this.pnTen = new Guna.UI2.WinForms.Guna2ShadowPanel();
             this.lblTenSP = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnChecked = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblGiamGia = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.PnSize = new System.Windows.Forms.Panel();
             this.btnSizeL = new Guna.UI2.WinForms.Guna2Button();
             this.btnSizeM = new Guna.UI2.WinForms.Guna2Button();
@@ -88,6 +89,7 @@
             this.pnTen.Location = new System.Drawing.Point(20, 112);
             this.pnTen.Name = "pnTen";
             this.pnTen.ShadowColor = System.Drawing.Color.Black;
+            this.pnTen.ShadowDepth = 70;
             this.pnTen.Size = new System.Drawing.Size(223, 56);
             this.pnTen.TabIndex = 4;
             this.pnTen.Click += new System.EventHandler(this.pnTen_Click);
@@ -112,6 +114,7 @@
             this.pnChecked.BackColor = System.Drawing.Color.Transparent;
             this.pnChecked.BorderColor = System.Drawing.Color.Tomato;
             this.pnChecked.BorderThickness = 4;
+            this.pnChecked.Controls.Add(this.lblGiamGia);
             this.pnChecked.Controls.Add(this.PnSize);
             this.pnChecked.Controls.Add(this.btnChecked);
             this.pnChecked.Controls.Add(this.pnTen);
@@ -125,6 +128,20 @@
             this.pnChecked.Size = new System.Drawing.Size(260, 260);
             this.pnChecked.TabIndex = 0;
             this.pnChecked.Click += new System.EventHandler(this.pnChecked_Click);
+            // 
+            // lblGiamGia
+            // 
+            this.lblGiamGia.AutoSize = false;
+            this.lblGiamGia.BackColor = System.Drawing.Color.Transparent;
+            this.lblGiamGia.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGiamGia.ForeColor = System.Drawing.Color.Tomato;
+            this.lblGiamGia.Location = new System.Drawing.Point(197, 3);
+            this.lblGiamGia.Name = "lblGiamGia";
+            this.lblGiamGia.Size = new System.Drawing.Size(60, 34);
+            this.lblGiamGia.TabIndex = 10;
+            this.lblGiamGia.Text = "0%";
+            this.lblGiamGia.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            this.lblGiamGia.Visible = false;
             // 
             // PnSize
             // 
@@ -293,5 +310,6 @@
         public Guna.UI2.WinForms.Guna2Button btnSizeM;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private System.Windows.Forms.Panel PnSize;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblGiamGia;
     }
 }

@@ -20,6 +20,7 @@ namespace Phan_Mem_Quan_Ly.Model
         public decimal? DonGia_SP { get; set; }
         public string MoTaSP { get; set; }
         public string MaLoai { get; set; }
+        public int GiamGia { get; set; }
 
         public static bool KiemTraSP(SanPham sp, out string errorMessage)
         {

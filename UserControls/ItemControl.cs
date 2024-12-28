@@ -17,6 +17,7 @@ namespace Phan_Mem_Quan_Ly
         public string DonGia_S { get; set; }
         public string DonGia_M { get; set; }
         public string DonGia_L { get; set; }
+        public string GiamGia { get => lblGiamGia.Text; set => lblGiamGia.Text = value; }
         public bool SizeS { get => btnSizeS.Checked; set => btnSizeS.Checked = value; }
         public bool SizeM { get => btnSizeM.Checked; set => btnSizeM.Checked = value; }
         public bool SizeL { get => btnSizeL.Checked; set => btnSizeL.Checked = value; }
@@ -54,6 +55,11 @@ namespace Phan_Mem_Quan_Ly
         {
             btnChecked.Visible = false;
             pnChecked.BorderColor = Color.Transparent;
+            int GiamGia = int.Parse(lblGiamGia.Text.Replace("%", ""));
+            if (GiamGia > 0)
+            {
+                lblGiamGia.Visible = true;
+            }
         }
 
         private void lblDonGia_Click(object sender, EventArgs e)
@@ -150,5 +156,7 @@ namespace Phan_Mem_Quan_Ly
                 btnSizeL.Checked = false;
             }
         }
+
+
     }
 }

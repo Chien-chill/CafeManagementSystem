@@ -20,6 +20,7 @@ namespace Phan_Mem_Quan_Ly.Model
             ChiTietHD.Columns.Add("Ma_SP", typeof(string));
             ChiTietHD.Columns.Add("SoLuong", typeof(int));
             ChiTietHD.Columns.Add("DonGia", typeof(decimal));
+            ChiTietHD.Columns.Add("ThanhTien", typeof(decimal));
         }
     }
 }

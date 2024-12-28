@@ -94,7 +94,7 @@ namespace Phan_Mem_Quan_Ly.TabControl
                 MssBox mss = new MssBox("Bạn có muốn xóa mã " + sk.MaSK + " ?");
                 if (mss.ShowDialog() == DialogResult.Yes)
                 {
-                    bool result = true;
+                    bool result = fn_SuKienRespository.DeleteSuKien(sk);
                     if (result)
                     {
                         ToastMSS ts = new ToastMSS("Xóa thành công !", "DELETE");
@@ -103,7 +103,8 @@ namespace Phan_Mem_Quan_Ly.TabControl
                     }
                     else
                     {
-                        MessageBox.Show("Xóa thất bại");
+                        ToastMSS ts = new ToastMSS("Xóa thất bại !", "INFO");
+                        ts.Show();
                     }
                 }
             }
