@@ -28,6 +28,7 @@ namespace Phan_Mem_Quan_Ly.View
                 item.DonGia_M = sp.DonGia_M.ToString();
                 item.DonGia_L = sp.DonGia_L.ToString();
                 item.DonGia_SP = sp.DonGia_SP.ToString();
+                item.GiamGia = sp.GiamGia.ToString() + "%";
                 item.BackgroundImage = MainFn.ByteArrayToImage(sp.AnhSP);
                 item.MaLoai = sp.MaLoai;
                 // Tạo sự kiện của sản phẩm đồ uống (Mã Loại đồ uống: ML01)
@@ -160,16 +161,22 @@ namespace Phan_Mem_Quan_Ly.View
             }
             flpSP.Controls.Add(item);
         }
-
+        private string TinhThanhTienPayCtrl(string strDonGia, string strGiamGia)
+        {
+            decimal GiamGia = ((decimal)(100 - int.Parse(strGiamGia.Replace("%", ""))) / 100);
+            decimal ThanhTien = decimal.Parse(strDonGia) * GiamGia;
+            return ThanhTien.ToString("F2");
+        }
         private void CreatePayCtrl(ItemControl item, string size)
         {
             PayControl pay = new PayControl();
             {
                 pay.TenSP = item.TenSP;
-                pay.ThanhTien = (size.Equals("Size S")) ? item.DonGia_S : ((size.Equals("Size M")) ? item.DonGia_M : item.DonGia_L);
+                pay.ThanhTien = (size.Equals("Size S")) ? TinhThanhTienPayCtrl(item.DonGia_S, item.GiamGia) :
+                    ((size.Equals("Size M")) ? TinhThanhTienPayCtrl(item.DonGia_M, item.GiamGia) : TinhThanhTienPayCtrl(item.DonGia_L, item.GiamGia));
                 pay.SizeSP = size;
                 pay.Tag = item.Tag; // Thêm tên tag từng paycontrol với mã sản phẩm tương ứng.
-                pay.btnXoa.Click += (c, d) =>
+                pay.btnXoa.Click += (a, b) =>
                 {
                     switch (size)
                     {
@@ -179,11 +186,11 @@ namespace Phan_Mem_Quan_Ly.View
                     }
                     if (!item.SizeS && !item.SizeM && !item.SizeL)
                     {
-                        TinhTongTien();
                         item.btnChecked.Visible = false;
                         item.pnChecked.BorderColor = Color.Transparent;
                         return;
                     }
+                    TinhTongTien();
                 };
                 pay.nudSoLuong.ValueChanged += (c, d) =>
                 {
@@ -201,7 +208,7 @@ namespace Phan_Mem_Quan_Ly.View
                 flplstMua.Controls.Remove(controlToRemove);
             }
         }
-        public void TinhTongTien()
+        private void TinhTongTien()
         {
             decimal TongTien = flplstMua.Controls.OfType<PayControl>().Sum(p => decimal.Parse(p.ThanhTien));
             lblThanhTien.Text = TongTien.ToString("C", new CultureInfo("vi-VN"));
@@ -227,7 +234,14 @@ namespace Phan_Mem_Quan_Ly.View
                     }
                 }
             }
-
+            // LOAD flpSP sau khi xóa ( có trong flpSP, không có trong lstSanPham)
+            foreach (var item in flpSP.Controls.OfType<ItemControl>())
+            {
+                if (!lstSanPham.Any(sp => sp.MaSP.Equals(item.Tag)))
+                {
+                    flpSP.Controls.Remove(item);
+                }
+            }
             // LOAD flpSP sau khi thêm ( có trong lstSanPham, không có trong flpSP)
             var lstSanPhamThem = lstSanPham.Where(sp => !flpSP.Controls.OfType<ItemControl>().Any(item => item.Tag.Equals(sp.MaSP))).ToList();
             if (lstSanPhamThem.Any())
@@ -235,16 +249,6 @@ namespace Phan_Mem_Quan_Ly.View
                 foreach (var sp in lstSanPhamThem)
                 {
                     AddSanPham(sp);
-                }
-            }
-
-
-            // LOAD flpSP sau khi xóa ( có trong flpSP, không có trong lstSanPham)
-            foreach (var item in flpSP.Controls.OfType<ItemControl>())
-            {
-                if (!lstSanPham.Any(sp => sp.MaSP.Equals(item.Tag)))
-                {
-                    flpSP.Controls.Remove(item);
                 }
             }
 
@@ -295,6 +299,7 @@ namespace Phan_Mem_Quan_Ly.View
                 else
                     i.Visible = true;
             }
+            lblSoLuong.Text = flpSP.Controls.OfType<ItemControl>().Count(i => i.Visible).ToString() + "+ Sản Phẩm";
             flowphelper.UpdateScrollBar();
         }
 
@@ -309,6 +314,7 @@ namespace Phan_Mem_Quan_Ly.View
                 else
                     i.Visible = true;
             }
+            lblSoLuong.Text = flpSP.Controls.OfType<ItemControl>().Count(i => i.Visible).ToString() + "+ Sản Phẩm";
             flowphelper.UpdateScrollBar();
         }
 
@@ -320,6 +326,7 @@ namespace Phan_Mem_Quan_Ly.View
                 var i = (ItemControl)item;
                 i.Visible = true;
             }
+            lblSoLuong.Text = flpSP.Controls.OfType<ItemControl>().Count(i => i.Visible).ToString() + "+ Sản Phẩm";
             flowphelper.UpdateScrollBar();
         }
         public bool checkHD = false;
@@ -332,12 +339,12 @@ namespace Phan_Mem_Quan_Ly.View
                     var hd = new HoaDon();
                     {
                         hd.MaKH = Convert.ToString(cbKhachHang.SelectedValue);
-                        hd.MaNV = frmTrangChu.Instance.MaNV;
-                        hd.MaSK = "SK01";
+                        hd.MaNV = "NV01"; //frmTrangChu.Instance.MaNV;
+                        hd.MaSK = fn_SuKienRespository.LayMaSuKien();
                         foreach (var item in flplstMua.Controls)
                         {
                             var i = (PayControl)item;
-                            hd.ChiTietHD.Rows.Add(i.Tag, i.nudSoLuong.Value, i.DonGia);
+                            hd.ChiTietHD.Rows.Add(i.Tag, i.nudSoLuong.Value, i.DonGia, i.ThanhTien);
                         }
                     }
                     bool result = fn_HoaDonRespository.AddHoaDon(hd);

@@ -15,7 +15,7 @@ namespace Phan_Mem_Quan_Ly.View
         {
 
             var lstSP = fn_ThongKeRespository.GetSanPhamBanChay();
-            if (lstSP.Any())
+            if (lstSP.Count > 0)
             {
                 var bestSeller = lstSP.First();
                 pbBestSeller.Image = MainFn.ByteArrayToImage(bestSeller.AnhSP);

@@ -149,6 +149,99 @@ namespace Phan_Mem_Quan_Ly.Respository
                 return false;
             }
         }
+        public static bool DeleteSuKien(SuKien sk)
+        {
+            try
+            {
+                using (SqlConnection conn = DataConnect.CreateConnection())
+                {
+                    using (SqlCommand cmd = new SqlCommand("SP_XoaSuKien", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@Ma_SK", sk.MaSK);
+                        int result = cmd.ExecuteNonQuery();
+                        return result > 0;
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                Debug.WriteLine("Lỗi SQL UPDSuKien: " + ex.Message);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Lỗi UPDSuKien: " + ex.Message);
+                return false;
+            }
+        }
+        public static bool KiemTraSuKien(string MaSK)
+        {
+            try
+            {
+                using (SqlConnection conn = DataConnect.CreateConnection())
+                {
+                    using (SqlCommand cmd = new SqlCommand("SP_KiemTraSuKien", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@Ma_SK", MaSK);
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.HasRows)
+                            {
+                                return true;
+                            }
+                            else
+                            {
+                                return false;
+                            }
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                Debug.WriteLine("Lỗi SQL KiemTraSuKien: " + ex.Message);
+                return false;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Lỗi KiemTraSuKien: " + ex.Message);
+                return false;
+            }
+        }
+        public static string LayMaSuKien()
+        {
+            string MaSK = null;
+            try
+            {
+                using (SqlConnection conn = DataConnect.CreateConnection())
+                {
+                    using (SqlCommand cmd = new SqlCommand("SP_LayMaSuKien", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                MaSK = reader["MaSK"].ToString();
+                            }
+                        }
+                        return MaSK;
+                    }
+                }
 
+            }
+            catch (SqlException ex)
+            {
+                Debug.WriteLine("Lỗi SQL LayMaSuKien: " + ex.Message);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Lỗi LayMaSuKien: " + ex.Message);
+                return null;
+            }
+        }
     }
 }

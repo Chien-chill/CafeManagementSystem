@@ -58,7 +58,7 @@
             // 
             this.gsdsfdsfds.BackColor = System.Drawing.Color.Transparent;
             this.gsdsfdsfds.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gsdsfdsfds.Location = new System.Drawing.Point(328, 259);
+            this.gsdsfdsfds.Location = new System.Drawing.Point(312, 259);
             this.gsdsfdsfds.Name = "gsdsfdsfds";
             this.gsdsfdsfds.Size = new System.Drawing.Size(140, 30);
             this.gsdsfdsfds.TabIndex = 17;
@@ -68,7 +68,7 @@
             // 
             this.fdsfsd.BackColor = System.Drawing.Color.Transparent;
             this.fdsfsd.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fdsfsd.Location = new System.Drawing.Point(328, 206);
+            this.fdsfsd.Location = new System.Drawing.Point(312, 206);
             this.fdsfsd.Name = "fdsfsd";
             this.fdsfsd.Size = new System.Drawing.Size(130, 30);
             this.fdsfsd.TabIndex = 18;
@@ -78,7 +78,7 @@
             // 
             this.fdsfds.BackColor = System.Drawing.Color.Transparent;
             this.fdsfds.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fdsfds.Location = new System.Drawing.Point(328, 152);
+            this.fdsfds.Location = new System.Drawing.Point(312, 152);
             this.fdsfds.Name = "fdsfds";
             this.fdsfds.Size = new System.Drawing.Size(124, 30);
             this.fdsfds.TabIndex = 14;
@@ -188,7 +188,7 @@
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(328, 314);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(312, 314);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(147, 30);
             this.guna2HtmlLabel1.TabIndex = 17;
@@ -198,7 +198,7 @@
             // 
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(328, 368);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(312, 368);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(139, 30);
             this.guna2HtmlLabel2.TabIndex = 17;
@@ -221,9 +221,9 @@
             this.lblTenDoUong.AutoSize = false;
             this.lblTenDoUong.BackColor = System.Drawing.Color.Transparent;
             this.lblTenDoUong.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenDoUong.Location = new System.Drawing.Point(502, 206);
+            this.lblTenDoUong.Location = new System.Drawing.Point(440, 206);
             this.lblTenDoUong.Name = "lblTenDoUong";
-            this.lblTenDoUong.Size = new System.Drawing.Size(212, 30);
+            this.lblTenDoUong.Size = new System.Drawing.Size(274, 30);
             this.lblTenDoUong.TabIndex = 18;
             this.lblTenDoUong.Text = "Tên Đồ Uống";
             this.lblTenDoUong.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;

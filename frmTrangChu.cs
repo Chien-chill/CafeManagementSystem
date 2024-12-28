@@ -87,7 +87,7 @@ namespace Phan_Mem_Quan_Ly
         public void loadThongBao()
         {
             var lstHDChuaXuLy = fn_HoaDonRespository.GetHoaDonTheoTrangThai("Chưa Xác Nhận");
-            if (lstHDChuaXuLy.Any())
+            if (lstHDChuaXuLy.Count > 0)
             {
                 if (lstHDChuaXuLy.Count() > 99)
                 {

@@ -38,6 +38,7 @@ namespace Phan_Mem_Quan_Ly.Respository
                                 SP.DonGia_M = (reader["DonGia_M"] != DBNull.Value) ? Convert.ToDecimal(reader["DonGia_M"].ToString()) : 0;
                                 SP.DonGia_L = (reader["DonGia_L"] != DBNull.Value) ? Convert.ToDecimal(reader["DonGia_L"].ToString()) : 0;
                                 SP.DonGia_SP = (reader["DonGia_SP"] != DBNull.Value) ? Convert.ToDecimal(reader["DonGia_SP"].ToString()) : 0;
+                                SP.GiamGia = (reader["Giam_Gia"] != DBNull.Value) ? Convert.ToInt16(reader["Giam_Gia"]) : 0;
                                 SanPhamList.Add(SP);
                             }
                             return SanPhamList;
