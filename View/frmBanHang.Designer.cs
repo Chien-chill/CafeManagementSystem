@@ -39,8 +39,6 @@
             this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.cbKhachHang = new Guna.UI2.WinForms.Guna2ComboBox();
             this.khachHangBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.gunaCheckBox1 = new Guna.UI.WinForms.GunaCheckBox();
             this.lblTongTien = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblThanhTien = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -55,6 +53,8 @@
             this.btnPhanLoaiDoAn = new Guna.UI2.WinForms.Guna2Button();
             this.btnPhanLoaiDoUong = new Guna.UI2.WinForms.Guna2Button();
             this.btnPhanLoaiTatCa = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.gunaCheckBox1 = new Guna.UI.WinForms.GunaCheckBox();
             this.panel1.SuspendLayout();
             this.guna2GradientPanel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
@@ -173,34 +173,6 @@
             // khachHangBindingSource
             // 
             this.khachHangBindingSource.DataSource = typeof(Phan_Mem_Quan_Ly.Model.KhachHang);
-            // 
-            // guna2HtmlLabel4
-            // 
-            this.guna2HtmlLabel4.AutoSize = false;
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.OrangeRed;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(444, 126);
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(189, 34);
-            this.guna2HtmlLabel4.TabIndex = 5;
-            this.guna2HtmlLabel4.Text = "0%";
-            this.guna2HtmlLabel4.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // gunaCheckBox1
-            // 
-            this.gunaCheckBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaCheckBox1.Checked = true;
-            this.gunaCheckBox1.CheckedOffColor = System.Drawing.Color.Gray;
-            this.gunaCheckBox1.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaCheckBox1.FillColor = System.Drawing.Color.White;
-            this.gunaCheckBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaCheckBox1.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.gunaCheckBox1.Location = new System.Drawing.Point(97, 128);
-            this.gunaCheckBox1.Name = "gunaCheckBox1";
-            this.gunaCheckBox1.Size = new System.Drawing.Size(118, 31);
-            this.gunaCheckBox1.TabIndex = 4;
-            this.gunaCheckBox1.Text = "Giảm Giá";
             // 
             // lblTongTien
             // 
@@ -437,6 +409,34 @@
             this.btnPhanLoaiTatCa.TextOffset = new System.Drawing.Point(5, 0);
             this.btnPhanLoaiTatCa.Click += new System.EventHandler(this.btnPhanLoaiTatCa_Click);
             // 
+            // guna2HtmlLabel4
+            // 
+            this.guna2HtmlLabel4.AutoSize = false;
+            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.OrangeRed;
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(444, 126);
+            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(189, 34);
+            this.guna2HtmlLabel4.TabIndex = 5;
+            this.guna2HtmlLabel4.Text = "0%";
+            this.guna2HtmlLabel4.TextAlignment = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // gunaCheckBox1
+            // 
+            this.gunaCheckBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaCheckBox1.Checked = true;
+            this.gunaCheckBox1.CheckedOffColor = System.Drawing.Color.Gray;
+            this.gunaCheckBox1.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaCheckBox1.FillColor = System.Drawing.Color.White;
+            this.gunaCheckBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaCheckBox1.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.gunaCheckBox1.Location = new System.Drawing.Point(97, 128);
+            this.gunaCheckBox1.Name = "gunaCheckBox1";
+            this.gunaCheckBox1.Size = new System.Drawing.Size(118, 31);
+            this.gunaCheckBox1.TabIndex = 4;
+            this.gunaCheckBox1.Text = "Giảm Giá";
+            // 
             // frmBanHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
@@ -480,15 +480,15 @@
         private Guna.UI2.WinForms.Guna2Button btnPhanLoaiDoAn;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblSoLuong;
         private Guna.UI2.WinForms.Guna2Separator guna2Separator1;
-        private Guna.UI.WinForms.GunaCheckBox gunaCheckBox1;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblThanhTien;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblTongTien;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         public Guna.UI2.WinForms.Guna2GradientButton btnThanhToan;
         private Guna.UI2.WinForms.Guna2ComboBox cbKhachHang;
         private System.Windows.Forms.BindingSource khachHangBindingSource;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
+        private Guna.UI.WinForms.GunaCheckBox gunaCheckBox1;
     }
 }
