@@ -123,6 +123,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataConnect.cs" />
+    <Compile Include="Model\ChiTietChucVu.cs" />
     <Compile Include="Model\ChiTietHoaDon.cs" />
     <Compile Include="Model\ChiTietSuKien.cs" />
     <Compile Include="Model\ChucVu.cs" />
@@ -219,6 +220,7 @@
       <DependentUpon>HoaDonReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Respository\fn_ChucVuRespository.cs" />
     <Compile Include="Respository\fn_HoaDonRespository.cs" />
     <Compile Include="Respository\fn_KhachHangRespository.cs" />
     <Compile Include="Respository\fn_NhanVienRespository.cs" />

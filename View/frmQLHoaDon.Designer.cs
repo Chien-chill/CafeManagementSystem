@@ -30,7 +30,6 @@
         {
             this.PnPage = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
-            this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnDSHoaDon = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnDonHangChuaXacNhan = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2CustomGradientPanel1.SuspendLayout();
@@ -46,7 +45,6 @@
             // 
             // guna2CustomGradientPanel1
             // 
-            this.guna2CustomGradientPanel1.Controls.Add(this.guna2GradientButton3);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnDSHoaDon);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnDonHangChuaXacNhan);
             this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -54,39 +52,6 @@
             this.guna2CustomGradientPanel1.Name = "guna2CustomGradientPanel1";
             this.guna2CustomGradientPanel1.Size = new System.Drawing.Size(1618, 71);
             this.guna2CustomGradientPanel1.TabIndex = 2;
-            // 
-            // guna2GradientButton3
-            // 
-            this.guna2GradientButton3.BackColor = System.Drawing.Color.White;
-            this.guna2GradientButton3.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton3.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.guna2GradientButton3.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.guna2GradientButton3.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
-            this.guna2GradientButton3.CheckedState.FillColor = System.Drawing.Color.White;
-            this.guna2GradientButton3.CheckedState.FillColor2 = System.Drawing.Color.White;
-            this.guna2GradientButton3.CheckedState.ForeColor = System.Drawing.Color.DimGray;
-            this.guna2GradientButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2GradientButton3.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 4);
-            this.guna2GradientButton3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientButton3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton3.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientButton3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientButton3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.guna2GradientButton3.FillColor = System.Drawing.Color.Empty;
-            this.guna2GradientButton3.FillColor2 = System.Drawing.Color.Empty;
-            this.guna2GradientButton3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton3.ForeColor = System.Drawing.Color.DimGray;
-            this.guna2GradientButton3.HoverState.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton3.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
-            this.guna2GradientButton3.HoverState.FillColor2 = System.Drawing.Color.White;
-            this.guna2GradientButton3.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton3.Location = new System.Drawing.Point(472, 0);
-            this.guna2GradientButton3.Name = "guna2GradientButton3";
-            this.guna2GradientButton3.PressedColor = System.Drawing.Color.White;
-            this.guna2GradientButton3.Size = new System.Drawing.Size(236, 71);
-            this.guna2GradientButton3.TabIndex = 1;
-            this.guna2GradientButton3.Text = "Đồ Uống";
             // 
             // btnDSHoaDon
             // 
@@ -176,7 +141,6 @@
 
         private Guna.UI2.WinForms.Guna2Panel PnPage;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;
         private Guna.UI2.WinForms.Guna2GradientButton btnDSHoaDon;
         private Guna.UI2.WinForms.Guna2GradientButton btnDonHangChuaXacNhan;
     }
