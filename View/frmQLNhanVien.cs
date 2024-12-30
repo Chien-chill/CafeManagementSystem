@@ -42,5 +42,10 @@ namespace Phan_Mem_Quan_Ly.View
         {
             loadPage("NhanVien", new frmNhanVien());
         }
+
+        private void btnChucVu_Click(object sender, EventArgs e)
+        {
+            loadPage("ChucVu", new frmChucVu());
+        }
     }
 }

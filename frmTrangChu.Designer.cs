@@ -52,7 +52,6 @@
             this.btnQLNhanVien = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.btnQLKhachHang = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.lblMaNV = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2GradientPanel2.SuspendLayout();
@@ -69,7 +68,6 @@
             // pnHeader
             // 
             this.pnHeader.BackColor = System.Drawing.Color.Transparent;
-            this.pnHeader.Controls.Add(this.lblMaNV);
             this.pnHeader.Controls.Add(this.guna2VSeparator1);
             this.pnHeader.Controls.Add(this.txtTimKiem);
             this.pnHeader.Controls.Add(this.guna2PictureBox1);
@@ -487,16 +485,6 @@
             this.guna2Panel1.Size = new System.Drawing.Size(237, 1050);
             this.guna2Panel1.TabIndex = 4;
             // 
-            // lblMaNV
-            // 
-            this.lblMaNV.BackColor = System.Drawing.Color.Transparent;
-            this.lblMaNV.Location = new System.Drawing.Point(897, 14);
-            this.lblMaNV.Name = "lblMaNV";
-            this.lblMaNV.Size = new System.Drawing.Size(114, 27);
-            this.lblMaNV.TabIndex = 5;
-            this.lblMaNV.Text = "Mã Nhân Viên";
-            this.lblMaNV.Visible = false;
-            // 
             // frmTrangChu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
@@ -514,7 +502,6 @@
             this.Text = "frmTrangChu";
             this.Load += new System.EventHandler(this.frmTrangChu_Load);
             this.pnHeader.ResumeLayout(false);
-            this.pnHeader.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2GradientPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pcbAnhNV)).EndInit();
@@ -547,6 +534,5 @@
         private Guna.UI2.WinForms.Guna2GradientTileButton btnThongKe;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnTrangChu;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblMaNV;
     }
 }

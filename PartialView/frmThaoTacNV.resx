@@ -121,7 +121,7 @@
   <data name="pcTieuDe.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAA95JREFUaEPtmU2IVWUcxseayZk0sxApykFK8wNJdFM6koukWmi7IkIUF6YgDOhC
+        DQAACw0B7QfALAAAA95JREFUaEPtmU2IVWUcxseayZk0sxApykFK8wNJdFM6koukWmi7IkIUF6YgDOhC
         WiS1SHEhqIuRaNVCQwwRA9FaJKZS0wfUaCD4AWplYjpoImbm6++573No5Db3nuPcOeco84MHnOf9f41z
         z3nPeW/TEEPcQ4QQHkCz0Uq0BW1H29BG9CZ62KHlhAGHo9Xod1SLP9B8p5ULBnsGHdWU5mfUhd5FC9Hb
         /vdhJG6gj9FclygehhmLziDxA3rBS/8L6+9XIv9jFxrp5eJgiB2VcUI4iNps9wsxuobGo6XoVyR2e7kY
@@ -187,4 +187,7 @@
         jlxMC7mFxTAMwzAMwzAMwzAMwzAMwzCM4cCIEf8Ce59wvA4e+FoAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="chucVuBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>633, 17</value>
+  </metadata>
 </root>

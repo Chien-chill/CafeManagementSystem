@@ -36,6 +36,8 @@ namespace Phan_Mem_Quan_Ly.Respository
                                 nv.NgaySinh = reader["Ngay_Sinh"].ToString().Split(' ')[0];
                                 nv.DiaChi = reader["Dia_Chi"].ToString();
                                 nv.AnhNV = (byte[])reader["Anh_NV"];
+                                nv.MaCV = reader["Ma_CV"].ToString();
+                                nv.TenCV = reader["Ten_CV"].ToString();
                                 NVList.Add(nv);
                             }
                             return NVList;
@@ -71,6 +73,7 @@ namespace Phan_Mem_Quan_Ly.Respository
                         cmd.Parameters.AddWithValue("@Gioi_Tinh", nv.GioiTinh);
                         cmd.Parameters.AddWithValue("@Dia_Chi", nv.DiaChi);
                         cmd.Parameters.AddWithValue("@SDT", nv.SDT);
+                        cmd.Parameters.AddWithValue("@Ma_CV", nv.MaCV);
                         int result = cmd.ExecuteNonQuery();
                         return result > 0;
                     }
@@ -104,7 +107,7 @@ namespace Phan_Mem_Quan_Ly.Respository
                         cmd.Parameters.AddWithValue("@Gioi_Tinh", nv.GioiTinh);
                         cmd.Parameters.AddWithValue("@Dia_Chi", nv.DiaChi);
                         cmd.Parameters.AddWithValue("@SDT", nv.SDT);
-
+                        cmd.Parameters.AddWithValue("@Ma_CV", nv.MaCV);
                         int result = cmd.ExecuteNonQuery();
                         return result > 0;
                     }

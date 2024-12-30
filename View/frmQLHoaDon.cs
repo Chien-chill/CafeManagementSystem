@@ -1,4 +1,5 @@
-﻿using Phan_Mem_Quan_Ly.TabControl;
+﻿using Phan_Mem_Quan_Ly.Respository;
+using Phan_Mem_Quan_Ly.TabControl;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -43,6 +44,16 @@ namespace Phan_Mem_Quan_Ly.View
 
         public void frmDonHang_Load(object sender, EventArgs e)
         {
+            var cv = fn_ChucVuRespository.GetQuyenChucVu(frmTrangChu.Instance.MaCV);
+            if (cv.ThaoTacDonHang == 1)
+            {
+                btnDonHangChuaXacNhan.Enabled = false;
+                btnDSHoaDon.Enabled = false;
+            }
+            else if (cv.ThaoTacDonHang == 2)
+            {
+                PnPage.Enabled = false;
+            }
             btnDonHangChuaXacNhan.Checked = true;
             btnDonHangChuaXacNhan_Click(sender, e);
         }

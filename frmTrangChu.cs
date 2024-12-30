@@ -10,9 +10,10 @@ namespace Phan_Mem_Quan_Ly
     public partial class frmTrangChu : Form
     {
         public static frmTrangChu Instance;
-        public string MaNV { get => lblMaNV.Text; set => lblMaNV.Text = value; }
         public string TenNV { get => lblTenNV.Text; set => lblTenNV.Text = value; }
+        public string MaNV { get => lblTenNV.Tag as string; set => lblTenNV.Tag = value; }
         public string ChucVu { get => lblChucVu.Text; set => lblChucVu.Text = value; }
+        public string MaCV { get => lblChucVu.Tag as string; set => lblChucVu.Tag = value; }
         public Image AnhNV { get => pcbAnhNV.Image; set => pcbAnhNV.Image = value; }
         public frmTrangChu()
         {
@@ -83,6 +84,7 @@ namespace Phan_Mem_Quan_Ly
         {
             btnTrangChu_Click(sender, e);
             loadThongBao();
+            MessageBox.Show(MaCV);
         }
         public void loadThongBao()
         {
@@ -104,9 +106,7 @@ namespace Phan_Mem_Quan_Ly
         private void btnTatCa_Click(object sender, EventArgs e)
         {
             loadfrm("BanHang", new frmBanHang());
-
         }
-
         private void btnNuocUong_Click(object sender, EventArgs e)
         {
             loadfrm("QLNhapSP", new frmNhapSP());
@@ -126,13 +126,10 @@ namespace Phan_Mem_Quan_Ly
         {
             loadfrm("QLNhanVien", new frmQLNhanVien());
         }
-
-
         private void btnThongKe_Click(object sender, EventArgs e)
         {
             loadfrm("ThongKe", new frmThongKe(), true);
         }
-
         private void btnTrangChu_Click(object sender, EventArgs e)
         {
             loadfrm("TrangChu", new frmHome(), true);

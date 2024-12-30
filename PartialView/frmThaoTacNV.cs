@@ -2,6 +2,7 @@
 using Phan_Mem_Quan_Ly.Respository;
 using Phan_Mem_Quan_Ly.TabControl;
 using System;
+using System.Diagnostics;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -27,6 +28,7 @@ namespace Phan_Mem_Quan_Ly.PartialView
                     nv.CCCD = txtCCCD.Text;
                     nv.GioiTinh = (btnNam.Checked) ? "Nam" : "Nữ";
                     nv.NgaySinh = dtpNS.Text;
+                    nv.MaCV = cbChucVu.SelectedValue.ToString();
                 }
                 if (!NhanVien.KiemTraNV(nv, out string errorMessage))
                 {
@@ -68,6 +70,7 @@ namespace Phan_Mem_Quan_Ly.PartialView
                     nv.CCCD = txtCCCD.Text;
                     nv.GioiTinh = (btnNam.Checked) ? "Nam" : "Nữ";
                     nv.NgaySinh = dtpNS.Text;
+                    nv.MaCV = cbChucVu.SelectedValue.ToString();
                 }
                 bool result = fn_NhanVienRespository.UpdateNV(nv);
                 if (result)
@@ -93,6 +96,15 @@ namespace Phan_Mem_Quan_Ly.PartialView
 
         private void frmThaoTacNV_Load(object sender, EventArgs e)
         {
+            try
+            {
+                var lstCV = fn_ChucVuRespository.GetAllChucVu();
+                chucVuBindingSource.DataSource = lstCV;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Lỗi load combox khách hàng: " + ex.Message);
+            }
             btnThem.Visible = true;
             btnSua.Visible = false;
             if (frmNhanVien.nvSua != null)
@@ -111,6 +123,7 @@ namespace Phan_Mem_Quan_Ly.PartialView
                 string[] SplitNS = frmNhanVien.nvSua.NgaySinh.Split('/');
                 DateTime NS = new DateTime(int.Parse(SplitNS[2]), int.Parse(SplitNS[1]), int.Parse(SplitNS[0]));
                 dtpNS.Value = NS;
+                cbChucVu.SelectedValue = frmNhanVien.nvSua.MaCV;
             }
         }
 

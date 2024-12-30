@@ -1,5 +1,4 @@
-﻿using Phan_Mem_Quan_Ly.PartialView;
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.IO;
 using System.Windows.Forms;
@@ -26,7 +25,7 @@ namespace Phan_Mem_Quan_Ly
             AppDomain.CurrentDomain.SetData("DataDirectory", databaseFolder);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmThaoTacCV());
+            Application.Run(new frmDangNhap());
         }
     }
 }

@@ -123,7 +123,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataConnect.cs" />
-    <Compile Include="Model\ChiTietChucVu.cs" />
     <Compile Include="Model\ChiTietHoaDon.cs" />
     <Compile Include="Model\ChiTietSuKien.cs" />
     <Compile Include="Model\ChucVu.cs" />

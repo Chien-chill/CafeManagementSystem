@@ -55,9 +55,11 @@ namespace Phan_Mem_Quan_Ly
             {
                 this.Hide();
                 frmTrangChu tt = new frmTrangChu();
-                tt.TenNV = nv.TenNV;
                 tt.AnhNV = MainFn.ByteArrayToImage(nv.AnhNV);
                 tt.MaNV = nv.MaNV;
+                tt.TenNV = nv.TenNV;
+                tt.MaCV = nv.MaCV;
+                tt.ChucVu = nv.TenCV;
                 tt.ShowDialog();
                 this.Show();
             }

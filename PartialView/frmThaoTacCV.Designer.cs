@@ -45,6 +45,12 @@
             this.txtMaCV = new Guna.UI2.WinForms.Guna2TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
+            this.accordionContentContainer2 = new DevExpress.XtraBars.Navigation.AccordionContentContainer();
+            this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.btnKH1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnKH2 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnKH3 = new Guna.UI2.WinForms.Guna2Button();
             this.accordionContentContainer5 = new DevExpress.XtraBars.Navigation.AccordionContentContainer();
             this.guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -79,12 +85,6 @@
             this.btnSP1 = new Guna.UI2.WinForms.Guna2Button();
             this.btnSP2 = new Guna.UI2.WinForms.Guna2Button();
             this.btnSP3 = new Guna.UI2.WinForms.Guna2Button();
-            this.accordionContentContainer2 = new DevExpress.XtraBars.Navigation.AccordionContentContainer();
-            this.guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnKH1 = new Guna.UI2.WinForms.Guna2Button();
-            this.btnKH2 = new Guna.UI2.WinForms.Guna2Button();
-            this.btnKH3 = new Guna.UI2.WinForms.Guna2Button();
             this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement3 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlSeparator1 = new DevExpress.XtraBars.Navigation.AccordionControlSeparator();
@@ -113,6 +113,8 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             this.accordionControl1.SuspendLayout();
+            this.accordionContentContainer2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.accordionContentContainer5.SuspendLayout();
             this.panel7.SuspendLayout();
             this.accordionContentContainer3.SuspendLayout();
@@ -123,8 +125,6 @@
             this.accordionContentContainer1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.accordionContentContainer2.SuspendLayout();
-            this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -194,6 +194,7 @@
             this.btnSua.Size = new System.Drawing.Size(152, 62);
             this.btnSua.TabIndex = 0;
             this.btnSua.Text = "SỬA";
+            this.btnSua.Visible = false;
             this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
@@ -338,11 +339,11 @@
             // 
             // accordionControl1
             // 
+            this.accordionControl1.Controls.Add(this.accordionContentContainer2);
             this.accordionControl1.Controls.Add(this.accordionContentContainer5);
             this.accordionControl1.Controls.Add(this.accordionContentContainer3);
             this.accordionControl1.Controls.Add(this.accordionContentContainer4);
             this.accordionControl1.Controls.Add(this.accordionContentContainer1);
-            this.accordionControl1.Controls.Add(this.accordionContentContainer2);
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement1,
             this.accordionControlSeparator1,
@@ -362,12 +363,108 @@
             this.accordionControl1.Size = new System.Drawing.Size(1052, 479);
             this.accordionControl1.TabIndex = 51;
             // 
+            // accordionContentContainer2
+            // 
+            this.accordionContentContainer2.Controls.Add(this.guna2HtmlLabel8);
+            this.accordionContentContainer2.Controls.Add(this.panel3);
+            this.accordionContentContainer2.Name = "accordionContentContainer2";
+            this.accordionContentContainer2.Size = new System.Drawing.Size(0, 95);
+            this.accordionContentContainer2.TabIndex = 8;
+            // 
+            // guna2HtmlLabel8
+            // 
+            this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel8.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(47, 27);
+            this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
+            this.guna2HtmlLabel8.Size = new System.Drawing.Size(279, 30);
+            this.guna2HtmlLabel8.TabIndex = 47;
+            this.guna2HtmlLabel8.Text = "Cho Phép Thao Tác Khách Hàng";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnKH1);
+            this.panel3.Controls.Add(this.btnKH2);
+            this.panel3.Controls.Add(this.btnKH3);
+            this.panel3.Location = new System.Drawing.Point(390, 14);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(199, 58);
+            this.panel3.TabIndex = 50;
+            // 
+            // btnKH1
+            // 
+            this.btnKH1.BorderRadius = 20;
+            this.btnKH1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnKH1.Checked = true;
+            this.btnKH1.CheckedState.FillColor = System.Drawing.Color.Red;
+            this.btnKH1.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btnKH1.CustomizableEdges.BottomRight = false;
+            this.btnKH1.CustomizableEdges.TopRight = false;
+            this.btnKH1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnKH1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnKH1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnKH1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnKH1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(253)))));
+            this.btnKH1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnKH1.ForeColor = System.Drawing.Color.White;
+            this.btnKH1.Image = ((System.Drawing.Image)(resources.GetObject("btnKH1.Image")));
+            this.btnKH1.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnKH1.Location = new System.Drawing.Point(15, 7);
+            this.btnKH1.Name = "btnKH1";
+            this.btnKH1.Size = new System.Drawing.Size(56, 46);
+            this.btnKH1.TabIndex = 48;
+            // 
+            // btnKH2
+            // 
+            this.btnKH2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
+            this.btnKH2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnKH2.CheckedState.FillColor = System.Drawing.Color.DimGray;
+            this.btnKH2.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.btnKH2.CustomBorderColor = System.Drawing.Color.LightGray;
+            this.btnKH2.CustomBorderThickness = new System.Windows.Forms.Padding(1, 0, 1, 0);
+            this.btnKH2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnKH2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnKH2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnKH2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnKH2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(253)))));
+            this.btnKH2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnKH2.ForeColor = System.Drawing.Color.White;
+            this.btnKH2.Image = ((System.Drawing.Image)(resources.GetObject("btnKH2.Image")));
+            this.btnKH2.ImageSize = new System.Drawing.Size(25, 25);
+            this.btnKH2.Location = new System.Drawing.Point(71, 7);
+            this.btnKH2.Name = "btnKH2";
+            this.btnKH2.Size = new System.Drawing.Size(56, 46);
+            this.btnKH2.TabIndex = 48;
+            // 
+            // btnKH3
+            // 
+            this.btnKH3.BorderRadius = 20;
+            this.btnKH3.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnKH3.CheckedState.FillColor = System.Drawing.Color.MediumSeaGreen;
+            this.btnKH3.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
+            this.btnKH3.CustomizableEdges.BottomLeft = false;
+            this.btnKH3.CustomizableEdges.TopLeft = false;
+            this.btnKH3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnKH3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnKH3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnKH3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnKH3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(253)))));
+            this.btnKH3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnKH3.ForeColor = System.Drawing.Color.White;
+            this.btnKH3.Image = ((System.Drawing.Image)(resources.GetObject("btnKH3.Image")));
+            this.btnKH3.ImageSize = new System.Drawing.Size(32, 32);
+            this.btnKH3.Location = new System.Drawing.Point(126, 7);
+            this.btnKH3.Name = "btnKH3";
+            this.btnKH3.Size = new System.Drawing.Size(56, 46);
+            this.btnKH3.TabIndex = 48;
+            // 
             // accordionContentContainer5
             // 
             this.accordionContentContainer5.Controls.Add(this.guna2HtmlLabel12);
             this.accordionContentContainer5.Controls.Add(this.panel7);
             this.accordionContentContainer5.Name = "accordionContentContainer5";
-            this.accordionContentContainer5.Size = new System.Drawing.Size(1024, 76);
+            this.accordionContentContainer5.Size = new System.Drawing.Size(0, 76);
             this.accordionContentContainer5.TabIndex = 15;
             // 
             // guna2HtmlLabel12
@@ -397,7 +494,7 @@
             this.btnTK1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnTK1.Checked = true;
             this.btnTK1.CheckedState.FillColor = System.Drawing.Color.Red;
-            this.btnTK1.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image")));
+            this.btnTK1.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
             this.btnTK1.CustomizableEdges.BottomRight = false;
             this.btnTK1.CustomizableEdges.TopRight = false;
             this.btnTK1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -419,7 +516,7 @@
             this.btnTK2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.btnTK2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnTK2.CheckedState.FillColor = System.Drawing.Color.DimGray;
-            this.btnTK2.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image1")));
+            this.btnTK2.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
             this.btnTK2.CustomBorderColor = System.Drawing.Color.LightGray;
             this.btnTK2.CustomBorderThickness = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.btnTK2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -441,7 +538,7 @@
             this.btnTK3.BorderRadius = 20;
             this.btnTK3.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnTK3.CheckedState.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnTK3.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image2")));
+            this.btnTK3.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
             this.btnTK3.CustomizableEdges.BottomLeft = false;
             this.btnTK3.CustomizableEdges.TopLeft = false;
             this.btnTK3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -465,7 +562,7 @@
             this.accordionContentContainer3.Controls.Add(this.guna2HtmlLabel9);
             this.accordionContentContainer3.Controls.Add(this.panel4);
             this.accordionContentContainer3.Name = "accordionContentContainer3";
-            this.accordionContentContainer3.Size = new System.Drawing.Size(1024, 184);
+            this.accordionContentContainer3.Size = new System.Drawing.Size(0, 184);
             this.accordionContentContainer3.TabIndex = 11;
             // 
             // guna2HtmlLabel10
@@ -495,7 +592,7 @@
             this.btnCV1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnCV1.Checked = true;
             this.btnCV1.CheckedState.FillColor = System.Drawing.Color.Red;
-            this.btnCV1.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image3")));
+            this.btnCV1.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
             this.btnCV1.CustomizableEdges.BottomRight = false;
             this.btnCV1.CustomizableEdges.TopRight = false;
             this.btnCV1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -517,7 +614,7 @@
             this.btnCV2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.btnCV2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnCV2.CheckedState.FillColor = System.Drawing.Color.DimGray;
-            this.btnCV2.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image4")));
+            this.btnCV2.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
             this.btnCV2.CustomBorderColor = System.Drawing.Color.LightGray;
             this.btnCV2.CustomBorderThickness = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.btnCV2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -539,7 +636,7 @@
             this.btnCV3.BorderRadius = 20;
             this.btnCV3.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnCV3.CheckedState.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnCV3.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image5")));
+            this.btnCV3.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image8")));
             this.btnCV3.CustomizableEdges.BottomLeft = false;
             this.btnCV3.CustomizableEdges.TopLeft = false;
             this.btnCV3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -583,7 +680,7 @@
             this.btnNV1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnNV1.Checked = true;
             this.btnNV1.CheckedState.FillColor = System.Drawing.Color.Red;
-            this.btnNV1.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image6")));
+            this.btnNV1.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image9")));
             this.btnNV1.CustomizableEdges.BottomRight = false;
             this.btnNV1.CustomizableEdges.TopRight = false;
             this.btnNV1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -605,7 +702,7 @@
             this.btnNV2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.btnNV2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnNV2.CheckedState.FillColor = System.Drawing.Color.DimGray;
-            this.btnNV2.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image7")));
+            this.btnNV2.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image10")));
             this.btnNV2.CustomBorderColor = System.Drawing.Color.LightGray;
             this.btnNV2.CustomBorderThickness = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.btnNV2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -627,7 +724,7 @@
             this.btnNV3.BorderRadius = 20;
             this.btnNV3.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnNV3.CheckedState.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnNV3.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image8")));
+            this.btnNV3.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image11")));
             this.btnNV3.CustomizableEdges.BottomLeft = false;
             this.btnNV3.CustomizableEdges.TopLeft = false;
             this.btnNV3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -649,7 +746,7 @@
             this.accordionContentContainer4.Controls.Add(this.guna2HtmlLabel11);
             this.accordionContentContainer4.Controls.Add(this.panel6);
             this.accordionContentContainer4.Name = "accordionContentContainer4";
-            this.accordionContentContainer4.Size = new System.Drawing.Size(1024, 86);
+            this.accordionContentContainer4.Size = new System.Drawing.Size(0, 86);
             this.accordionContentContainer4.TabIndex = 13;
             // 
             // guna2HtmlLabel11
@@ -679,7 +776,7 @@
             this.btnHD1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnHD1.Checked = true;
             this.btnHD1.CheckedState.FillColor = System.Drawing.Color.Red;
-            this.btnHD1.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image9")));
+            this.btnHD1.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image12")));
             this.btnHD1.CustomizableEdges.BottomRight = false;
             this.btnHD1.CustomizableEdges.TopRight = false;
             this.btnHD1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -701,7 +798,7 @@
             this.btnHD2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.btnHD2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnHD2.CheckedState.FillColor = System.Drawing.Color.DimGray;
-            this.btnHD2.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image10")));
+            this.btnHD2.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image13")));
             this.btnHD2.CustomBorderColor = System.Drawing.Color.LightGray;
             this.btnHD2.CustomBorderThickness = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.btnHD2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -723,7 +820,7 @@
             this.btnHD3.BorderRadius = 20;
             this.btnHD3.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnHD3.CheckedState.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnHD3.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image11")));
+            this.btnHD3.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image14")));
             this.btnHD3.CustomizableEdges.BottomLeft = false;
             this.btnHD3.CustomizableEdges.TopLeft = false;
             this.btnHD3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -777,7 +874,7 @@
             this.btnSK1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnSK1.Checked = true;
             this.btnSK1.CheckedState.FillColor = System.Drawing.Color.Red;
-            this.btnSK1.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image12")));
+            this.btnSK1.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image15")));
             this.btnSK1.CustomizableEdges.BottomRight = false;
             this.btnSK1.CustomizableEdges.TopRight = false;
             this.btnSK1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -799,7 +896,7 @@
             this.btnSK2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.btnSK2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnSK2.CheckedState.FillColor = System.Drawing.Color.DimGray;
-            this.btnSK2.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image13")));
+            this.btnSK2.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image16")));
             this.btnSK2.CustomBorderColor = System.Drawing.Color.LightGray;
             this.btnSK2.CustomBorderThickness = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.btnSK2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -821,7 +918,7 @@
             this.btnSK3.BorderRadius = 20;
             this.btnSK3.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnSK3.CheckedState.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnSK3.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image14")));
+            this.btnSK3.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image17")));
             this.btnSK3.CustomizableEdges.BottomLeft = false;
             this.btnSK3.CustomizableEdges.TopLeft = false;
             this.btnSK3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -864,7 +961,7 @@
             this.btnSP1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnSP1.Checked = true;
             this.btnSP1.CheckedState.FillColor = System.Drawing.Color.Red;
-            this.btnSP1.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image15")));
+            this.btnSP1.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image18")));
             this.btnSP1.CustomizableEdges.BottomRight = false;
             this.btnSP1.CustomizableEdges.TopRight = false;
             this.btnSP1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -886,7 +983,7 @@
             this.btnSP2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
             this.btnSP2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnSP2.CheckedState.FillColor = System.Drawing.Color.DimGray;
-            this.btnSP2.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image16")));
+            this.btnSP2.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image19")));
             this.btnSP2.CustomBorderColor = System.Drawing.Color.LightGray;
             this.btnSP2.CustomBorderThickness = new System.Windows.Forms.Padding(1, 0, 1, 0);
             this.btnSP2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -908,7 +1005,7 @@
             this.btnSP3.BorderRadius = 20;
             this.btnSP3.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
             this.btnSP3.CheckedState.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnSP3.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image17")));
+            this.btnSP3.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image20")));
             this.btnSP3.CustomizableEdges.BottomLeft = false;
             this.btnSP3.CustomizableEdges.TopLeft = false;
             this.btnSP3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
@@ -925,107 +1022,10 @@
             this.btnSP3.Size = new System.Drawing.Size(56, 46);
             this.btnSP3.TabIndex = 48;
             // 
-            // accordionContentContainer2
-            // 
-            this.accordionContentContainer2.Controls.Add(this.guna2HtmlLabel8);
-            this.accordionContentContainer2.Controls.Add(this.panel3);
-            this.accordionContentContainer2.Name = "accordionContentContainer2";
-            this.accordionContentContainer2.Size = new System.Drawing.Size(1024, 95);
-            this.accordionContentContainer2.TabIndex = 8;
-            // 
-            // guna2HtmlLabel8
-            // 
-            this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel8.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.guna2HtmlLabel8.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(47, 27);
-            this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            this.guna2HtmlLabel8.Size = new System.Drawing.Size(279, 30);
-            this.guna2HtmlLabel8.TabIndex = 47;
-            this.guna2HtmlLabel8.Text = "Cho Phép Thao Tác Khách Hàng";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.btnKH1);
-            this.panel3.Controls.Add(this.btnKH2);
-            this.panel3.Controls.Add(this.btnKH3);
-            this.panel3.Location = new System.Drawing.Point(390, 14);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(199, 58);
-            this.panel3.TabIndex = 50;
-            // 
-            // btnKH1
-            // 
-            this.btnKH1.BorderRadius = 20;
-            this.btnKH1.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnKH1.Checked = true;
-            this.btnKH1.CheckedState.FillColor = System.Drawing.Color.Red;
-            this.btnKH1.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image18")));
-            this.btnKH1.CustomizableEdges.BottomRight = false;
-            this.btnKH1.CustomizableEdges.TopRight = false;
-            this.btnKH1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnKH1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnKH1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnKH1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnKH1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(253)))));
-            this.btnKH1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnKH1.ForeColor = System.Drawing.Color.White;
-            this.btnKH1.Image = ((System.Drawing.Image)(resources.GetObject("btnKH1.Image")));
-            this.btnKH1.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnKH1.Location = new System.Drawing.Point(15, 7);
-            this.btnKH1.Name = "btnKH1";
-            this.btnKH1.Size = new System.Drawing.Size(56, 46);
-            this.btnKH1.TabIndex = 48;
-            // 
-            // btnKH2
-            // 
-            this.btnKH2.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.btnKH2.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnKH2.CheckedState.FillColor = System.Drawing.Color.DimGray;
-            this.btnKH2.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image19")));
-            this.btnKH2.CustomBorderColor = System.Drawing.Color.LightGray;
-            this.btnKH2.CustomBorderThickness = new System.Windows.Forms.Padding(1, 0, 1, 0);
-            this.btnKH2.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnKH2.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnKH2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnKH2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnKH2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(253)))));
-            this.btnKH2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnKH2.ForeColor = System.Drawing.Color.White;
-            this.btnKH2.Image = ((System.Drawing.Image)(resources.GetObject("btnKH2.Image")));
-            this.btnKH2.ImageSize = new System.Drawing.Size(25, 25);
-            this.btnKH2.Location = new System.Drawing.Point(71, 7);
-            this.btnKH2.Name = "btnKH2";
-            this.btnKH2.Size = new System.Drawing.Size(56, 46);
-            this.btnKH2.TabIndex = 48;
-            // 
-            // btnKH3
-            // 
-            this.btnKH3.BorderRadius = 20;
-            this.btnKH3.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnKH3.CheckedState.FillColor = System.Drawing.Color.MediumSeaGreen;
-            this.btnKH3.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("resource.Image20")));
-            this.btnKH3.CustomizableEdges.BottomLeft = false;
-            this.btnKH3.CustomizableEdges.TopLeft = false;
-            this.btnKH3.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnKH3.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnKH3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnKH3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnKH3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(253)))));
-            this.btnKH3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnKH3.ForeColor = System.Drawing.Color.White;
-            this.btnKH3.Image = ((System.Drawing.Image)(resources.GetObject("btnKH3.Image")));
-            this.btnKH3.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnKH3.Location = new System.Drawing.Point(126, 7);
-            this.btnKH3.Name = "btnKH3";
-            this.btnKH3.Size = new System.Drawing.Size(56, 46);
-            this.btnKH3.TabIndex = 48;
-            // 
             // accordionControlElement1
             // 
             this.accordionControlElement1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement3});
-            this.accordionControlElement1.Expanded = true;
             this.accordionControlElement1.HeaderTemplate.AddRange(new DevExpress.XtraBars.Navigation.HeaderElementInfo[] {
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Text),
             new DevExpress.XtraBars.Navigation.HeaderElementInfo(DevExpress.XtraBars.Navigation.HeaderElementType.Image),
@@ -1037,6 +1037,7 @@
             // accordionControlElement3
             // 
             this.accordionControlElement3.ContentContainer = this.accordionContentContainer1;
+            this.accordionControlElement3.Expanded = true;
             this.accordionControlElement3.Name = "accordionControlElement3";
             this.accordionControlElement3.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement3.Text = "Chi Tiết";
@@ -1049,7 +1050,6 @@
             // 
             this.accordionControlElement2.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement4});
-            this.accordionControlElement2.Expanded = true;
             this.accordionControlElement2.Name = "accordionControlElement2";
             this.accordionControlElement2.Text = "Quản Lý Khách Hàng";
             // 
@@ -1069,13 +1069,13 @@
             // 
             this.accordionControlElement5.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement6});
-            this.accordionControlElement5.Expanded = true;
             this.accordionControlElement5.Name = "accordionControlElement5";
             this.accordionControlElement5.Text = "Quản Lý Nhân Viên";
             // 
             // accordionControlElement6
             // 
             this.accordionControlElement6.ContentContainer = this.accordionContentContainer3;
+            this.accordionControlElement6.Expanded = true;
             this.accordionControlElement6.Name = "accordionControlElement6";
             this.accordionControlElement6.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement6.Text = "Chi Tiết";
@@ -1088,13 +1088,13 @@
             // 
             this.accordionControlElement7.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement10});
-            this.accordionControlElement7.Expanded = true;
             this.accordionControlElement7.Name = "accordionControlElement7";
             this.accordionControlElement7.Text = "Thống Kê";
             // 
             // accordionControlElement10
             // 
             this.accordionControlElement10.ContentContainer = this.accordionContentContainer5;
+            this.accordionControlElement10.Expanded = true;
             this.accordionControlElement10.Name = "accordionControlElement10";
             this.accordionControlElement10.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement10.Text = "Chi Tiết";
@@ -1107,13 +1107,13 @@
             // 
             this.accordionControlElement8.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement9});
-            this.accordionControlElement8.Expanded = true;
             this.accordionControlElement8.Name = "accordionControlElement8";
             this.accordionControlElement8.Text = "Quản Lý Đơn Hàng";
             // 
             // accordionControlElement9
             // 
             this.accordionControlElement9.ContentContainer = this.accordionContentContainer4;
+            this.accordionControlElement9.Expanded = true;
             this.accordionControlElement9.Name = "accordionControlElement9";
             this.accordionControlElement9.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement9.Text = "Chi Tiết";
@@ -1224,6 +1224,9 @@
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             this.accordionControl1.ResumeLayout(false);
+            this.accordionContentContainer2.ResumeLayout(false);
+            this.accordionContentContainer2.PerformLayout();
+            this.panel3.ResumeLayout(false);
             this.accordionContentContainer5.ResumeLayout(false);
             this.accordionContentContainer5.PerformLayout();
             this.panel7.ResumeLayout(false);
@@ -1238,9 +1241,6 @@
             this.accordionContentContainer1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.accordionContentContainer2.ResumeLayout(false);
-            this.accordionContentContainer2.PerformLayout();
-            this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();

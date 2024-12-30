@@ -20,6 +20,8 @@ namespace Phan_Mem_Quan_Ly.Model
         [Required(ErrorMessage = "Số điện thoại không được trống")]
         public string SDT { get; set; }
         public byte[] AnhNV { get; set; }
+        public string MaCV { get; set; }
+        public string TenCV { get; set; }
         public static bool KiemTraNV(NhanVien nv, out string errorMessage)
         {
             var context = new ValidationContext(nv);

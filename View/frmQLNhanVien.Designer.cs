@@ -120,6 +120,7 @@
             this.btnChucVu.Size = new System.Drawing.Size(236, 71);
             this.btnChucVu.TabIndex = 1;
             this.btnChucVu.Text = "Chức Vụ";
+            this.btnChucVu.Click += new System.EventHandler(this.btnChucVu_Click);
             // 
             // btnNhanVien
             // 
