@@ -7,7 +7,7 @@ using System.Diagnostics;
 
 namespace Phan_Mem_Quan_Ly.Respository
 {
-    internal class fn_ChucVuRespository
+    public class fn_ChucVuRespository
     {
         public static List<ChucVu> GetAllChucVu()
         {

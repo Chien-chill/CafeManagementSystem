@@ -1,6 +1,7 @@
 ﻿using Phan_Mem_Quan_Ly.Model;
 using Phan_Mem_Quan_Ly.PartialView;
 using Phan_Mem_Quan_Ly.Respository;
+using Phan_Mem_Quan_Ly.View;
 using System;
 using System.Linq;
 using System.Windows.Forms;
@@ -46,7 +47,27 @@ namespace Phan_Mem_Quan_Ly.TabControl
 
         private void txtTimKiem_IconRightClick(object sender, EventArgs e)
         {
+            try
+            {
+                var lstCV = fn_ChucVuRespository.GetAllChucVu();
+                if (lstCV != null && !string.IsNullOrEmpty(txtTimKiem.Text))
+                {
+                    chucVuBindingSource.DataSource = lstCV.Where(cv =>
+                    cv.MaCV.Trim().ToLower().Contains(
+                    txtTimKiem.Text.Trim().ToLower()) ||
+                     cv.TenCV.Trim().ToLower().Contains(
+                    txtTimKiem.Text.Trim().ToLower())).ToList();
 
+                }
+                else if (string.IsNullOrEmpty(txtTimKiem.Text))
+                {
+                    chucVuBindingSource.DataSource = lstCV;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi không load được bảng chức vụ" + ex.Message);
+            }
         }
         public static ChucVu cvSua { get; set; }
         private void dtgNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -90,6 +111,12 @@ namespace Phan_Mem_Quan_Ly.TabControl
 
         private void frmChucVu_Load(object sender, EventArgs e)
         {
+            if (frmQLNhanVien.cv.ThaoTacChucVu == 2)
+            {
+                btnThemCV.Enabled = false;
+                dtgChucVu.Columns["ThaoTacSua"].Visible = false;
+                dtgChucVu.Columns["ThaoTacXoa"].Visible = false;
+            }
             LoadData();
         }
     }

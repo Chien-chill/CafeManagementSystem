@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PayControl));
             this.nudSoLuong = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.lblDonGia = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.lblSize = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblTenSP = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblThanhTien = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnXoa = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.lblDonGia = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.nudSoLuong)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnXoa)).BeginInit();
@@ -85,6 +85,16 @@
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(650, 82);
             this.guna2Panel1.TabIndex = 0;
+            // 
+            // lblDonGia
+            // 
+            this.lblDonGia.BackColor = System.Drawing.Color.Transparent;
+            this.lblDonGia.Location = new System.Drawing.Point(445, 48);
+            this.lblDonGia.Name = "lblDonGia";
+            this.lblDonGia.Size = new System.Drawing.Size(62, 22);
+            this.lblDonGia.TabIndex = 8;
+            this.lblDonGia.Text = "Đơn Giá";
+            this.lblDonGia.Visible = false;
             // 
             // guna2Separator1
             // 
@@ -135,16 +145,6 @@
             this.btnXoa.TabIndex = 3;
             this.btnXoa.TabStop = false;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // lblDonGia
-            // 
-            this.lblDonGia.BackColor = System.Drawing.Color.Transparent;
-            this.lblDonGia.Location = new System.Drawing.Point(445, 48);
-            this.lblDonGia.Name = "lblDonGia";
-            this.lblDonGia.Size = new System.Drawing.Size(62, 22);
-            this.lblDonGia.TabIndex = 8;
-            this.lblDonGia.Text = "Đơn Giá";
-            this.lblDonGia.Visible = false;
             // 
             // PayControl
             // 

@@ -172,6 +172,7 @@
             this.dtgChucVu.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgChucVu.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgChucVu.Location = new System.Drawing.Point(131, 184);
+            this.dtgChucVu.MultiSelect = false;
             this.dtgChucVu.Name = "dtgChucVu";
             this.dtgChucVu.ReadOnly = true;
             this.dtgChucVu.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -189,7 +190,7 @@
             this.dtgChucVu.Size = new System.Drawing.Size(1363, 680);
             this.dtgChucVu.TabIndex = 15;
             this.dtgChucVu.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
-            this.dtgChucVu.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtgChucVu.ThemeStyle.AlternatingRowsStyle.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtgChucVu.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dtgChucVu.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Silver;
             this.dtgChucVu.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));

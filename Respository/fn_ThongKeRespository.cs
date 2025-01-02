@@ -93,6 +93,43 @@ namespace Phan_Mem_Quan_Ly.Respository
                 return null;
             }
         }
+        public static ThongKe GetThongKe()
+        {
+            try
+            {
+                using (SqlConnection conn = DataConnect.CreateConnection())
+                {
+                    if (conn == null)
+                    {
+                        throw new Exception("Không thể tạo kết nối đến cơ sở dữ liệu.");
+                    }
+                    using (SqlCommand cmd = new SqlCommand("SP_ThongKe", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            ThongKe tk = new ThongKe();
+                            while (reader.Read())
+                            {
+                                tk.TongSoLuong = (reader["TongSoLuong"] != DBNull.Value) ? Convert.ToInt16(reader["TongSoLuong"]) : 0;
+                                tk.TongDoanhThu = (reader["TongDoanhThu"] != DBNull.Value) ? Convert.ToDecimal(reader["TongDoanhThu"]) : 0;
+                            }
+                            return tk;
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                Debug.WriteLine("Lỗi SQL GetThongKe: " + ex.Message);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Lỗi GetThongKe: " + ex.Message);
+                return null;
+            }
+        }
         public static List<ThongKe> GetThongKeDoanhThuNam(int Nam)
         {
             try

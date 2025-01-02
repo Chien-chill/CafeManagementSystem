@@ -1,6 +1,7 @@
 ﻿using Phan_Mem_Quan_Ly.Model;
 using Phan_Mem_Quan_Ly.PartialView;
 using Phan_Mem_Quan_Ly.Respository;
+using Phan_Mem_Quan_Ly.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,6 +32,12 @@ namespace Phan_Mem_Quan_Ly.TabControl
         }
         private void frmDoUong_Load(object sender, EventArgs e)
         {
+            if (frmNhapSP.cv.ThaoTacSanPham == 2)
+            {
+                btnThemSP.Enabled = false;
+                dtgDoUong.Columns["ThaoTacSua"].Visible = false;
+                dtgDoUong.Columns["ThaoTacXoa"].Visible = false;
+            }
             LoadDataSP();
         }
 

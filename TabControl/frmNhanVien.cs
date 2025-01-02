@@ -1,6 +1,7 @@
 ﻿using Phan_Mem_Quan_Ly.Model;
 using Phan_Mem_Quan_Ly.PartialView;
 using Phan_Mem_Quan_Ly.Respository;
+using Phan_Mem_Quan_Ly.View;
 using System;
 using System.Linq;
 using System.Windows.Forms;
@@ -48,6 +49,12 @@ namespace Phan_Mem_Quan_Ly.TabControl
 
         private void frmNhanVien_Load(object sender, EventArgs e)
         {
+            if (frmQLNhanVien.cv.ThaoTacNhanVien == 2)
+            {
+                btnThemNV.Enabled = false;
+                dtgNhanVien.Columns["ThaoTacSua"].Visible = false;
+                dtgNhanVien.Columns["ThaoTacXoa"].Visible = false;
+            }
             LoadData();
         }
         public static NhanVien nvSua { get; set; }

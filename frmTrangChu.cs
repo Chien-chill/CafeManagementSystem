@@ -84,7 +84,6 @@ namespace Phan_Mem_Quan_Ly
         {
             btnTrangChu_Click(sender, e);
             loadThongBao();
-            MessageBox.Show(MaCV);
         }
         public void loadThongBao()
         {

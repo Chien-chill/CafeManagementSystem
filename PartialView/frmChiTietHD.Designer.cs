@@ -43,13 +43,13 @@
             this.btnThoat = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.dtgDoAn = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.ChiTietHDbindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AnhSP = new System.Windows.Forms.DataGridViewImageColumn();
             this.SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DonGia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ThanhTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ChiTietHDbindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcTieuDe)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -234,6 +234,10 @@
             this.dtgDoAn.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.Silver;
             this.dtgDoAn.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // ChiTietHDbindingSource
+            // 
+            this.ChiTietHDbindingSource.DataSource = typeof(Phan_Mem_Quan_Ly.Model.ChiTietHoaDon);
+            // 
             // MaSP
             // 
             this.MaSP.DataPropertyName = "MaSP";
@@ -252,11 +256,14 @@
             // 
             // AnhSP
             // 
+            this.AnhSP.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
             this.AnhSP.DataPropertyName = "AnhSP";
             this.AnhSP.HeaderText = "Ảnh Sản Phẩm";
+            this.AnhSP.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
             this.AnhSP.MinimumWidth = 8;
             this.AnhSP.Name = "AnhSP";
             this.AnhSP.ReadOnly = true;
+            this.AnhSP.Width = 70;
             // 
             // SoLuong
             // 
@@ -282,10 +289,6 @@
             this.ThanhTien.Name = "ThanhTien";
             this.ThanhTien.ReadOnly = true;
             // 
-            // ChiTietHDbindingSource
-            // 
-            this.ChiTietHDbindingSource.DataSource = typeof(Phan_Mem_Quan_Ly.Model.ChiTietHoaDon);
-            // 
             // frmChiTietHD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
@@ -297,7 +300,7 @@
             this.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmChiTietHD";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmChiTietHD";
             this.Load += new System.EventHandler(this.frmChiTietHD_Load);
             this.guna2GradientPanel1.ResumeLayout(false);

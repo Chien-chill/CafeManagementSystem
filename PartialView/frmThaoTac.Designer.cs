@@ -32,6 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmThaoTac));
             this.txtTenSP = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel1 = new Guna.UI2.WinForms.Guna2GradientPanel();
+            this.pcTieuDe = new Guna.UI2.WinForms.Guna2PictureBox();
             this.lblTieuDe = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.btnThem = new Guna.UI2.WinForms.Guna2Button();
             this.btnThoat = new Guna.UI2.WinForms.Guna2Button();
@@ -52,12 +53,11 @@
             this.btnSizeS = new Guna.UI2.WinForms.Guna2Button();
             this.txtDonGia = new Guna.UI2.WinForms.Guna2TextBox();
             this.lblDonGia = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.pcTieuDe = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnDuyetAnh = new Guna.UI2.WinForms.Guna2Button();
             this.picSP = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientPanel1.SuspendLayout();
-            this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcTieuDe)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picSP)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,6 +95,19 @@
             this.guna2GradientPanel1.Name = "guna2GradientPanel1";
             this.guna2GradientPanel1.Size = new System.Drawing.Size(934, 100);
             this.guna2GradientPanel1.TabIndex = 0;
+            // 
+            // pcTieuDe
+            // 
+            this.pcTieuDe.BackColor = System.Drawing.Color.Transparent;
+            this.pcTieuDe.FillColor = System.Drawing.Color.Transparent;
+            this.pcTieuDe.Image = global::Phan_Mem_Quan_Ly.Properties.Resources.icons8_soda_48_hover;
+            this.pcTieuDe.ImageRotate = 0F;
+            this.pcTieuDe.Location = new System.Drawing.Point(11, 12);
+            this.pcTieuDe.Name = "pcTieuDe";
+            this.pcTieuDe.Size = new System.Drawing.Size(76, 75);
+            this.pcTieuDe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pcTieuDe.TabIndex = 1;
+            this.pcTieuDe.TabStop = false;
             // 
             // lblTieuDe
             // 
@@ -467,19 +480,6 @@
             this.lblDonGia.Text = "Đơn Giá:";
             this.lblDonGia.Visible = false;
             // 
-            // pcTieuDe
-            // 
-            this.pcTieuDe.BackColor = System.Drawing.Color.Transparent;
-            this.pcTieuDe.FillColor = System.Drawing.Color.Transparent;
-            this.pcTieuDe.Image = global::Phan_Mem_Quan_Ly.Properties.Resources.icons8_soda_48_hover;
-            this.pcTieuDe.ImageRotate = 0F;
-            this.pcTieuDe.Location = new System.Drawing.Point(11, 12);
-            this.pcTieuDe.Name = "pcTieuDe";
-            this.pcTieuDe.Size = new System.Drawing.Size(76, 75);
-            this.pcTieuDe.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pcTieuDe.TabIndex = 1;
-            this.pcTieuDe.TabStop = false;
-            // 
             // btnDuyetAnh
             // 
             this.btnDuyetAnh.Animated = true;
@@ -548,8 +548,8 @@
             this.Load += new System.EventHandler(this.frmThaoTac_Load);
             this.guna2GradientPanel1.ResumeLayout(false);
             this.guna2GradientPanel1.PerformLayout();
-            this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pcTieuDe)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picSP)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

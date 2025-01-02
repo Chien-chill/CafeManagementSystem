@@ -188,6 +188,12 @@
     <Compile Include="PartialView\frmThaoTacSK.Designer.cs">
       <DependentUpon>frmThaoTacSK.cs</DependentUpon>
     </Compile>
+    <Compile Include="PartialView\frmThaoTacTK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartialView\frmThaoTacTK.Designer.cs">
+      <DependentUpon>frmThaoTacTK.cs</DependentUpon>
+    </Compile>
     <Compile Include="PartialView\MssBox.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -208,17 +214,18 @@
     <Compile Include="Reports\frmReport.Designer.cs">
       <DependentUpon>frmReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\HoaDonDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>HoaDonDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Reports\HoaDonReport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HoaDonReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Resources\HoaDonDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HoaDonDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\HoaDonDataSet2.Designer.cs" />
     <Compile Include="Respository\fn_ChucVuRespository.cs" />
     <Compile Include="Respository\fn_HoaDonRespository.cs" />
     <Compile Include="Respository\fn_KhachHangRespository.cs" />
@@ -280,6 +287,12 @@
     </Compile>
     <Compile Include="TabControl\frmSuKien.Designer.cs">
       <DependentUpon>frmSuKien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TabControl\frmTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TabControl\frmTaiKhoan.Designer.cs">
+      <DependentUpon>frmTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="TabControl\frmThongKeNam.cs">
       <SubType>Form</SubType>
@@ -386,6 +399,9 @@
     <EmbeddedResource Include="PartialView\frmThaoTacSK.resx">
       <DependentUpon>frmThaoTacSK.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="PartialView\frmThaoTacTK.resx">
+      <DependentUpon>frmThaoTacTK.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PartialView\MssBox.resx">
       <DependentUpon>MssBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -437,6 +453,9 @@
     <EmbeddedResource Include="TabControl\frmSuKien.resx">
       <DependentUpon>frmSuKien.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TabControl\frmTaiKhoan.resx">
+      <DependentUpon>frmTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TabControl\frmThongKeNam.resx">
       <DependentUpon>frmThongKeNam.cs</DependentUpon>
     </EmbeddedResource>
@@ -485,6 +504,7 @@
     <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.NhanVien.datasource" />
     <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.SanPham.datasource" />
     <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.SuKien.datasource" />
+    <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.TaiKhoan.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -505,15 +525,15 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Reports\HoaDonDataSet.xsc">
+    <None Include="Resources\HoaDonDataSet.xsc">
       <DependentUpon>HoaDonDataSet.xsd</DependentUpon>
     </None>
-    <None Include="Reports\HoaDonDataSet.xsd">
+    <None Include="Resources\HoaDonDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>HoaDonDataSet2.Designer.cs</LastGenOutput>
+      <LastGenOutput>HoaDonDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="Reports\HoaDonDataSet.xss">
+    <None Include="Resources\HoaDonDataSet.xss">
       <DependentUpon>HoaDonDataSet.xsd</DependentUpon>
     </None>
     <None Include="Resources\icons8-image-96.png" />

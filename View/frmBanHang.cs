@@ -339,7 +339,7 @@ namespace Phan_Mem_Quan_Ly.View
                     var hd = new HoaDon();
                     {
                         hd.MaKH = Convert.ToString(cbKhachHang.SelectedValue);
-                        hd.MaNV = "NV01"; //frmTrangChu.Instance.MaNV;
+                        hd.MaNV = frmTrangChu.Instance.MaNV;
                         hd.MaSK = fn_SuKienRespository.LayMaSuKien();
                         foreach (var item in flplstMua.Controls)
                         {
@@ -367,6 +367,20 @@ namespace Phan_Mem_Quan_Ly.View
             catch (Exception ex)
             {
                 Console.WriteLine("Lỗi thêm :" + ex.Message);
+            }
+        }
+
+        private void txtSoTienKhachDua_TextChanged(object sender, EventArgs e)
+        {
+            decimal ThanhTien = decimal.Parse(lblThanhTien.Text.Replace(" ₫", ""));
+            if (!string.IsNullOrEmpty(txtSoTienKhachDua.Text))
+            {
+                decimal SoTienKhachDua = decimal.Parse(txtSoTienKhachDua.Text);
+                if (ThanhTien > 0 && SoTienKhachDua >= ThanhTien)
+                {
+                    decimal SoTienTra = SoTienKhachDua - ThanhTien;
+                    txtSoTienTra.Text = SoTienTra.ToString("C", new CultureInfo("vi-VN"));
+                }
             }
         }
     }

@@ -1,6 +1,7 @@
 ﻿using Phan_Mem_Quan_Ly.Model;
 using Phan_Mem_Quan_Ly.PartialView;
 using Phan_Mem_Quan_Ly.Respository;
+using Phan_Mem_Quan_Ly.View;
 using System;
 using System.Linq;
 using System.Windows.Forms;
@@ -16,6 +17,12 @@ namespace Phan_Mem_Quan_Ly.TabControl
 
         private void frmKhachHang_Load(object sender, EventArgs e)
         {
+            if (frmQLKhachHang.cv.ThaoTacKhachHang == 2)
+            {
+                btnThemKH.Enabled = false;
+                dtgKhachHang.Columns["ThaoTacSua"].Visible = false;
+                dtgKhachHang.Columns["ThaoTacXoa"].Visible = false;
+            }
             LoadData();
         }
 
@@ -50,9 +57,6 @@ namespace Phan_Mem_Quan_Ly.TabControl
             }
 
         }
-
-
-
         private void txtTimKiem_IconRightClick(object sender, EventArgs e)
         {
             try

@@ -1,6 +1,7 @@
 ﻿using Phan_Mem_Quan_Ly.Model;
 using Phan_Mem_Quan_Ly.PartialView;
 using Phan_Mem_Quan_Ly.Respository;
+using Phan_Mem_Quan_Ly.View;
 using System;
 using System.Linq;
 using System.Windows.Forms;
@@ -112,6 +113,12 @@ namespace Phan_Mem_Quan_Ly.TabControl
 
         private void frmSuKien_Load(object sender, EventArgs e)
         {
+            if (frmNhapSP.cv.ThaoTacSuKien == 2)
+            {
+                btnThemSK.Enabled = false;
+                dtgSuKien.Columns["ThaoTacSua"].Visible = false;
+                dtgSuKien.Columns["ThaoTacXoa"].Visible = false;
+            }
             LoadData();
         }
     }

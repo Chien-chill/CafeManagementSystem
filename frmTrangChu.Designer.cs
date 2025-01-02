@@ -41,7 +41,6 @@
             this.lblChucVu = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.lblTenNV = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pcbAnhNV = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.guna2GradientTileButton8 = new Guna.UI2.WinForms.Guna2GradientTileButton();
             this.MainPanel = new System.Windows.Forms.Panel();
             this.notifPDonHang = new Guna.UI2.WinForms.Guna2NotificationPaint(this.components);
             this.btnDonHang = new Guna.UI2.WinForms.Guna2GradientTileButton();
@@ -74,7 +73,6 @@
             this.pnHeader.Controls.Add(this.guna2ControlBox2);
             this.pnHeader.Controls.Add(this.guna2ControlBox1);
             this.pnHeader.Controls.Add(this.guna2GradientPanel2);
-            this.pnHeader.Controls.Add(this.guna2GradientTileButton8);
             this.pnHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnHeader.FillColor = System.Drawing.Color.White;
             this.pnHeader.Location = new System.Drawing.Point(237, 0);
@@ -161,7 +159,7 @@
             this.guna2GradientPanel2.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(72)))), ((int)(((byte)(115)))));
             this.guna2GradientPanel2.Location = new System.Drawing.Point(1065, 5);
             this.guna2GradientPanel2.Name = "guna2GradientPanel2";
-            this.guna2GradientPanel2.Size = new System.Drawing.Size(218, 63);
+            this.guna2GradientPanel2.Size = new System.Drawing.Size(383, 63);
             this.guna2GradientPanel2.TabIndex = 1;
             // 
             // lblChucVu
@@ -170,9 +168,9 @@
             this.lblChucVu.BackColor = System.Drawing.Color.Transparent;
             this.lblChucVu.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lblChucVu.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblChucVu.Location = new System.Drawing.Point(63, 36);
+            this.lblChucVu.Location = new System.Drawing.Point(74, 36);
             this.lblChucVu.Name = "lblChucVu";
-            this.lblChucVu.Size = new System.Drawing.Size(155, 27);
+            this.lblChucVu.Size = new System.Drawing.Size(309, 27);
             this.lblChucVu.TabIndex = 7;
             this.lblChucVu.Text = "Chức Vụ";
             this.lblChucVu.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -183,9 +181,9 @@
             this.lblTenNV.BackColor = System.Drawing.Color.Transparent;
             this.lblTenNV.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblTenNV.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTenNV.Location = new System.Drawing.Point(63, 0);
+            this.lblTenNV.Location = new System.Drawing.Point(74, 0);
             this.lblTenNV.Name = "lblTenNV";
-            this.lblTenNV.Size = new System.Drawing.Size(155, 32);
+            this.lblTenNV.Size = new System.Drawing.Size(309, 32);
             this.lblTenNV.TabIndex = 6;
             this.lblTenNV.Text = "Tên nhân viên";
             this.lblTenNV.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -198,28 +196,10 @@
             this.pcbAnhNV.Location = new System.Drawing.Point(0, 0);
             this.pcbAnhNV.Name = "pcbAnhNV";
             this.pcbAnhNV.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.pcbAnhNV.Size = new System.Drawing.Size(63, 63);
+            this.pcbAnhNV.Size = new System.Drawing.Size(74, 63);
             this.pcbAnhNV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pcbAnhNV.TabIndex = 5;
             this.pcbAnhNV.TabStop = false;
-            // 
-            // guna2GradientTileButton8
-            // 
-            this.guna2GradientTileButton8.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton8.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2GradientTileButton8.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton8.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2GradientTileButton8.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2GradientTileButton8.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton8.FillColor2 = System.Drawing.Color.Transparent;
-            this.guna2GradientTileButton8.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2GradientTileButton8.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientTileButton8.Image = ((System.Drawing.Image)(resources.GetObject("guna2GradientTileButton8.Image")));
-            this.guna2GradientTileButton8.ImageSize = new System.Drawing.Size(50, 50);
-            this.guna2GradientTileButton8.Location = new System.Drawing.Point(1289, 10);
-            this.guna2GradientTileButton8.Name = "guna2GradientTileButton8";
-            this.guna2GradientTileButton8.Size = new System.Drawing.Size(66, 55);
-            this.guna2GradientTileButton8.TabIndex = 0;
             // 
             // MainPanel
             // 
@@ -517,7 +497,6 @@
         private Guna.UI2.WinForms.Guna2GradientTileButton btnNuocUong;
         private Guna.UI2.WinForms.Guna2ShadowPanel pnHeader;
         private Guna.UI2.WinForms.Guna2GradientTileButton btnQLNhanVien;
-        private Guna.UI2.WinForms.Guna2GradientTileButton guna2GradientTileButton8;
         private Guna.UI2.WinForms.Guna2GradientPanel guna2GradientPanel2;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox1;
         private Guna.UI2.WinForms.Guna2ControlBox guna2ControlBox2;

@@ -36,6 +36,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDoUong));
             this.guna2Separator1 = new Guna.UI2.WinForms.Guna2Separator();
             this.dtgDoUong = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.MaDU = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDU = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MoTaDU = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ChiTiet = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ThaoTacSua = new System.Windows.Forms.DataGridViewImageColumn();
+            this.ThaoTacXoa = new System.Windows.Forms.DataGridViewImageColumn();
+            this.SanPhambindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
@@ -44,13 +51,6 @@
             this.dataGridViewImageColumn6 = new System.Windows.Forms.DataGridViewImageColumn();
             this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.btnThemSP = new Guna.UI2.WinForms.Guna2Button();
-            this.SanPhambindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.MaDU = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDU = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MoTaDU = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ChiTiet = new System.Windows.Forms.DataGridViewImageColumn();
-            this.ThaoTacSua = new System.Windows.Forms.DataGridViewImageColumn();
-            this.ThaoTacXoa = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgDoUong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SanPhambindingSource)).BeginInit();
             this.SuspendLayout();
@@ -142,6 +142,72 @@
             this.dtgDoUong.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.Silver;
             this.dtgDoUong.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dtgDoUong.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgDoUong_CellClick);
+            // 
+            // MaDU
+            // 
+            this.MaDU.DataPropertyName = "MaSP";
+            this.MaDU.HeaderText = "Mã Đồ Uống";
+            this.MaDU.MinimumWidth = 8;
+            this.MaDU.Name = "MaDU";
+            this.MaDU.ReadOnly = true;
+            // 
+            // TenDU
+            // 
+            this.TenDU.DataPropertyName = "TenSP";
+            this.TenDU.HeaderText = "Tên Đồ Uống";
+            this.TenDU.MinimumWidth = 8;
+            this.TenDU.Name = "TenDU";
+            this.TenDU.ReadOnly = true;
+            // 
+            // MoTaDU
+            // 
+            this.MoTaDU.DataPropertyName = "MoTaSP";
+            this.MoTaDU.HeaderText = "Mô Tả ";
+            this.MoTaDU.MinimumWidth = 8;
+            this.MoTaDU.Name = "MoTaDU";
+            this.MoTaDU.ReadOnly = true;
+            // 
+            // ChiTiet
+            // 
+            this.ChiTiet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ChiTiet.FillWeight = 84.75073F;
+            this.ChiTiet.HeaderText = "Chi Tiết";
+            this.ChiTiet.Image = ((System.Drawing.Image)(resources.GetObject("ChiTiet.Image")));
+            this.ChiTiet.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.ChiTiet.MinimumWidth = 8;
+            this.ChiTiet.Name = "ChiTiet";
+            this.ChiTiet.ReadOnly = true;
+            this.ChiTiet.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ChiTiet.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ChiTiet.Width = 90;
+            // 
+            // ThaoTacSua
+            // 
+            this.ThaoTacSua.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ThaoTacSua.FillWeight = 124.6334F;
+            this.ThaoTacSua.HeaderText = "Sửa";
+            this.ThaoTacSua.Image = ((System.Drawing.Image)(resources.GetObject("ThaoTacSua.Image")));
+            this.ThaoTacSua.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.ThaoTacSua.MinimumWidth = 8;
+            this.ThaoTacSua.Name = "ThaoTacSua";
+            this.ThaoTacSua.ReadOnly = true;
+            this.ThaoTacSua.Width = 90;
+            // 
+            // ThaoTacXoa
+            // 
+            this.ThaoTacXoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.ThaoTacXoa.FillWeight = 136.3636F;
+            this.ThaoTacXoa.HeaderText = "Xóa";
+            this.ThaoTacXoa.Image = ((System.Drawing.Image)(resources.GetObject("ThaoTacXoa.Image")));
+            this.ThaoTacXoa.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+            this.ThaoTacXoa.MinimumWidth = 8;
+            this.ThaoTacXoa.Name = "ThaoTacXoa";
+            this.ThaoTacXoa.ReadOnly = true;
+            this.ThaoTacXoa.Width = 90;
+            // 
+            // SanPhambindingSource
+            // 
+            this.SanPhambindingSource.DataSource = typeof(Phan_Mem_Quan_Ly.Model.SanPham);
             // 
             // dataGridViewImageColumn1
             // 
@@ -255,72 +321,6 @@
             this.btnThemSP.TabIndex = 14;
             this.btnThemSP.Text = "Thêm Mới";
             this.btnThemSP.Click += new System.EventHandler(this.btnThemSP_Click);
-            // 
-            // SanPhambindingSource
-            // 
-            this.SanPhambindingSource.DataSource = typeof(Phan_Mem_Quan_Ly.Model.SanPham);
-            // 
-            // MaDU
-            // 
-            this.MaDU.DataPropertyName = "MaSP";
-            this.MaDU.HeaderText = "Mã Đồ Uống";
-            this.MaDU.MinimumWidth = 8;
-            this.MaDU.Name = "MaDU";
-            this.MaDU.ReadOnly = true;
-            // 
-            // TenDU
-            // 
-            this.TenDU.DataPropertyName = "TenSP";
-            this.TenDU.HeaderText = "Tên Đồ Uống";
-            this.TenDU.MinimumWidth = 8;
-            this.TenDU.Name = "TenDU";
-            this.TenDU.ReadOnly = true;
-            // 
-            // MoTaDU
-            // 
-            this.MoTaDU.DataPropertyName = "MoTaSP";
-            this.MoTaDU.HeaderText = "Mô Tả ";
-            this.MoTaDU.MinimumWidth = 8;
-            this.MoTaDU.Name = "MoTaDU";
-            this.MoTaDU.ReadOnly = true;
-            // 
-            // ChiTiet
-            // 
-            this.ChiTiet.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ChiTiet.FillWeight = 84.75073F;
-            this.ChiTiet.HeaderText = "Chi Tiết";
-            this.ChiTiet.Image = ((System.Drawing.Image)(resources.GetObject("ChiTiet.Image")));
-            this.ChiTiet.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.ChiTiet.MinimumWidth = 8;
-            this.ChiTiet.Name = "ChiTiet";
-            this.ChiTiet.ReadOnly = true;
-            this.ChiTiet.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.ChiTiet.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.ChiTiet.Width = 90;
-            // 
-            // ThaoTacSua
-            // 
-            this.ThaoTacSua.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ThaoTacSua.FillWeight = 124.6334F;
-            this.ThaoTacSua.HeaderText = "Sửa";
-            this.ThaoTacSua.Image = ((System.Drawing.Image)(resources.GetObject("ThaoTacSua.Image")));
-            this.ThaoTacSua.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.ThaoTacSua.MinimumWidth = 8;
-            this.ThaoTacSua.Name = "ThaoTacSua";
-            this.ThaoTacSua.ReadOnly = true;
-            this.ThaoTacSua.Width = 90;
-            // 
-            // ThaoTacXoa
-            // 
-            this.ThaoTacXoa.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.ThaoTacXoa.FillWeight = 136.3636F;
-            this.ThaoTacXoa.HeaderText = "Xóa";
-            this.ThaoTacXoa.Image = ((System.Drawing.Image)(resources.GetObject("ThaoTacXoa.Image")));
-            this.ThaoTacXoa.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-            this.ThaoTacXoa.MinimumWidth = 8;
-            this.ThaoTacXoa.Name = "ThaoTacXoa";
-            this.ThaoTacXoa.ReadOnly = true;
-            this.ThaoTacXoa.Width = 90;
             // 
             // frmDoUong
             // 

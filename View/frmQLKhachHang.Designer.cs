@@ -28,26 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQLKhachHang));
             this.PnPage = new Guna.UI2.WinForms.Guna2Panel();
+            this.PnDeny = new System.Windows.Forms.Panel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.btnDoAn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnKhachHang = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.PnPage.SuspendLayout();
+            this.PnDeny.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.guna2CustomGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // PnPage
             // 
+            this.PnPage.Controls.Add(this.PnDeny);
             this.PnPage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PnPage.Location = new System.Drawing.Point(0, 71);
             this.PnPage.Name = "PnPage";
             this.PnPage.Size = new System.Drawing.Size(1618, 895);
             this.PnPage.TabIndex = 7;
             // 
+            // PnDeny
+            // 
+            this.PnDeny.Controls.Add(this.guna2HtmlLabel1);
+            this.PnDeny.Controls.Add(this.guna2PictureBox1);
+            this.PnDeny.Location = new System.Drawing.Point(641, 83);
+            this.PnDeny.Name = "PnDeny";
+            this.PnDeny.Size = new System.Drawing.Size(569, 435);
+            this.PnDeny.TabIndex = 4;
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Tomato;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(20, 326);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(473, 47);
+            this.guna2HtmlLabel1.TabIndex = 3;
+            this.guna2HtmlLabel1.Text = "Bạn Không Có Quyền Truy Cập !";
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(79, 43);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(300, 200);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 2;
+            this.guna2PictureBox1.TabStop = false;
+            // 
             // guna2CustomGradientPanel1
             // 
             this.guna2CustomGradientPanel1.Controls.Add(this.guna2GradientButton3);
-            this.guna2CustomGradientPanel1.Controls.Add(this.btnDoAn);
             this.guna2CustomGradientPanel1.Controls.Add(this.btnKhachHang);
             this.guna2CustomGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.guna2CustomGradientPanel1.Location = new System.Drawing.Point(0, 0);
@@ -81,45 +119,12 @@
             this.guna2GradientButton3.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
             this.guna2GradientButton3.HoverState.FillColor2 = System.Drawing.Color.White;
             this.guna2GradientButton3.HoverState.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton3.Location = new System.Drawing.Point(472, 0);
+            this.guna2GradientButton3.Location = new System.Drawing.Point(236, 0);
             this.guna2GradientButton3.Name = "guna2GradientButton3";
             this.guna2GradientButton3.PressedColor = System.Drawing.Color.White;
             this.guna2GradientButton3.Size = new System.Drawing.Size(236, 71);
             this.guna2GradientButton3.TabIndex = 1;
-            this.guna2GradientButton3.Text = "Đồ Uống";
-            // 
-            // btnDoAn
-            // 
-            this.btnDoAn.BackColor = System.Drawing.Color.White;
-            this.btnDoAn.BorderColor = System.Drawing.Color.Transparent;
-            this.btnDoAn.BorderStyle = System.Drawing.Drawing2D.DashStyle.Custom;
-            this.btnDoAn.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnDoAn.CheckedState.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
-            this.btnDoAn.CheckedState.FillColor = System.Drawing.Color.White;
-            this.btnDoAn.CheckedState.FillColor2 = System.Drawing.Color.White;
-            this.btnDoAn.CheckedState.ForeColor = System.Drawing.Color.DimGray;
-            this.btnDoAn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDoAn.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 4);
-            this.btnDoAn.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnDoAn.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnDoAn.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDoAn.DisabledState.FillColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnDoAn.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnDoAn.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnDoAn.FillColor = System.Drawing.Color.Empty;
-            this.btnDoAn.FillColor2 = System.Drawing.Color.Empty;
-            this.btnDoAn.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoAn.ForeColor = System.Drawing.Color.DimGray;
-            this.btnDoAn.HoverState.CustomBorderColor = System.Drawing.Color.Transparent;
-            this.btnDoAn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(101)))), ((int)(((byte)(101)))));
-            this.btnDoAn.HoverState.FillColor2 = System.Drawing.Color.White;
-            this.btnDoAn.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnDoAn.Location = new System.Drawing.Point(236, 0);
-            this.btnDoAn.Name = "btnDoAn";
-            this.btnDoAn.PressedColor = System.Drawing.Color.White;
-            this.btnDoAn.Size = new System.Drawing.Size(236, 71);
-            this.btnDoAn.TabIndex = 1;
-            this.btnDoAn.Text = "Đồ Ăn";
+            this.guna2GradientButton3.Text = "Coming Soon...";
             // 
             // btnKhachHang
             // 
@@ -167,6 +172,10 @@
             this.Name = "frmQLKhachHang";
             this.Text = "frmQLKhachHang";
             this.Load += new System.EventHandler(this.frmQLKhachHang_Load);
+            this.PnPage.ResumeLayout(false);
+            this.PnDeny.ResumeLayout(false);
+            this.PnDeny.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.guna2CustomGradientPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -177,7 +186,9 @@
         private Guna.UI2.WinForms.Guna2Panel PnPage;
         private Guna.UI2.WinForms.Guna2CustomGradientPanel guna2CustomGradientPanel1;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;
-        private Guna.UI2.WinForms.Guna2GradientButton btnDoAn;
         private Guna.UI2.WinForms.Guna2GradientButton btnKhachHang;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private System.Windows.Forms.Panel PnDeny;
     }
 }

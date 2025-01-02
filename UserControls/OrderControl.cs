@@ -53,6 +53,8 @@ namespace Phan_Mem_Quan_Ly.UserControls
                     hdRow["GioRa"] = DateTime.Now.ToString("HH:mm:ss");
                     hdRow["GioVao"] = GioVao;
                     hdRow["TongTien"] = TongTien;
+                    hdRow["MaKH"] = MaKH;
+                    hdRow["MaSK"] = MaSK;
                     dataset.Tables["HoaDonTable"].Rows.Add(hdRow);
 
                     var lstcthd = fn_HoaDonRespository.GetChiTietHDTheoMa(MaHD);

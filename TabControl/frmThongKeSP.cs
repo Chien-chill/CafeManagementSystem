@@ -1,6 +1,7 @@
 ﻿using DevExpress.XtraCharts;
 using Phan_Mem_Quan_Ly.Respository;
 using System;
+using System.Globalization;
 using System.Windows.Forms;
 
 namespace Phan_Mem_Quan_Ly.TabControl
@@ -38,6 +39,11 @@ namespace Phan_Mem_Quan_Ly.TabControl
 
             // Add the chart to the form.
             chtDoanhThuSanPham.Series.Add(series);
+
+
+            var tk = fn_ThongKeRespository.GetThongKe();
+            txtTongDoanhThu.Text = tk.TongDoanhThu.ToString("C", new CultureInfo("vi-VN"));
+            txtSoLuongHD.Text = tk.TongSoLuong.ToString() + " Hóa Đơn ";
 
         }
     }

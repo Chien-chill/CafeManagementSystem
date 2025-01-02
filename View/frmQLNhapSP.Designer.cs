@@ -28,12 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNhapSP));
             this.guna2CustomGradientPanel1 = new Guna.UI2.WinForms.Guna2CustomGradientPanel();
             this.btnSuKien = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnDoAn = new Guna.UI2.WinForms.Guna2GradientButton();
             this.btnDoUong = new Guna.UI2.WinForms.Guna2GradientButton();
             this.PnPage = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.pnDeny = new System.Windows.Forms.Panel();
             this.guna2CustomGradientPanel1.SuspendLayout();
+            this.PnPage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
+            this.pnDeny.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2CustomGradientPanel1
@@ -151,11 +158,44 @@
             // 
             // PnPage
             // 
+            this.PnPage.Controls.Add(this.pnDeny);
             this.PnPage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PnPage.Location = new System.Drawing.Point(0, 71);
             this.PnPage.Name = "PnPage";
             this.PnPage.Size = new System.Drawing.Size(1618, 895);
             this.PnPage.TabIndex = 1;
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Tomato;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(71, 331);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(473, 47);
+            this.guna2HtmlLabel1.TabIndex = 7;
+            this.guna2HtmlLabel1.Text = "Bạn Không Có Quyền Truy Cập !";
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.FillColor = System.Drawing.Color.Transparent;
+            this.guna2PictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("guna2PictureBox1.Image")));
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(130, 48);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(300, 200);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.guna2PictureBox1.TabIndex = 6;
+            this.guna2PictureBox1.TabStop = false;
+            // 
+            // pnDeny
+            // 
+            this.pnDeny.Controls.Add(this.guna2HtmlLabel1);
+            this.pnDeny.Controls.Add(this.guna2PictureBox1);
+            this.pnDeny.Location = new System.Drawing.Point(590, 78);
+            this.pnDeny.Name = "pnDeny";
+            this.pnDeny.Size = new System.Drawing.Size(618, 471);
+            this.pnDeny.TabIndex = 8;
             // 
             // frmNhapSP
             // 
@@ -169,6 +209,10 @@
             this.Text = "frmNhapSP";
             this.Load += new System.EventHandler(this.frmNhapSP_Load);
             this.guna2CustomGradientPanel1.ResumeLayout(false);
+            this.PnPage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
+            this.pnDeny.ResumeLayout(false);
+            this.pnDeny.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -180,5 +224,8 @@
         private Guna.UI2.WinForms.Guna2GradientButton btnDoUong;
         private Guna.UI2.WinForms.Guna2GradientButton btnSuKien;
         private Guna.UI2.WinForms.Guna2Panel PnPage;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private System.Windows.Forms.Panel pnDeny;
     }
 }
