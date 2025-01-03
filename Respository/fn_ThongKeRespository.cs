@@ -113,6 +113,7 @@ namespace Phan_Mem_Quan_Ly.Respository
                             {
                                 tk.TongSoLuong = (reader["TongSoLuong"] != DBNull.Value) ? Convert.ToInt16(reader["TongSoLuong"]) : 0;
                                 tk.TongDoanhThu = (reader["TongDoanhThu"] != DBNull.Value) ? Convert.ToDecimal(reader["TongDoanhThu"]) : 0;
+                                tk.TyLeHoanThanh = (reader["TyLeHoanThanh"] != DBNull.Value) ? Convert.ToDecimal(reader["TyLeHoanThanh"]) : 0;
                             }
                             return tk;
                         }

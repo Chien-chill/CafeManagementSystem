@@ -42,8 +42,9 @@ namespace Phan_Mem_Quan_Ly.TabControl
 
 
             var tk = fn_ThongKeRespository.GetThongKe();
-            txtTongDoanhThu.Text = tk.TongDoanhThu.ToString("C", new CultureInfo("vi-VN"));
-            txtSoLuongHD.Text = tk.TongSoLuong.ToString() + " Hóa Đơn ";
+            lblTongDoanhThu.Text = tk.TongDoanhThu.ToString("C", new CultureInfo("vi-VN"));
+            lblSoLuongHD.Text = tk.TongSoLuong.ToString() + " Hóa Đơn ";
+            lblTyLeHoanThanh.Text = tk.TyLeHoanThanh.ToString() + " %";
 
         }
     }

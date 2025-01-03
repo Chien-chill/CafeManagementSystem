@@ -42,14 +42,15 @@
             this.ThaoTacSua = new System.Windows.Forms.DataGridViewImageColumn();
             this.btnThemSK = new Guna.UI2.WinForms.Guna2Button();
             this.dtgSuKien = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn5 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.dataGridViewImageColumn6 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.MaSK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenSK = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SuKienbindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataGridViewImageColumn4 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn5 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewImageColumn6 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnLichSu = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgSuKien)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SuKienbindingSource)).BeginInit();
             this.SuspendLayout();
@@ -217,6 +218,34 @@
             this.dtgSuKien.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             this.dtgSuKien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgSuKien_CellClick);
             // 
+            // MaSK
+            // 
+            this.MaSK.DataPropertyName = "MaSK";
+            this.MaSK.HeaderText = "Mã Sự Kiện";
+            this.MaSK.MinimumWidth = 8;
+            this.MaSK.Name = "MaSK";
+            this.MaSK.ReadOnly = true;
+            // 
+            // TenSK
+            // 
+            this.TenSK.DataPropertyName = "TenSK";
+            this.TenSK.HeaderText = "Tên Sự Kiện";
+            this.TenSK.MinimumWidth = 8;
+            this.TenSK.Name = "TenSK";
+            this.TenSK.ReadOnly = true;
+            // 
+            // TrangThai
+            // 
+            this.TrangThai.DataPropertyName = "TrangThai";
+            this.TrangThai.HeaderText = "Trạng Thái";
+            this.TrangThai.MinimumWidth = 8;
+            this.TrangThai.Name = "TrangThai";
+            this.TrangThai.ReadOnly = true;
+            // 
+            // SuKienbindingSource
+            // 
+            this.SuKienbindingSource.DataSource = typeof(Phan_Mem_Quan_Ly.Model.SuKien);
+            // 
             // dataGridViewImageColumn4
             // 
             this.dataGridViewImageColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
@@ -275,33 +304,23 @@
             this.txtTimKiem.TabIndex = 20;
             this.txtTimKiem.IconRightClick += new System.EventHandler(this.txtTimKiem_IconRightClick);
             // 
-            // MaSK
+            // btnLichSu
             // 
-            this.MaSK.DataPropertyName = "MaSK";
-            this.MaSK.HeaderText = "Mã Sự Kiện";
-            this.MaSK.MinimumWidth = 8;
-            this.MaSK.Name = "MaSK";
-            this.MaSK.ReadOnly = true;
-            // 
-            // TenSK
-            // 
-            this.TenSK.DataPropertyName = "TenSK";
-            this.TenSK.HeaderText = "Tên Sự Kiện";
-            this.TenSK.MinimumWidth = 8;
-            this.TenSK.Name = "TenSK";
-            this.TenSK.ReadOnly = true;
-            // 
-            // TrangThai
-            // 
-            this.TrangThai.DataPropertyName = "TrangThai";
-            this.TrangThai.HeaderText = "Trạng Thái";
-            this.TrangThai.MinimumWidth = 8;
-            this.TrangThai.Name = "TrangThai";
-            this.TrangThai.ReadOnly = true;
-            // 
-            // SuKienbindingSource
-            // 
-            this.SuKienbindingSource.DataSource = typeof(Phan_Mem_Quan_Ly.Model.SuKien);
+            this.btnLichSu.AutoRoundedCorners = true;
+            this.btnLichSu.BorderRadius = 27;
+            this.btnLichSu.CustomizableEdges.TopRight = false;
+            this.btnLichSu.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnLichSu.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnLichSu.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnLichSu.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnLichSu.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLichSu.ForeColor = System.Drawing.Color.White;
+            this.btnLichSu.Location = new System.Drawing.Point(303, 74);
+            this.btnLichSu.Name = "btnLichSu";
+            this.btnLichSu.Size = new System.Drawing.Size(182, 56);
+            this.btnLichSu.TabIndex = 21;
+            this.btnLichSu.Text = "Lịch Sử Kích Hoạt";
+            this.btnLichSu.Click += new System.EventHandler(this.btnLichSu_Click);
             // 
             // frmSuKien
             // 
@@ -310,6 +329,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(248)))), ((int)(((byte)(253)))));
             this.ClientSize = new System.Drawing.Size(1596, 839);
             this.Controls.Add(this.guna2Separator1);
+            this.Controls.Add(this.btnLichSu);
             this.Controls.Add(this.btnThemSK);
             this.Controls.Add(this.dtgSuKien);
             this.Controls.Add(this.txtTimKiem);
@@ -344,5 +364,6 @@
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn5;
         private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn6;
         private Guna.UI2.WinForms.Guna2TextBox txtTimKiem;
+        private Guna.UI2.WinForms.Guna2Button btnLichSu;
     }
 }

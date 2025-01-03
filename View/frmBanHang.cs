@@ -350,7 +350,8 @@ namespace Phan_Mem_Quan_Ly.View
                     bool result = fn_HoaDonRespository.AddHoaDon(hd);
                     if (result)
                     {
-                        MessageBox.Show("Thêm thành công");
+                        ToastMSS mss = new ToastMSS("Tạo Hóa Đơn Thành Công !", "SUCCESS");
+                        mss.Show();
                         checkHD = true;
                     }
                     else

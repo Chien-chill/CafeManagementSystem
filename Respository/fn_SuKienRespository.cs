@@ -49,6 +49,46 @@ namespace Phan_Mem_Quan_Ly.Respository
                 return null;
             }
         }
+        public static List<LichSuSuKien> GetAllLichSuSuKien()
+        {
+            try
+            {
+                using (SqlConnection conn = DataConnect.CreateConnection())
+                {
+                    if (conn == null)
+                    {
+                        throw new Exception("Không thể tạo kết nối đến cơ sở dữ liệu.");
+                    }
+                    using (SqlCommand cmd = new SqlCommand("SP_HienThiLSSK", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            List<LichSuSuKien> SKList = new List<LichSuSuKien>();
+                            while (reader.Read())
+                            {
+                                LichSuSuKien sk = new LichSuSuKien();
+                                sk.MaSK = reader["Ma_SK"].ToString();
+                                sk.ThoiGianBD = reader["ThoiGian_BD"].ToString();
+                                sk.ThoiGianKT = (reader["ThoiGian_KT"] != DBNull.Value) ? reader["ThoiGian_KT"].ToString() : "Chưa Kết Thúc";
+                                SKList.Add(sk);
+                            }
+                            return SKList;
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                Debug.WriteLine("Lỗi SQL GetAllLichSuSuKien: " + ex.Message);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Lỗi GetAllLichSuSuKien: " + ex.Message);
+                return null;
+            }
+        }
         public static List<ChiTietSuKien> GetChiTietSKTheoMa(string MaSK)
         {
             try

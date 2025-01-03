@@ -160,6 +160,7 @@
             this.dtgKhachHang.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgKhachHang.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dtgKhachHang.Location = new System.Drawing.Point(131, 184);
+            this.dtgKhachHang.MultiSelect = false;
             this.dtgKhachHang.Name = "dtgKhachHang";
             this.dtgKhachHang.ReadOnly = true;
             this.dtgKhachHang.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;

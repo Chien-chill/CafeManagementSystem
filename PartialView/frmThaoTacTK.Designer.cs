@@ -41,13 +41,13 @@
             this.btnThem = new Guna.UI2.WinForms.Guna2Button();
             this.btnThoat = new Guna.UI2.WinForms.Guna2Button();
             this.lblDonGia = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.txtTaiKhoan = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.cbNhanVien = new Guna.UI2.WinForms.Guna2ComboBox();
             this.nhanVienBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblMoTa = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.txtReMatKhau = new Guna.UI2.WinForms.Guna2TextBox();
+            this.txtTaiKhoan = new Guna.UI2.WinForms.Guna2TextBox();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcTieuDe)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -213,30 +213,6 @@
             this.lblDonGia.TabIndex = 39;
             this.lblDonGia.Text = "Tài Khoản:";
             // 
-            // txtTaiKhoan
-            // 
-            this.txtTaiKhoan.AutoRoundedCorners = true;
-            this.txtTaiKhoan.BorderRadius = 29;
-            this.txtTaiKhoan.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTaiKhoan.DefaultText = "";
-            this.txtTaiKhoan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.txtTaiKhoan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.txtTaiKhoan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTaiKhoan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.txtTaiKhoan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txtTaiKhoan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtTaiKhoan.Location = new System.Drawing.Point(51, 163);
-            this.txtTaiKhoan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtTaiKhoan.Name = "txtTaiKhoan";
-            this.txtTaiKhoan.PasswordChar = '\0';
-            this.txtTaiKhoan.PlaceholderText = "";
-            this.txtTaiKhoan.ReadOnly = true;
-            this.txtTaiKhoan.SelectedText = "";
-            this.txtTaiKhoan.Size = new System.Drawing.Size(299, 60);
-            this.txtTaiKhoan.TabIndex = 40;
-            this.txtTaiKhoan.TextOffset = new System.Drawing.Point(10, 0);
-            // 
             // guna2Panel1
             // 
             this.guna2Panel1.Controls.Add(this.btnSua);
@@ -316,6 +292,30 @@
             this.txtReMatKhau.TabIndex = 48;
             this.txtReMatKhau.TextOffset = new System.Drawing.Point(10, 0);
             // 
+            // txtTaiKhoan
+            // 
+            this.txtTaiKhoan.AutoRoundedCorners = true;
+            this.txtTaiKhoan.BorderRadius = 29;
+            this.txtTaiKhoan.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTaiKhoan.DefaultText = "";
+            this.txtTaiKhoan.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.txtTaiKhoan.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.txtTaiKhoan.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTaiKhoan.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.txtTaiKhoan.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtTaiKhoan.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.txtTaiKhoan.Location = new System.Drawing.Point(51, 163);
+            this.txtTaiKhoan.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtTaiKhoan.Name = "txtTaiKhoan";
+            this.txtTaiKhoan.PasswordChar = '\0';
+            this.txtTaiKhoan.PlaceholderText = "";
+            this.txtTaiKhoan.ReadOnly = true;
+            this.txtTaiKhoan.SelectedText = "";
+            this.txtTaiKhoan.Size = new System.Drawing.Size(299, 60);
+            this.txtTaiKhoan.TabIndex = 40;
+            this.txtTaiKhoan.TextOffset = new System.Drawing.Point(10, 0);
+            // 
             // frmThaoTacTK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
@@ -359,12 +359,12 @@
         private Guna.UI2.WinForms.Guna2Button btnThem;
         private Guna.UI2.WinForms.Guna2Button btnThoat;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblDonGia;
-        private Guna.UI2.WinForms.Guna2TextBox txtTaiKhoan;
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2ComboBox cbNhanVien;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblMoTa;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2TextBox txtReMatKhau;
         private System.Windows.Forms.BindingSource nhanVienBindingSource;
+        private Guna.UI2.WinForms.Guna2TextBox txtTaiKhoan;
     }
 }

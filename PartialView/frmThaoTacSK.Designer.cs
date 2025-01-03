@@ -48,7 +48,7 @@
             this.lblMaSP = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.dtgSanPham = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.SanPhambindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.GiamGia = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.txtTimKiem = new Guna.UI2.WinForms.Guna2TextBox();
             this.flpGiamGia = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -58,7 +58,9 @@
             this.MaSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.GiamGia = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.SanPhambindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2GradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcTieuDe)).BeginInit();
             this.guna2Panel1.SuspendLayout();
@@ -340,9 +342,14 @@
             this.dtgSanPham.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgSanPham_CellValueChanged);
             this.dtgSanPham.CurrentCellDirtyStateChanged += new System.EventHandler(this.dtgSanPham_CurrentCellDirtyStateChanged);
             // 
-            // SanPhambindingSource
+            // GiamGia
             // 
-            this.SanPhambindingSource.DataSource = typeof(Phan_Mem_Quan_Ly.Model.SanPham);
+            this.GiamGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.GiamGia.FillWeight = 90.90909F;
+            this.GiamGia.HeaderText = "Chọn";
+            this.GiamGia.MinimumWidth = 8;
+            this.GiamGia.Name = "GiamGia";
+            this.GiamGia.Width = 70;
             // 
             // txtTimKiem
             // 
@@ -390,7 +397,7 @@
             // 
             this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel1.Location = new System.Drawing.Point(32, 264);
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(32, 253);
             this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             this.guna2HtmlLabel1.Size = new System.Drawing.Size(96, 30);
             this.guna2HtmlLabel1.TabIndex = 1;
@@ -405,7 +412,7 @@
             this.toggleBatTat.CheckedState.InnerBorderColor = System.Drawing.Color.White;
             this.toggleBatTat.CheckedState.InnerBorderRadius = 8;
             this.toggleBatTat.CheckedState.InnerColor = System.Drawing.Color.White;
-            this.toggleBatTat.Location = new System.Drawing.Point(134, 269);
+            this.toggleBatTat.Location = new System.Drawing.Point(134, 258);
             this.toggleBatTat.Name = "toggleBatTat";
             this.toggleBatTat.Size = new System.Drawing.Size(47, 26);
             this.toggleBatTat.TabIndex = 14;
@@ -422,7 +429,7 @@
             this.lblKichHoat.BackColor = System.Drawing.Color.Transparent;
             this.lblKichHoat.Font = new System.Drawing.Font("Segoe UI Semibold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblKichHoat.ForeColor = System.Drawing.Color.Crimson;
-            this.lblKichHoat.Location = new System.Drawing.Point(188, 265);
+            this.lblKichHoat.Location = new System.Drawing.Point(188, 254);
             this.lblKichHoat.Name = "lblKichHoat";
             this.lblKichHoat.Size = new System.Drawing.Size(38, 30);
             this.lblKichHoat.TabIndex = 1;
@@ -449,14 +456,31 @@
             this.dataGridViewTextBoxColumn2.MinimumWidth = 8;
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // GiamGia
+            // SanPhambindingSource
             // 
-            this.GiamGia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.GiamGia.FillWeight = 90.90909F;
-            this.GiamGia.HeaderText = "Chọn";
-            this.GiamGia.MinimumWidth = 8;
-            this.GiamGia.Name = "GiamGia";
-            this.GiamGia.Width = 70;
+            this.SanPhambindingSource.DataSource = typeof(Phan_Mem_Quan_Ly.Model.SanPham);
+            // 
+            // guna2HtmlLabel3
+            // 
+            this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel3.Font = new System.Drawing.Font("Segoe UI", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.OrangeRed;
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(32, 290);
+            this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            this.guna2HtmlLabel3.Size = new System.Drawing.Size(10, 23);
+            this.guna2HtmlLabel3.TabIndex = 15;
+            this.guna2HtmlLabel3.Text = "*";
+            // 
+            // guna2HtmlLabel4
+            // 
+            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Segoe UI Semibold", 8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel4.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(48, 289);
+            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(475, 23);
+            this.guna2HtmlLabel4.TabIndex = 16;
+            this.guna2HtmlLabel4.Text = "Sau khi kích hoạt vui lòng reset ứng dụng để sự kiện được áp dụng";
             // 
             // frmThaoTacSK
             // 
@@ -464,6 +488,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1258, 970);
+            this.Controls.Add(this.guna2HtmlLabel4);
+            this.Controls.Add(this.guna2HtmlLabel3);
             this.Controls.Add(this.toggleBatTat);
             this.Controls.Add(this.flpGiamGia);
             this.Controls.Add(this.txtTimKiem);
@@ -522,5 +548,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewCheckBoxColumn GiamGia;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
     }
 }

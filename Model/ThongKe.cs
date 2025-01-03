@@ -7,5 +7,6 @@
         public int TongKhachHangDat { get; set; }
         public string Thang_Nam { get; set; }
         public decimal TongDoanhThu { get; set; }
+        public decimal TyLeHoanThanh { get; set; }
     }
 }

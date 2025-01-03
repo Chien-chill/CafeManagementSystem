@@ -18,7 +18,7 @@ namespace Phan_Mem_Quan_Ly.PartialView
         {
             try
             {
-                if (!txtMatKhau.Equals(txtReMatKhau.Text))
+                if (txtMatKhau.Text.Equals(txtReMatKhau.Text) == false)
                 {
                     Mss.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
                     Mss.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;
@@ -64,7 +64,7 @@ namespace Phan_Mem_Quan_Ly.PartialView
         {
             try
             {
-                if (!txtMatKhau.Equals(txtReMatKhau.Text))
+                if (txtMatKhau.Text.Equals(txtReMatKhau.Text) == false)
                 {
                     Mss.Buttons = Guna.UI2.WinForms.MessageDialogButtons.OK;
                     Mss.Icon = Guna.UI2.WinForms.MessageDialogIcon.Error;

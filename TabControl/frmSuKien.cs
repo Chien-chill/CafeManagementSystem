@@ -121,5 +121,11 @@ namespace Phan_Mem_Quan_Ly.TabControl
             }
             LoadData();
         }
+
+        private void btnLichSu_Click(object sender, EventArgs e)
+        {
+            frmLichSuSuKien lssk = new frmLichSuSuKien();
+            lssk.ShowDialog();
+        }
     }
 }

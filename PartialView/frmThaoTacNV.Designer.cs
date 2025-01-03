@@ -445,7 +445,7 @@
             this.dtpNS.BackColor = System.Drawing.SystemColors.Control;
             this.dtpNS.BorderRadius = 29;
             this.dtpNS.Checked = true;
-            this.dtpNS.CustomFormat = "dd/MM/yyyy";
+            this.dtpNS.CustomFormat = "MM/dd/yyyy";
             this.dtpNS.FillColor = System.Drawing.Color.White;
             this.dtpNS.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpNS.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -456,7 +456,7 @@
             this.dtpNS.Size = new System.Drawing.Size(301, 60);
             this.dtpNS.TabIndex = 9;
             this.dtpNS.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.dtpNS.Value = new System.DateTime(2024, 12, 6, 0, 0, 0, 0);
+            this.dtpNS.Value = new System.DateTime(2025, 1, 3, 14, 19, 2, 0);
             // 
             // picNV
             // 

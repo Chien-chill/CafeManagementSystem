@@ -50,6 +50,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Aspose.Words">
+      <HintPath>..\..\source\repos\QuanLyMayTinh\DoAn\bin\Debug\TemplateWord\Aspose.Words.dll</HintPath>
+    </Reference>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Data.AdoDotNetInterop, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -128,6 +131,7 @@
     <Compile Include="Model\ChucVu.cs" />
     <Compile Include="Model\HoaDon.cs" />
     <Compile Include="Model\KhachHang.cs" />
+    <Compile Include="Model\LichSuSuKien.cs" />
     <Compile Include="Model\NhanVien.cs" />
     <Compile Include="Model\SuKien.cs" />
     <Compile Include="Model\TaiKhoan.cs" />
@@ -143,6 +147,12 @@
     </Compile>
     <Compile Include="PartialView\frmChiTietSP.Designer.cs">
       <DependentUpon>frmChiTietSP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PartialView\frmLichSuSuKien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PartialView\frmLichSuSuKien.Designer.cs">
+      <DependentUpon>frmLichSuSuKien.cs</DependentUpon>
     </Compile>
     <Compile Include="PartialView\frmThaoTac.cs">
       <SubType>Form</SubType>
@@ -372,11 +382,15 @@
     <Compile Include="View\frmThongKe.Designer.cs">
       <DependentUpon>frmThongKe.cs</DependentUpon>
     </Compile>
+    <Compile Include="WordExtention.cs" />
     <EmbeddedResource Include="PartialView\frmChiTietHD.resx">
       <DependentUpon>frmChiTietHD.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PartialView\frmChiTietSP.resx">
       <DependentUpon>frmChiTietSP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PartialView\frmLichSuSuKien.resx">
+      <DependentUpon>frmLichSuSuKien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PartialView\frmThaoTac.resx">
       <DependentUpon>frmThaoTac.cs</DependentUpon>
@@ -501,6 +515,7 @@
     <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.ChucVu.datasource" />
     <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.HoaDon.datasource" />
     <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.KhachHang.datasource" />
+    <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.LichSuSuKien.datasource" />
     <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.NhanVien.datasource" />
     <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.SanPham.datasource" />
     <None Include="Properties\DataSources\Phan_Mem_Quan_Ly.Model.SuKien.datasource" />
@@ -514,6 +529,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="TemplateWord\Mau_Bao_Cao_Doanh_Thu.doc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

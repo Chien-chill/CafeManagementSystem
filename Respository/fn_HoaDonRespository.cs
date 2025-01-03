@@ -56,6 +56,51 @@ namespace Phan_Mem_Quan_Ly.Respository
                 return null;
             }
         }
+        public static List<HoaDon> GetHoaDonTheoNgay(DateTime NgayTao)
+        {
+            try
+            {
+                using (SqlConnection conn = DataConnect.CreateConnection())
+                {
+                    if (conn == null)
+                    {
+                        throw new Exception("Không thể tạo kết nối đến cơ sở dữ liệu.");
+                    }
+                    using (SqlCommand cmd = new SqlCommand("SP_BaoCaoNgay", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@NgayTao", NgayTao);
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            List<HoaDon> lstHD = new List<HoaDon>();
+                            while (reader.Read())
+                            {
+                                HoaDon hd = new HoaDon();
+                                hd.MaHD = reader["Ma_HD"].ToString();
+                                hd.MaKH = reader["Ma_KH"].ToString();
+                                hd.MaNV = reader["Ma_NV"].ToString();
+                                hd.MaSK = reader["Ma_SK"].ToString();
+                                hd.GioRa = reader["GioRa"].ToString();
+                                hd.GioVao = reader["GioVao"].ToString();
+                                hd.TongTien = (decimal)reader["TongTien"];
+                                lstHD.Add(hd);
+                            }
+                            return lstHD;
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                Debug.WriteLine("Lỗi SQL GetHoaDonTheoNgay:" + ex.Message);
+                return null;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Lỗi GetHoaDonTheoNgay:" + ex.Message);
+                return null;
+            }
+        }
         public static List<ChiTietHoaDon> GetChiTietHDTheoMa(string MaHD)
         {
             try
