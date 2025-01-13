@@ -71,7 +71,7 @@
             this.nudGiamGia.Location = new System.Drawing.Point(180, 67);
             this.nudGiamGia.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.nudGiamGia.Maximum = new decimal(new int[] {
-            10,
+            50,
             0,
             0,
             0});
